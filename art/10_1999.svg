@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs><radialGradient id="bg" cx="50%" cy="58%" r="75%"><stop offset="0" stop-color="#3a2412"/><stop offset=".55" stop-color="#1a0f08"/><stop offset="1" stop-color="#070504"/></radialGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceGraphic" stdDeviation="9" result="b"/><feColorMatrix in="b" type="matrix" values="1 0 0 0 .1  0 .85 0 0 .04  0 0 .5 0 0  0 0 0 1.1 0" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="tglow" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<linearGradient id="yg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe6a8"/><stop offset="1" stop-color="#d9902e"/></linearGradient></defs>
+<rect width="1024" height="1024" fill="url(#bg)"/>
+<rect x="34" y="34" width="956" height="956" rx="26" fill="none" stroke="#f3c56b" stroke-width="2" opacity=".45" />
+<text x="92" y="214" font-family="Georgia,'Times New Roman',serif" font-size="150" font-weight="bold" fill="url(#yg)" filter="url(#tglow)" opacity="1">1999</text>
+<text x="932" y="110" text-anchor="end" font-family="Georgia,serif" font-size="30" fill="#f3c56b" opacity=".8">10 / 20</text>
+<text x="92" y="286" font-family="Georgia,'Times New Roman',serif" font-size="40" fill="#fbe9c6" opacity=".95">Rao &amp; Ballard</text><text x="92" y="330" font-family="Georgia,serif" font-style="italic" font-size="28" fill="#f3c56b" opacity=".85">Prediction and error</text>
+<g transform="translate(112,250) scale(.78)" filter="url(#glow)" opacity="1"><rect x="325" y="290" width="380" height="245" rx="12" fill="none" stroke="#f3c56b" stroke-width="4"/><line x1="420" y1="285" x2="420" y2="395" stroke="#fbe9c6" stroke-width="6" stroke-linecap="round" /><polyline points="413.2,385.1 420,395 426.8,385.1" fill="none" stroke="#fbe9c6" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><line x1="610" y1="520" x2="610" y2="410" stroke="#f3c56b" stroke-width="6" stroke-linecap="round" /><polyline points="616.8,419.9 610,410 603.2,419.9" fill="none" stroke="#f3c56b" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><text x="425" y="250" fill="#fbe9c6" font-family="Georgia,serif" font-size="27" text-anchor="middle">prediction ↓</text><text x="615" y="590" fill="#fbe9c6" font-family="Georgia,serif" font-size="27" text-anchor="middle">error ↑</text></g>
+
+<line x1="92" y1="884" x2="932" y2="884" stroke="#f3c56b" stroke-width="1.5" opacity=".35"/>
+<text x="92" y="930" font-family="Georgia,serif" font-style="italic" font-size="31" fill="#fbe9c6" opacity=".92">Predictions descend; differences travel upward.</text>
+<text x="92" y="968" font-family="Helvetica,Arial,sans-serif" font-size="19" letter-spacing="2" fill="#f3c56b" opacity=".7">LANDMARK</text>
+</svg>

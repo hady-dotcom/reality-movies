@@ -470,7 +470,7 @@ window.FIELD={
  ],
  "meta": {
   "title": "Seeing",
-  "kicker": "Reality Movies",
+  "kicker": "Reality Sourcing",
   "intro": "This is a journey through the research that helped us understand seeing, and what seeing really means.",
   "sub": "How we learned that the picture in your head is built, not received.",
   "years": "20 MARKERS · FIVE ROOMS · 1851 – 2024",
@@ -518,7 +518,7 @@ window.FIELD={
   },
   "end": {
    "room": "Next door: Hearing",
-   "note": "The next walk is about sound.",
+   "note": "The next walk is through this door.",
    "href": "../hearing/",
    "label": "Walk into Hearing",
    "img": "00_next"

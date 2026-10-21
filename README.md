@@ -1,10 +1,10 @@
-# Reality Movies
+# Reality Sourcing
 
 Short 3D walks through the research behind Reality Hound. Live: https://hady-dotcom.github.io/reality-movies/
 
-- `/` hub listing all seven walks (built ones are clickable; the rest are marked "coming").
+- `/` hub listing all seven walks (all clickable).
 - `/seeing/` Seeing walk (20 markers, 1851–2024). Old `/?stop=N` links redirect here.
-- `/hearing/` Hearing walk (20 markers, 1863–2025).
+- `/hearing/`, `/truth/`, `/shaped/`, `/hold/`, `/speech/`, `/edges/`: the other six walks, chained door to door.
 - `vendor/` three.js r160 (local, no CDN). `art/` source SVGs for the stop cards.
 
-Every caption uses only facts from the marker's Pixel Hound receipt. Dashed cards and dim rooms mean thin evidence. Static files only: no running cost.
+Every caption uses only facts recorded in Pixel Hound. Dashed cards and dim rooms mean thin evidence. Static files only: no running cost.

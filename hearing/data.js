@@ -415,7 +415,7 @@ window.FIELD={
  ],
  "meta": {
   "title": "Hearing",
-  "kicker": "Reality Movies",
+  "kicker": "Reality Sourcing",
   "intro": "This is a journey through the research that helped us understand hearing, and what hearing really means.",
   "sub": "How we learned the ear sorts and predicts, not just records.",
   "years": "20 MARKERS · FIVE ROOMS · 1863 – 2025",
@@ -458,10 +458,10 @@ window.FIELD={
    "17": "Tong, Li, Bruns & Röder"
   },
   "end": {
-   "room": "End of the Hearing walk",
-   "note": "Back to all the walks.",
-   "href": "../",
-   "label": "All walks",
+   "room": "Next door: Truth showing up",
+   "note": "The next walk is through this door.",
+   "href": "../truth/",
+   "label": "Walk into Truth showing up",
    "img": "00_next"
   },
   "rooms_img": "room"

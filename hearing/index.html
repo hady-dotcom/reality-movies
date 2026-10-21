@@ -1,6 +1,6 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<link rel="icon" href="data:,"><title>Hearing · Reality Movies</title>
+<link rel="icon" href="data:,"><title>Hearing · Reality Sourcing</title>
 <style>
 html,body{margin:0;height:100%;background:#070504;color:#f4e6c8;font:15px/1.45 Georgia,'Times New Roman',serif;overflow:hidden;overscroll-behavior:none;touch-action:none}
 canvas{display:block;position:fixed;inset:0}
@@ -33,11 +33,11 @@ canvas{display:block;position:fixed;inset:0}
 @keyframes breathe{50%{text-shadow:0 0 44px #f3a63ccc,0 0 110px #f3a63c66}}
 @media(min-width:900px){#card{left:auto;right:30px;bottom:86px;width:430px;max-height:70vh}#card .c{font-size:17px}}
 </style></head><body>
-<div id="title"><div class="k">Reality Movies</div><h2>Hearing</h2><p class="intro">This is a journey through the research that helped us understand hearing, and what hearing really means.</p><p>How we learned the ear sorts and predicts, not just records.</p><div class="yr">20 MARKERS · FIVE ROOMS · 1863 – 2025</div><button id="enter">Enter the walk</button><a class="hub" href="../">All walks</a></div>
-<div id="top"><h1><a href="../" style="color:inherit;text-decoration:none;pointer-events:auto">Reality Movies</a> · Hearing</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
+<div id="title"><div class="k">Reality Sourcing</div><h2>Hearing</h2><p class="intro">This is a journey through the research that helped us understand hearing, and what hearing really means.</p><p>How we learned the ear sorts and predicts, not just records.</p><div class="yr">20 MARKERS · FIVE ROOMS · 1863 – 2025</div><button id="enter">Enter the walk</button><a class="hub" href="../">All walks</a></div>
+<div id="top"><h1><a href="../" style="color:inherit;text-decoration:none;pointer-events:auto">Reality Sourcing</a> · Hearing</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
-<script src="data.js"></script>
+<script src="data.js"></script><script src="theme.js"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD, M=F.meta, stops=[];
@@ -46,7 +46,7 @@ const N=stops.length+2;
 const IMG=M.imgs;
 const NAMES=M.names;
 const LIGHT={dim:.35,half:.62,bright:1};
-const RD=14, renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+const RDS=F.rooms.map(r=>Math.max(14,r.cards.length*2.3+3)),ZS=RDS.map((d,i)=>RDS.slice(0,i).reduce((a,b)=>a+b,0)),RD=14, renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.prepend(renderer.domElement);
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x070504);scene.fog=new THREE.FogExp2(0x0a0604,.055);
 const cam=new THREE.PerspectiveCamera(62,1,.1,200);
@@ -60,7 +60,7 @@ const pulses=[], backdrops=[];
 const plinthPos=[];let k=0;
 const floorMat=new THREE.MeshStandardMaterial({color:0x2a1d12,roughness:.35,metalness:.3});
 const plGeo=new THREE.BoxGeometry(.8,1,.8), cardGeo=new THREE.PlaneGeometry(1.9,1.9), frameGeo=new THREE.PlaneGeometry(2.04,2.04);
-F.rooms.forEach((r,ri)=>{const z0=ri*RD, L=LIGHT[r.light];
+F.rooms.forEach((r,ri)=>{const RD=RDS[ri],z0=ZS[ri], L=LIGHT[r.light]*(F.thinField?.8:1);
  const rt=tex(`img/room${ri+1}.jpg`);
  const floor=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),floorMat);floor.rotation.x=-Math.PI/2;floor.position.set(0,0,z0+RD/2);scene.add(floor);
  // walls: room mood image, darkened by evidence level
@@ -83,17 +83,18 @@ F.rooms.forEach((r,ri)=>{const z0=ri*RD, L=LIGHT[r.light];
   plinthPos.push(new THREE.Vector3(side*3.6,1.25,z));k++;});
 });
 // threads between listed markers
-const tmat=new THREE.LineBasicMaterial({color:0xe0a857,transparent:true,opacity:.28,blending:THREE.AdditiveBlending,depthWrite:false});
+const tmat=new (F.thinField?THREE.LineDashedMaterial:THREE.LineBasicMaterial)({dashSize:.25,gapSize:.2,color:0xe0a857,transparent:true,opacity:.28,blending:THREE.AdditiveBlending,depthWrite:false});
 stops.forEach((a,i)=>a.links.forEach(t=>{const j=stops.findIndex(b=>b.title.startsWith(t.slice(0,30)));if(j>i||(j>=0&&j<i&&!stops[j].links.some(x=>a.title.startsWith(x.slice(0,30))))){const p=plinthPos[i],q=plinthPos[j],m=p.clone().add(q).multiplyScalar(.5);m.y=4;
- scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(new THREE.QuadraticBezierCurve3(p,m,q).getPoints(24)),tmat))}}));
+ {const ln=new THREE.Line(new THREE.BufferGeometry().setFromPoints(new THREE.QuadraticBezierCurve3(p,m,q).getPoints(24)),tmat);if(F.thinField)ln.computeLineDistances();scene.add(ln)}}}));
 // end: doorway to the next walk
-const endZ=F.rooms.length*RD;
+const endZ=ZS[ZS.length-1]+RDS[RDS.length-1];
 const wall=new THREE.Mesh(new THREE.PlaneGeometry(10,5),new THREE.MeshBasicMaterial({color:0x0c0907}));wall.position.set(0,2.5,endZ+.6);wall.rotation.y=Math.PI;scene.add(wall);
 const hf=new THREE.Mesh(new THREE.PlaneGeometry(2.6,2.6),new THREE.MeshBasicMaterial({map:tex(`img/${M.end.img}.webp`)}));hf.position.set(0,2,endZ+.5);hf.rotation.y=Math.PI;scene.add(hf);
 const hh=halo(0xffc070,4.4,.16);hh.position.set(0,2,endZ+.3);scene.add(hh);pulses.push({o:hh,b:.16,a:.06,f:.4,ph:0});
 // dust motes
 const DN=innerWidth<700?500:900, dpos=new Float32Array(DN*3), dseed=new Float32Array(DN);
 for(let i=0;i<DN;i++){dpos[i*3]=(Math.random()-.5)*9.6;dpos[i*3+1]=Math.random()*4.8;dpos[i*3+2]=-4+Math.random()*(endZ+4);dseed[i]=Math.random()*6.28}
+const glyphs=[];if(((window.THEME||{}).motion)==='glyph'){const L='AaBbEeGgKkMmRrSsWwβλΩ';for(let i=0;i<(innerWidth<700?70:140);i++){const c=document.createElement('canvas');c.width=c.height=64;const g=c.getContext('2d');g.fillStyle='#fff';g.font='44px Georgia';g.textAlign='center';g.textBaseline='middle';g.fillText(L[i%L.length],32,34);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),color:0xffe2a0,transparent:true,opacity:.35,depthWrite:false}));sp.scale.setScalar(.22+Math.random()*.18);sp.position.set((Math.random()-.5)*9,Math.random()*4.8,-3+Math.random()*(endZ+3));sp.userData.r=Math.random()-.5;scene.add(sp);glyphs.push(sp)}}
 const dgeo=new THREE.BufferGeometry();dgeo.setAttribute('position',new THREE.BufferAttribute(dpos,3));
 const dust=new THREE.Points(dgeo,new THREE.PointsMaterial({map:GLOW,size:.07,color:0xffd590,transparent:true,opacity:.7,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true}));scene.add(dust);
 // camera poses
@@ -111,11 +112,11 @@ if(qs.has('stop')){started=true;titleEl.classList.add('gone')}
 $('#bar').innerHTML=stops.map(s=>`<i class="${s.thin?'thin':''}"></i>`).join('');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function fill(){const card=$('#card');
- if(idx===0){$('#room').textContent='Entrance';$('#roomnote').textContent=M.entrance_note;card.className='';card.innerHTML=`<div class="y" style="font-size:24px">${esc(M.entrance_title)}</div><div class="c" style="margin-top:8px">${esc(F.arc.split('\n')[1])}</div><div class="s">${stops.length} markers from Pixel Hound. Captions use only facts from each marker's receipt.</div>`}
+ if(idx===0){$('#room').textContent='Entrance';$('#roomnote').textContent=M.entrance_note+(F.thinField?' This whole field is thin: few records have links.':'');card.className='';card.innerHTML=`<div class="y" style="font-size:24px">${esc(M.entrance_title)}</div><div class="c" style="margin-top:8px">${esc(F.arc.split('\n')[1])}</div><div class="s">${stops.length} markers from Pixel Hound. Captions use only facts from each marker's receipt.</div>`}
  else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;card.className='';card.innerHTML=`<a class="go" href="${esc(M.end.href)}">${esc(M.end.label)} ›</a><div class="y" style="font-size:20px;margin-top:12px">What this walk doesn't show</div>${F.gaps.map(g=>`<div class="s">• ${esc(g)}</div>`).join('')}${M.end.href==='../'?'':'<a class="go ghost" href="../">All walks</a>'}`}
  else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;card.className=s.thin?'thin':'';
   const nm=NAMES[s.n];
-  card.innerHTML=`<div class="y">${s.year}<span class="tag ${s.thin?'thin':''}">${s.thin?'thin evidence':esc(s.rating)}</span><span class="tag">${s.n}/${stops.length}</span></div>${nm?`<div class="nm">${esc(nm)}</div>`:''}<div class="t">${esc(s.title)}</div><div class="c">${esc(s.cap)}</div><details><summary>Receipt</summary>${esc(s.receipt)}<br>Summary line: “${esc(s.summary)}”${s.thin?'<br>Thin because: '+esc(s.thin_reasons.join(', ')):''}${s.links.length?'<br>Connects to: '+esc(s.links.join('; ')):''}${s.url?`<br><a style="color:#f3c56b" href="${esc(s.url)}" target="_blank" rel="noopener">source</a>`:''}</details>`}
+  card.innerHTML=`<div class="y">${s.year}<span class="tag ${s.thin?'thin':''}">${s.thin?'thin evidence':esc(s.rating)}</span><span class="tag">${s.n}/${stops.length}</span></div>${nm?`<div class="nm">${esc(nm)}</div>`:''}<div class="t">${esc(s.title)}</div><div class="c">${esc(s.cap)}</div><details><summary>Recorded in Pixel Hound</summary>${esc(s.receipt)}<br>Summary line: “${esc(s.summary)}”${s.thin?'<br>Thin because: '+esc(s.thin_reasons.join(', ')):''}${s.links.length?'<br>Connects to: '+esc(s.links.join('; ')):''}${s.url?`<br><a style="color:#f3c56b" href="${esc(s.url)}" target="_blank" rel="noopener">source</a>`:''}</details>`}
  $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;}
 let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
  history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};
@@ -136,6 +137,15 @@ function loop(){const dt=Math.min(clock.getDelta(),.05);T+=dt;const g=pose(idx),
  cam.position.set(curP.x+Math.sin(T*.4)*.04,curP.y+Math.sin(T*.7)*.025,curP.z);cam.lookAt(curL);
  for(const q of pulses){const v=q.b+q.a*Math.sin(T*q.f*2+q.ph);q.o.material.opacity=Math.max(0,v);if(q.sc)q.o.scale.setScalar(q.sc*(1+.12*Math.sin(T*q.f*2+q.ph)))}
  for(const b of backdrops){const d=b.position.z-cam.position.z;b.material.opacity=THREE.MathUtils.clamp((d-1.2)/4,0,.92)}
- const P=dgeo.attributes.position.array;for(let i=0;i<DN;i++){P[i*3+1]+=dt*.05*(.5+Math.sin(dseed[i]+T*.3));P[i*3]+=Math.sin(T*.2+dseed[i])*dt*.03;if(P[i*3+1]>4.9)P[i*3+1]=0}dgeo.attributes.position.needsUpdate=true;
+ const P=dgeo.attributes.position.array,MO=(window.THEME||{}).motion||'rise';
+ for(let i=0;i<DN;i++){const s=dseed[i];
+  if(MO==='drift'){P[i*3]+=dt*.12*(.6+Math.sin(s));P[i*3+1]+=Math.sin(T*.3+s)*dt*.01;if(P[i*3]>4.8)P[i*3]=-4.8}
+  else if(MO==='ember'){P[i*3+1]+=dt*.22*(.6+Math.sin(s+T));P[i*3]+=Math.sin(T*1.3+s*3)*dt*.06;if(P[i*3+1]>4.9){P[i*3+1]=0}}
+  else if(MO==='star'){P[i*3+1]+=Math.sin(T*.15+s)*dt*.006}
+  else if(MO==='dawn'){P[i*3+1]+=dt*.03*(.5+Math.sin(s+T*.2));P[i*3+2]+=dt*.02;if(P[i*3+1]>4.9)P[i*3+1]=0}
+  else{P[i*3+1]+=dt*.05*(.5+Math.sin(s+T*.3));P[i*3]+=Math.sin(T*.2+s)*dt*.03;if(P[i*3+1]>4.9)P[i*3+1]=0}}
+ dgeo.attributes.position.needsUpdate=true;
+ if(MO==='star')dust.material.opacity=.55+.3*Math.sin(T*1.7);if(MO==='ember')dust.material.opacity=.6+.25*Math.sin(T*9)*Math.sin(T*3.1);
+ for(const g of glyphs){g.position.y-=dt*.08;g.material.rotation+=dt*.1*g.userData.r;if(g.position.y<.2)g.position.y=4.8;g.material.opacity=.25+.2*Math.sin(T*.5+g.userData.r*5)}
  renderer.render(scene,cam);window.__frames=(window.__frames||0)+1;requestAnimationFrame(loop)}loop();
 </script></body></html>

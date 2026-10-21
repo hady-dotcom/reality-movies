@@ -1,8 +1,8 @@
 window.FIELD={
- "field": "Seeing & hearing",
+ "field": "Seeing",
  "arc": "Change: measuring touch (1851) → seeing as inference (1867) → spikes from one fibre (1938) → edge cells and columns (1959–68) → attention binding (1980) → face patch (1997) → prediction and error (1999) → feedback, body ownership and interoception (2015–2024).\nUnderstanding: the picture in your head is built, not received. The same idea comes back at every scale: Helmholtz's 'inference' in 1867, Rao & Ballard's predictions in 1999, the Bayesian 'mine' hand in 2015.",
  "gaps": [
-  "Hearing: none of the 20 markers is about hearing. Some links point to auditory work (for example 'Attentional Enhancement of Auditory Mismatch…'), but no hearing paper made the top 20. The film should say this out loud and leave the 'Hearing' alcove as an empty, labelled frame.",
+  "This walk is about seeing (and some touch and body sense). Hearing has its own walk, next door.",
   "Long gaps with no markers: 1867→1912, 1912→1938 and 1938→1959. The camera crosses them in darkness.",
   "Ratings come from recent citations, so the 1851–1912 markers look 'thin' because of how they are measured, not because they mattered less."
  ],
@@ -467,5 +467,61 @@ window.FIELD={
     }
    ]
   }
- ]
+ ],
+ "meta": {
+  "title": "Seeing",
+  "kicker": "Reality Movies",
+  "intro": "This is a journey through the research that helped us understand seeing, and what seeing really means.",
+  "sub": "How we learned that the picture in your head is built, not received.",
+  "years": "20 MARKERS · FIVE ROOMS · 1851 – 2024",
+  "entrance_title": "How seeing came to be understood",
+  "entrance_note": "Five era-rooms, 1851 to 2024. Dim rooms mean thin evidence.",
+  "imgs": [
+   "01_1851",
+   "02_1867",
+   "03_1912",
+   "04_1938",
+   "05_1959",
+   "06_1962",
+   "07_1968",
+   "08_1980",
+   "09_1997",
+   "10_1999",
+   "11_2015",
+   "12_2015",
+   "13_2015",
+   "14_2016",
+   "15_2016",
+   "16_2016",
+   "17_2019",
+   "18_2020",
+   "19_2022",
+   "20_2024"
+  ],
+  "names": {
+   "1": "Weber",
+   "2": "Helmholtz",
+   "3": "Wertheimer",
+   "4": "Hartline",
+   "5": "Hubel & Wiesel",
+   "6": "Hubel & Wiesel",
+   "7": "Hubel & Wiesel",
+   "8": "Treisman & Gelade",
+   "9": "Kanwisher, McDermott & Chun",
+   "10": "Rao & Ballard",
+   "11": "Muckli et al.",
+   "12": "Samad, Chung & Shams",
+   "13": "Kilteni, Maselli, Kording & Slater",
+   "15": "Garfinkel et al.",
+   "16": "Tsakiris",
+   "18": "Teufel & Fletcher"
+  },
+  "end": {
+   "room": "Next door: Hearing",
+   "note": "The next walk is about sound.",
+   "href": "../hearing/",
+   "label": "Walk into Hearing",
+   "img": "00_next"
+  }
+ }
 };

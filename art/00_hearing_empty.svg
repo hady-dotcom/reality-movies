@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><defs><radialGradient id="bg" cx="50%" cy="50%" r="75%"><stop offset="0" stop-color="#1c1712"/><stop offset="1" stop-color="#050403"/></radialGradient></defs>
-<rect width="1024" height="1024" fill="url(#bg)"/><rect x="200" y="230" width="624" height="470" rx="6" fill="none" stroke="#c9b48a" stroke-width="10" opacity=".55"/><rect x="232" y="262" width="560" height="406" fill="none" stroke="#c9b48a" stroke-width="2" stroke-dasharray="12 10" opacity=".4"/>
-<text x="512" y="168" text-anchor="middle" font-family="Georgia,serif" font-size="64" fill="#e8dcc0" opacity=".85">Hearing</text>
-<text x="512" y="476" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="36" fill="#c9b48a" opacity=".7">no marker in the top 20</text>
-<text x="512" y="800" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#fbe9c6" opacity=".6">Some links point to hearing studies,</text><text x="512" y="842" text-anchor="middle" font-family="Georgia,serif" font-size="28" fill="#fbe9c6" opacity=".6">but none made this list. The frame stays empty.</text></svg>

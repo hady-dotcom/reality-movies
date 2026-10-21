@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="icon" href="data:,"><title>Seeing · Reality Movies</title>
+<style>
+html,body{margin:0;height:100%;background:#070504;color:#f4e6c8;font:15px/1.45 Georgia,'Times New Roman',serif;overflow:hidden;overscroll-behavior:none;touch-action:none}
+canvas{display:block;position:fixed;inset:0}
+#top{position:fixed;top:0;left:0;right:0;padding:calc(env(safe-area-inset-top) + 12px) 16px 18px;background:linear-gradient(#070504f0,#07050400);pointer-events:none}
+#top h1{margin:0;font:11px/1 -apple-system,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#c9a46a}
+#room{font-size:19px;margin-top:5px;color:#ffe9b8;text-shadow:0 0 14px #f3a63c66}
+#roomnote{font-size:12.5px;font-style:italic;color:#bba98a;margin-top:2px;max-width:640px}
+#bar{display:flex;gap:3px;margin-top:8px;max-width:640px}#bar i{flex:1;height:3px;background:#3a2c1c;border-radius:2px;transition:all .5s}#bar i.on{background:#f3c56b;box-shadow:0 0 6px #f3a63c}#bar i.thin{opacity:.55}
+#card{position:fixed;left:10px;right:10px;bottom:calc(env(safe-area-inset-bottom) + 66px);max-width:560px;margin:0 auto;background:linear-gradient(160deg,#21160dee,#0d0906ee);border:1px solid #6b4f2a;border-radius:16px;padding:14px 18px;box-shadow:0 0 40px #f3a63c22,0 10px 30px #000a;transition:opacity .45s,transform .45s;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);max-height:42vh;overflow:auto}
+#card.fade{opacity:0;transform:translateY(8px)}
+#card.thin{border-style:dashed;border-color:#5a4c38;background:linear-gradient(160deg,#1b1712d8,#0d0b09d8)}
+#card .y{font-size:34px;line-height:1;color:#ffd98a;text-shadow:0 0 18px #f3a63c88}#card.thin .y{color:#d8c9a6;text-shadow:none}
+#card .nm{font-size:14px;color:#f4e6c8;margin-top:4px}#card .t{font-size:12px;font-style:italic;color:#a8957a;margin:2px 0 8px}
+#card .c{font-size:16px}#card .s{font-size:12.5px;color:#c4b394;margin-top:6px}
+#card details{margin-top:8px;font:11.5px/1.45 -apple-system,system-ui,sans-serif;color:#a8977c}#card summary{cursor:pointer;color:#f3c56b}
+.tag{display:inline-block;vertical-align:middle;font:10.5px/1.5 -apple-system,system-ui,sans-serif;padding:1px 7px;border-radius:9px;border:1px solid #6b4f2a;margin-left:8px;color:#e9cf98;text-shadow:none}.tag.thin{border-style:dashed;color:#cbb88e}
+#nav{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 12px);display:flex;justify-content:center;gap:12px}
+#nav button{min-width:100px;height:44px;border-radius:22px;border:1px solid #8a6a38;background:#1c130bcc;color:#ffe3a8;font:15px Georgia,serif;box-shadow:0 0 18px #f3a63c22}
+#nav button:disabled{opacity:.35}
+#title{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(ellipse at 50% 55%,#2a1a0ccc,#070504f5 70%);transition:opacity 1.2s;z-index:5}
+#title.gone{opacity:0;pointer-events:none}
+#title .k{font:11px -apple-system,system-ui,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#c9a46a}
+#title h2{font-weight:normal;font-size:clamp(44px,11vw,104px);margin:.2em 0 .1em;color:#ffe2a0;text-shadow:0 0 30px #f3a63c99,0 0 80px #f3a63c44;animation:breathe 5s ease-in-out infinite}
+#title p{max-width:520px;font-style:italic;color:#d6c3a0;font-size:16px;margin:.4em 0}
+#title .yr{font-size:13px;color:#a8957a;letter-spacing:.15em;margin-top:6px}
+#enter{margin-top:26px;height:50px;padding:0 34px;border-radius:25px;border:1px solid #c99a4a;background:#2a1a0c;color:#ffe3a8;font:17px Georgia,serif;box-shadow:0 0 30px #f3a63c55;cursor:pointer}
+#title .intro{font-style:normal;color:#f4e6c8;font-size:17px;max-width:480px}
+#title .hub{margin-top:16px;font:13px -apple-system,system-ui,sans-serif;letter-spacing:.12em;color:#c9a46a;text-decoration:none}
+.go{display:inline-block;margin-top:4px;padding:10px 20px;border-radius:22px;border:1px solid #c99a4a;background:#2a1a0c;color:#ffe3a8;text-decoration:none;font:16px Georgia,serif;box-shadow:0 0 20px #f3a63c44}.go.ghost{margin-top:12px;background:none;box-shadow:none;font-size:14px;padding:6px 14px;border-color:#6b4f2a}
+@keyframes breathe{50%{text-shadow:0 0 44px #f3a63ccc,0 0 110px #f3a63c66}}
+@media(min-width:900px){#card{left:auto;right:30px;bottom:86px;width:430px;max-height:70vh}#card .c{font-size:17px}}
+</style></head><body>
+<div id="title"><div class="k">Reality Movies</div><h2>Seeing</h2><p class="intro">This is a journey through the research that helped us understand seeing, and what seeing really means.</p><p>How we learned that the picture in your head is built, not received.</p><div class="yr">20 MARKERS · FIVE ROOMS · 1851 – 2024</div><button id="enter">Enter the walk</button><a class="hub" href="../">All walks</a></div>
+<div id="top"><h1><a href="../" style="color:inherit;text-decoration:none;pointer-events:auto">Reality Movies</a> · Seeing</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
+<div id="card"></div>
+<div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
+<script src="data.js"></script>
+<script type="module">
+import * as THREE from '../vendor/three.module.min.js';
+const F=window.FIELD, M=F.meta, stops=[];
+F.rooms.forEach((r,ri)=>r.cards.forEach(c=>stops.push({...c,ri})));
+const N=stops.length+2;
+const IMG=M.imgs;
+const NAMES=M.names;
+const LIGHT={dim:.35,half:.62,bright:1};
+const RD=14, renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.prepend(renderer.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x070504);scene.fog=new THREE.FogExp2(0x0a0604,.055);
+const cam=new THREE.PerspectiveCamera(62,1,.1,200);
+scene.add(new THREE.AmbientLight(0xffe2b0,.35));
+const TL=new THREE.TextureLoader();const tex=u=>{const t=TL.load(u);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;return t};
+// soft radial sprite for glow/bloom and dust
+const gcv=document.createElement('canvas');gcv.width=gcv.height=64;{const g=gcv.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,'rgba(255,230,170,1)');gr.addColorStop(.25,'rgba(255,190,90,.55)');gr.addColorStop(1,'rgba(255,160,60,0)');g.fillStyle=gr;g.fillRect(0,0,64,64)}
+const GLOW=new THREE.CanvasTexture(gcv);
+const halo=(color,size,op)=>{const s=new THREE.Sprite(new THREE.SpriteMaterial({map:GLOW,color,transparent:true,opacity:op,depthWrite:false,blending:THREE.AdditiveBlending}));s.scale.set(size,size,1);return s};
+const pulses=[], backdrops=[];
+const plinthPos=[];let k=0;
+const floorMat=new THREE.MeshStandardMaterial({color:0x2a1d12,roughness:.35,metalness:.3});
+const plGeo=new THREE.BoxGeometry(.8,1,.8), cardGeo=new THREE.PlaneGeometry(1.9,1.9), frameGeo=new THREE.PlaneGeometry(2.04,2.04);
+F.rooms.forEach((r,ri)=>{const z0=ri*RD, L=LIGHT[r.light];
+ const rt=tex(`img/room${ri+1}.jpg`);
+ const floor=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),floorMat);floor.rotation.x=-Math.PI/2;floor.position.set(0,0,z0+RD/2);scene.add(floor);
+ // walls: room mood image, darkened by evidence level
+ for(const s of[-1,1]){const wt=rt.clone();wt.wrapS=THREE.MirroredRepeatWrapping;wt.repeat.set(2,1);wt.needsUpdate=true;const m=new THREE.MeshBasicMaterial({map:wt,color:new THREE.Color().setScalar(.2+.22*L)});const w=new THREE.Mesh(new THREE.PlaneGeometry(RD,5,8,1),m);w.rotation.y=-s*Math.PI/2;w.position.set(s*5,2.5,z0+RD/2);if(s>0)w.scale.x=-1;scene.add(w)}
+ // ceiling
+ const ce=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),new THREE.MeshBasicMaterial({color:0x060403}));ce.rotation.x=Math.PI/2;ce.position.set(0,5,z0+RD/2);scene.add(ce);
+ // backdrop at the far end of each room (fades as you approach)
+ const bd=new THREE.Mesh(new THREE.PlaneGeometry(10,5.4),new THREE.MeshBasicMaterial({map:rt,transparent:true,opacity:.9,depthWrite:false,color:new THREE.Color().setScalar(.45+.55*L)}));bd.position.set(0,2.6,z0+RD-.2);bd.rotation.y=Math.PI;bd.scale.x=-1;if(ri<F.rooms.length-1){scene.add(bd);backdrops.push(bd)}
+ const pl=new THREE.PointLight(0xffc27a,22*L,14,1.5);pl.position.set(0,4,z0+RD/2);scene.add(pl);
+ const lamp=halo(0xffc070,1.6,.5*L);lamp.position.copy(pl.position);scene.add(lamp);pulses.push({o:lamp,b:.5*L,a:.12,f:.5+ri*.13,ph:ri});
+ const arch=new THREE.Mesh(new THREE.TorusGeometry(1.7,.05,8,48,Math.PI),new THREE.MeshBasicMaterial({color:L<.5?0x8a7a60:0xffcf7a}));arch.position.set(0,2,z0+.05);scene.add(arch);
+ const n=r.cards.length;r.cards.forEach((c,i)=>{const side=(k%2)?1:-1;const z=z0+1.5+(i+.5)*(RD-3)/n;const thin=!!c.thin;
+  const p=new THREE.Mesh(plGeo,new THREE.MeshStandardMaterial({color:thin?0x3a332a:0x6b4a26,roughness:.4,metalness:.6,emissive:thin?0x000000:0x2a1404}));p.position.set(side*3.6,.5,z);scene.add(p);
+  const fr=new THREE.Mesh(frameGeo,new THREE.MeshBasicMaterial({color:thin?0x6a5d48:0xd9a54e,transparent:true,opacity:thin?.5:.9}));fr.position.set(side*4.93,2.1,z);fr.rotation.y=-side*Math.PI/2;scene.add(fr);
+  const card=new THREE.Mesh(cardGeo,new THREE.MeshBasicMaterial({map:tex(`img/${IMG[c.n-1]}.webp`),color:new THREE.Color().setScalar(thin?.62:1)}));
+  card.position.set(side*4.9,2.1,z);card.rotation.y=-side*Math.PI/2;scene.add(card);
+  const ch=halo(0xffb860,3.4,thin?.08:.18);ch.position.set(side*4.75,2.1,z);scene.add(ch);pulses.push({o:ch,b:thin?.08:.18,a:.05,f:.7,ph:k});
+  const orb=new THREE.Mesh(new THREE.SphereGeometry(.09,16,12),new THREE.MeshBasicMaterial({color:thin?0x9a8a70:0xffe0a0}));orb.position.set(side*3.6,1.25,z);scene.add(orb);
+  const oh=halo(0xffb050,thin?.6:1.1,thin?.35:.8);oh.position.copy(orb.position);scene.add(oh);pulses.push({o:oh,b:thin?.35:.8,a:.25,f:1.1,ph:k*.7,sc:thin?.6:1.1});
+  plinthPos.push(new THREE.Vector3(side*3.6,1.25,z));k++;});
+});
+// threads between listed markers
+const tmat=new THREE.LineBasicMaterial({color:0xe0a857,transparent:true,opacity:.28,blending:THREE.AdditiveBlending,depthWrite:false});
+stops.forEach((a,i)=>a.links.forEach(t=>{const j=stops.findIndex(b=>b.title.startsWith(t.slice(0,30)));if(j>i||(j>=0&&j<i&&!stops[j].links.some(x=>a.title.startsWith(x.slice(0,30))))){const p=plinthPos[i],q=plinthPos[j],m=p.clone().add(q).multiplyScalar(.5);m.y=4;
+ scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(new THREE.QuadraticBezierCurve3(p,m,q).getPoints(24)),tmat))}}));
+// end: doorway to the next walk
+const endZ=F.rooms.length*RD;
+const wall=new THREE.Mesh(new THREE.PlaneGeometry(10,5),new THREE.MeshBasicMaterial({color:0x0c0907}));wall.position.set(0,2.5,endZ+.6);wall.rotation.y=Math.PI;scene.add(wall);
+const hf=new THREE.Mesh(new THREE.PlaneGeometry(2.6,2.6),new THREE.MeshBasicMaterial({map:tex(`img/${M.end.img}.webp`)}));hf.position.set(0,2,endZ+.5);hf.rotation.y=Math.PI;scene.add(hf);
+const hh=halo(0xffc070,4.4,.16);hh.position.set(0,2,endZ+.3);scene.add(hh);pulses.push({o:hh,b:.16,a:.06,f:.4,ph:0});
+// dust motes
+const DN=innerWidth<700?500:900, dpos=new Float32Array(DN*3), dseed=new Float32Array(DN);
+for(let i=0;i<DN;i++){dpos[i*3]=(Math.random()-.5)*9.6;dpos[i*3+1]=Math.random()*4.8;dpos[i*3+2]=-4+Math.random()*(endZ+4);dseed[i]=Math.random()*6.28}
+const dgeo=new THREE.BufferGeometry();dgeo.setAttribute('position',new THREE.BufferAttribute(dpos,3));
+const dust=new THREE.Points(dgeo,new THREE.PointsMaterial({map:GLOW,size:.07,color:0xffd590,transparent:true,opacity:.7,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true}));scene.add(dust);
+// camera poses
+function pose(i){if(i<=0)return{p:new THREE.Vector3(0,1.7,-4.5),l:new THREE.Vector3(0,1.9,4)};
+ if(i>=N-1)return{p:new THREE.Vector3(0,1.7,endZ-3.6),l:new THREE.Vector3(0,1.95,endZ+1)};
+ const q=plinthPos[i-1];const p=new THREE.Vector3(q.x*.12,1.7,q.z-2.9);return{p,l:new THREE.Vector3(q.x*1.25,1.95,q.z+.15)}}
+const qs=new URLSearchParams(location.search);
+let idx=Math.max(0,Math.min(N-1,parseInt(qs.get('stop')||'0')));
+const cp=pose(idx),curP=cp.p.clone(),curL=cp.l.clone();
+const $=s=>document.querySelector(s);
+const titleEl=$('#title');let started=false;
+function start(){if(started)return;started=true;titleEl.classList.add('gone');if(idx===0)go(1)}
+$('#enter').onclick=e=>{e.stopPropagation();start()};
+if(qs.has('stop')){started=true;titleEl.classList.add('gone')}
+$('#bar').innerHTML=stops.map(s=>`<i class="${s.thin?'thin':''}"></i>`).join('');
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function fill(){const card=$('#card');
+ if(idx===0){$('#room').textContent='Entrance';$('#roomnote').textContent=M.entrance_note;card.className='';card.innerHTML=`<div class="y" style="font-size:24px">${esc(M.entrance_title)}</div><div class="c" style="margin-top:8px">${esc(F.arc.split('\n')[1])}</div><div class="s">${stops.length} markers from Pixel Hound. Captions use only facts from each marker's receipt.</div>`}
+ else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;card.className='';card.innerHTML=`<a class="go" href="${esc(M.end.href)}">${esc(M.end.label)} ›</a><div class="y" style="font-size:20px;margin-top:12px">What this walk doesn't show</div>${F.gaps.map(g=>`<div class="s">• ${esc(g)}</div>`).join('')}${M.end.href==='../'?'':'<a class="go ghost" href="../">All walks</a>'}`}
+ else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;card.className=s.thin?'thin':'';
+  const nm=NAMES[s.n];
+  card.innerHTML=`<div class="y">${s.year}<span class="tag ${s.thin?'thin':''}">${s.thin?'thin evidence':esc(s.rating)}</span><span class="tag">${s.n}/${stops.length}</span></div>${nm?`<div class="nm">${esc(nm)}</div>`:''}<div class="t">${esc(s.title)}</div><div class="c">${esc(s.cap)}</div><details><summary>Receipt</summary>${esc(s.receipt)}<br>Summary line: “${esc(s.summary)}”${s.thin?'<br>Thin because: '+esc(s.thin_reasons.join(', ')):''}${s.links.length?'<br>Connects to: '+esc(s.links.join('; ')):''}${s.url?`<br><a style="color:#f3c56b" href="${esc(s.url)}" target="_blank" rel="noopener">source</a>`:''}</details>`}
+ $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;}
+let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
+ history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};
+ if(first){fill()}else{const c=$('#card');c.classList.add('fade');clearTimeout(fadeT);fadeT=setTimeout(()=>{fill();c.classList.remove('fade')},260);$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}
+ window.__state.room=idx===0?'Entrance':idx===N-1?M.end.room:F.rooms[stops[idx-1].ri].name}
+function go(d){if(!started){start();return}const n=Math.max(0,Math.min(N-1,idx+d));if(n!==idx){idx=n;ui()}}
+window.__go=n=>{started=true;titleEl.classList.add('gone');idx=n;ui(true)};
+$('#next').onclick=()=>go(1);$('#prev').onclick=()=>go(-1);
+addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(e.key)){go(1);e.preventDefault()}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){go(-1);e.preventDefault()}});
+let wheelAcc=0,wheelLock=0;addEventListener('wheel',e=>{if(e.target.closest('#card'))return;e.preventDefault();const now=performance.now();if(now<wheelLock)return;wheelAcc+=e.deltaY;if(Math.abs(wheelAcc)>60){go(Math.sign(wheelAcc));wheelAcc=0;wheelLock=now+500}},{passive:false});
+let sx=0,sy=0,st=0;addEventListener('touchstart',e=>{const p=e.touches[0];sx=p.clientX;sy=p.clientY;st=Date.now()},{passive:true});
+addEventListener('touchend',e=>{if(e.target.closest('button,details,a,#card'))return;const p=e.changedTouches[0],dx=p.clientX-sx,dy=p.clientY-sy;if(Math.max(Math.abs(dx),Math.abs(dy))>40){go(Math.abs(dx)>Math.abs(dy)?(dx<0?1:-1):(dy<0?1:-1))}else if(Date.now()-st<300)go(p.clientX<innerWidth*.3?-1:1)});
+function resize(){renderer.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.fov=cam.aspect<.8?74:58;cam.updateProjectionMatrix()}
+addEventListener('resize',resize);resize();ui(true);
+const clock=new THREE.Clock();let T=0;
+function loop(){const dt=Math.min(clock.getDelta(),.05);T+=dt;const g=pose(idx),a=1-Math.exp(-dt*2.6);
+ curP.lerp(g.p,a);curL.lerp(g.l,a*1.15>1?1:a*1.15);
+ cam.position.set(curP.x+Math.sin(T*.4)*.04,curP.y+Math.sin(T*.7)*.025,curP.z);cam.lookAt(curL);
+ for(const q of pulses){const v=q.b+q.a*Math.sin(T*q.f*2+q.ph);q.o.material.opacity=Math.max(0,v);if(q.sc)q.o.scale.setScalar(q.sc*(1+.12*Math.sin(T*q.f*2+q.ph)))}
+ for(const b of backdrops){const d=b.position.z-cam.position.z;b.material.opacity=THREE.MathUtils.clamp((d-1.2)/4,0,.92)}
+ const P=dgeo.attributes.position.array;for(let i=0;i<DN;i++){P[i*3+1]+=dt*.05*(.5+Math.sin(dseed[i]+T*.3));P[i*3]+=Math.sin(T*.2+dseed[i])*dt*.03;if(P[i*3+1]>4.9)P[i*3+1]=0}dgeo.attributes.position.needsUpdate=true;
+ renderer.render(scene,cam);window.__frames=(window.__frames||0)+1;requestAnimationFrame(loop)}loop();
+</script></body></html>

@@ -1,149 +1,118 @@
 window.FIELD={
  "field": "Learning & holding",
  "thinField": false,
- "arc": "\nLearning & holding: 20 markers from 1852 to 2020.",
+ "arc": "\nStart in 1852 with mind and body. End in 2020 with scientists switching memories back on.",
  "gaps": [
-  "6 of 20 markers are thin (no rating and/or few links). Older markers are often thin because ratings come from recent citations.",
-  "Long gaps with no markers: 1862→1904, 1904→1949, 1950→1983.",
-  "11 of 20 markers are from 2010 or later, so the walk is crowded at the end."
+  "The early stops have only a little evidence so far.",
+  "There are long stretches with no stops: 1862 to 1904, 1904 to 1949, and 1950 to 1983.",
+  "Two stops, from 2001 and 2008, have only a single line of description."
  ],
  "rooms": [
   {
-   "name": "Room 1 · The Soul's Physiology (1852–1862)",
+   "name": "Room 1 · Mind and Body (1852–1862)",
    "light": "dim",
-   "note": "2 of 2 markers here are thin. Lit low.",
+   "note": "Where memory research began.",
    "cards": [
     {
      "n": 1,
      "id": 6,
      "year": 1852,
      "title": "Medicinische Psychologie oder Physiologie der Seele (Lotze)",
-     "cap": "In 1852, Lotze wrote a 'physiology of the soul': how sensations tie to the body, and how mental life holds onto bodily processes.",
-     "rating": "unrated",
+     "cap": "Lotze wrote about how sensations are tied to the body, and how the mind keeps a grip on what the body does.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 6 · 1852 · material (book/encyclopedia/article etc.) · unrated · no citation counts · edges 0 (0 curated)",
-     "summary": "physiology of the soul — local signs, sensation–body coupling, and the directed hold of mental life on organic process.",
      "url": "https://archive.org/details/medicinischepsy01lotzgoog",
-     "links": []
+     "links": [],
+     "head": "The mind runs on the body",
+     "src": "Lotze, 1852",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 2,
      "id": 12,
      "year": 1862,
      "title": "Beiträge zur Theorie der Sinneswahrnehmung (Wundt)",
-     "cap": "In 1862, Wundt's experiments on perception asked how held attention decides what we take to be an object.",
-     "rating": "unrated",
+     "cap": "Wundt's experiments asked a simple question: how does holding your attention decide what you notice as a thing?",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 12 · 1862 · paper · unrated · no citation counts · edges 0 (0 curated)",
-     "summary": "IA beitrgezurtheo00wund · Leipzig/Heidelberg C. F. Winter’sche 1862 — experimental essays on sense perception and apperception; how held attention shapes what is taken as a sensory object.",
      "url": "https://archive.org/details/beitrgezurtheo00wund",
-     "links": []
+     "links": [],
+     "head": "Attention picks the object",
+     "src": "Wundt, 1862",
+     "plain": "Only a little evidence so far"
     }
    ]
   },
   {
-   "name": "Room 2 · Assemblies and Traces (1904–1989)",
+   "name": "Room 2 · Cells and Traces (1904–1989)",
    "light": "dim",
-   "note": "4 of 5 markers here are thin. Lit low.",
+   "note": "Hunting for where a memory lives.",
    "cards": [
     {
      "n": 3,
      "id": 50,
      "year": 1904,
      "title": "Physiology of Digestion — Nobel Lecture (Pavlov)",
-     "cap": "In 1904, Pavlov showed digestion responds to signals: a learned link can trigger the body.",
-     "rating": "unrated",
+     "cap": "Pavlov showed digestion can be triggered by a signal alone. A learned link can switch the body on.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 50 · 1904 · Nobel lecture · unrated · no citation counts · edges 0 (0 curated)",
-     "summary": "psychic secretion and signalled salivation — associative hold of conditioned digestive responses.",
      "url": "https://www.nobelprize.org/prizes/medicine/1904/pavlov/lecture/",
-     "links": []
+     "links": [],
+     "head": "A signal starts digestion",
+     "src": "Pavlov, 1904",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 4,
      "id": 112,
      "year": 1949,
      "title": "The Organization of Behavior (Hebb)",
-     "cap": "In 1949, Hebb proposed that cells firing together strengthen their links, so groups of cells hold memories.",
-     "rating": "unrated",
+     "cap": "Hebb proposed that brain cells firing together build stronger links. Groups of cells hold a memory.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges"
-     ],
-     "receipt": "id 112 · 1949 · material (book/encyclopedia/article etc.) · unrated · no citation counts · edges 1 (1 curated)",
-     "summary": "cell assemblies and synaptic strengthening — how repeated co-activity holds memory traces.",
      "url": "https://archive.org/details/in.ernet.dli.2015.168156",
      "links": [
       "In search of the engram (Lashley)"
-     ]
+     ],
+     "head": "Fire together, stay together",
+     "src": "Hebb, 1949",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 5,
      "id": 117,
      "year": 1950,
      "title": "In search of the engram (Lashley)",
-     "cap": "In 1950, Lashley damaged parts of the cortex and never found one spot holding a memory. It seemed spread out.",
-     "rating": "unrated",
+     "cap": "Lashley damaged different parts of the brain and never found one place that held a memory. It seemed spread out.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges"
-     ],
-     "receipt": "id 117 · 1950 · SEB symposium · unrated · no citation counts · edges 2 (2 curated)",
-     "summary": "cortical lesions fail to isolate a local memory trace — distributed hold of the engram.",
      "url": "https://raw.githubusercontent.com/dr-darryl-wright/Lashley_1950/master/In_Search_of_the_Engram_Lashley_1950.pdf",
      "links": [
       "Elements of Episodic Memory (Tulving)",
       "The Organization of Behavior (Hebb)"
-     ]
+     ],
+     "head": "No single memory spot",
+     "src": "Lashley, 1950",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 6,
      "id": 196,
      "year": 1983,
      "title": "Elements of Episodic Memory (Tulving)",
-     "cap": "In 1983, Tulving described episodic memory: a separate system for things that happened to you, and when.",
-     "rating": "unrated",
+     "cap": "Tulving described a separate memory system for events in your own life: what happened, and when.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges"
-     ],
-     "receipt": "id 196 · 1983 · material (book/encyclopedia/article etc.) · unrated · no citation counts · edges 2 (2 curated)",
-     "summary": "episodic memory as a distinct system for personally experienced events — hold map of what happened when.",
      "url": "https://archive.org/details/elementsofepisod0000tulv",
      "links": [
       "In search of the engram (Lashley)",
       "Generalization of word meanings during infant sleep (Friedrich, Wilhelm, Born & Friederici)"
-     ]
+     ],
+     "head": "Remembering what happened to you",
+     "src": "Tulving, 1983",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 7,
      "id": 219,
      "year": 1989,
      "title": "Two-stage model of memory trace formation: A role for noisy brain states",
-     "cap": "In 1989: a weak trace is laid down while awake, then bursts during rest and sleep replay it and glue it in. Memory works in two shifts.",
-     "rating": "landmark",
+     "cap": "While you're awake, a weak memory trace forms. During rest and sleep, quick bursts replay it and glue it in.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 219 · 1989 · Neuroscience · landmark · cited 1708 total / 137 in 2024-25 · edges 17 (0 curated)",
-     "summary": "daytime theta exploration lays a weak trace; sharp-wave ripples in rest/sleep replay and glue it. Memory is a two-shift factory, not a snapshot.",
      "url": "https://doi.org/10.1016/0306-4522(89)90423-5",
      "links": [
       "The memory function of sleep (Diekelmann & Born)",
@@ -151,44 +120,42 @@ window.FIELD={
       "How Targeted Memory Reactivation Promotes the Selective Strengthening of Memories in Sleep",
       "Sleep Spindle Density Predicts the Effect of Prior Knowledge on Memory Consolidation (Hennies, Lambon Ralph, Kempkes, Cousins & Lewis)",
       "Decoding material-specific memory reprocessing during sleep in humans (Schönauer, Alizadeh, Jamalabadi et al.)"
-     ]
+     ],
+     "head": "Memory works two shifts",
+     "src": "Two-stage model of memory trace formation, 1989",
+     "plain": "A classic"
     }
    ]
   },
   {
    "name": "Room 3 · Two Shifts (2001–2008)",
    "light": "bright",
-   "note": "Well-rated, linked papers.",
+   "note": "Learn by day, glue it in by night.",
    "cards": [
     {
      "n": 8,
      "id": 265,
      "year": 2001,
      "title": "Learning in Networks of Cortical Neurons",
-     "cap": "In 2001, networks of brain cells in a dish learned in a closed loop, outside a body. (The record holds only a short line.)",
-     "rating": "landmark",
+     "cap": "Brain cells grown in a dish learned through feedback, with no body attached. (Only a short description so far.)",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 265 · 2001 · Journal of Neuroscience · landmark · cited 400 total / 20 in 2024-25 · edges 3 (0 curated)",
-     "summary": "Early closed-loop learning outside the body",
      "url": "https://doi.org/10.1523/jneurosci.21-22-08782.2001",
      "links": [
       "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish",
       "Cultured Cortical Neurons Can Perform Blind Source Separation According to the Free-Energy Principle (Isomura, Kotani & Jimbo)",
       "Dynamic Network Plasticity and Sample Efficiency in Biological Neural Cultures: A Comparative Study with Deep Reinforcement Learning"
-     ]
+     ],
+     "head": "Learning in a dish",
+     "src": "Learning in Networks of Cortical Neurons, 2001",
+     "plain": "A classic"
     },
     {
      "n": 9,
      "id": 302,
      "year": 2008,
      "title": "Spatio-temporal electrical stimuli shape behavior of an embodied cortical network in a goal-directed learning task",
-     "cap": "In 2008, the timing of electric feedback shaped what a dish of brain cells learned to do. (The record holds only a short line.)",
-     "rating": "living",
+     "cap": "The timing of electric feedback shaped what a dish of brain cells learned to do. (Only a short description so far.)",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 302 · 2008 · Journal of Neural Engineering · living · cited 131 total / 22 in 2024-25 · edges 5 (0 curated)",
-     "summary": "Contingency of feedback matters for goal-directed learning",
      "url": "https://doi.org/10.1088/1741-2560/5/3/004",
      "links": [
       "In vitro neurons learn and exhibit sentience when embodied in a simulated game-world",
@@ -196,26 +163,25 @@ window.FIELD={
       "Dynamic Network Plasticity and Sample Efficiency in Biological Neural Cultures: A Comparative Study with Deep Reinforcement Learning",
       "Modular Neuronal Assemblies Embodied in a Closed-Loop Environment: Toward Future Integration of Brains and Machines",
       "The Neurally Controlled Animat: Biological Brains Acting with Simulated Bodies"
-     ]
+     ],
+     "head": "Feedback shapes learning",
+     "src": "Spatio-temporal electrical stimuli…, 2008",
+     "plain": "Still being argued over"
     }
    ]
   },
   {
    "name": "Room 4 · Sleep Edits (2010–2016)",
    "light": "bright",
-   "note": "Well-rated, linked papers.",
+   "note": "Sleep turns out to be busy work.",
    "cards": [
     {
      "n": 10,
      "id": 314,
      "year": 2010,
      "title": "The memory function of sleep (Diekelmann & Born)",
-     "cap": "In 2010: during deep sleep, new memories replay and move from the hippocampus to the cortex. Sleep edits memory.",
-     "rating": "landmark",
+     "cap": "During deep sleep, new memories replay and get moved to long-term storage. Sleep edits memory. It isn't just rest.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 314 · 2010 · Nat Rev Neurosci · landmark · cited 3737 total / 552 in 2024-25 · edges 58 (0 curated)",
-     "summary": "slow-wave sleep reactivates and ships new traces from hippocampus to cortex; REM may stabilize them — sleep is active memory editing, not just rest.",
      "url": "https://doi.org/10.1038/nrn2762",
      "links": [
       "Memory Consolidation Is Linked to Spindle-Mediated Information Processing during Sleep (Cairney, Guttesen, El Marj & Lewis)",
@@ -223,19 +189,18 @@ window.FIELD={
       "Generalization of word meanings during infant sleep (Friedrich, Wilhelm, Born & Friederici)",
       "Two-stage model of memory trace formation: A role for noisy brain states",
       "Promoting memory consolidation during sleep: A meta-analysis of targeted memory reactivation"
-     ]
+     ],
+     "head": "Sleep moves your memories",
+     "src": "Diekelmann & Born, 2010",
+     "plain": "A classic"
     },
     {
      "n": 11,
      "id": 411,
      "year": 2015,
      "title": "Hierarchical nesting of slow oscillations, spindles and ripples in the human hippocampus during sleep (Staresina, Bergmann, Bonnefond, van der Meij, Jensen, Deuker, Elger, Axmacher & Fell)",
-     "cap": "In 2015, in the sleeping human hippocampus: slow waves hold spindles, which hold ripples. A timed cascade that can replay memories.",
-     "rating": "landmark",
+     "cap": "In the sleeping human brain, slow waves carry faster bursts, which carry even faster ripples. A timed chain that can replay the day.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 411 · 2015 · Nat Neurosci · landmark · cited 828 total / 183 in 2024-25 · edges 34 (0 curated)",
-     "summary": "in sleeping human hippocampus, slow waves nest spindles that nest ripples — a timed cascade that can replay and glue daytime engrams into longer-term memory.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4625581/",
      "links": [
       "Memory Consolidation Is Linked to Spindle-Mediated Information Processing during Sleep (Cairney, Guttesen, El Marj & Lewis)",
@@ -243,19 +208,18 @@ window.FIELD={
       "The hippocampal sharp wave–ripple in memory retrieval for immediate use and consolidation (Joo & Frank)",
       "A sleep spindle framework for motor memory consolidation (Boutin, Doyon)",
       "How Targeted Memory Reactivation Promotes the Selective Strengthening of Memories in Sleep"
-     ]
+     ],
+     "head": "Waves inside waves",
+     "src": "Hierarchical nesting of slow…, 2015",
+     "plain": "A classic"
     },
     {
      "n": 12,
      "id": 410,
      "year": 2015,
      "title": "Generalization of word meanings during infant sleep (Friedrich, Wilhelm, Born & Friederici)",
-     "cap": "In 2015, babies who napped after learning words kept the details and stretched the words to new examples.",
-     "rating": "living",
+     "cap": "Babies who napped after learning new words kept the details and used the words for new examples.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 410 · 2015 · Nature Communications · living · cited 176 total / 24 in 2024-25 · edges 5 (1 curated)",
-     "summary": "babies who nap after learning words keep the specifics and stretch them to new category examples—sleep spindles helping build general meaning.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4316748/",
      "links": [
       "Elements of Episodic Memory (Tulving)",
@@ -263,19 +227,18 @@ window.FIELD={
       "Sleep and the extraction of hidden regularities: A systematic review and the importance of temporal compression (Lerner & Gluck)",
       "How Memory Replay in Sleep Boosts Creative Problem-Solving (Lewis, Knoblich & Poe)",
       "Sleep-dependent memory consolidation in infants protects new episodic memories from existing semantic memories (Friedrich, Mölle, Friederici & Born)"
-     ]
+     ],
+     "head": "Naps help babies learn words",
+     "src": "Generalization of word meanings during…, 2015",
+     "plain": "Still being argued over"
     },
     {
      "n": 13,
      "id": 407,
      "year": 2015,
      "title": "Engram cells retain memory under retrograde amnesia (Ryan, Roy, Pignatelli, Arons & Tonegawa)",
-     "cap": "In 2015, mice with memory loss still had the memory cells. Switching them on with light brought the memory back. Storing is not the same as finding.",
-     "rating": "landmark",
+     "cap": "Mice with memory loss still had the cells holding the memory. Switching them on with light brought it back. Storing isn't the same as finding.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 407 · 2015 · Science · landmark · cited 744 total / 149 in 2024-25 · edges 17 (0 curated)",
-     "summary": "block protein synthesis and recall fails—but the engram cells still hold the trace; optogenetic reactivation restores the memory. Storage ≠ retrieval.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5583719/",
      "links": [
       "Engrams and circuits crucial for systems consolidation of a memory",
@@ -283,37 +246,35 @@ window.FIELD={
       "Memory engrams: Recalling the past and imagining the future",
       "Engram neurons: Encoding, consolidation, retrieval, and forgetting of memory",
       "The neurobiological foundation of memory retrieval"
-     ]
+     ],
+     "head": "The memory was still there",
+     "src": "Ryan et al., 2015",
+     "plain": "A classic"
     },
     {
      "n": 14,
      "id": 390,
      "year": 2015,
      "title": "A single pair of neurons links sleep to memory consolidation in Drosophila melanogaster (Haynes, Christmann & Griffith)",
-     "cap": "In 2015, in fruit flies, just two neurons linked sleep to locking in memory.",
-     "rating": "living",
+     "cap": "In fruit flies, just two nerve cells connect sleep to locking in memories.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 390 · 2015 · eLife · living · cited 186 total / 23 in 2024-25 · edges 3 (1 curated)",
-     "summary": "in fruit flies, just two neurons couple sleep to locking in memory—tiny sleep–engram link you can point to.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4305081/",
      "links": [
       "Memory Consolidation Is Linked to Spindle-Mediated Information Processing during Sleep (Cairney, Guttesen, El Marj & Lewis)",
       "The memory function of sleep (Diekelmann & Born)",
       "Availability of Food Determines the Need for Sleep in Memory Consolidation (Chouhan, Griffith, Haynes & Sehgal)"
-     ]
+     ],
+     "head": "Two cells link sleep and memory",
+     "src": "A single pair of neurons links sleep to…, 2015",
+     "plain": "Still being argued over"
     },
     {
      "n": 15,
      "id": 790,
      "year": 2016,
      "title": "Memory retrieval by activating engram cells in mouse models of early Alzheimer’s disease",
-     "cap": "In 2016, in mice modelling early Alzheimer's, switching memory cells on with light brought back a lost memory. A mouse study.",
-     "rating": "landmark",
+     "cap": "In mice with early Alzheimer's-like disease, switching on memory cells with light brought back a memory they seemed to have lost. A mouse study.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 790 · 2016 · Nature · landmark · cited 600 total / 126 in 2024-25 · edges 10 (0 curated)",
-     "summary": "In mice modelling early Alzheimer's, switching on the memory cells with light brought back a memory they seemed to have lost. This hints the memory is stored but hard to retrieve. It is a mouse study.",
      "url": "https://doi.org/10.1038/nature17172",
      "links": [
       "Engram cells retain memory under retrograde amnesia (Ryan, Roy, Pignatelli, Arons & Tonegawa)",
@@ -321,26 +282,25 @@ window.FIELD={
       "Memory engrams: Recalling the past and imagining the future",
       "Engram neurons: Encoding, consolidation, retrieval, and forgetting of memory",
       "The neurobiological foundation of memory retrieval"
-     ]
+     ],
+     "head": "A lost memory, switched back on",
+     "src": "Memory retrieval by activating engram…, 2016",
+     "plain": "A classic"
     }
    ]
   },
   {
-   "name": "Room 5 · Engrams Found (2017–2020)",
+   "name": "Room 5 · Memories Found (2017–2020)",
    "light": "bright",
-   "note": "Well-rated, linked papers.",
+   "note": "Lost memories, switched back on.",
    "cards": [
     {
      "n": 16,
      "id": 1194,
      "year": 2017,
      "title": "Engrams and circuits crucial for systems consolidation of a memory",
-     "cap": "In 2017, in mice: memory cells at the front of the brain formed at learning and matured as hippocampus cells went quiet.",
-     "rating": "living",
+     "cap": "In mice, memory cells at the front of the brain formed at the moment of learning, then matured as other memory cells went quiet.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1194 · 2017 · Science · living · cited 1100 total / 274 in 2024-25 · edges 23 (0 curated)",
-     "summary": "In mice, memory cells in the front of the brain formed at the moment of learning and matured over time as hippocampal cells went quiet. Amygdala cells kept the fear memory going.",
      "url": "https://doi.org/10.1126/science.aam6808",
      "links": [
       "Engram cells retain memory under retrograde amnesia (Ryan, Roy, Pignatelli, Arons & Tonegawa)",
@@ -348,19 +308,18 @@ window.FIELD={
       "Memory engrams: Recalling the past and imagining the future",
       "Engram neurons: Encoding, consolidation, retrieval, and forgetting of memory",
       "The neurobiological foundation of memory retrieval"
-     ]
+     ],
+     "head": "Memories move house",
+     "src": "Engrams and circuits crucial for…, 2017",
+     "plain": "Still being argued over"
     },
     {
      "n": 17,
      "id": 1655,
      "year": 2018,
      "title": "Memory Consolidation Is Linked to Spindle-Mediated Information Processing during Sleep (Cairney, Guttesen, El Marj & Lewis)",
-     "cap": "In 2018, cues played in sleep sparked fast spindles that carried readable memory content.",
-     "rating": "living",
+     "cap": "Cues played during sleep set off bursts of brain activity. Scientists could read which memories those bursts carried.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1655 · 2018 · / online Mar 8 Current Biology · living · cited 288 total / 92 in 2024-25 · edges 22 (1 curated)",
-     "summary": "cues in NREM sleep spark fast spindles that carry decodable memory categories—spindles as the hold-and-replay channel.",
      "url": "https://doi.org/10.1016/j.cub.2018.01.087",
      "links": [
       "A single pair of neurons links sleep to memory consolidation in Drosophila melanogaster (Haynes, Christmann & Griffith)",
@@ -368,19 +327,18 @@ window.FIELD={
       "Hierarchical nesting of slow oscillations, spindles and ripples in the human hippocampus during sleep (Staresina, Bergmann, Bonnefond, van der Meij, Jensen, Deuker, Elger, Axmacher & Fell)",
       "Promoting memory consolidation during sleep: A meta-analysis of targeted memory reactivation",
       "A sleep spindle framework for motor memory consolidation (Boutin, Doyon)"
-     ]
+     ],
+     "head": "Sounds in sleep, memories replayed",
+     "src": "Memory Consolidation Is Linked to…, 2018",
+     "plain": "Still being argued over"
     },
     {
      "n": 18,
      "id": 1681,
      "year": 2018,
      "title": "The hippocampal sharp wave–ripple in memory retrieval for immediate use and consolidation (Joo & Frank)",
-     "cap": "In 2018, a review: sharp-wave ripples replay memories both for choices now and for keeping them overnight.",
-     "rating": "living",
+     "cap": "Quick bursts called ripples replay memories for decisions right now, and to keep them overnight.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1681 · 2018 · Nat Rev Neurosci · living · cited 428 total / 150 in 2024-25 · edges 19 (0 curated)",
-     "summary": "sharp-wave ripples as dual-use hold bursts—replay for decisions now and consolidation overnight.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6794196/",
      "links": [
       "Hierarchical nesting of slow oscillations, spindles and ripples in the human hippocampus during sleep (Staresina, Bergmann, Bonnefond, van der Meij, Jensen, Deuker, Elger, Axmacher & Fell)",
@@ -388,19 +346,18 @@ window.FIELD={
       "Memory engrams: Recalling the past and imagining the future",
       "Engram neurons: Encoding, consolidation, retrieval, and forgetting of memory",
       "Hippocampal Offline Reactivation Consolidates Recently Formed Cell Assembly Patterns during Sharp Wave-Ripples (van de Ven, Trouche, McNamara, Allen & Dupret)"
-     ]
+     ],
+     "head": "Ripples with two jobs",
+     "src": "The hippocampal sharp wave–ripple in…, 2018",
+     "plain": "Still being argued over"
     },
     {
      "n": 19,
      "id": 2509,
      "year": 2020,
      "title": "Promoting memory consolidation during sleep: A meta-analysis of targeted memory reactivation",
-     "cap": "In 2020, pooling 91 experiments with 2,004 people: replaying cues during sleep gave a small but reliable memory boost.",
-     "rating": "living",
+     "cap": "Across 91 experiments with 2,004 people, replaying cues during sleep gave memory a small but reliable boost.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 2509 · 2020 · Psychological Bulletin · living · cited 228 total / 88 in 2024-25 · edges 21 (0 curated)",
-     "summary": "A pooled analysis of 91 experiments on replaying cues during sleep to strengthen memories, with 2,004 people. It gave a small but reliable boost to memory, and could help in learning.",
      "url": "https://doi.org/10.1037/bul0000223",
      "links": [
       "Memory Consolidation Is Linked to Spindle-Mediated Information Processing during Sleep (Cairney, Guttesen, El Marj & Lewis)",
@@ -408,19 +365,18 @@ window.FIELD={
       "Sleep Spindle Refractoriness Segregates Periods of Memory Reactivation (Antony, Piloto, Wang, Pacheco, Norman & Paller)",
       "Targeted Memory Reactivation during Sleep Depends on Prior Learning (Creery, Oudiette, Antony & Paller)",
       "Identification of memory reactivation during sleep by EEG classification (Belal, Cousins, El-Deredy, Parkes, Schneider, Tsujimura et al.)"
-     ]
+     ],
+     "head": "A small, real boost",
+     "src": "Promoting memory consolidation during…, 2020",
+     "plain": "Still being argued over"
     },
     {
      "n": 20,
      "id": 2500,
      "year": 2020,
      "title": "Memory engrams: Recalling the past and imagining the future",
-     "cap": "In 2020, a review of the engram, the physical trace of a memory in a small group of cells, first proposed in 1904.",
-     "rating": "living",
+     "cap": "A memory may live in a small group of cells, an idea first proposed in 1904. New tools now let scientists see and control them.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 2500 · 2020 · Science · living · cited 1081 total / 423 in 2024-25 · edges 19 (0 curated)",
-     "summary": "A review of the memory engram, the physical trace of a memory in a small group of brain cells, first proposed in 1904. New tools let scientists see and control engrams, treating them as the basic unit of memory.",
      "url": "https://doi.org/10.1126/science.aaw4325",
      "links": [
       "The memory function of sleep (Diekelmann & Born)",
@@ -428,7 +384,10 @@ window.FIELD={
       "Engrams and circuits crucial for systems consolidation of a memory",
       "Memory retrieval by activating engram cells in mouse models of early Alzheimer’s disease",
       "The hippocampal sharp wave–ripple in memory retrieval for immediate use and consolidation (Joo & Frank)"
-     ]
+     ],
+     "head": "The trace of a memory",
+     "src": "Memory engrams, 2020",
+     "plain": "Still being argued over"
     }
    ]
   }
@@ -436,11 +395,11 @@ window.FIELD={
  "meta": {
   "title": "Learning & holding",
   "kicker": "Reality Sourcing",
-  "intro": "This is a journey through the research that helped us understand learning and memory, and what holding on really means.",
-  "sub": "5 rooms, oldest to newest. Dim rooms and dashed cards mean thin evidence.",
-  "years": "20 MARKERS · FIVE ROOMS · 1852 – 2020",
-  "entrance_title": "How learning and memory came to be understood",
-  "entrance_note": "5 era-rooms, 1852 to 2020. Dim rooms mean thin evidence.",
+  "intro": "Your memories aren't stored like files on a laptop. They are built by cells that fire together, edited while you sleep, and sometimes still there when you think they're lost. Here's how we learned that.",
+  "sub": "Start in 1852 with mind and body. End in 2020 with scientists switching memories back on.",
+  "years": "20 STOPS · 5 ROOMS · 1852 – 2020",
+  "entrance_title": "Before you start",
+  "entrance_note": "Five rooms, from 1852 to 2020. Dim rooms have less evidence.",
   "imgs": [
    "01_1852",
    "02_1862",
@@ -474,8 +433,8 @@ window.FIELD={
    "13": "Ryan et al."
   },
   "end": {
-   "room": "Next door: Speech & meaning",
-   "note": "The next walk is through this door.",
+   "room": "Next: Speech & meaning",
+   "note": "From one word, \"Tan\", to a language network",
    "href": "../speech/",
    "label": "Walk into Speech & meaning",
    "img": "00_next"

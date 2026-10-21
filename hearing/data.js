@@ -1,207 +1,166 @@
 window.FIELD={
  "field": "Hearing",
- "arc": "Change: pitch as body science (1863) → two ears, one followed (1953–64) → sound grouped into streams (1990–2005) → the ear predicts and flags surprise (2015–17) → hearing and seeing bound together, and music read back from the brain (2016–2025).\nUnderstanding: hearing is not a microphone. The brain sorts sound into streams, guesses what comes next, and checks it against sight and movement.",
+ "arc": "\nStart in 1863 with the science of musical notes. End in 2025 with mice whose brains notice a sound that doesn't match their steps.",
  "gaps": [
-  "8 of the 20 markers are thin. Every marker before 2005 has zero links in the Pixel Hound map, so the first three rooms are dim. That is about how the map was built, not how much these studies mattered.",
-  "Long gaps: 1863→1935, 1964→1985 and 2005→2015 have no hearing markers.",
-  "Several markers live in other Pixel Hound fields (Speech & meaning, Truth showing up). Each receipt names its field.",
-  "Stop 2 (1935) and stop 6 (1985) are magazine articles, not research papers."
+  "Many of the older stops have only a little evidence so far, so the first rooms are dim.",
+  "There are long stretches with no stops: 1863 to 1935, 1964 to 1985, and 2005 to 2015.",
+  "Two stops are magazine articles, not research papers: 1935 and 1985."
  ],
  "rooms": [
   {
    "name": "Room 1 · The Tuning Bench (1863–1935)",
    "light": "dim",
-   "note": "Both markers have no rating and no links in the map. Lit low.",
+   "note": "Notes, harmonies, and lips that help you hear.",
    "cards": [
     {
      "n": 1,
      "id": 13,
      "year": 1863,
      "title": "Die Lehre von den Tonempfindungen (Helmholtz)",
-     "cap": "In 1863, Helmholtz treated pitch, harmonics and why some notes sound good together as things you can study in the body. Hearing became a feeling you could take apart.",
-     "rating": "unrated",
+     "cap": "Helmholtz studied pitch, harmonies, and why some notes sound good together. He treated hearing as something you could pull apart and study, like any other part of the body.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 13 · 1863 · no venue listed · unrated · no citation counts · edges 0 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "DataCite/e-rara 10.3931/e-rara-9201 · Braunschweig Vieweg 1863 scan — physiological acoustics of pitch, harmonics, and consonance; hearing as analyzable sensation, not pure musical intuition.",
      "url": "https://doi.org/10.3931/e-rara-9201",
-     "links": []
+     "links": [],
+     "head": "Notes you can take apart",
+     "src": "Helmholtz, 1863",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 2,
      "id": 88,
      "year": 1935,
      "title": "Do we hear with our eyes? — lip cues fix speech (Cotton, SciAm)",
-     "cap": "A 1935 magazine piece asked: do we hear with our eyes? Watching a speaker's face helps you understand the words when hearing fails.",
-     "rating": "unrated",
+     "cap": "When you can't hear someone clearly, watching their face fixes the words. Speech is something we see as well as hear.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 88 · 1935 · no venue listed · unrated · no citation counts · edges 0 (0 curated) · Pixel Hound field: Speech & meaning",
-     "summary": "watching the talker's face repairs understanding when hearing fails — speech as audiovisual sense, not ear alone.",
      "url": "https://www.scientificamerican.com/article/do-we-hear-with-our-eyes/",
-     "links": []
+     "links": [],
+     "head": "Do we hear with our eyes?",
+     "src": "Cotton, 1935",
+     "plain": "Only a little evidence so far"
     }
    ]
   },
   {
    "name": "Room 2 · One Ear, Then the Other (1953–1964)",
    "light": "dim",
-   "note": "Famous studies, but none has links in the map yet, so the room stays dim.",
+   "note": "Different words in each ear, and a mind that picks one.",
    "cards": [
     {
      "n": 3,
      "id": 121,
      "year": 1953,
      "title": "Some experiments on the recognition of speech (Cherry)",
-     "cap": "In 1953, Cherry played different speech into each ear. People could follow one stream while the other was filtered out: the 'cocktail party' problem.",
-     "rating": "unrated",
+     "cap": "Cherry played different speech into each ear. People could follow one voice and filter out the other. It is the same trick you use at a loud party.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 121 · 1953 · JASA · unrated · no citation counts · edges 0 (0 curated) · Pixel Hound field: Speech & meaning",
-     "summary": "dichotic listening / cocktail-party selection — one stream followed while the other is filtered.",
      "url": "https://jontalle.web.engr.illinois.edu/Public/Cherry-2ear-speech.53.pdf",
-     "links": []
+     "links": [],
+     "head": "The cocktail party problem",
+     "src": "Cherry, 1953",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 4,
      "id": 132,
      "year": 1957,
      "title": "The discrimination of speech sounds within and across phoneme boundaries.",
-     "cap": "In 1957, this study found that smoothly changing speech sounds are heard in separate bins: one sound or the other, with little in between.",
-     "rating": "landmark",
+     "cap": "Speech sounds can slide smoothly from one to another. We don't hear the slide. We hear one sound or the other, with almost nothing in between.",
      "thin": true,
-     "thin_reasons": [
-      "fewer than 3 edges",
-      "no edges at all",
-      "very short summary"
-     ],
-     "receipt": "id 132 · 1957 · Journal of Experimental Psychology · landmark · cited 1691 total / 76 in 2024-25 · edges 0 (0 curated) · Pixel Hound field: Speech & meaning",
-     "summary": "Continuous acoustics carved into phoneme bins",
      "url": "https://doi.org/10.1037/h0044417",
-     "links": []
+     "links": [],
+     "head": "Sounds snap into boxes",
+     "src": "The discrimination of speech sounds…, 1957",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 5,
      "id": 145,
      "year": 1964,
      "title": "Attention still hears the ignored ear (Treisman)",
-     "cap": "In 1964, Treisman showed that when you follow one ear, the other ear is turned down, not switched off. Meaning can still leak through.",
-     "rating": "living",
+     "cap": "Follow a voice in one ear and the other ear gets turned down, not off. Meaning can still sneak through.",
      "thin": true,
-     "thin_reasons": [
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 145 · 1964 · J. Verbal Learning & Verbal Behavior · living · cited 348 total / 13 in 2024-25 · edges 0 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "when you shadow one ear, the ignored ear is attenuated not blocked — meaning can still leak through, so attention is a soft filter on sense data.",
      "url": "https://doi.org/10.1016/S0022-5371(64)80015-3",
-     "links": []
+     "links": [],
+     "head": "The other ear is still listening",
+     "src": "Treisman, 1964",
+     "plain": "Only a little evidence so far"
     }
    ]
   },
   {
-   "name": "Room 3 · Streams in a Scene (1985–2005)",
+   "name": "Room 3 · Streams of Sound (1985–2005)",
    "light": "half",
-   "note": "Two thin markers, then the first one with a link.",
+   "note": "Babies, bands, and a brain that sorts the mix.",
    "cards": [
     {
      "n": 6,
      "id": 205,
      "year": 1985,
      "title": "The Perception of Speech in Early Infancy (Eimas)",
-     "cap": "By 1985, studies showed babies already sort the flow of sound into speech categories, long before they can talk.",
-     "rating": "unrated",
+     "cap": "Babies already split the flow of speech into separate sounds, long before they can talk. Hearing language starts as sorting.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 205 · 1985 · no venue listed · unrated · no citation counts · edges 0 (0 curated) · Pixel Hound field: Speech & meaning",
-     "summary": "babies already slice the sound stream into phonetic categories. Language hearing starts as a discrimination engine.",
      "url": "https://www.scientificamerican.com/article/the-perception-of-speech-in-early-i/",
-     "links": []
+     "links": [],
+     "head": "Babies sort sounds first",
+     "src": "Eimas, 1985",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 7,
      "id": 223,
      "year": 1990,
      "title": "Auditory Scene Analysis — Albert S. Bregman",
-     "cap": "In 1990, Bregman argued the ear does not just receive a soundtrack. It groups sound into streams: who is speaking, which instrument is playing.",
-     "rating": "unrated",
+     "cap": "Bregman argued that your ears don't receive one soundtrack. Your brain groups sound into streams: who is talking, which instrument is playing.",
      "thin": true,
-     "thin_reasons": [
-      "no rating",
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 223 · 1990 · no venue listed · unrated · no citation counts · edges 0 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "the ear does not receive a soundtrack; it groups streams (who is speaking, which instrument). Hearing is scene construction.",
      "url": "https://blackwells.co.uk/bookshop/product/Auditory-Scene-Analysis-by-Albert-S-Bregman/9780262022972",
-     "links": []
+     "links": [],
+     "head": "Your brain splits the mix",
+     "src": "Bregman, 1990",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 8,
      "id": 288,
      "year": 2005,
      "title": "Perceptual Organization of Tone Sequences in the Auditory Cortex of Awake Macaques",
-     "cap": "In 2005, recordings in awake monkeys showed the same mix of tones turning from one stream into two over time, inside the hearing part of the brain.",
-     "rating": "living",
+     "cap": "Play the same mix of beeps for a while. In monkeys' hearing areas, one stream of sound turned into two over time.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 288 · 2005 · Neuron · living · cited 290 total / 14 in 2024-25 · edges 1 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "One stream vs two emerges over time in cortex from same mixture",
      "url": "https://doi.org/10.1016/j.neuron.2005.08.039",
      "links": [
       "Neuronal correlates of a perceptual decision"
-     ]
+     ],
+     "head": "One stream becomes two",
+     "src": "Perceptual Organization of Tone…, 2005",
+     "plain": "Still being argued over"
     }
    ]
   },
   {
    "name": "Room 4 · The Ear Guesses Ahead (2015–2017)",
    "light": "bright",
-   "note": "Well-linked, still-argued papers. Here hearing turns out to predict.",
+   "note": "Hearing turns out to predict what comes next.",
    "cards": [
     {
      "n": 9,
      "id": 513,
      "year": 2015,
      "title": "Sustained Perceptual Deficits from Transient Sensory Deprivation (Caras & Sanes)",
-     "cap": "In 2015: a short spell of hearing loss early in life left lasting problems, even after hearing came back. The senses need the right input at the right time.",
-     "rating": "living",
+     "cap": "A short spell of hearing loss early in life caused problems that lasted, even after hearing came back. The senses need the right sounds at the right time.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 513 · 2015 · J Neurosci · living · cited 78 total / 16 in 2024-25 · edges 1 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "brief developmental hearing loss leaves lasting perceptual deficits after hearing returns—senses need the right early input window or perception stays warped.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4518056/",
      "links": [
       "Linguistic Experience Alters Phonetic Perception in Infants by 6 Months of Age"
-     ]
+     ],
+     "head": "Early silence leaves a mark",
+     "src": "Caras & Sanes, 2015",
+     "plain": "Still being argued over"
     },
     {
      "n": 10,
      "id": 1050,
      "year": 2016,
      "title": "Brain responses in humans reveal ideal observer-like sensitivity to complex acoustic patterns",
-     "cap": "In 2016, listeners spotted a pattern forming in fast tone sequences about as well as an ideal observer would. Brain activity tracked how predictable the tones were. Lab tones, not speech.",
-     "rating": "living",
+     "cap": "Listeners spotted a pattern hidden in fast beeps about as well as a perfect calculator would. Their brains tracked how predictable each beep was.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1050 · 2016 · PNAS · living · cited 295 total / 69 in 2024-25 · edges 5 (0 curated) · Pixel Hound field: Truth showing up",
-     "summary": "behaviour + MEG + fMRI: listeners spotted a pattern forming inside fast tone sequences about as well as an ideal observer; activity tracked predictability across auditory cortex, hippocampus, frontal cortex; lab tones, not speech; online 19 Jan 2016",
      "url": "https://doi.org/10.1073/pnas.1508523113",
      "links": [
       "A theory of cortical responses — predictive coding in the cortex (Friston)",
@@ -209,19 +168,18 @@ window.FIELD={
       "How Do Expectations Shape Perception? (de Lange, Heilbron & Kok)",
       "Great Expectations: Is there Evidence for Predictive Coding in Auditory Cortex?",
       "Prediction Error Signaling Explains Neuronal Mismatch Responses in the Medial Prefrontal Cortex (Casado-Román, Carbajal, Pérez-González & Malmierca)"
-     ]
+     ],
+     "head": "A pattern-spotter in your head",
+     "src": "Brain responses in humans reveal ideal…, 2016",
+     "plain": "Still being argued over"
     },
     {
      "n": 11,
      "id": 1066,
      "year": 2016,
      "title": "Hierarchy of prediction errors for auditory events in human temporal and frontal cortex (Dürschmid, Edwards, Reichert, Dewar, Hinrichs, Heinze, Kirsch, Dalal et al.)",
-     "cap": "Also in 2016: when a sound breaks the pattern, signals flag the surprise in both the hearing and the frontal parts of the brain, in a hierarchy.",
-     "rating": "living",
+     "cap": "When a sound breaks the pattern, the hearing area and the front of the brain both raise a flag. Surprise is checked at more than one level.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1066 · 2016 · PNAS · living · cited 160 total / 36 in 2024-25 · edges 10 (0 curated) · Pixel Hound field: Truth showing up",
-     "summary": "frontal high-γ (not just low-frequency ERPs) flags unpredictable auditory deviations — prediction-error hierarchy across temporal and frontal cortex.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4914143/",
      "links": [
       "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
@@ -229,19 +187,18 @@ window.FIELD={
       "Great Expectations: Is there Evidence for Predictive Coding in Auditory Cortex?",
       "Auditory mismatch negativity under predictive coding framework and its role in psychotic disorders (Fong, Law, Uka & Koike)",
       "Neurons along the auditory pathway exhibit a hierarchical organization of prediction error (Parras, Nieto-Diego, Carbajal, Valdés-Baizabal, Escera & Malmierca)"
-     ]
+     ],
+     "head": "The brain flags surprises",
+     "src": "Dürschmid et al., 2016",
+     "plain": "Still being argued over"
     },
     {
      "n": 12,
      "id": 1449,
      "year": 2017,
      "title": "Temporal modulations in speech and music",
-     "cap": "In 2017, 25 hours of speech in nine languages and 39 hours of music were measured. Speech pulses about 5 times a second, music about 2.",
-     "rating": "living",
+     "cap": "Researchers measured 25 hours of speech in nine languages and 39 hours of music. Speech has a beat of about 5 per second. Music is closer to 2.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1449 · 2017 · Neuroscience & Biobehavioral Reviews · living · cited 508 total / 112 in 2024-25 · edges 5 (0 curated) · Pixel Hound field: Speech & meaning",
-     "summary": "Analysing 25 hours of speech in nine languages and 39 hours of music showed speech has a steady rhythm of about 5 beats a second and music about 2. These may be built-in rhythms.",
      "url": "https://doi.org/10.1016/j.neubiorev.2017.02.011",
      "links": [
       "Cortical tracking of hierarchical linguistic structures in connected speech",
@@ -249,19 +206,18 @@ window.FIELD={
       "The coupling between auditory and motor cortices is rate-restricted: Evidence for an intrinsic speech-motor rhythm",
       "Roles of Brain Criticality and Multiscale Oscillations in Temporal Predictions for Sensorimotor Processing (Palva & Palva)",
       "Evolutionarily conserved neural signatures involved in sequencing predictions and their relevance for language (Kikuchi, Sedley, Griffiths & Petkov)"
-     ]
+     ],
+     "head": "Speech pulses 5 times a second",
+     "src": "Temporal modulations in speech and music, 2017",
+     "plain": "Still being argued over"
     },
     {
      "n": 13,
      "id": 1509,
      "year": 2017,
      "title": "Neurons along the auditory pathway exhibit a hierarchical organization of prediction error (Parras, Nieto-Diego, Carbajal, Valdés-Baizabal, Escera & Malmierca)",
-     "cap": "In 2017, 'that wasn't expected' signals were found growing step by step along the hearing pathway, from midbrain to thalamus to cortex. Surprise is not only a cortex trick.",
-     "rating": "living",
+     "cap": "'That wasn't expected' signals got stronger step by step on the way from the brainstem to the hearing area. Surprise isn't only handled at the top.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1509 · 2017 · Nat Commun · living · cited 343 total / 88 in 2024-25 · edges 11 (0 curated) · Pixel Hound field: Truth showing up",
-     "summary": "prediction-error signals grow from midbrain→thalamus→auditory cortex (and lemniscal→non-lemniscal)—mismatch isn’t only a cortex trick.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5732270/",
      "links": [
       "Repetition suppression and its contextual determinants in predictive coding (Auksztulewicz & Friston)",
@@ -269,19 +225,18 @@ window.FIELD={
       "Forms of prediction in the nervous system (Teufel & Fletcher)",
       "Disruption of hierarchical predictive coding during sleep (Strauss, Sitt, King, Elbaz, Azizi, Buiatti, Naccache, van Wassenhove & Dehaene)",
       "Auditory mismatch negativity under predictive coding framework and its role in psychotic disorders (Fong, Law, Uka & Koike)"
-     ]
+     ],
+     "head": "Surprise grows as it travels",
+     "src": "Parras et al., 2017",
+     "plain": "Still being argued over"
     },
     {
      "n": 14,
      "id": 1513,
      "year": 2017,
      "title": "Pavlovian conditioning–induced hallucinations result from overweighting of perceptual priors",
-     "cap": "In 2017, people learned that a light came with a faint tone. Later, some 'heard' the tone when only the light came on. Small groups, a lab task, not everyday voices.",
-     "rating": "living",
+     "cap": "People learned that a light came with a faint tone. Later, some of them heard the tone when only the light came on. Expectation made the sound.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1513 · 2017 · Science · living · cited 679 total / 147 in 2024-25 · edges 25 (0 curated) · Pixel Hound field: Truth showing up",
-     "summary": "empirical: light paired with a faint tone until people “hear” the tone when only the light appears; four groups split by voice-hearing × treatment-seeking; fMRI + computational model; modest samples, lab task ≠ everyday voices",
      "url": "https://doi.org/10.1126/science.aan3458",
      "links": [
       "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
@@ -289,99 +244,91 @@ window.FIELD={
       "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
       "Shift toward prior knowledge confers a perceptual advantage in early psychosis and psychosis-prone healthy individuals (Teufel, Subramaniam, Dobler, Perez, Finnemann, Mehta et al.)",
       "How Do Expectations Shape Perception? (de Lange, Heilbron & Kok)"
-     ]
+     ],
+     "head": "Hearing a tone that isn't there",
+     "src": "Pavlovian conditioning–induced…, 2017",
+     "plain": "Still being argued over"
     }
    ]
   },
   {
    "name": "Room 5 · Sound Meets Sight (2016–2025)",
    "light": "bright",
-   "note": "Hearing and seeing work as one team, and the listening brain can now be read.",
+   "note": "Eyes and ears working as one team.",
    "cards": [
     {
      "n": 15,
      "id": 843,
      "year": 2016,
      "title": "Defining Auditory-Visual Objects: Behavioral Tests and Physiological Mechanisms (Bizley, Maddox & Lee)",
-     "cap": "In 2016, a review asked when a sound and a sight bind into one object, and which brain tests can prove the bind is real.",
-     "rating": "living",
+     "cap": "A review asked when a sound and a sight join into one thing. It also asked how scientists can prove that joining is real.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 843 · 2016 · Trends in Neurosciences · living · cited 105 total / 26 in 2024-25 · edges 3 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "when a sound and a sight bind into one object—and which brain tests prove the bind is real.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4738154/",
      "links": [
       "Neuro-oscillatory phase alignment drives speeded multisensory response times: an electro-corticographic investigation (Mercier, Molholm, Fiebelkorn, Butler, Schwartz & Foxe)",
       "Integration of Visual Information in Auditory Cortex Promotes Auditory Scene Analysis through Multisensory Binding (Atilgan, Town, Wood, Jones, Maddox, Lee & Bizley)",
       "Emergence of β and γ networks following multisensory training (La Rocca, Ciuciu, Engemann & van Wassenhove)"
-     ]
+     ],
+     "head": "When sound and sight become one",
+     "src": "Bizley, Maddox & Lee, 2016",
+     "plain": "Still being argued over"
     },
     {
      "n": 16,
      "id": 1281,
      "year": 2017,
      "title": "Contextual modulation of primary visual cortex by auditory signals (Petro, Paton & Muckli)",
-     "cap": "In 2017: sound patterns change activity in the earliest seeing part of the brain. Hearing gives vision context.",
-     "rating": "living",
+     "cap": "Patterns of sound changed activity in the very first seeing area of the brain. Hearing gives your eyes context.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 1281 · 2017 · Phil. Trans. B · living · cited 101 total / 27 in 2024-25 · edges 4 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "sound patterns reshape activity in early visual cortex—hearing helps vision by supplying context, not only late 'association' areas.",
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5206272/",
      "links": [
       "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
       "A theory of cortical responses — predictive coding in the cortex (Friston)",
       "Contextual Feedback to Superficial Layers of V1 (Muckli, De Martino, Vizioli, Petro, Smith, Ugurbil et al.)",
       "A roadmap for the study of conscious audition and its neural basis (Dykstra, Cariani & Gutschalk)"
-     ]
+     ],
+     "head": "Sound changes what you see",
+     "src": "Petro, Paton & Muckli, 2017",
+     "plain": "Still being argued over"
     },
     {
      "n": 17,
      "id": 2556,
      "year": 2020,
      "title": "Crossmodal associations modulate multisensory spatial integration (Tong, Li, Bruns & Röder)",
-     "cap": "In 2020: learned sight–sound pairings change how strongly what you see pulls where you hear a sound from. This is the ventriloquist effect.",
-     "rating": "living",
+     "cap": "What you see pulls where you think a sound comes from. That is why a puppet seems to talk. Learned sight-and-sound pairs change how strong that pull is.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 2556 · 2020 · no venue listed · living · cited 30 total / 14 in 2024-25 · edges 4 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "learned sight–sound pairings change how strongly vision pulls hearing in space (ventriloquism).",
      "url": "https://doi.org/10.3758/s13414-020-02083-2",
      "links": [
       "Cortical Hierarchies Perform Bayesian Causal Inference in Multisensory Perception (Rohe & Noppeney)",
       "Top-down modulation in the infant brain: Learning-induced expectations rapidly affect the sensory cortex at 6 months (Emberson, Richards & Aslin)",
       "Assessing the Role of the 'Unity Assumption' on Multisensory Integration: A Review (Chen & Spence)",
       "Experience with crossmodal statistics reduces the sensitivity for audio-visual temporal asynchrony (Habets, Bruns & Röder)"
-     ]
+     ],
+     "head": "The ventriloquist trick",
+     "src": "Tong, Li, Bruns & Röder, 2020",
+     "plain": "Still being argued over"
     },
     {
      "n": 18,
      "id": 2907,
      "year": 2023,
      "title": "Music can be reconstructed from human auditory cortex activity using nonlinear decoding models",
-     "cap": "In 2023, music was rebuilt from the brain activity of people listening to it. The recordings came from 29 epilepsy-surgery patients with electrodes on the brain's surface.",
-     "rating": "living",
+     "cap": "Researchers rebuilt a piece of music from the brain activity of people listening to it. The recordings came from 29 epilepsy patients with sensors on the brain's surface.",
      "thin": true,
-     "thin_reasons": [
-      "fewer than 3 edges",
-      "no edges at all"
-     ],
-     "receipt": "id 2907 · 2023 · PLOS Biology · living · cited 56 total / 45 in 2024-25 · edges 0 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "29 epilepsy-surgery patients with electrodes on the brain surface; recordings from 2008–2015 re-analysed — clinical sample, invasive method",
      "url": "https://doi.org/10.1371/journal.pbio.3002176",
-     "links": []
+     "links": [],
+     "head": "Music read back from the brain",
+     "src": "Music can be reconstructed from human…, 2023",
+     "plain": "Only a little evidence so far"
     },
     {
      "n": 19,
      "id": 2923,
      "year": 2023,
      "title": "Evidence of a predictive coding hierarchy in the human brain listening to speech",
-     "cap": "In 2023, brain scans of 304 people listening to short stories found a ladder of predictions about what comes next in speech.",
-     "rating": "living",
+     "cap": "Brain scans of 304 people listening to stories found predictions stacked like a ladder. Some guess the next sound, others guess much further ahead.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 2923 · 2023 · Nature Human Behaviour · living · cited 307 total / 185 in 2024-25 · edges 15 (0 curated) · Pixel Hound field: Speech & meaning",
-     "summary": "fMRI of 304 listeners to short stories; also bridges truth-showing-up",
      "url": "https://doi.org/10.1038/s41562-022-01516-2",
      "links": [
       "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
@@ -389,26 +336,28 @@ window.FIELD={
       "Cortical tracking of hierarchical linguistic structures in connected speech",
       "fMRI reveals language-specific predictive coding during naturalistic sentence comprehension (Shain, Blank, van Schijndel, Schuler & Fedorenko)",
       "A hierarchy of linguistic predictions during natural language comprehension"
-     ]
+     ],
+     "head": "A ladder of predictions",
+     "src": "Evidence of a predictive coding…, 2023",
+     "plain": "Still being argued over"
     },
     {
      "n": 20,
      "id": 3001,
      "year": 2025,
      "title": "Multimodal mismatch responses in mouse auditory cortex",
-     "cap": "In 2025, in mice: the hearing part of the brain flags 'that sound didn't match my movement', and surprises from sight feed into the same signal.",
-     "rating": "unrated",
+     "cap": "In mice, the hearing part of the brain flags a sound that doesn't match their movement. Surprises from the eyes feed into the same signal.",
      "thin": false,
-     "thin_reasons": [],
-     "receipt": "id 3001 · 2025 · eLife · unrated · cited 4 total / 1 in 2024-25 · edges 4 (0 curated) · Pixel Hound field: Seeing & hearing",
-     "summary": "In mice, the hearing part of the brain flags 'that sound didn't match my movement', and sight-based surprises feed into the same signal. This is how the brain checks its predictions across senses.",
      "url": "https://doi.org/10.7554/eLife.95398",
      "links": [
       "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
       "A Sensorimotor Circuit in Mouse Cortex for Visual Flow Predictions",
       "Visuomotor Coupling Shapes the Functional Development of Mouse Visual Cortex",
       "Mismatch Receptive Fields in Mouse Visual Cortex"
-     ]
+     ],
+     "head": "Did that match my step?",
+     "src": "Multimodal mismatch responses in mouse…, 2025",
+     "plain": ""
     }
    ]
   }
@@ -416,11 +365,11 @@ window.FIELD={
  "meta": {
   "title": "Hearing",
   "kicker": "Reality Sourcing",
-  "intro": "This is a journey through the research that helped us understand hearing, and what hearing really means.",
-  "sub": "How we learned the ear sorts and predicts, not just records.",
-  "years": "20 MARKERS · FIVE ROOMS · 1863 – 2025",
-  "entrance_title": "How hearing came to be understood",
-  "entrance_note": "Five era-rooms, 1863 to 2025. Dim rooms mean thin evidence.",
+  "intro": "Your ears don't just record sound like a microphone. Your brain splits a noisy room into voices, guesses the next note, and can even hear a tone that was never played. Here is how we found out.",
+  "sub": "Start in 1863 with the science of musical notes. End in 2025 with mice whose brains notice a sound that doesn't match their steps.",
+  "years": "20 STOPS · 5 ROOMS · 1863 – 2025",
+  "entrance_title": "Before you start",
+  "entrance_note": "Five rooms, from 1863 to 2025. Dim rooms have less evidence.",
   "imgs": [
    "01_1863",
    "02_1935",
@@ -458,8 +407,8 @@ window.FIELD={
    "17": "Tong, Li, Bruns & Röder"
   },
   "end": {
-   "room": "Next door: Truth showing up",
-   "note": "The next walk is through this door.",
+   "room": "Next: Truth showing up",
+   "note": "How a brain checks its guesses against the world",
    "href": "../truth/",
    "label": "Walk into Truth showing up",
    "img": "00_next"

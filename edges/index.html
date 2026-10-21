@@ -1,7 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <link rel="icon" href="data:,"><title>Life edges · Reality Sourcing</title>
-<style>
+<style>@font-face{font-family:'Instrument Serif';src:url(../fonts/InstrumentSerif-Regular.ttf) format('truetype');font-display:swap}@font-face{font-family:'Instrument Serif';font-style:italic;src:url(../fonts/InstrumentSerif-Italic.ttf) format('truetype');font-display:swap}
+
 html,body{margin:0;height:100%;background:#050407;color:#e5d1eb;font:15px/1.45 Georgia,'Times New Roman',serif;overflow:hidden;overscroll-behavior:none;touch-action:none}
 canvas{display:block;position:fixed;inset:0}
 #top{position:fixed;top:0;left:0;right:0;padding:calc(env(safe-area-inset-top) + 12px) 16px 18px;background:linear-gradient(#050407f0,#05040700);pointer-events:none}
@@ -32,8 +33,10 @@ canvas{display:block;position:fixed;inset:0}
 .go{display:inline-block;margin-top:4px;padding:10px 20px;border-radius:22px;border:1px solid #875db6;background:#1a1026;color:#e1b9ee;text-decoration:none;font:16px Georgia,serif;box-shadow:0 0 20px #9357d844}.go.ghost{margin-top:12px;background:none;box-shadow:none;font-size:14px;padding:6px 14px;border-color:#493461}
 @keyframes breathe{50%{text-shadow:0 0 44px #9357d8cc,0 0 110px #9357d866}}
 @media(min-width:900px){#card{left:auto;right:30px;bottom:86px;width:430px;max-height:70vh}#card .c{font-size:17px}}
+#card .hd{font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.1;margin:8px 0 6px;color:#fff}#card .c{font:15.5px/1.55 -apple-system,system-ui,'Segoe UI',sans-serif;opacity:.92}#card .src{margin-top:10px;font:11.5px/1.4 -apple-system,system-ui,sans-serif;opacity:.6;letter-spacing:.02em}#card .src a{color:inherit}
+#card .y,#title h2,#room{font-family:'Instrument Serif',Georgia,serif}#title p{font-family:-apple-system,system-ui,sans-serif;font-style:normal;font-size:15px;line-height:1.55}#title .intro{font-size:17px;max-width:520px}#title .lede{opacity:.75;max-width:460px}#roomnote{font-family:-apple-system,system-ui,sans-serif}
 </style></head><body>
-<div id="title"><div class="k">Reality Sourcing</div><h2>Life edges</h2><p class="intro">This is a journey through the research that helped us understand the edges of life and mind, and what those edges really mean.</p><p>5 rooms, oldest to newest. Dim rooms and dashed cards mean thin evidence.</p><div class="yr">20 MARKERS · FIVE ROOMS · 1850 – 2022</div><button id="enter">Enter the walk</button><a class="hub" href="../">All walks</a></div>
+<div id="title"><div class="k">Reality Sourcing</div><h2>Life edges</h2><p class="intro">Where does thinking start, and where does awareness stop? This walk goes from the first timing of a nerve signal to doctors finding hidden awareness in patients who cannot move or speak.</p><p class="lede">Start in 1850 with a stopwatch on a nerve. End in 2022 with real symptoms that scans can now explain.</p><div class="yr">20 STOPS · 5 ROOMS · 1850 – 2022</div><button id="enter">Start walking</button><a class="hub" href="../">All walks</a></div>
 <div id="top"><h1><a href="../" style="color:inherit;text-decoration:none;pointer-events:auto">Reality Sourcing</a> · Life edges</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
@@ -112,11 +115,11 @@ if(qs.has('stop')){started=true;titleEl.classList.add('gone')}
 $('#bar').innerHTML=stops.map(s=>`<i class="${s.thin?'thin':''}"></i>`).join('');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function fill(){const card=$('#card');
- if(idx===0){$('#room').textContent='Entrance';$('#roomnote').textContent=M.entrance_note+(F.thinField?' This whole field is thin: few records have links.':'');card.className='';card.innerHTML=`<div class="y" style="font-size:24px">${esc(M.entrance_title)}</div><div class="c" style="margin-top:8px">${esc(F.arc.split('\n')[1])}</div><div class="s">${stops.length} markers from Pixel Hound. Captions use only facts from each marker's receipt.</div>`}
- else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;card.className='';card.innerHTML=`<a class="go" href="${esc(M.end.href)}">${esc(M.end.label)} ›</a><div class="y" style="font-size:20px;margin-top:12px">What this walk doesn't show</div>${F.gaps.map(g=>`<div class="s">• ${esc(g)}</div>`).join('')}${M.end.href==='../'?'':'<a class="go ghost" href="../">All walks</a>'}`}
+ if(idx===0){$('#room').textContent='Entrance';$('#roomnote').textContent=M.entrance_note+(F.thinField?' This whole field has only a little evidence so far.':'');card.className='';card.innerHTML=`<div class="y" style="font-size:24px">${esc(M.entrance_title)}</div><div class="c" style="margin-top:8px">${esc(F.arc.split('\n')[1])}</div><div class="s">Swipe, tap Next, or use the arrow keys. Tap "see the original" on any card to read the study.</div>`}
+ else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;card.className='';card.innerHTML=`<a class="go" href="${esc(M.end.href)}">${esc(M.end.label)} ›</a><div class="y" style="font-size:20px;margin-top:12px">Still missing from this walk</div>${F.gaps.map(g=>`<div class="s">• ${esc(g)}</div>`).join('')}${M.end.href==='../'?'':'<a class="go ghost" href="../">All walks</a>'}`}
  else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;card.className=s.thin?'thin':'';
   const nm=NAMES[s.n];
-  card.innerHTML=`<div class="y">${s.year}<span class="tag ${s.thin?'thin':''}">${s.thin?'thin evidence':esc(s.rating)}</span><span class="tag">${s.n}/${stops.length}</span></div>${nm?`<div class="nm">${esc(nm)}</div>`:''}<div class="t">${esc(s.title)}</div><div class="c">${esc(s.cap)}</div><details><summary>Recorded in Pixel Hound</summary>${esc(s.receipt)}<br>Summary line: “${esc(s.summary)}”${s.thin?'<br>Thin because: '+esc(s.thin_reasons.join(', ')):''}${s.links.length?'<br>Connects to: '+esc(s.links.join('; ')):''}${s.url?`<br><a style="color:#ac7fdf" href="${esc(s.url)}" target="_blank" rel="noopener">source</a>`:''}</details>`}
+  const tg=s.plain?`<span class="tag ${s.thin?'thin':''}">${esc(s.plain)}</span>`:'';card.innerHTML=`<div class="y">${s.year}${tg}<span class="tag">${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div><div class="src">Recorded in Pixel Hound · ${esc(s.src)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>`:''}</div>`}
  $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;}
 let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
  history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};

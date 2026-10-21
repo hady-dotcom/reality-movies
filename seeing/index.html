@@ -35,12 +35,13 @@ canvas{display:block;position:fixed;inset:0}
 @media(min-width:900px){#card{left:auto;right:30px;bottom:86px;width:430px;max-height:70vh}#card .c{font-size:17px}}
 #card .hd{font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.1;margin:8px 0 6px;color:#fff}#card .c{font:15.5px/1.55 -apple-system,system-ui,'Segoe UI',sans-serif;opacity:.92}#card .src{margin-top:10px;font:11.5px/1.4 -apple-system,system-ui,sans-serif;opacity:.6;letter-spacing:.02em}#card .src a{color:inherit}
 #card .y,#title h2,#room{font-family:'Instrument Serif',Georgia,serif}#title p{font-family:-apple-system,system-ui,sans-serif;font-style:normal;font-size:15px;line-height:1.55}#title .intro{font-size:17px;max-width:520px}#title .lede{opacity:.75;max-width:460px}#roomnote{font-family:-apple-system,system-ui,sans-serif}
+#card .play{display:inline-flex;align-items:center;gap:8px;margin-top:12px;height:40px;padding:0 18px;border-radius:20px;border:1px solid currentColor;background:#ffffff10;color:inherit;font:600 14px -apple-system,system-ui,sans-serif;cursor:pointer}#card .play span{font-size:11px}
 </style></head><body>
 <div id="title"><div class="k">Reality Sourcing</div><h2>Seeing</h2><p class="intro">Your eyes don't hand your brain a photo. Your brain builds the picture, guesses what comes next, and even decides which hand is yours. Here is how people found that out, one experiment at a time.</p><p class="lede">Start in 1851 with two pins on the skin. End in 2024 with signals from your own heart.</p><div class="yr">20 STOPS · 5 ROOMS · 1851 – 2024</div><button id="enter">Start walking</button><a class="hub" href="../">All walks</a></div>
 <div id="top"><h1><a href="../" style="color:inherit;text-decoration:none;pointer-events:auto">Reality Sourcing</a> · Seeing</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
-<script src="data.js"></script><script src="theme.js"></script>
+<script src="data.js"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#f6a640',b:'#b8461c',hi:'#ffe6b8',bg0:'#0a0604',bg1:'#2b1607'}</script><script src="../demos/demo.js"></script><script src="demos.js"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD, M=F.meta, stops=[];
@@ -119,7 +120,7 @@ function fill(){const card=$('#card');
  else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;card.className='';card.innerHTML=`<a class="go" href="${esc(M.end.href)}">${esc(M.end.label)} ›</a><div class="y" style="font-size:20px;margin-top:12px">Still missing from this walk</div>${F.gaps.map(g=>`<div class="s">• ${esc(g)}</div>`).join('')}${M.end.href==='../'?'':'<a class="go ghost" href="../">All walks</a>'}`}
  else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;card.className=s.thin?'thin':'';
   const nm=NAMES[s.n];
-  const tg=s.plain?`<span class="tag ${s.thin?'thin':''}">${esc(s.plain)}</span>`:'';card.innerHTML=`<div class="y">${s.year}${tg}<span class="tag">${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div><div class="src">Recorded in Pixel Hound · ${esc(s.src)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>`:''}</div>`}
+  const tg=s.plain?`<span class="tag ${s.thin?'thin':''}">${esc(s.plain)}</span>`:'';card.innerHTML=`<div class="y">${s.year}${tg}<span class="tag">${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div>${window.DEMOS&&DEMOS[s.n]?'<button class="play" type="button"><span>▶</span> Play the experiment</button>':''}<div class="src">Recorded in Pixel Hound · ${esc(s.src)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>`:''}</div>`}
  $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;}
 let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
  history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};
@@ -127,15 +128,16 @@ let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')]
  window.__state.room=idx===0?'Entrance':idx===N-1?M.end.room:F.rooms[stops[idx-1].ri].name}
 function go(d){if(!started){start();return}const n=Math.max(0,Math.min(N-1,idx+d));if(n!==idx){idx=n;ui()}}
 window.__go=n=>{started=true;titleEl.classList.add('gone');idx=n;ui(true)};
+$('#card').addEventListener('click',e=>{if(e.target.closest('.play')&&idx>0&&idx<N-1){const s=stops[idx-1];Demo.open(s.n,s.head)}});window.__openDemo=()=>{const s=stops[idx-1];Demo.open(s.n,s.head)};
 $('#next').onclick=()=>go(1);$('#prev').onclick=()=>go(-1);
-addEventListener('keydown',e=>{if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(e.key)){go(1);e.preventDefault()}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){go(-1);e.preventDefault()}});
-let wheelAcc=0,wheelLock=0;addEventListener('wheel',e=>{if(e.target.closest('#card'))return;e.preventDefault();const now=performance.now();if(now<wheelLock)return;wheelAcc+=e.deltaY;if(Math.abs(wheelAcc)>60){go(Math.sign(wheelAcc));wheelAcc=0;wheelLock=now+500}},{passive:false});
+addEventListener('keydown',e=>{if(window.__demoOpen)return;if(['ArrowRight','ArrowDown',' ','PageDown','Enter'].includes(e.key)){go(1);e.preventDefault()}if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){go(-1);e.preventDefault()}});
+let wheelAcc=0,wheelLock=0;addEventListener('wheel',e=>{if(window.__demoOpen)return;if(e.target.closest('#card'))return;e.preventDefault();const now=performance.now();if(now<wheelLock)return;wheelAcc+=e.deltaY;if(Math.abs(wheelAcc)>60){go(Math.sign(wheelAcc));wheelAcc=0;wheelLock=now+500}},{passive:false});
 let sx=0,sy=0,st=0;addEventListener('touchstart',e=>{const p=e.touches[0];sx=p.clientX;sy=p.clientY;st=Date.now()},{passive:true});
-addEventListener('touchend',e=>{if(e.target.closest('button,details,a,#card'))return;const p=e.changedTouches[0],dx=p.clientX-sx,dy=p.clientY-sy;if(Math.max(Math.abs(dx),Math.abs(dy))>40){go(Math.abs(dx)>Math.abs(dy)?(dx<0?1:-1):(dy<0?1:-1))}else if(Date.now()-st<300)go(p.clientX<innerWidth*.3?-1:1)});
+addEventListener('touchend',e=>{if(window.__demoOpen)return;if(e.target.closest('button,details,a,#card'))return;const p=e.changedTouches[0],dx=p.clientX-sx,dy=p.clientY-sy;if(Math.max(Math.abs(dx),Math.abs(dy))>40){go(Math.abs(dx)>Math.abs(dy)?(dx<0?1:-1):(dy<0?1:-1))}else if(Date.now()-st<300)go(p.clientX<innerWidth*.3?-1:1)});
 function resize(){renderer.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.fov=cam.aspect<.8?74:58;cam.updateProjectionMatrix()}
 addEventListener('resize',resize);resize();ui(true);
 const clock=new THREE.Clock();let T=0;
-function loop(){const dt=Math.min(clock.getDelta(),.05);T+=dt;const g=pose(idx),a=1-Math.exp(-dt*2.6);
+function loop(){if(window.__demoOpen){requestAnimationFrame(loop);return}const dt=Math.min(clock.getDelta(),.05);T+=dt;const g=pose(idx),a=1-Math.exp(-dt*2.6);
  curP.lerp(g.p,a);curL.lerp(g.l,a*1.15>1?1:a*1.15);
  cam.position.set(curP.x+Math.sin(T*.4)*.04,curP.y+Math.sin(T*.7)*.025,curP.z);cam.lookAt(curL);
  for(const q of pulses){const v=q.b+q.a*Math.sin(T*q.f*2+q.ph);q.o.material.opacity=Math.max(0,v);if(q.sc)q.o.scale.setScalar(q.sc*(1+.12*Math.sin(T*q.f*2+q.ph)))}

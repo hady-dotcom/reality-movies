@@ -17,6 +17,7 @@ const css=`#demo{position:fixed;inset:0;z-index:20;display:flex;align-items:cent
 #demo button{font:15px -apple-system,system-ui,sans-serif;color:${PAL.hi};background:#ffffff10;border:1px solid ${PAL.a}66;border-radius:22px;height:44px;min-width:44px;padding:0 16px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex:none}
 #demo button svg{width:22px;height:22px;fill:currentColor}
 #demo .dm-i{width:44px;padding:0}
+#demo .dm-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;pointer-events:none;transition:opacity .7s;z-index:2}#demo .dm-poster.on{opacity:1;pointer-events:auto;cursor:pointer}
 #demo .dm-stage{grid-area:stage;position:relative;width:min(100%,calc(62dvh * .75));aspect-ratio:3/4;margin:0 auto;border-radius:16px;overflow:hidden;background:${PAL.bg0};box-shadow:inset 0 0 0 1px #ffffff14}
 #demo canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 #demo .dm-hint{position:absolute;left:0;right:0;top:12px;text-align:center;font:600 14px -apple-system,system-ui,sans-serif;color:#fff;opacity:0;transition:opacity .4s;pointer-events:none;text-shadow:0 1px 8px #000}
@@ -33,7 +34,7 @@ let sBtn,AC=null,MG=null,sound=false,el,cv,ctx,mctx,off,capEl,bar,hintEl,pBtn,D=
 function build(){
  const st=document.createElement('style');st.textContent=css;document.head.appendChild(st);
  el=document.createElement('div');el.id='demo';el.setAttribute('role','dialog');el.setAttribute('aria-modal','true');
- el.innerHTML='<div class="dm-box"><div class="dm-top"><div><div class="dm-k">Play the experiment</div><div class="dm-t"></div></div><button class="dm-x dm-i" aria-label="Close">✕</button></div><div class="dm-stage"><canvas></canvas><div class="dm-hint"></div></div><div class="dm-cap" aria-live="polite"></div><div class="dm-bar"><i></i></div><div class="dm-ctl"><button class="dm-p dm-i" aria-label="Pause">'+IC.pause+'</button><button class="dm-r dm-i" aria-label="Replay">'+IC.replay+'</button><button class="dm-s dm-i" aria-label="Sound" aria-pressed="false" hidden>'+IC.soff+'</button><button class="dm-done">Back to the walk</button></div></div>';
+ el.innerHTML='<div class="dm-box"><div class="dm-top"><div><div class="dm-k">Play the experiment</div><div class="dm-t"></div></div><button class="dm-x dm-i" aria-label="Close">✕</button></div><div class="dm-stage"><canvas></canvas><img class="dm-poster" alt=""><div class="dm-hint"></div></div><div class="dm-cap" aria-live="polite"></div><div class="dm-bar"><i></i></div><div class="dm-ctl"><button class="dm-p dm-i" aria-label="Pause">'+IC.pause+'</button><button class="dm-r dm-i" aria-label="Replay">'+IC.replay+'</button><button class="dm-s dm-i" aria-label="Sound" aria-pressed="false" hidden>'+IC.soff+'</button><button class="dm-done">Back to the walk</button></div></div>';
  document.body.appendChild(el);cv=el.querySelector('canvas');mctx=cv.getContext('2d');off=document.createElement('canvas');ctx=off.getContext('2d');capEl=el.querySelector('.dm-cap');bar=el.querySelector('.dm-bar i');hintEl=el.querySelector('.dm-hint');pBtn=el.querySelector('.dm-p');sBtn=el.querySelector('.dm-s');
  sBtn.onclick=()=>{if(!AC){try{AC=new (window.AudioContext||window.webkitAudioContext)();MG=AC.createGain();MG.gain.value=.5;MG.connect(AC.destination)}catch(e){AC=null}}if(!AC)return;sound=!sound;if(sound&&AC.state==='suspended')AC.resume();sBtn.innerHTML=sound?IC.son:IC.soff;sBtn.setAttribute('aria-pressed',sound);sBtn.setAttribute('aria-label',sound?'Sound on':'Sound off')};
  el.querySelector('.dm-x').onclick=close;el.querySelector('.dm-done').onclick=close;el.querySelector('.dm-r').onclick=()=>start();
@@ -66,8 +67,11 @@ function loop(){if(!playing)return;const now=performance.now(),sp=window.__demoS
  if(t>=D.dur){playing=false;setP();el.dataset.ended='1';frame(1);return}
  raf=requestAnimationFrame(loop)}
 function open(n,title){const all=window.DEMOS||{};D=all[n];if(!D)return;(D.pics||[]).forEach(pic);if(!el)build();sBtn.hidden=!D.audio||!(window.AudioContext||window.webkitAudioContext);el.querySelector('.dm-t').textContent=title||'';
- window.__demoOpen=true;el.classList.add('on');size();rmNext=0;start()}
-function close(){playing=false;cancelAnimationFrame(raf);window.__demoOpen=false;el.classList.remove('on');D=null}
+ window.__demoOpen=true;el.classList.add('on');size();rmNext=0;
+ /* open on the stop's hero picture for a beat, then play */
+ const po=el.querySelector('.dm-poster');clearTimeout(posterT);if(window.DEMO_HERO&&!window.__noPoster){po.src=DEMO_HERO(n);po.classList.add('on');S={};D.init&&D.init(S);t=0;capI=-1;playing=false;setP();frame(1);const go=()=>{clearTimeout(posterT);po.onclick=null;po.classList.remove('on');if(D&&!playing&&t===0)start()};po.onclick=go;posterT=setTimeout(go,1600)}else{po.classList.remove('on');start()}}
+let posterT;
+function close(){clearTimeout(posterT);playing=false;cancelAnimationFrame(raf);window.__demoOpen=false;el.classList.remove('on');D=null}
 /* preview/test helper: jump to time T and hold */
 function seek(T){if(!D)return;playing=false;cancelAnimationFrame(raf);S={};D.init&&D.init(S);seeking=true;t=0;const step=1/30;while(t<T){t=Math.min(T,t+step);G.t=t;if(D.sim)D.sim(G,t,S)}t=T;frame(1);seeking=false;setP()}
 /* ===== drawing kit, logical canvas 600x800 ===== */

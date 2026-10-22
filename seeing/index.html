@@ -41,7 +41,7 @@ canvas{display:block;position:fixed;inset:0}
 <div id="top"><h1><a href="../" style="color:inherit;text-decoration:none;pointer-events:auto">Reality Sourcing</a> · Seeing</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
-<script src="data.js"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#f6a640',b:'#b8461c',hi:'#ffe6b8',bg0:'#0a0604',bg1:'#2b1607'}</script><script src="../demos/demo.js"></script><script src="demos.js"></script><script src="story.js"></script><script src="../storymap/storymap.js"></script>
+<script src="data.js"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#f6a640',b:'#b8461c',hi:'#ffe6b8',bg0:'#0a0604',bg1:'#2b1607'}</script><script src="../demos/demo.js"></script><script src="demos.js"></script><script src="story.js"></script><script src="../storymap/storymap.js"></script><script src="../cinematic/cin.js"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD, M=F.meta, stops=[];
@@ -63,9 +63,9 @@ const halo=(color,size,op)=>{const s=new THREE.Sprite(new THREE.SpriteMaterial({
 const pulses=[], backdrops=[];
 const plinthPos=[];let k=0;
 const floorMat=new THREE.MeshStandardMaterial({color:0x2a1d12,roughness:.35,metalness:.3});
-const plGeo=new THREE.BoxGeometry(.8,1,.8), cardGeo=new THREE.PlaneGeometry(1.9,1.9), frameGeo=new THREE.PlaneGeometry(2.04,2.04);
+const plGeo=new THREE.BoxGeometry(.8,1,.8), cardGeo=new THREE.PlaneGeometry(2.2,1.65), frameGeo=new THREE.PlaneGeometry(2.34,1.79);
 F.rooms.forEach((r,ri)=>{const RD=RDS[ri],z0=ZS[ri], L=LIGHT[r.light]*(F.thinField?.8:1);
- const rt=tex(`img/room${ri+1}.jpg`);
+ const rt=tex(Cin.banner(ri));
  const floor=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),floorMat);floor.rotation.x=-Math.PI/2;floor.position.set(0,0,z0+RD/2);scene.add(floor);
  // walls: room mood image, darkened by evidence level
  for(const s of[-1,1]){const wt=rt.clone();wt.wrapS=THREE.MirroredRepeatWrapping;wt.repeat.set(2,1);wt.needsUpdate=true;const m=new THREE.MeshBasicMaterial({map:wt,color:new THREE.Color().setScalar(.2+.22*L)});const w=new THREE.Mesh(new THREE.PlaneGeometry(RD,5,8,1),m);w.rotation.y=-s*Math.PI/2;w.position.set(s*5,2.5,z0+RD/2);if(s>0)w.scale.x=-1;scene.add(w)}
@@ -79,7 +79,7 @@ F.rooms.forEach((r,ri)=>{const RD=RDS[ri],z0=ZS[ri], L=LIGHT[r.light]*(F.thinFie
  const n=r.cards.length;r.cards.forEach((c,i)=>{const side=(k%2)?1:-1;const z=z0+1.5+(i+.5)*(RD-3)/n;const thin=!!c.thin;
   const p=new THREE.Mesh(plGeo,new THREE.MeshStandardMaterial({color:thin?0x3a332a:0x6b4a26,roughness:.4,metalness:.6,emissive:thin?0x000000:0x2a1404}));p.position.set(side*3.6,.5,z);scene.add(p);
   const fr=new THREE.Mesh(frameGeo,new THREE.MeshBasicMaterial({color:thin?0x6a5d48:0xd9a54e,transparent:true,opacity:thin?.5:.9}));fr.position.set(side*4.93,2.1,z);fr.rotation.y=-side*Math.PI/2;scene.add(fr);
-  const card=new THREE.Mesh(cardGeo,new THREE.MeshBasicMaterial({map:tex(`img/${IMG[c.n-1]}.webp`),color:new THREE.Color().setScalar(thin?.62:1)}));
+  const card=new THREE.Mesh(cardGeo,new THREE.MeshBasicMaterial({map:tex(Cin.hero(c.n)),color:new THREE.Color().setScalar(thin?.62:1)}));
   card.position.set(side*4.9,2.1,z);card.rotation.y=-side*Math.PI/2;scene.add(card);
   const ch=halo(0xffb860,3.4,thin?.08:.18);ch.position.set(side*4.75,2.1,z);scene.add(ch);pulses.push({o:ch,b:thin?.08:.18,a:.05,f:.7,ph:k});
   const orb=new THREE.Mesh(new THREE.SphereGeometry(.09,16,12),new THREE.MeshBasicMaterial({color:thin?0x9a8a70:0xffe0a0}));orb.position.set(side*3.6,1.25,z);scene.add(orb);
@@ -112,6 +112,7 @@ const $=s=>document.querySelector(s);
 const titleEl=$('#title');let started=false;
 function start(){if(started)return;started=true;titleEl.classList.add('gone');if(idx===0)go(1)}
 $('#enter').onclick=e=>{e.stopPropagation();start()};
+Cin.sheet(n=>window.__go(n));
 if(qs.has('stop')){started=true;titleEl.classList.add('gone')}
 $('#bar').innerHTML=stops.map(s=>`<i class="${s.thin?'thin':''}"></i>`).join('');
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -120,8 +121,8 @@ function fill(){const card=$('#card');
  else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;card.className='';card.innerHTML=`<a class="go" href="${esc(M.end.href)}">${esc(M.end.label)} ›</a><div class="y" style="font-size:20px;margin-top:12px">Still missing from this walk</div>${F.gaps.map(g=>`<div class="s">• ${esc(g)}</div>`).join('')}${M.end.href==='../'?'':'<a class="go ghost" href="../">All walks</a>'}`}
  else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;card.className=s.thin?'thin':'';
   const nm=NAMES[s.n];
-  const tg=s.plain?`<span class="tag ${s.thin?'thin':''}">${esc(s.plain)}</span>`:'';card.innerHTML=`<div class="y">${s.year}${tg}<span class="tag">${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div>${window.DEMOS&&DEMOS[s.n]?'<button class="play" type="button"><span>▶</span> Play the experiment</button>':''}<div class="src">Recorded in Pixel Hound · ${esc(s.src)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>`:''}</div>`}
- $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;window.StoryMap&&StoryMap.refill(idx);}
+  const tg=s.plain?`<span class="tag ${s.thin?'thin':''}">${esc(s.plain)}</span>`:'';card.innerHTML=Cin.heroHTML(s)+`<div class="y">${s.year}${tg}<span class="tag">${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div>${window.DEMOS&&DEMOS[s.n]?'<button class="play" type="button"><span>▶</span> Play the experiment</button>':''}<div class="src">Recorded in Pixel Hound · ${esc(s.src)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>`:''}</div>`}
+ $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;window.StoryMap&&StoryMap.refill(idx);if(started)Cin.room(idx>0&&idx<N-1?stops[idx-1].ri:-1);}
 let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
  history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};
  if(first){fill()}else{const c=$('#card');c.classList.add('fade');clearTimeout(fadeT);fadeT=setTimeout(()=>{fill();c.classList.remove('fade')},260);$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}

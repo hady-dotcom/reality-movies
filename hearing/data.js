@@ -194,6 +194,23 @@ window.FIELD={
     },
     {
      "n": 12,
+     "id": 843,
+     "year": 2016,
+     "title": "Defining Auditory-Visual Objects: Behavioral Tests and Physiological Mechanisms (Bizley, Maddox & Lee)",
+     "cap": "A review asked when a sound and a sight join into one thing. It also asked how scientists can prove that joining is real.",
+     "thin": false,
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4738154/",
+     "links": [
+      "Neuro-oscillatory phase alignment drives speeded multisensory response times: an electro-corticographic investigation (Mercier, Molholm, Fiebelkorn, Butler, Schwartz & Foxe)",
+      "Integration of Visual Information in Auditory Cortex Promotes Auditory Scene Analysis through Multisensory Binding (Atilgan, Town, Wood, Jones, Maddox, Lee & Bizley)",
+      "Emergence of β and γ networks following multisensory training (La Rocca, Ciuciu, Engemann & van Wassenhove)"
+     ],
+     "head": "When sound and sight become one",
+     "src": "Bizley, Maddox & Lee, 2016",
+     "plain": "Still being argued over"
+    },
+    {
+     "n": 13,
      "id": 1449,
      "year": 2017,
      "title": "Temporal modulations in speech and music",
@@ -212,7 +229,7 @@ window.FIELD={
      "plain": "Still being argued over"
     },
     {
-     "n": 13,
+     "n": 14,
      "id": 1509,
      "year": 2017,
      "title": "Neurons along the auditory pathway exhibit a hierarchical organization of prediction error (Parras, Nieto-Diego, Carbajal, Valdés-Baizabal, Escera & Malmierca)",
@@ -231,7 +248,7 @@ window.FIELD={
      "plain": "Still being argued over"
     },
     {
-     "n": 14,
+     "n": 15,
      "id": 1513,
      "year": 2017,
      "title": "Pavlovian conditioning–induced hallucinations result from overweighting of perceptual priors",
@@ -252,27 +269,10 @@ window.FIELD={
    ]
   },
   {
-   "name": "Room 5 · Sound Meets Sight (2016–2025)",
+   "name": "Room 5 · Sound Meets Sight (2017–2025)",
    "light": "bright",
    "note": "Eyes and ears working as one team.",
    "cards": [
-    {
-     "n": 15,
-     "id": 843,
-     "year": 2016,
-     "title": "Defining Auditory-Visual Objects: Behavioral Tests and Physiological Mechanisms (Bizley, Maddox & Lee)",
-     "cap": "A review asked when a sound and a sight join into one thing. It also asked how scientists can prove that joining is real.",
-     "thin": false,
-     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4738154/",
-     "links": [
-      "Neuro-oscillatory phase alignment drives speeded multisensory response times: an electro-corticographic investigation (Mercier, Molholm, Fiebelkorn, Butler, Schwartz & Foxe)",
-      "Integration of Visual Information in Auditory Cortex Promotes Auditory Scene Analysis through Multisensory Binding (Atilgan, Town, Wood, Jones, Maddox, Lee & Bizley)",
-      "Emergence of β and γ networks following multisensory training (La Rocca, Ciuciu, Engemann & van Wassenhove)"
-     ],
-     "head": "When sound and sight become one",
-     "src": "Bizley, Maddox & Lee, 2016",
-     "plain": "Still being argued over"
-    },
     {
      "n": 16,
      "id": 1281,
@@ -382,10 +382,10 @@ window.FIELD={
    "09_2015",
    "10_2016",
    "11_2016",
+   "15_2016",
    "12_2017",
    "13_2017",
    "14_2017",
-   "15_2016",
    "16_2017",
    "17_2020",
    "18_2023",
@@ -401,8 +401,8 @@ window.FIELD={
    "7": "Bregman",
    "9": "Caras & Sanes",
    "11": "Dürschmid et al.",
-   "13": "Parras et al.",
-   "15": "Bizley, Maddox & Lee",
+   "12": "Bizley, Maddox & Lee",
+   "14": "Parras et al.",
    "16": "Petro, Paton & Muckli",
    "17": "Tong, Li, Bruns & Röder"
   },

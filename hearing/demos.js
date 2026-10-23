@@ -41,7 +41,7 @@ D[3]={dur:16,audio:1,pics:['tape-man'],rv:9,rvx:220,rvy:370,
   if(f>0){G.bubble(160,190,150,54,250,330,GO,f);G.text('following',235,215,{size:16,col:'#1a0d06',al:f})}}};
 // 4 Sounds snap into boxes (1957)
 D[4]={dur:17,audio:1,pics:['boy-ear'],rv:9.5,rvx:300,rvy:200,
- caps:[[0,'A sound slides smoothly, step by step'],[3,'From one speech sound to another'],[7,'But you hear only one or the other'],[11,'Almost nothing in between']],
+ caps:[[0,'A sound slides smoothly, step by step'],[3,'From one speech sound to another'],[7,'But you hear only one or the other'],[11,'Hardly any in-between']],
  draw(g,t,s){G.pic('boy-ear',0,0,600,800);const x=(Math.sin((t-2)*.55-1.57)+1)/2;const st=t<2?0:x;
   G.glass(40,60,520,230,22);const c=g.c;const gr=G.lg(70,0,530,0,[[0,'#ff9a5a'],[1,'#6ab8ff']]);G.rr(70,120,460,16,8,gr);
   for(let i=0;i<=8;i++)G.dot(70+i*57.5,128,4,WH,.6);G.ball(70+460*st,128,16,G.mix('#ff9a5a','#6ab8ff',st));
@@ -140,7 +140,7 @@ D[13]={dur:16,audio:1,pics:['duet'],rv:9,rvx:300,rvy:330,
   G.line(50,762,250,762,'#ffffff',3,.6);G.text('1 second',150,780,{size:14,al:.7})}};
 // 14 Parras 2017: surprise grows step by step on the way up
 D[14]={dur:16,audio:1,pics:['sound-lab'],rv:10,rvx:430,rvy:160,
- caps:[[0,'An unexpected sound enters'],[3,'Brainstem: a small "huh?"'],[5.5,'Next relay: bigger'],[8,'Hearing area: biggest'],[11,'Surprise grows on the way up']],
+ caps:[[0,'An unexpected sound enters'],[3,'Midbrain: a small "huh?"'],[5.5,'Next relay: bigger'],[8,'Hearing area: biggest'],[11,'Surprise grows on the way up']],
  draw(g,t,s){G.pic('sound-lab',0,0,600,800);dim(.35);const st=[['brainstem',620,3],['relay',440,5.5],['hearing area',260,8]];
   if(t<3.5)rings(164,300,t,RD,1,3,1.2,30,120);
   G.glass(250,190,320,500,26);G.path([[430,680],[430,260]],'#ffffff',6,.15);
@@ -159,7 +159,7 @@ D[15]={dur:18,audio:1,pics:['lamp-speaker'],hint:'Turn sound on: the last tone i
   G.text('light',40,680,{size:12,align:'left',al:.6});G.text('tone',40,725,{size:12,align:'left',al:.6})}};
 // 16 Petro, Paton & Muckli 2017: sound reaches the first seeing area
 D[16]={dur:16,pics:['mri-glow'],rv:9,rvx:440,rvy:220,
- caps:[[0,'Patterns of sound play in a scanner'],[4,'Watch the back of the brain, where seeing starts'],[7,'It changes with the sounds'],[11,'Hearing gives the eyes context']],
+ caps:[[0,'A review of brain-scan studies'],[4,'Watch the back of the brain, where seeing starts'],[7,'It changes with the sounds'],[11,'Hearing gives the eyes context']],
  draw(g,t){G.pic('mri-glow',0,0,600,800);const k=ramp(t,6,8),p=.6+.4*Math.sin(t*5);
   rings(300,600,t,BL,.6,4,.8,30,150);G.brain(300,220,.95,{spots:[[-20,40,60,.5,BL],[130,0,55,k*p,GO]]});
   if(t>4){G.at(300,220,.95);G.curveArrow(-10,50,70,110,120,15,GO,5,ramp(t,4,6));G.end();G.text('first seeing area',460,110,{size:15,col:GO,al:ramp(t,4,5)})}}};
@@ -184,8 +184,8 @@ D[18]={dur:17,audio:1,pics:['hospital'],rv:11,rvx:300,rvy:620,
   G.text('rebuilt',60,690,{size:14,align:'left',col:P.hi,al:k});if(k>0)G.wave(110,725,440*k,u=>mel(u*k)*.9+Math.sin(u*200)*4+20,P.hi,4,k,10)}};
 // 19 2023: predictions stacked like a ladder
 D[19]={dur:17,pics:['mri'],rv:11,rvx:300,rvy:150,
- caps:[[0,'304 people listen to stories in a scanner'],[4,'Some brain areas guess the next sound'],[7,'Others guess further ahead'],[10,'Predictions stacked like a ladder']],
- draw(g,t){G.pic('mri',0,0,600,800);dim(.35);const lv=[['next sound',1,4],['next word',3,6],['further ahead',7,8]];
+ caps:[[0,'304 people listen to stories in a scanner'],[4,'Some brain areas guess what comes very soon'],[7,'Others guess further ahead'],[10,'Predictions stacked like a ladder']],
+ draw(g,t){G.pic('mri',0,0,600,800);dim(.35);const lv=[['very soon',1,4],['a bit later',3,6],['further ahead',7,8]];
   G.glass(40,40,520,330,24);lv.forEach(([l,len,t0],i)=>{const y=310-i*95,k=ramp(t,t0,t0+1);G.text(l,70,y-30,{size:15,align:'left',al:.85*k});
    G.rr(70,y-10,460,16,8,'#ffffff',null,.08);G.rr(70,y-10,lerp(20,460,(len/7))*k,16,8,[GO,'#ffb070','#ffd8a0'][i],null,.9);G.bloom(70+lerp(20,460,len/7)*k,y-2,30,GO,k)});
   const x=(t*60)%520;G.text('· · the · story · went · on · ·',300+((-t*40)%120),430,{size:18,al:.6});
@@ -225,9 +225,9 @@ const STORY={
 4:[[0,'Q',"Speech sounds can blend smoothly into each other. So do we hear all the in-between sounds too? In 1957 researchers tested this."],
  [0,'S',"Phoneme = one of the small sounds words are built from, like the 'b' in 'bat'. The researchers made a row of sounds sliding from one phoneme to another."],
  [1,'D',"Each sound in the row is a tiny step on from the last. 'ba' and 'da' here are examples."],
- [3,'D',"Listeners heard sounds from the row and said whether they sounded the same or different."],
+ [3,'D',"Listeners heard sounds from the row and were tested on whether they could tell them apart."],
  [7,'R',"Small steps inside one phoneme were very hard to tell apart. A step of the same size across the border between two was easy."],
- [11,'R',"So people heard one sound or the other, with almost nothing in between."],
+ [11,'R',"So people mostly heard one sound or the other, with hardly any in-between."],
  [13,'W',"Your brain sorts speech into boxes, even when the sound itself slides smoothly."],
  [15,'N',"Thin evidence: our record has few details of the tests."]],
 5:[[0,'Q',"Cherry found we can tune out one ear. But is the ignored voice really gone? In 1964 Treisman tested it."],
@@ -255,27 +255,27 @@ const STORY={
  [4,'D',"At first they sound like one tune, hopping up and down."],
  [9,'R',"Keep listening, and it splits: a high stream and a low stream."],
  [13,'R',"In the monkeys' hearing area, the cells' responses changed over time in the same way: one stream turned into two."],
- [15,'W',"The brain doesn't just record sound. Over a few seconds, it decides how to group it."]],
+ [15,'W',"The brain doesn't just record sound. Over time, it decides how to group it."]],
 9:[[0,'Q',"Does it matter when you hear things? What if hearing is blocked for a while early in life?"],
  [0,'S',"In 2015 Caras and Sanes studied what happens after a short, temporary hearing loss while hearing is still growing up."],
  [3,'D',"Early in life, hearing is blocked for a short spell."],
  [7,'D',"Then hearing comes back to normal."],
  [11,'R',"But problems making sense of sound lasted, long after hearing returned."],
  [13,'W',"The senses need the right sounds at the right time while they develop. Miss that window, and hearing can stay changed."],
- [14.5,'N',"Our record doesn't give details of who was tested or how, so the scene shows the idea."]],
+ [14.5,'N',"The tests were done in animals. Our record doesn't say which animal or how, so the scene shows the idea."]],
 10:[[0,'Q',"Can your brain spot a pattern hidden in a fast jumble of beeps? And how quickly?"],
  [0,'S',"In 2016 researchers played people fast runs of beeps and recorded their brains with scanners."],
  [1,'D',"At first the beeps are random."],
  [5,'D',"Then, with no warning, a pattern starts repeating."],
  [7,'R',"Listeners caught it almost as fast as an 'ideal observer': a perfect calculator using every clue."],
  [12,'R',"Their brain activity tracked how predictable each beep was, in hearing areas, a memory area and the front of the brain."],
- [14,'W',"Your brain keeps very precise track of patterns in sound, without you trying."],
+ [14,'W',"Your brain keeps very precise track of patterns in sound."],
  [16,'N',"These were simple lab beeps, not speech."]],
 11:[[0,'Q',"When a sound breaks a pattern you've been hearing, your brain notices. But which parts of the brain notice?"],
  [0,'S',"In 2016 Dürschmid and colleagues recorded people's brain activity while they heard patterns of sounds."],
  [1,'D',"A steady pattern of sounds plays."],
  [5,'D',"Then one sound breaks the pattern."],
- [6,'R',"The hearing area, at the side of the brain, reacts with a burst of activity, like raising a warning flag."],
+ [6,'R',"The hearing area, at the side of the brain, reacts too, like raising a warning flag."],
  [7,'R',"So does the front of the brain, with a burst of fast electrical activity."],
  [11,'W',"Surprise is checked at more than one level. Prediction error = the brain's 'that wasn't expected' signal."]],
 12:[[0,'Q',"At a concert, how do you know which sound comes from which person? When do a sound and a sight become one 'thing'?"],
@@ -292,7 +292,7 @@ const STORY={
  [9,'R',"Music pulses closer to 2 times a second."],
  [11,'W',"Speech and music have different steady beats. The authors suggest these may be rhythms our brains are built for."]],
 14:[[0,'Q',"Is surprise noticed only at the top of the brain, or earlier, on the way up?"],
- [0,'S',"In 2017 Parras and colleagues recorded neurons (brain cells) along the hearing pathway: the chain of stations sound signals pass through from the ear to the brain's hearing area."],
+ [0,'S',"In 2017 Parras and colleagues recorded neurons (brain cells) in animals, along the hearing pathway: the chain of stations sound signals pass through from the ear to the brain's hearing area."],
  [1,'D',"They played a sound that broke a pattern."],
  [3,'R',"In the midbrain, an early station low down, neurons gave a small 'that wasn't expected' signal."],
  [5.5,'R',"At the next station, the thalamus, the signal was bigger."],
@@ -307,8 +307,8 @@ const STORY={
  [13,'W',"What we hear is partly what we expect. When expectation counts too much, the brain can hear things that aren't there."],
  [15,'N',"Small groups of people, and a lab task, not everyday life. The study also used brain scans and a computer model."]],
 16:[[0,'Q',"Can what you hear change the part of the brain that sees?"],
- [0,'S',"In 2017 Petro, Paton and Muckli looked at how sounds affect V1: the first seeing area, at the back of the brain."],
- [1,'D',"Patterns of sound play while a scanner watches the brain."],
+ [0,'S',"In 2017 Petro, Paton and Muckli wrote a review about how sounds affect V1, the first seeing area at the back of the brain. Review = a paper that pulls earlier studies together. They added some new scan data of their own too."],
+ [1,'D',"In the brain-scan studies it covers, people hear sounds while a scanner watches their brain."],
  [4,'D',"Watch the back of the brain, where seeing starts."],
  [7,'R',"Its activity changes with the sounds, even though they're sounds, not sights."],
  [11,'W',"Hearing gives your eyes context. Even the earliest seeing area uses information from the ears."]],
@@ -330,7 +330,7 @@ const STORY={
  [14,'N',"A small, special group: patients in surgery. The recordings were made from 2008 to 2015 and studied again later."]],
 19:[[0,'Q',"When you listen to a story, does your brain guess what's coming next? And how far ahead?"],
  [0,'S',"In 2023 researchers scanned the brains of 304 people with fMRI while they listened to short stories. fMRI = a scanner that shows which brain areas are working hardest."],
- [4,'D',"Some brain areas guessed only what was coming very soon: the next sound."],
+ [4,'D',"Some brain areas guessed only what was coming very soon."],
  [7,'D',"Other areas guessed much further ahead."],
  [10,'R',"The guesses were stacked like a ladder, from short-range to long-range."],
  [12.5,'W',"Listening is predicting, at several distances at once. It backs the guess-and-check idea seen on the Seeing walk."]],

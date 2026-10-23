@@ -63,7 +63,7 @@ window.FIELD={
      "id": 132,
      "year": 1957,
      "title": "The discrimination of speech sounds within and across phoneme boundaries.",
-     "cap": "Speech sounds can slide smoothly from one to another. We don't hear the slide. We hear one sound or the other, with almost nothing in between.",
+     "cap": "Speech sounds can slide smoothly from one to another. We don't hear the slide. We hear one sound or the other, with hardly any in-between.",
      "thin": true,
      "url": "https://doi.org/10.1037/h0044417",
      "links": [],
@@ -233,7 +233,7 @@ window.FIELD={
      "id": 1509,
      "year": 2017,
      "title": "Neurons along the auditory pathway exhibit a hierarchical organization of prediction error (Parras, Nieto-Diego, Carbajal, Valdés-Baizabal, Escera & Malmierca)",
-     "cap": "'That wasn't expected' signals got stronger step by step on the way from the brainstem to the hearing area. Surprise isn't only handled at the top.",
+     "cap": "'That wasn't expected' signals got stronger step by step on the way from the midbrain to the hearing area. Surprise isn't only handled at the top.",
      "thin": false,
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5732270/",
      "links": [

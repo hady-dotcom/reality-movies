@@ -103,7 +103,7 @@ D[16]={dur:15,pics:['anatomy'],rv:10.5,rvx:300,rvy:330,caps:[[0,'Signals from ou
   G.stream([[309,246],[300,170],[297,90]],t,4,'#ff8090',4,i2,.6);G.stream([[301,336],[296,200],[297,90]],t,4,P.a,4,i2,.5);
   if(s>0){G.bloom(297,80,120,P.hi,.8*s);for(let k=0;k<3;k++){const kk=((t*.5+k/3)%1);G.ring(300,400,lerp(60,330,kk),P.a,4,(1-kk)*s)}G.text('“me”',300,30+0*s,{serif:1,size:34,al:s})}}};
 // 17 Attention hears your heart
-D[17]={dur:16,pics:['screen-person'],rv:9,rvx:300,rvy:110,caps:[[0,'Attention on the screen'],[5.5,'Now on the heartbeat'],[9,'The brain\'s echo grows'],[13,'Still being tested']],
+D[17]={dur:16,pics:['screen-person'],rv:9,rvx:300,rvy:110,caps:[[0,'Attention outward, on a sound'],[5.5,'Now on the heartbeat'],[9,'The brain\'s echo grows'],[13,'Still being tested']],
  draw(g,t){const c=g.c;G.pic('screen-person',0,0,600,800);const a=ramp(t,5.5,7.5),beat=(t%1);
   // spotlight moves from screen to chest
   const sx=lerp(405,180,a),sy=lerp(370,560,a),sr=lerp(150,90,a);c.fillStyle='rgba(0,0,0,.45)';c.beginPath();c.rect(0,0,600,800);c.arc(sx,sy,sr,0,7,true);c.fill('evenodd');G.ring(sx,sy,sr,'#ffffff',3,.6);
@@ -171,7 +171,7 @@ D[6]={dur:17,pics:['cat-lab'],rv:11,rvx:410,rvy:230,
 // 9 Kanwisher: a patch for faces
 const IM9=['face','house','hand','cup','face','house','face'],SPAN9=2;
 D[9]={dur:17,pics:['face','house','hand','cup'],rv:12.5,rvx:340,rvy:660,
- caps:[[0,'Pictures flash while a scanner watches'],[2,'A face: one small patch glows'],[4,'A house: dark'],[6,'Hands, objects: dark'],[12.5,'A patch that prefers faces']],
+ caps:[[0,'Pictures flash while a scanner watches'],[2,'A face: one small patch glows'],[4,'A house: much weaker'],[6,'Hands, objects: weaker too'],[12.5,'A patch that prefers faces']],
  draw(g,t){const c=g.c;const i=Math.min(IM9.length-1,Math.floor(t/SPAN9)),u=(t%SPAN9)/SPAN9,n=IM9[i],isF=n==='face',app=G.clamp(u*5)*G.clamp((1-u)*6);
   picIn(n,130,40,340,430,22,app);
   const glow=isF?G.clamp(G.clamp((u-.15)*4)*G.clamp((1-u)*4)):0;
@@ -226,7 +226,7 @@ const STORY={
  [1,'D',"Here the points start far apart. The person clearly feels two separate touches. The white line under the arm shows the gap."],
  [3.5,'D',"Now the points move closer, step by step. Each time, the person says whether they feel one point or two."],
  [11,'R',"At a certain gap, the two points feel like a single touch. Weber measured that exact gap: the spot where two turns into one."],
- [12.5,'W',"Before this, feelings could only be described. Weber showed a feeling can be measured, with numbers, like anything else."],
+ [12.5,'W',"Weber showed a feeling can be measured, with numbers. He also found that the smallest change you can notice is a steady fraction of what you started with. That's now called Weber's law."],
  [14,'N',"Thin evidence: our record of this book is short. The scene is an example of the test, not his exact setup. Tap the arm to move the points yourself."]],
 2:[[0,'Q',"When you look around, it feels as if your eyes take a photo. Is that really how seeing works? In 1867 a scientist called Helmholtz wrote a giant handbook on the eye."],
  [0,'S',"The eye bends light into an image on the retina. Retina = a thin layer of light-catching cells at the back of your eye."],
@@ -278,8 +278,8 @@ const STORY={
 9:[[0,'Q',"Faces matter to us more than most things we look at. Does the brain have a special place just for them? In 1997 Kanwisher, McDermott and Chun checked."],
  [0,'S',"People lay in an fMRI scanner while pictures flashed up. fMRI = a scanner that shows which parts of the brain are working hardest."],
  [2,'D',"When a face appeared, one small patch of the brain lit up."],
- [4,'D',"A house: that patch stayed dark."],
- [6,'D',"Hands and everyday objects: dark too."],
+ [4,'D',"A house: that patch answered much less."],
+ [6,'D',"Hands and everyday objects: much less too."],
  [12.5,'R',"The patch answered faces more than anything else they tried. They named it the fusiform face area."],
  [14,'W',"Seeing isn't done by one all-purpose machine. Some parts of the brain specialise, and one specialises in faces."]],
 10:[[0,'Q',"Your eyes send the brain a flood of signals every second. Does it really deal with every bit? In 1999 Rao and Ballard suggested a smarter way."],
@@ -306,7 +306,7 @@ const STORY={
  [1,'S',"In it, a person wears a virtual reality headset. It shows a body standing in front of them, seen from behind."],
  [3.5,'D',"A stick strokes the person's back. At the same moment they see the virtual body's back stroked."],
  [8,'D',"Then they're asked: where do you feel you are?"],
- [11,'R',"In tests like this, people's sense of where they are drifts towards the virtual body."],
+ [11,'R',"In tests like this, people can start to feel that the body they see is their own."],
  [14,'W',"Owning your body isn't a fixed fact. The brain builds it from many senses at once, and these illusions are tools for studying how."]],
 14:[[0,'Q',"Does your brain learn what to expect in a familiar place? In 2016 researchers tested this in mice."],
  [0,'S',"Mice ran through a virtual corridor, like a video-game hallway. Scientists recorded neurons (brain cells) in their seeing area."],
@@ -330,8 +330,8 @@ const STORY={
  [10,'R',"Tsakiris argued the brain combines both kinds into one sense of being you. It keeps predicting what should happen to your body and checks that against what does."],
  [12.5,'W',"Even 'me' is put together by the brain, from senses outside and inside."]],
 17:[[0,'Q',"Each time your heart beats, your brain reacts a little, even if you don't notice. Does paying attention change that reaction?"],
- [0,'S',"Heartbeat evoked potential = a small wave of brain activity that follows each heartbeat. Researchers measured it while people focused on different things."],
- [1,'D',"First, attention points outward, at a screen."],
+ [0,'S',"Heartbeat evoked potential = a small wave of brain activity that follows each heartbeat. Researchers measured it with EEG, sensors on the scalp, while people focused on different things."],
+ [1,'D',"First, attention points outward, at a sound playing around the person."],
  [5.5,'D',"Then attention turns inward, onto the person's own heartbeat."],
  [9,'R',"The brain's echo of the heartbeat grew when attention was on it."],
  [11,'W',"Where you point your attention changes how your brain handles signals from your own body."],

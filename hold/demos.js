@@ -8,7 +8,7 @@ const mouseLight=(x,y,on)=>{G.glow(x,y-30,60,'#4aa8ff',on*.7);G.line(x,y-80,x,y-
 D[1]={dur:18,pics:['pavlov'],draw(g,t){bg('pavlov');const trial=t<11?Math.floor((t-2)/2.2):-1,ph=((t-2)%2.2)/2.2;
  if(t>2&&t<11){K.tag('Trial '+(trial+1),300,40,{bg:K.BLUE,size:16});K.burst(130,220,60,ph<.4?ph/.4:0,K.SAFF);K.txt('signal',130,170,{size:16,al:ph<.5?1:.4});if(trial<3&&ph>.45){G.dot(470,250,20,'#c97a3a',1);K.txt('food',470,215,{size:16})}}
  if(t>11.5){K.burst(130,220,60,((t-11.5)%2)/2,K.SAFF);K.tag('Signal only, no food',300,40,{bg:K.TERRA,size:17})}
- const k=ramp(t,3,4);K.panel(60,560,480,190,k);if(k<=0)return;K.txt('Saliva after the signal, before any food',300,584,{size:15,col:K.BLUE,al:k,max:440});const lv=[.1,.35,.6,.85,.9];const m=G.clamp(Math.floor((t-3)/2.2)+1,0,5);K.bars(110,610,380,100,lv.slice(0,m).map((v,i)=>({v,label:i==4?'signal only':'trial '+(i+1),col:i==4?K.TERRA:K.TEAL})).concat(Array(5-m).fill({v:0})),1,{gap:16,ls:13.5})},
+ const k=ramp(t,3,4);K.panel(60,560,480,190,k);if(k<=0)return;K.txt('Saliva after the signal, before any food',300,584,{size:15,col:K.BLUE,al:k,max:440});const lv=[.1,.35,.6,.85,.9];const m=G.clamp(Math.floor((t-3)/2.2)+1,0,5);K.bars(110,610,380,100,lv.slice(0,m).map((v,i)=>({v,label:i==4?'no food':'trial '+(i+1),col:i==4?K.TERRA:K.TEAL})).concat(Array(5-m).fill({v:0})),1,{gap:16,ls:13.5})},
  story:[[0,'Q',"Your mouth waters when you smell dinner. But can it learn to water at a sound that only means dinner? Ivan Pavlov studied this in dogs."],
  [0,'S',"Pavlov measured the saliva and stomach juices dogs made. He won the 1904 Nobel Prize for this work on digestion and described it in his Nobel lecture."],
  [2,'D',"A signal came just before food arrived, again and again."],
@@ -56,7 +56,7 @@ D[5]={dur:17,pics:['study'],draw(g,t){bg('study');const k=ramp(t,1,2);K.panel(50
  [2,'D',"Across very different tasks, the limit kept landing in the same place."],
  [8,'R',"People could hold about seven items at once, give or take two."],
  [11,'W',"Miller also noted we can stretch it by grouping items into bigger chunks, as we do with phone numbers."],
- [12.5,'N',"Later research suggests the true limit may be nearer four chunks. The digits here are an example of a digit-span test."]]};
+ [12.5,'N',"Later work (Nelson Cowan, 2001, Behavioral and Brain Sciences) argued the true limit is nearer four chunks. The digits here are an example of a digit-span test."]]};
 // 6 Baddeley & Hitch (theory)
 D[6]={dur:17,pics:['workdesk'],draw(g,t){bg('workdesk');K.tag('A model: illustrated, not one experiment',300,36,{bg:K.INK,size:15});const k=ramp(t,2,3);K.panel(60,80,480,290,k);if(k<=0)return;
  G.rr(210,110,180,60,14,K.SAFF,null,k);K.txt('Boss: directs attention',300,140,{size:15,al:k,max:170});
@@ -93,7 +93,7 @@ D[8]={dur:17,pics:['london'],draw(g,t){bg('london');const k=ramp(t,2,3);K.panel(
 // 9 Shahaf & Marom
 D[9]={dur:18,pics:['dish'],draw(g,t){bg('dish');const k=ramp(t,2,3);K.panel(60,40,480,300,k);if(k<=0)return;K.txt('Cells on electrodes',300,62,{size:16,col:K.BLUE,al:k});
  for(let i=0;i<5;i++)for(let j=0;j<4;j++){const x=140+i*80,y=110+j*55;G.dot(x,y,6,'#8a7a66',k);}
- const tr=(t-3)%2,on=tr<1.2&&t>3;if(on)K.burst(140,110,40,tr/1.2,K.SAFF);const hit=tr>Math.max(.3,1.1-(t-3)*.06);if(on&&hit){K.burst(460,275,40,(tr-.3)/.6,K.TEAL);}K.txt('zap',140,85,{size:14,al:on?1:.3});K.txt('target response',460,310,{size:14,al:k});
+ const tr=(t-3)%2,on=tr<1.2&&t>3;if(on)K.burst(140,110,40,tr/1.2,K.SAFF);const hit=tr>Math.max(.3,1.1-(t-3)*.06);if(on&&hit){K.burst(460,275,40,(tr-.3)/.6,K.TEAL);}K.txt('zap',140,85,{size:14,al:on?1:.3});K.txt('target response',430,310,{size:14,al:k});
  if(t>11)K.tag('Response came sooner each round',300,370,{bg:K.TERRA,size:16,pop:G.clamp((t-11)/.4)})},
  story:[[0,'Q',"Do you need a whole brain to learn? Goded Shahaf and Shimon Marom tested a tiny network of brain cells in a dish."],
  [0,'S',"Rat brain cells were grown on a dish dotted with electrodes. Electrodes can both zap the cells and listen to them."],
@@ -120,7 +120,7 @@ D[11]={dur:18,pics:['happymouse'],draw(g,t){bg('happymouse');const steps=['1 · 
  [0,'S',"Male mice had a good experience, time with a female mouse. The brain cells holding that memory were tagged so light could switch them on."],
  [4,'D',"Then the mice went through stress until they showed depression-like behaviour: giving up sooner and losing interest in treats."],
  [7,'D',"The scientists shone light on the tagged happy-memory cells."],
- [11,'R',"The low-mood behaviour lifted. Reactivating the good memory helped, while just having a new good experience did less."],
+ [11,'R',"The low-mood behaviour lifted while the happy-memory cells were switched on."],
  [14,'W',"Stored memories aren't only records. Switching them back on can change how an animal feels."],
  [15.5,'N',"A mouse study, using behaviour as a stand-in for mood. Not a treatment for people. The bars are illustrative."]]};
 // 12 Friedrich
@@ -159,7 +159,7 @@ D[14]={dur:18,pics:['brainmodel'],draw(g,t){bg('brainmodel');const day=Math.floo
  [14.5,'N',"A mouse study. The painted model looks more like a human brain; read it as a guide to the areas. Bars are illustrative."]]};
 // 15 Leminen
 D[15]={dur:18,pics:['sleeplab'],draw(g,t){bg('sleeplab');const k=ramp(t,2,3);K.panel(50,40,500,200,k);if(k>0){K.txt('Slow brain waves in deep sleep',300,62,{size:15,col:K.BLUE,al:k});const ph=t*1.6;wave(80,150,440,40,2,-ph,K.BLUE,4,k);if(t>4)for(let i=0;i<2;i++){const x=80+((ph/6.283+.25+i)/2)*440%440;}const up=(Math.sin(-ph)+1)/2;if(t>4&&((ph/6.283)%1)<.12){K.burst(300,110,50,((ph/6.283)%1)/.12,K.SAFF);K.tag('click',300,215,{bg:K.SAFF,col:K.INK,size:15})}}
- const k2=ramp(t,9,10);K.panel(80,560,440,200,k2);if(k2>0){K.txt('Linked word pairs recalled next day',300,582,{size:15,col:K.BLUE,al:k2});K.bars(130,600,340,100,[{v:15.6/22,val:'15.6',label:'sham night',col:K.TEAL},{v:21.1/22,val:'21.1',label:'clicks night',col:K.TERRA}],G.clamp((t-10)/1.5),{gap:80,ls:14,vs:18})}},
+ const k2=ramp(t,9,10);K.panel(80,560,440,200,k2);if(k2>0){K.txt('Linked word pairs recalled next day',300,582,{size:15,col:K.BLUE,al:k2});K.bars(130,600,340,100,[{v:15.6/27,val:'15.6',label:'sham night',col:K.TEAL},{v:21.1/27,val:'21.1',label:'clicks night',col:K.TERRA}],G.clamp((t-10)/1.5),{gap:80,ls:14,vs:18})}},
  story:[[0,'Q',"Can you boost memory while someone sleeps, just with sound? Miika Leminen and colleagues tried in 2017."],
  [0,'S',"People learned word pairs, then slept in a lab wearing EEG. A computer watched for the slow waves of deep sleep."],
  [4,'D',"Each time a slow wave rose, the computer played a quiet click, timed to the wave. On another night, no sound (a sham night)."],
@@ -179,7 +179,7 @@ D[16]={dur:18,pics:['odour'],draw(g,t){bg('odour');const steps=['1 · Light swit
  [15.5,'N',"Checked online for the M72 and reward-pathway details. A mouse finding; how it relates to people is open."]]};
 // 17 TMR meta-analysis
 D[17]={dur:17,pics:['cuebed'],draw(g,t){bg('cuebed');const k=ramp(t,1,2);const n=Math.floor(G.clamp((t-1)/4)*91);K.tag(n+' experiments · 2,004 people',300,40,{bg:K.BLUE,size:17,al:k});
- if(t>3&&t<9&&(t%2)<.6)K.burst(450,300,60,(t%2)/.6,K.SAFF);const k2=ramp(t,8,9);K.panel(60,560,480,200,k2);if(k2>0){K.txt('Each experiment: memory boost from cues',300,582,{size:15,col:K.BLUE,al:k2});G.line(300,610,300,740,K.INK,2,.4);const q=G.rnd(7),m=Math.floor(G.clamp((t-9)/2)*40);for(let i=0;i<m;i++){const v=.12+(q()-.5)*.6;G.dot(300+v*300,615+q()*120,4,K.TEAL,.8)}K.txt('no effect',300,750,{size:13.5,al:k2});if(t>11.5){G.line(300+.12*300,610,300+.12*300,740,K.TERRA,5,1);K.tag('small, real boost',420,600,{bg:K.TERRA,size:15,pop:G.clamp((t-11.5)/.4)})}}},
+ if(t>3&&t<9&&(t%2)<.6)K.burst(450,300,60,(t%2)/.6,K.SAFF);const k2=ramp(t,8,9);K.panel(60,560,480,200,k2);if(k2>0){K.txt('Each experiment: memory boost from cues',300,582,{size:15,col:K.BLUE,al:k2});G.line(300,610,300,740,K.INK,2,.4);const q=G.rnd(7),m=Math.floor(G.clamp((t-9)/2)*40);for(let i=0;i<m;i++){const v=.12+(q()-.5)*.6;G.dot(300+v*300,615+q()*120,4,K.TEAL,.8)}K.txt('no effect',300,750,{size:13.5,al:k2});if(t>11.5){G.line(300+.12*300,610,300+.12*300,740,K.TERRA,5,1);K.tag('small, real boost',300,535,{bg:K.TERRA,size:15,pop:G.clamp((t-11.5)/.4)})}}},
  story:[[0,'Q',"Many small studies replayed learning cues to people while they slept. Did it really help? Xiaoqing Hu, Ken Paller and colleagues pooled them."],
  [0,'S',"Targeted memory reactivation (TMR): you learn something along with a sound or smell, then that cue is played again quietly during sleep."],
  [3,'D',"The team gathered 91 experiments with 2,004 people and combined their results: a meta-analysis."],
@@ -198,7 +198,7 @@ D[18]={dur:19,pics:['pong'],draw(g,t){bg('pong');const k=ramp(t,1,2);K.panel(80,
  [14.5,'N',"The paper calls this 'sentience'. Many scientists dispute that word. The game here is a sketch."]]};
 // 19 KIBRA
 D[19]={dur:18,pics:['synapse'],draw(g,t){bg('synapse');const k=ramp(t,1,2);K.panel(60,40,480,280,k);if(k<=0)return;K.txt(t<10?'A strengthened connection':'Block the link',300,62,{size:16,col:K.BLUE,al:k});
- const broken=t>10?ramp(t,10,12):0;for(let i=0;i<5;i++){const x=140+i*80,y=200;G.dot(x,y-18-broken*30*(i%2?1:-1),16,K.TEAL,k*(1-broken*.6));G.dot(x,y+18,16,K.SAFF,k);if(!broken)G.line(x,y-4,x,y+4,K.INK,4,k)}K.txt('KIBRA',90,182,{size:14,col:K.TEAL,al:k});K.txt('PKMζ',90,218,{size:14,col:'#a07a10',al:k});
+ const broken=t>10?ramp(t,10,12):0;for(let i=0;i<5;i++){const x=140+i*80,y=200;G.dot(x,y-18-broken*30*(i%2?1:-1),16,K.TEAL,k*(1-broken*.6));G.dot(x,y+18,16,K.SAFF,k);if(!broken)G.line(x,y-4,x,y+4,K.INK,4,k)}K.txt('KIBRA',112,150,{size:14,col:K.TEAL,al:k});K.txt('PKMζ',112,250,{size:14,col:'#a07a10',al:k});
  if(t>4&&t<10)K.tag('Still holding a month later',300,290,{bg:K.TEAL,size:16,pop:G.clamp((t-4)/.4)});if(t>12)K.tag('Old memory erased; normal signals fine',300,290,{bg:K.TERRA,size:16,pop:G.clamp((t-12)/.4)})},
  story:[[0,'Q',"The proteins at your brain connections are replaced over days. So how can a memory last for years?"],
  [0,'S',"Panayiotis Tsokas, Todd Sacktor and colleagues studied two proteins: KIBRA and PKMζ. PKMζ helps keep a strengthened connection strong."],

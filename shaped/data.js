@@ -5,6 +5,7 @@ window.FIELD={
  "gaps": [
   "The first stops are older books; our records of Mendel and Thorndike are short.",
   "Most plastic studies here show plastic is present. Only one links it to illness, and that is a link, not proof.",
+  "Two Room 3 stops come from news reports of the papers; the papers are named on each card.",
   "Some stops add a detail checked against the original paper online; those details are marked in the captions."
  ],
  "rooms": [
@@ -68,7 +69,14 @@ window.FIELD={
      "src": "Blakemore & Cooper, 1970",
      "plain": "",
      "scene": "stripes"
-    },
+    }
+   ]
+  },
+  {
+   "name": "Room 2 · Chemicals in Water and Air (1986–2016)",
+   "light": "bright",
+   "note": "Can tiny amounts of a chemical reshape animals and children?",
+   "cards": [
     {
      "n": 5,
      "id": 209,
@@ -77,55 +85,14 @@ window.FIELD={
      "cap": "Sea snails were dying out near harbours where boat paint leaked a chemical, TBT. Females were growing male body parts.",
      "thin": false,
      "url": "https://doi.org/10.1017/S0025315400042247",
-     "links": [
-      "Developmental effects of endocrine-disrupting chemicals in wildlife and humans"
-     ],
+     "links": [],
      "head": "Snails and boat paint",
      "src": "Bryan et al., 1986",
      "plain": "",
      "scene": "harbour"
-    }
-   ]
-  },
-  {
-   "name": "Room 2 · Hormone Mimics in the Water (1993–2013)",
-   "light": "bright",
-   "note": "Can tiny amounts of a chemical reshape animals?",
-   "cards": [
+    },
     {
      "n": 6,
-     "id": 234,
-     "year": 1993,
-     "title": "Developmental effects of endocrine-disrupting chemicals in wildlife and humans",
-     "cap": "A review argued some man-made chemicals act like hormones, and tiny doses at the wrong time in development can change how bodies grow.",
-     "thin": false,
-     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1519860/",
-     "links": [
-      "Widespread Sexual Disruption in Wild Fish"
-     ],
-     "head": "Chemicals that pretend to be hormones",
-     "src": "Colborn et al., 1993",
-     "plain": "",
-     "scene": "review"
-    },
-    {
-     "n": 7,
-     "id": 248,
-     "year": 1998,
-     "title": "Widespread Sexual Disruption in Wild Fish",
-     "cap": "In UK rivers downstream of sewage works, many male fish had features of both sexes.",
-     "thin": false,
-     "url": "https://doi.org/10.1021/es9710870",
-     "links": [
-      "Collapse of a fish population after exposure to a synthetic estrogen"
-     ],
-     "head": "Fish below the sewage works",
-     "src": "Jobling et al., 1998",
-     "plain": "",
-     "scene": "river"
-    },
-    {
-     "n": 8,
      "id": 298,
      "year": 2007,
      "title": "Collapse of a fish population after exposure to a synthetic estrogen",
@@ -139,23 +106,7 @@ window.FIELD={
      "scene": "lake"
     },
     {
-     "n": 9,
-     "id": 326,
-     "year": 2013,
-     "title": "Ingested plastic transfers hazardous chemicals to fish and induces hepatic stress",
-     "cap": "Fish fed plastic that had soaked in the sea took up its pollutants and showed liver stress.",
-     "thin": false,
-     "url": "https://doi.org/10.1038/srep03263",
-     "links": [
-      "Detection of Various Microplastics in Human Stool: A Prospective Case Series"
-     ],
-     "head": "Plastic as a delivery van",
-     "src": "Rochman et al., 2013",
-     "plain": "",
-     "scene": "aquarium"
-    },
-    {
-     "n": 10,
+     "n": 7,
      "id": 565,
      "year": 2015,
      "title": "Persistent Associations between Maternal Prenatal Exposure to Phthalates on Child IQ at Age 7 Years",
@@ -167,16 +118,9 @@ window.FIELD={
      "src": "Factor-Litvak et al., 2015",
      "plain": "",
      "scene": "clinic"
-    }
-   ]
-  },
-  {
-   "name": "Room 3 · What Gets Inside Us (2016–2019)",
-   "light": "bright",
-   "note": "Lead, soot, plastic beads: what reaches living bodies?",
-   "cards": [
+    },
     {
-     "n": 11,
+     "n": 8,
      "id": 924,
      "year": 2016,
      "title": "Elevated Blood Lead Levels in Children Associated With the Flint Drinking Water Crisis",
@@ -190,7 +134,7 @@ window.FIELD={
      "scene": "town"
     },
     {
-     "n": 12,
+     "n": 9,
      "id": 941,
      "year": 2016,
      "title": "Magnetite pollution nanoparticles in the human brain",
@@ -202,48 +146,97 @@ window.FIELD={
      "src": "Maher et al., 2016",
      "plain": "",
      "scene": "magnetite"
+    }
+   ]
+  },
+  {
+   "name": "Room 3 · Shaped by Experience, Before and After Birth (2009–2019)",
+   "light": "bright",
+   "note": "Mirrors, music, a mother's support, a baby's kicks, a week in the dark",
+   "cards": [
+    {
+     "n": 10,
+     "id": null,
+     "year": 2009,
+     "title": "The use of visual feedback, in particular mirror visual feedback, in restoring brain function (Ramachandran & Altschuler)",
+     "cap": "A mirror can make a missing or paralysed limb look as if it moves. In some patients that eased phantom pain and helped stroke recovery.",
+     "thin": false,
+     "url": "https://europepmc.org/article/MED/19506071",
+     "links": [],
+     "head": "A mirror that fools the brain",
+     "src": "Ramachandran & Altschuler, 2009",
+     "plain": "",
+     "scene": "mirrorbox"
+    },
+    {
+     "n": 11,
+     "id": null,
+     "year": 2016,
+     "title": "Does prenatal stress alter the developing connectome? (Scheinost et al.)",
+     "cap": "A review: a mother's stress in pregnancy may change how a baby's brain networks wire up.",
+     "thin": false,
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5313513/",
+     "links": [],
+     "head": "Stress before birth",
+     "src": "Scheinost et al., 2016",
+     "plain": "",
+     "scene": "prenatal"
+    },
+    {
+     "n": 12,
+     "id": null,
+     "year": 2016,
+     "title": "Mother nurture and the social definition of neurodevelopment (Meaney)",
+     "cap": "A commentary on a study where children with more supportive mothers at preschool age had faster hippocampus growth.",
+     "thin": false,
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4896686/",
+     "links": [],
+     "head": "A mother's support and a growing brain",
+     "src": "Meaney, 2016",
+     "plain": "",
+     "scene": "mothercare"
     },
     {
      "n": 13,
-     "id": 951,
+     "id": null,
      "year": 2016,
-     "title": "Oyster reproduction is affected by exposure to polystyrene microplastics",
-     "cap": "Oysters kept with tiny plastic beads made fewer eggs, slower sperm and fewer babies.",
+     "title": "Musical intervention enhances infants' neural processing of temporal structure in music and speech (Zhao & Kuhl)",
+     "cap": "Nine-month-olds given 12 music play sessions had sharper brain responses to rhythm in music and in speech.",
      "thin": false,
-     "url": "https://doi.org/10.1073/pnas.1519019113",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4868410/",
      "links": [],
-     "head": "Oysters and plastic beads",
-     "src": "Sussarellu et al., 2016",
+     "head": "Babies who danced to waltzes",
+     "src": "Zhao & Kuhl, 2016",
      "plain": "",
-     "scene": "oysters"
+     "scene": "music"
     },
     {
      "n": 14,
-     "id": 1394,
-     "year": 2017,
-     "title": "Temporal trends in sperm count: a systematic review and meta-regression analysis",
-     "cap": "Pooling 185 studies, sperm counts among Western men fell by about half between 1973 and 2011.",
+     "id": null,
+     "year": 2018,
+     "title": "Babies kicking in the womb are creating a map of their bodies (ScienceDaily / UCL Fabrizi)",
+     "cap": "When sleeping newborns kicked, fast brainwaves fired in the matching touch area of the brain, strongest in babies born early.",
      "thin": false,
-     "url": "https://doi.org/10.1093/humupd/dmx022",
+     "url": "https://www.sciencedaily.com/releases/2018/11/181130080352.htm",
      "links": [],
-     "head": "185 studies, one trend",
-     "src": "Levine et al., 2017",
+     "head": "Kicks that draw a body map",
+     "src": "Whitehead, Meek & Fabrizi, 2018 (news report)",
      "plain": "",
-     "scene": "archive"
+     "scene": "newborn"
     },
     {
      "n": 15,
-     "id": 2208,
+     "id": null,
      "year": 2019,
-     "title": "Detection of Various Microplastics in Human Stool: A Prospective Case Series",
-     "cap": "Every one of 8 volunteers from several countries had microplastics in their stool.",
+     "title": "A week in the dark rewires brain cell networks and changes hearing in adult mice (ScienceDaily)",
+     "cap": "After a week in darkness, adult mice's hearing cells re-sorted which pitches they responded to.",
      "thin": false,
-     "url": "https://doi.org/10.7326/M19-0618",
+     "url": "https://www.sciencedaily.com/releases/2019/12/191204145858.htm",
      "links": [],
-     "head": "What comes out",
-     "src": "Schwabl et al., 2019",
+     "head": "A week in the dark",
+     "src": "Solarana et al., 2019 (news report)",
      "plain": "",
-     "scene": "stool"
+     "scene": "darkbox"
     }
    ]
   },
@@ -260,9 +253,7 @@ window.FIELD={
      "cap": "Microplastic bits turned up in placentas, the organ that feeds a baby before birth.",
      "thin": false,
      "url": "https://doi.org/10.1016/j.envint.2020.106274",
-     "links": [
-      "Discovery and quantification of plastic particle pollution in human blood"
-     ],
+     "links": [],
      "head": "Plastic in the placenta",
      "src": "Ragusa et al., 2020",
      "plain": "",
@@ -276,11 +267,7 @@ window.FIELD={
      "cap": "For the first time, plastic particles were measured in human blood: in 17 of 22 healthy volunteers.",
      "thin": false,
      "url": "https://doi.org/10.1016/j.envint.2022.107199",
-     "links": [
-      "Microplastics in the Olfactory Bulb of the Human Brain",
-      "Microplastics and Nanoplastics in Atheromas and Cardiovascular Events",
-      "Health impacts of microplastic and nanoplastic exposure"
-     ],
+     "links": [],
      "head": "Plastic in the blood",
      "src": "Leslie et al., 2022",
      "plain": "",
@@ -334,7 +321,7 @@ window.FIELD={
  "meta": {
   "title": "Things being shaped",
   "kicker": "Reality Sourcing",
-  "intro": "What shapes a living thing? Genes, rewards, what you see as a baby, and the chemicals around you. Here is how scientists found out, one experiment at a time.",
+  "intro": "What shapes a living thing? Genes, rewards, what you see first, chemicals in the water, a mirror, music, a mother's support, and the plastic now inside us. Here is how scientists found out, one experiment at a time.",
   "sub": "Start in 1866 with peas that hid a colour. End in 2025 with what we still don't know about plastic inside us.",
   "years": "20 STOPS · 4 ROOMS · 1866 – 2025",
   "entrance_title": "Before you start",
@@ -345,16 +332,16 @@ window.FIELD={
    "maze",
    "stripes",
    "harbour",
-   "review",
-   "river",
    "lake",
-   "aquarium",
    "clinic",
    "town",
    "magnetite",
-   "oysters",
-   "archive",
-   "stool",
+   "mirrorbox",
+   "prenatal",
+   "mothercare",
+   "music",
+   "newborn",
+   "darkbox",
    "placenta",
    "blood",
    "olfactory",
@@ -367,16 +354,16 @@ window.FIELD={
    "3": "Tolman",
    "4": "Blakemore & Cooper",
    "5": "Bryan et al.",
-   "6": "Colborn et al.",
-   "7": "Jobling et al.",
-   "8": "Kidd et al.",
-   "9": "Rochman et al.",
-   "10": "Factor-Litvak et al.",
-   "11": "Hanna-Attisha et al.",
-   "12": "Maher et al.",
-   "13": "Sussarellu et al.",
-   "14": "Levine et al.",
-   "15": "Schwabl et al.",
+   "6": "Kidd et al.",
+   "7": "Factor-Litvak et al.",
+   "8": "Hanna-Attisha et al.",
+   "9": "Maher et al.",
+   "10": "Ramachandran & Altschuler",
+   "11": "Scheinost et al.",
+   "12": "Meaney",
+   "13": "Zhao & Kuhl",
+   "14": "Whitehead, Meek & Fabrizi",
+   "15": "Solarana et al.",
    "16": "Ragusa et al.",
    "17": "Leslie et al.",
    "18": "Amato-Lourenço et al.",

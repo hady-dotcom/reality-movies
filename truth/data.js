@@ -1,14 +1,15 @@
 window.FIELD={
  "field": "Truth showing up",
  "thinField": false,
- "arc": "\nStart in 1868 with geometry and real objects. End in 2020 asking whether the 'prediction brain' idea really holds up.",
+ "arc": "Start in 1868 with geometry and real objects. End in 2025, with AI finding things and people checking them.",
  "gaps": [
   "The early stops have only a little evidence so far.",
-  "There are long stretches with no stops: 1878 to 1927, 1927 to 1948, and 1954 to 1980."
+  "Room 6 is new: those seven stops are not in our Pixel Hound records yet. Each links to its published paper.",
+  "Big gaps between 1878 and 1927, and 1954 and 1980."
  ],
  "rooms": [
   {
-   "name": "Room 1 · Measuring the World (1868–1878)",
+   "name": "Room 1 · Measuring the World (1868–1927)",
    "light": "dim",
    "note": "Ideas tested against real things.",
    "cards": [
@@ -25,7 +26,8 @@ window.FIELD={
      ],
      "head": "Space, measured with objects",
      "src": "Helmholtz, 1868",
-     "plain": "Only a little evidence so far"
+     "plain": "Only a little evidence so far",
+     "new": false
     },
     {
      "n": 2,
@@ -41,15 +43,9 @@ window.FIELD={
      ],
      "head": "What difference does it make?",
      "src": "Peirce, 1878",
-     "plain": "Only a little evidence so far"
-    }
-   ]
-  },
-  {
-   "name": "Room 2 · Bits and Edges (1927–1980)",
-   "light": "dim",
-   "note": "Information you can count, edges you can find.",
-   "cards": [
+     "plain": "Only a little evidence so far",
+     "new": false
+    },
     {
      "n": 3,
      "id": 78,
@@ -63,8 +59,16 @@ window.FIELD={
      ],
      "head": "If you can't measure it…",
      "src": "Bridgman, 1927",
-     "plain": "Only a little evidence so far"
-    },
+     "plain": "Only a little evidence so far",
+     "new": false
+    }
+   ]
+  },
+  {
+   "name": "Room 2 · Counting and Finding (1948–1980)",
+   "light": "dim",
+   "note": "Information you can count, edges you can find.",
+   "cards": [
     {
      "n": 4,
      "id": 108,
@@ -78,7 +82,8 @@ window.FIELD={
      ],
      "head": "Information, counted in bits",
      "src": "Shannon, 1948",
-     "plain": "Only a little evidence so far"
+     "plain": "Only a little evidence so far",
+     "new": false
     },
     {
      "n": 5,
@@ -94,7 +99,8 @@ window.FIELD={
      ],
      "head": "The eye saves space",
      "src": "Attneave, 1954",
-     "plain": "Only a little evidence so far"
+     "plain": "Only a little evidence so far",
+     "new": false
     },
     {
      "n": 6,
@@ -105,13 +111,12 @@ window.FIELD={
      "thin": false,
      "url": "https://doi.org/10.1098/rspb.1980.0020",
      "links": [
-      "Some informational aspects of visual perception (Attneave)",
-      "Monkey visual cortex: orientation columns and eye preference (Hubel & Wiesel)",
-      "Receptive fields, binocular interaction and functional architecture in the cat's visual cortex"
+      "Some informational aspects of visual perception (Attneave)"
      ],
      "head": "Finding the edges",
      "src": "Marr & Hildreth, 1980",
-     "plain": "A classic"
+     "plain": "A classic",
+     "new": false
     }
    ]
   },
@@ -128,16 +133,11 @@ window.FIELD={
      "cap": "A way to score how much a brain is split into separate parts and still works as one. Hidden structure you can put a number on.",
      "thin": false,
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC43925/",
-     "links": [
-      "A theory of cortical responses — predictive coding in the cortex (Friston)",
-      "Hallucinations as Top-Down Effects on Perception",
-      "Detection of EEG dynamic complex patterns in disorders of consciousness",
-      "Measuring the Complexity of Consciousness (Arsiwalla & Verschure)",
-      "Neural Correlates of Consciousness at Near-Electrocerebral Silence in an Asphyxial Cardiac Arrest Model (Lee, Lee, Siu, Bazrafkan, Farahabadi, Dinh et al.)"
-     ],
+     "links": [],
      "head": "Split, but joined",
      "src": "A measure for brain complexity, 1994",
-     "plain": "A classic"
+     "plain": "A classic",
+     "new": false
     },
     {
      "n": 8,
@@ -147,16 +147,11 @@ window.FIELD={
      "cap": "Brain scans could tell what a person was looking at from patterns of activity alone. It even worked for things they didn't consciously notice.",
      "thin": false,
      "url": "https://doi.org/10.1038/nrn1931",
-     "links": [
-      "The Fusiform Face Area: A Module in Human Extrastriate Cortex Specialized for Face Perception (Kanwisher, McDermott & Chun)",
-      "Reconstructing Visual Experiences from Brain Activity Evoked by Natural Movies",
-      "Identifying natural images from human brain activity",
-      "Hierarchical Organization of Auditory and Motor Representations in Speech Perception: Evidence from Searchlight Similarity Analysis (Evans & Davis)",
-      "A theory of working memory without consciousness or sustained activity (Trübutschek, Marti, Ojeda, King, Mi, Tsodyks & Dehaene)"
-     ],
+     "links": [],
      "head": "Reading what you see",
      "src": "Haynes & Rees, 2006",
-     "plain": "A classic"
+     "plain": "A classic",
+     "new": false
     }
    ]
   },
@@ -173,57 +168,14 @@ window.FIELD={
      "cap": "Friston proposed that brains act to keep surprise low. Seeing, moving and learning become one job: predict well.",
      "thin": false,
      "url": "https://doi.org/10.1038/nrn2787",
-     "links": [
-      "Active inference and oculomotor pursuit: the dynamic causal modelling of eye movements (Adams, Aponte, Marshall & Friston)",
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "A theory of cortical responses — predictive coding in the cortex (Friston)",
-      "Attentional Enhancement of Auditory Mismatch Responses: a DCM/MEG Study (Auksztulewicz & Friston)",
-      "Active Inference, homeostatic regulation and adaptive behavioural control (Pezzulo, Rigoli & Friston)"
-     ],
+     "links": [],
      "head": "Brains hate surprises",
      "src": "Friston, 2010",
-     "plain": "A classic"
+     "plain": "A classic",
+     "new": false
     },
     {
      "n": 10,
-     "id": 657,
-     "year": 2015,
-     "title": "Active Inference, homeostatic regulation and adaptive behavioural control (Pezzulo, Rigoli & Friston)",
-     "cap": "The brain keeps the body safe by acting to make its own predictions happen. Seeing and doing run on the same loop.",
-     "thin": false,
-     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4779150/",
-     "links": [
-      "The free-energy principle: a unified brain theory? (Friston)",
-      "Active inference and learning",
-      "Active interoceptive inference and the emotional brain (Seth & Friston)",
-      "Active Inference: A Process Theory",
-      "An active inference theory of allostasis and interoception in depression (Barrett, Quigley & Hamilton)"
-     ],
-     "head": "Making the guess come true",
-     "src": "Pezzulo et al., 2015",
-     "plain": "A classic"
-    },
-    {
-     "n": 11,
-     "id": 662,
-     "year": 2015,
-     "title": "Cerebral hierarchies: predictive processing, precision and the pulvinar (Kanai, Komura, Shipp & Friston)",
-     "cap": "A deep brain area called the pulvinar may work like a dial. It decides which predictions get the most weight.",
-     "thin": false,
-     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4387510/",
-     "links": [
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "Repetition suppression and its contextual determinants in predictive coding (Auksztulewicz & Friston)",
-      "Evaluating the neurophysiological evidence for predictive processing as a model of perception (Walsh, McGovern, Clark, O’Connell)",
-      "From allostatic agents to counterfactual cognisers: active inference, biological regulation, and the origins of cognition (Corcoran, Pezzulo & Hohwy)",
-      "Selective Activation of the Deep Layers of the Human Primary Visual Cortex by Top-Down Feedback"
-     ],
-     "head": "A dial for which guess wins",
-     "src": "Kanai et al., 2015",
-     "plain": "A classic"
-    },
-    {
-     "n": 12,
      "id": 698,
      "year": 2015,
      "title": "Shift toward prior knowledge confers a perceptual advantage in early psychosis and psychosis-prone healthy individuals (Teufel, Subramaniam, Dobler, Perez, Finnemann, Mehta et al.)",
@@ -231,37 +183,15 @@ window.FIELD={
      "thin": false,
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4629373/",
      "links": [
-      "The free-energy principle: a unified brain theory? (Friston)",
-      "Pavlovian conditioning–induced hallucinations result from overweighting of perceptual priors",
-      "Hallucinations and Strong Priors",
-      "The Predictive Coding Account of Psychosis",
-      "Forms of prediction in the nervous system (Teufel & Fletcher)"
+      "The free-energy principle: a unified brain theory? (Friston)"
      ],
      "head": "When expecting helps you see",
      "src": "Shift toward prior knowledge confers a…, 2015",
-     "plain": "A classic"
+     "plain": "A classic",
+     "new": false
     },
     {
-     "n": 13,
-     "id": 1036,
-     "year": 2016,
-     "title": "Active inference and learning",
-     "cap": "A theory, tested in computer simulations, of how learning and habits fit into the prediction idea. No new data from people.",
-     "thin": false,
-     "url": "https://doi.org/10.1016/j.neubiorev.2016.06.022",
-     "links": [
-      "Active Inference, homeostatic regulation and adaptive behavioural control (Pezzulo, Rigoli & Friston)",
-      "Active Inference: A Process Theory",
-      "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
-      "From allostatic agents to counterfactual cognisers: active inference, biological regulation, and the origins of cognition (Corcoran, Pezzulo & Hohwy)",
-      "Active inference on discrete state-spaces: A synthesis"
-     ],
-     "head": "Learning, in simulation",
-     "src": "Active inference and learning, 2016",
-     "plain": "A classic"
-    },
-    {
-     "n": 14,
+     "n": 11,
      "id": 1039,
      "year": 2016,
      "title": "Active interoceptive inference and the emotional brain (Seth & Friston)",
@@ -269,25 +199,15 @@ window.FIELD={
      "thin": false,
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5062097/",
      "links": [
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "Active Inference, homeostatic regulation and adaptive behavioural control (Pezzulo, Rigoli & Friston)",
-      "An active inference theory of allostasis and interoception in depression (Barrett, Quigley & Hamilton)",
-      "From allostatic agents to counterfactual cognisers: active inference, biological regulation, and the origins of cognition (Corcoran, Pezzulo & Hohwy)",
-      "Contextual Feedback to Superficial Layers of V1 (Muckli, De Martino, Vizioli, Petro, Smith, Ugurbil et al.)"
+      "An active inference theory of allostasis and interoception in depression (Barrett, Quigley & Hamilton)"
      ],
      "head": "Feelings as predictions",
      "src": "Seth & Friston, 2016",
-     "plain": "A classic"
-    }
-   ]
-  },
-  {
-   "name": "Room 5 · Checking the Story (2016–2020)",
-   "light": "bright",
-   "note": "Does the evidence really back the idea?",
-   "cards": [
+     "plain": "A classic",
+     "new": false
+    },
     {
-     "n": 15,
+     "n": 12,
      "id": 1042,
      "year": 2016,
      "title": "An active inference theory of allostasis and interoception in depression (Barrett, Quigley & Hamilton)",
@@ -296,55 +216,22 @@ window.FIELD={
      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5062100/",
      "links": [
       "The free-energy principle: a unified brain theory? (Friston)",
-      "Active Inference, homeostatic regulation and adaptive behavioural control (Pezzulo, Rigoli & Friston)",
-      "Active interoceptive inference and the emotional brain (Seth & Friston)",
-      "Where Is the Semantic System? A Critical Review and Meta-Analysis of 120 Functional Neuroimaging Studies",
-      "From allostatic agents to counterfactual cognisers: active inference, biological regulation, and the origins of cognition (Corcoran, Pezzulo & Hohwy)"
+      "Active interoceptive inference and the emotional brain (Seth & Friston)"
      ],
      "head": "Stuck on old guesses",
      "src": "Barrett et al., 2016",
-     "plain": "A classic"
-    },
+     "plain": "A classic",
+     "new": false
+    }
+   ]
+  },
+  {
+   "name": "Room 5 · Checking the Story (2018–2020)",
+   "light": "bright",
+   "note": "Does the evidence really back the idea?",
+   "cards": [
     {
-     "n": 16,
-     "id": 1095,
-     "year": 2016,
-     "title": "Repetition suppression and its contextual determinants in predictive coding (Auksztulewicz & Friston)",
-     "cap": "When a sight or sound repeats, the brain responds less, but only in the right setting. That points to prediction, not tiredness.",
-     "thin": false,
-     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5405056/",
-     "links": [
-      "The free-energy principle: a unified brain theory? (Friston)",
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "A theory of cortical responses — predictive coding in the cortex (Friston)",
-      "Attentional Enhancement of Auditory Mismatch Responses: a DCM/MEG Study (Auksztulewicz & Friston)",
-      "Cerebral hierarchies: predictive processing, precision and the pulvinar (Kanai, Komura, Shipp & Friston)"
-     ],
-     "head": "Repeat it and the brain goes quiet",
-     "src": "Repetition suppression and its…, 2016",
-     "plain": "A classic"
-    },
-    {
-     "n": 17,
-     "id": 1471,
-     "year": 2017,
-     "title": "Active Inference: A Process Theory",
-     "cap": "A theory paper: brain cell activity can be described as steadily shrinking prediction errors. Its simulations match brain responses seen in real experiments.",
-     "thin": false,
-     "url": "https://doi.org/10.1162/neco_a_00912",
-     "links": [
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "Active Inference, homeostatic regulation and adaptive behavioural control (Pezzulo, Rigoli & Friston)",
-      "Active inference and learning",
-      "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
-      "From allostatic agents to counterfactual cognisers: active inference, biological regulation, and the origins of cognition (Corcoran, Pezzulo & Hohwy)"
-     ],
-     "head": "Cutting error, step by step",
-     "src": "Active Inference, 2017",
-     "plain": "Still being argued over"
-    },
-    {
-     "n": 18,
+     "n": 13,
      "id": 1922,
      "year": 2018,
      "title": "How Do Expectations Shape Perception? (de Lange, Heilbron & Kok)",
@@ -353,17 +240,16 @@ window.FIELD={
      "url": "https://doi.org/10.1016/j.tics.2018.06.002",
      "links": [
       "The free-energy principle: a unified brain theory? (Friston)",
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "A theory of cortical responses — predictive coding in the cortex (Friston)",
       "Evaluating the neurophysiological evidence for predictive processing as a model of perception (Walsh, McGovern, Clark, O’Connell)",
       "Predictive processing as a systematic basis for identifying the neural correlates of consciousness"
      ],
      "head": "Expect it, see it",
      "src": "de Lange, Heilbron & Kok, 2018",
-     "plain": "Still being argued over"
+     "plain": "Still being argued over",
+     "new": false
     },
     {
-     "n": 19,
+     "n": 14,
      "id": 2758,
      "year": 2020,
      "title": "Evaluating the neurophysiological evidence for predictive processing as a model of perception (Walsh, McGovern, Clark, O’Connell)",
@@ -371,18 +257,15 @@ window.FIELD={
      "thin": false,
      "url": "https://doi.org/10.1111/nyas.14321",
      "links": [
-      "The free-energy principle: a unified brain theory? (Friston)",
-      "Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects",
-      "A theory of cortical responses — predictive coding in the cortex (Friston)",
-      "Attentional Enhancement of Auditory Mismatch Responses: a DCM/MEG Study (Auksztulewicz & Friston)",
-      "Cerebral hierarchies: predictive processing, precision and the pulvinar (Kanai, Komura, Shipp & Friston)"
+      "The free-energy principle: a unified brain theory? (Friston)"
      ],
      "head": "Does the evidence hold up?",
      "src": "Evaluating the neurophysiological…, 2020",
-     "plain": "Still being argued over"
+     "plain": "Still being argued over",
+     "new": false
     },
     {
-     "n": 20,
+     "n": 15,
      "id": 2799,
      "year": 2020,
      "title": "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
@@ -391,14 +274,122 @@ window.FIELD={
      "url": "https://doi.org/10.33735/phimisci.2020.II.64",
      "links": [
       "The free-energy principle: a unified brain theory? (Friston)",
-      "A theory of cortical responses — predictive coding in the cortex (Friston)",
-      "Active inference and learning",
-      "Active Inference: A Process Theory",
       "Evaluating the neurophysiological evidence for predictive processing as a model of perception (Walsh, McGovern, Clark, O’Connell)"
      ],
      "head": "A map for finding consciousness",
-     "src": "Predictive processing as a systematic…, 2020",
-     "plain": "Still being argued over"
+     "src": "Hohwy & Seth, 2020",
+     "plain": "Still being argued over",
+     "new": false
+    }
+   ]
+  },
+  {
+   "name": "Room 6 · Machines Find, People Check (2020–2025)",
+   "light": "bright",
+   "note": "New: beyond our Pixel Hound records. AI suggests; a lab, the weather, a proof checker or a rival team checks.",
+   "cards": [
+    {
+     "id": null,
+     "year": 2020,
+     "title": "A Deep Learning Approach to Antibiotic Discovery (Stokes et al.)",
+     "head": "An antibiotic found by AI",
+     "src": "Stokes et al., Cell 2020",
+     "url": "https://doi.org/10.1016/j.cell.2020.01.021",
+     "cap": "An AI learned which molecules kill bacteria, then searched huge libraries. It picked halicin, a molecule unlike existing antibiotics, and lab tests confirmed it works in dishes and mice.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [],
+     "n": 16
+    },
+    {
+     "id": null,
+     "year": 2021,
+     "title": "Highly accurate protein structure prediction with AlphaFold (Jumper et al.)",
+     "head": "Protein shapes, predicted",
+     "src": "Jumper et al., Nature 2021",
+     "url": "https://doi.org/10.1038/s41586-021-03819-2",
+     "cap": "AlphaFold predicts the 3D shape of a protein from its chain of building blocks. In a blind contest it matched lab results in most cases. Nobel Prize in Chemistry, 2024.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [],
+     "n": 17
+    },
+    {
+     "id": null,
+     "year": 2021,
+     "title": "Investigating the replicability of preclinical cancer biology (Errington et al.)",
+     "head": "Do it again",
+     "src": "Errington et al., eLife 2021",
+     "url": "https://doi.org/10.7554/eLife.71601",
+     "cap": "Teams repeated 50 experiments from 23 well-known cancer papers. The typical positive effect came out 85% smaller the second time.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [],
+     "n": 18
+    },
+    {
+     "id": null,
+     "year": 2023,
+     "title": "Learning skillful medium-range global weather forecasting (Lam et al.)",
+     "head": "Weather, learned from the past",
+     "src": "Lam et al., Science 2023",
+     "url": "https://doi.org/10.1126/science.adi2336",
+     "cap": "GraphCast learned from decades of past weather. It forecasts 10 days ahead in under a minute and beat the leading forecast on 90% of 1,380 checks.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [],
+     "n": 19
+    },
+    {
+     "id": null,
+     "year": 2023,
+     "title": "Mathematical discoveries from program search with large language models (Romera-Paredes et al.)",
+     "head": "New maths, kept honest by a checker",
+     "src": "Romera-Paredes et al., Nature 2023",
+     "url": "https://doi.org/10.1038/s41586-023-06924-6",
+     "cap": "A language AI wrote thousands of programs and a strict checker threw out the wrong ones. The survivors beat the best known answers to a famous maths puzzle.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [],
+     "n": 20
+    },
+    {
+     "id": null,
+     "year": 2023,
+     "title": "Semantic reconstruction of continuous language from non-invasive brain recordings (Tang, LeBel, Jain & Huth)",
+     "head": "From brain scans to sentences",
+     "src": "Tang et al., Nature Neuroscience 2023",
+     "url": "https://doi.org/10.1038/s41593-023-01304-9",
+     "cap": "A decoder turned brain scans into word sequences that caught the gist of stories people heard or imagined. It only worked if the person cooperated.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [
+      "Decoding mental states from brain activity in humans (Haynes & Rees)"
+     ],
+     "n": 21
+    },
+    {
+     "id": null,
+     "year": 2025,
+     "title": "Adversarial testing of global neuronal workspace and integrated information theories of consciousness (Cogitate Consortium)",
+     "head": "Two rival theories, one fair test",
+     "src": "Cogitate Consortium, Nature 2025",
+     "url": "https://doi.org/10.1038/s41586-025-08888-1",
+     "cap": "Rival scientists agreed the test before collecting data. 256 people later, the results challenged key claims of both theories of consciousness.",
+     "new": true,
+     "thin": false,
+     "plain": "New · beyond our records",
+     "links": [
+      "Predictive processing as a systematic basis for identifying the neural correlates of consciousness",
+      "A measure for brain complexity: relating functional segregation and integration in the nervous system (Tononi, Sporns & Edelman)"
+     ],
+     "n": 22
     }
    ]
   }
@@ -406,32 +397,34 @@ window.FIELD={
  "meta": {
   "title": "Truth showing up",
   "kicker": "Reality Sourcing",
-  "intro": "How do you know something is really true? This walk goes from measuring space with your hands to a brain that is always guessing, and checking its guesses against the world.",
-  "sub": "Start in 1868 with geometry and real objects. End in 2020 asking whether the 'prediction brain' idea really holds up.",
-  "years": "20 STOPS · 5 ROOMS · 1868 – 2020",
+  "intro": "How do you know something is really true? This walk goes from measuring space with a ruler, to a brain that is always guessing, to AI that finds things no person could, and the checks that keep everyone honest.",
+  "sub": "Start in 1868 with geometry and real objects. End in 2025, with AI finding things and people checking them.",
+  "years": "22 STOPS · 6 ROOMS · 1868 – 2025",
   "entrance_title": "Before you start",
-  "entrance_note": "Five rooms, from 1868 to 2020. Dim rooms have less evidence.",
+  "entrance_note": "Six rooms, from 1868 to 2025. Dim rooms have less evidence. Room 6 is new.",
   "imgs": [
-   "01_1868",
-   "02_1878",
-   "03_1927",
-   "04_1948",
-   "05_1954",
-   "06_1980",
-   "07_1994",
-   "08_2006",
-   "09_2010",
-   "10_2015",
-   "11_2015",
-   "12_2015",
-   "13_2016",
-   "14_2016",
-   "15_2016",
-   "16_2016",
-   "17_2017",
-   "18_2018",
-   "19_2020",
-   "20_2020"
+   "t01",
+   "t02",
+   "t03",
+   "t04",
+   "t05",
+   "t06",
+   "t07",
+   "t08",
+   "t09",
+   "t10",
+   "t11",
+   "t12",
+   "t13",
+   "t14",
+   "t15",
+   "t16",
+   "t17",
+   "t18",
+   "t19",
+   "t20",
+   "t21",
+   "t22"
   ],
   "names": {
    "1": "Helmholtz",
@@ -442,11 +435,17 @@ window.FIELD={
    "6": "Marr & Hildreth",
    "8": "Haynes & Rees",
    "9": "Friston",
-   "10": "Pezzulo et al.",
-   "11": "Kanai et al.",
-   "14": "Seth & Friston",
-   "15": "Barrett et al.",
-   "18": "de Lange, Heilbron & Kok"
+   "11": "Seth & Friston",
+   "12": "Barrett et al.",
+   "13": "de Lange",
+   "15": "Hohwy & Seth",
+   "16": "Stokes et al.",
+   "17": "Jumper et al.",
+   "18": "Errington et al.",
+   "19": "Lam et al.",
+   "20": "Romera-Paredes et al.",
+   "21": "Tang et al.",
+   "22": "Cogitate Consortium"
   },
   "end": {
    "room": "Next: Things being shaped",

@@ -4,7 +4,7 @@
 <style>@font-face{font-family:'Instrument Serif';src:url(../fonts/InstrumentSerif-Regular.ttf) format('truetype');font-display:swap}
 :root{--cream:#f7f0e3;--ink:#1f1a14;--blue:#16507a;--saff:#e8a33a;--terra:#c2410c;--teal:#1d8a8a}
 html,body{margin:0;height:100%;background:var(--cream);color:var(--ink);font:15px/1.5 -apple-system,system-ui,'Segoe UI',sans-serif;overflow:hidden;overscroll-behavior:none;touch-action:none}
-canvas#w{display:block;position:fixed;inset:0}
+canvas#w{display:block;position:fixed;inset:0;width:100%;height:100%}
 .serif{font-family:'Instrument Serif',Georgia,serif}
 #top{position:fixed;top:0;left:0;right:0;padding:calc(env(safe-area-inset-top) + 10px) 16px 22px;background:linear-gradient(#f7f0e3f2 60%,#f7f0e300);pointer-events:none}
 #top h1{margin:0;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);font-weight:700}
@@ -45,7 +45,7 @@ canvas#w{display:block;position:fixed;inset:0}
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
 <script src="data.js"></script>
 <script>window.DEMO_PAL={a:'#c2410c',b:'#16507a',hi:'#1f1a14',bg0:'#efe2c8',bg1:'#fbf4e6'};window.DEMO_IMG_BASE='scene/';window.DEMO_HERO=n=>'scene/'+window.FIELD.meta.imgs[n-1]+'.webp';</script>
-<script src="../demos/demo-bright.js?v=fix1"></script><script src="../demos/kit-bright.js?v=fix1"></script><script src="demos.js?v=fix1"></script>
+<script src="../demos/demo-bright.js?v=qa1"></script><script src="../demos/kit-bright.js?v=qa1"></script><script src="demos.js?v=qa1"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD,M=F.meta,$=s=>document.querySelector(s);const stops=[];F.rooms.forEach((r,ri)=>r.cards.forEach(c=>stops.push({...c,ri})));
@@ -92,6 +92,6 @@ window.__go=i=>{idx=i;show()};window.__openDemo=()=>{const s=stops[idx-1];Demo.o
 $('#enter').onclick=()=>{$('#title').classList.add('gone');idx=1;show()};
 function size(){const w=innerWidth,h=innerHeight;R.setSize(w,h,false);cam.aspect=w/h;cam.fov=w<h?68:52;cam.updateProjectionMatrix()}addEventListener('resize',size);size();show();
 const clk=new THREE.Clock();(function loop(){const dt=Math.min(.05,clk.getDelta()),e=clk.elapsedTime;cz+=(tz-cz)*Math.min(1,dt*3);look+=(tlook-look)*Math.min(1,dt*3);const portrait=innerWidth<innerHeight;
- cam.position.set(look*(portrait?-.6:-1.2),1.75+Math.sin(e*.6)*.03,cz+(portrait?1.2:0));cam.lookAt(look*4.3,2.1,cz-(portrait?2.2:3.2)*(1-Math.abs(look)*.55));
+ cam.position.set(look*(portrait?-.6:-1.2),1.75+Math.sin(e*.6)*.03,cz+(portrait?1.2:0));cam.lookAt(look*4.3,portrait?1.75:2.1,cz-(portrait?2.2:3.2)*(1-Math.abs(look)*.55));
  for(let i=0;i<PN;i++){pp[i*3+1]-=dt*.25;pp[i*3]+=Math.sin(e+i)*dt*.1;if(pp[i*3+1]<0)pp[i*3+1]=5}pg.attributes.position.needsUpdate=true;R.render(S,cam);requestAnimationFrame(loop)})();
 </script></body></html>

@@ -3,20 +3,21 @@ const G=window.Demo.G,lerp=G.lerp,ramp=(t,a,b)=>G.ramp(t,a,b),win=(t,a,b,f)=>G.w
 const INK='#2a1d10',TILE='#1d4f9e',SAFF='#e08a12',TEAL='#11806f',ROSE='#c0392f',CREAM='#fff8ea',SAGE='#4f8a2e',GOLD='#f2b84b';
 const WALK=window.FIELD.meta.title,PN=n=>'../../art/cin/'+WALK+'/d'+String(n).padStart(2,'0');
 const D={};
-function back(n,t,o={}){const c=G.c,z=1.03+.06*G.clamp(t/22);c.save();c.translate(o.fx??300,o.fy??300);c.scale(z,z);c.translate(-(o.fx??300),-(o.fy??300));if(!G.pic(PN(n),0,0,600,800)){c.fillStyle=G.lg(0,0,0,800,[[0,'#fbefd6'],[1,'#e9d2a6']]);c.fillRect(0,0,600,800)}c.restore();
+let PX=null;
+function back(n,t,o={}){PX=null;const c=G.c,z=1.03+.06*G.clamp(t/22);c.save();c.translate(o.fx??300,o.fy??300);c.scale(z,z);c.translate(-(o.fx??300),-(o.fy??300));if(!G.pic(PN(n),0,0,600,800)){c.fillStyle=G.lg(0,0,0,800,[[0,'#fbefd6'],[1,'#e9d2a6']]);c.fillRect(0,0,600,800)}c.restore();
  if(o.wash){c.fillStyle=G.rgba(CREAM,o.wash);c.fillRect(0,0,600,800)}
  const g=G.lg(0,430,0,800,[[0,'rgba(255,248,234,0)'],[1,'rgba(255,244,222,.55)']]);c.fillStyle=g;c.fillRect(0,430,600,370)}
-function panel(x,y,w,h,al=1){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(70,40,10,.38)';c.shadowBlur=26;c.shadowOffsetY=8;G.rr(x,y,w,h,22,'#fff8ea');c.restore();c.globalAlpha=1;
+function panel(x,y,w,h,al=1){if(al<=0)return;PX=[x,w];const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(70,40,10,.38)';c.shadowBlur=26;c.shadowOffsetY=8;G.rr(x,y,w,h,22,'#fff8ea');c.restore();c.globalAlpha=1;
  G.rr(x,y,w,h,22,null,TILE,.7*al,3);G.rr(x+7,y+7,w-14,h-14,16,null,SAFF,.45*al,1.4);
  const q=8;for(let i=0;i<q;i++){const px=x+30+i*(w-60)/(q-1);G.dot(px,y+1.5,3.2,i%2?SAFF:TILE,.8*al)}}
-function T(s,x,y,o={}){G.text(s,x,y,Object.assign({col:INK,size:24,w:700},o))}
+function T(s,x,y,o={}){o=Object.assign({col:INK,size:24,w:700},o);if(PX&&o.maxW==null&&x>PX[0]&&x<PX[0]+PX[1]){const a=o.align||'center',L=x-PX[0]-18,R=PX[0]+PX[1]-x-18;o.maxW=Math.max(40,a==='left'?R:a==='right'?L:2*Math.min(L,R));if(!o.nowrap&&o.wrap==null)o.wrap=1}G.text(s,x,y,o)}
 function S(s,x,y,size,col,al=1,it){G.text(s,x,y,{serif:1,size,col:col||INK,al,it})}
 function chip(s,x,y,col=TILE,al=1,size=21){if(al<=0)return;const c=G.c;const z=Math.max(size,12/G.k);c.font=`700 ${z}px -apple-system,system-ui,sans-serif`;const w=Math.min(c.measureText(s).width+30,G.fitW(x,"center")+8);G.rr(x-w/2,y-z*.9,w,z*1.8,z*.9,G.rgba(col,.95*al));T(s,x,y+1,{col:"#ffffff",size,al,maxW:w-24})}
-function hbar(x,y,w,h,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,y,w,h,h/2,G.rgba(INK,.09*al));if(v>0.005)G.rr(x,y,Math.max(h,v*w),h,h/2,G.rgba(col,al));T(lab,x,y-17,{align:'left',size:20,al,w:600});if(val)T(val,x+w,y-17,{align:'right',size:21,al,col,w:800})}
-function vbar(x,base,w,hmax,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,base-hmax,w,hmax,10,G.rgba(INK,.07*al));const h=Math.max(0,v)*hmax;if(h>2)G.rr(x,base-h,w,h,10,G.rgba(col,al));T(lab,x+w/2,base+22,{size:19,al,w:600});if(val)T(val,x+w/2,base-h-18,{size:22,al,col,w:800})}
+function hbar(x,y,w,h,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,y,w,h,h/2,G.rgba(INK,.09*al));if(v>0.005)G.rr(x,y,Math.max(h,v*w),h,h/2,G.rgba(col,al));let vw=0;if(val){const c=G.c;c.font=`800 ${Math.max(21,12/G.k)}px -apple-system,system-ui,sans-serif`;vw=c.measureText(val).width+14}T(lab,x,y-17,{align:'left',size:20,al,w:600,maxW:Math.max(60,w-vw),nowrap:1});if(val)T(val,x+w,y-17,{align:'right',size:21,al,col,w:800,nowrap:1})}
+function vbar(x,base,w,hmax,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,base-hmax,w,hmax,10,G.rgba(INK,.07*al));const h=Math.max(0,v)*hmax;if(h>2)G.rr(x,base-h,w,h,10,G.rgba(col,al));T(lab,x+w/2,base+22,{size:19,al,w:600,nowrap:1});if(val)T(val,x+w/2,base-h-18,{size:22,al,col,w:800})}
 function badge(s,t0,t){G.stamp(s,300,90,t0,t,ROSE,30)}
 function spark(x,y,col,k){if(k<=0)return;G.bloom(x,y,60,col,.7*k);G.ring(x,y,14+26*(1-k),col,3,k)}
-function bubble(x,y,w,h,txt,al=1,col=INK,size=24,tail){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(60,30,10,.3)';c.shadowBlur=14;G.rr(x,y,w,h,h/2>26?26:h/2,'#ffffff');c.restore();if(tail){c.globalAlpha=al;c.fillStyle='#ffffff';c.beginPath();c.moveTo(x+w*.3,y+h-2);c.lineTo(tail[0],tail[1]);c.lineTo(x+w*.45,y+h-2);c.fill();c.globalAlpha=1}T(txt,x+w/2,y+h/2+1,{size,col,al})}
+function bubble(x,y,w,h,txt,al=1,col=INK,size=24,tail){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(60,30,10,.3)';c.shadowBlur=14;G.rr(x,y,w,h,h/2>26?26:h/2,'#ffffff');c.restore();if(tail){c.globalAlpha=al;c.fillStyle='#ffffff';c.beginPath();c.moveTo(x+w*.3,y+h-2);c.lineTo(tail[0],tail[1]);c.lineTo(x+w*.45,y+h-2);c.fill();c.globalAlpha=1}T(txt,x+w/2,y+h/2+1,{size,col,al,maxW:w-22})}
 function trace(x,y,w,fn,col,lw=3.5,al=1){G.wave(x,y,w,fn,col,lw,al)}
 function brainAt(x,y,s,spots,al=1){G.brain(x,y,s,{spots,al,tint:'#eab3a5'})}
 function standin(t){if(t<.2)return;const k=G.clamp(t/0.8);chip('Stand-in scene · not an experiment',300,38,'#7a5a2a',.92*k,19)}
@@ -94,21 +95,21 @@ D[9]={dur:17,pics:[PN(9)],draw(g,t){back(9,t);panel(30,430,540,345);
  const p=t<4.5?0:t<8.5?1:2;
  if(p<2){spiky(190,590,62,GOLD,1);blob(410,590,62,'#5c8fd6',1);const fit=p===0;T(fit?'Word that FITS the shape':'Word that does NOT fit',300,475,{size:22,col:fit?SAGE:ROSE});
   const w=fit?'"spiky-sounding" name':'"round-sounding" name';bubble(130,665,340,52,w+' → spiky',ramp(t,p?5:1,p?5.5:1.5),INK,20);spark(190,590,fit?SAGE:ROSE,win(t%4,1.5,3.5,.3))}
- else{const k=ramp(t,8.5,9.3);T('Did the 14-month-olds learn the pairing?',300,475,{size:21,al:k});vbar(150,720,110,170,.8*ramp(t,9.3,10.5),SAGE,'sound fits','learned',k);vbar(340,720,110,170,.25*ramp(t,9.8,11),ROSE,'no fit','not clearly',k);G.text('bar heights illustrative',540,772,{size:15,col:'#8a7350',align:'right',w:500})}}};
+ else{const k=ramp(t,8.5,9.3);T('Did the 14-month-olds learn the pairing?',300,475,{size:21,al:k});vbar(150,720,110,170,.8*ramp(t,9.3,10.5),SAGE,'sound fits','learned',k);vbar(340,720,110,170,.25*ramp(t,9.8,11),ROSE,'no fit','not clearly',k);G.text('bar heights illustrative',300,506,{size:15,col:'#8a7350',w:500,al:k})}}};
 // 10 Ding: words, phrases, sentences
 const DW=['new','plans','gave','hope','dry','fur','rubs','skin'];
 D[10]={dur:18,pics:[PN(10)],draw(g,t){back(10,t);panel(30,420,540,355);
  const tt=Math.max(0,t-1),wi=Math.floor(tt*2)%8;if(t<11)DW.forEach((w,i)=>{const on=i===wi&&t>1&&t<11;T(w,85+i*62,465,{size:21,col:on?SAFF:INK,al:on?1:.45})});
  const rows=[['words',4,SAFF],['phrases',2,TEAL],['sentences',1,TILE]];const sh=t>11?0:1;
  if(t<11)rows.forEach(([n,f,c],i)=>{const y=530+i*62,k=ramp(t,2+i*2,3+i*2);T(n,95,y,{size:19,al:k,w:600});trace(160,y,380,(u,px)=>-Math.max(0,Math.cos((u*4-tt*.5)*f*Math.PI*2*.5))*20*k,c,3.5,k)});
- const k2=ramp(t,11,12);if(k2>0){G.rr(40,430,520,340,18,G.rgba('#fff8ea',k2));T('Brain rhythms found at',300,470,{size:22,al:k2});[[1,'1 a second','sentences',TILE],[2,'2 a second','phrases',TEAL],[4,'4 a second','words',SAFF]].forEach(([f,a,b,c],i)=>vbar(90+i*150,700,100,170,[.55,.7,.9][i]*k2,c,b,a,k2));
-  T("People who didn't know the language: only the word beat",300,752,{size:16,al:ramp(t,14,15),col:ROSE,w:700})}}};
+ const k2=ramp(t,11,12);if(k2>0){G.rr(40,430,520,340,18,G.rgba('#fff8ea',k2));T('Brain rhythms found at',300,462,{size:22,al:k2});[[1,'1 a second','sentences',TILE],[2,'2 a second','phrases',TEAL],[4,'4 a second','words',SAFF]].forEach(([f,a,b,c],i)=>vbar(90+i*150,680,100,150,[.55,.7,.9][i]*k2,c,b,a,k2));
+  T("People who didn't know the language: only the word beat",300,740,{size:16,al:ramp(t,14,15),col:ROSE,w:700})}}};
 // 11 Fedorenko: meaning builds word by word
 const FS=['Ten','sad','students','of','Bill','Gates','should','often','sleep'];
 D[11]={dur:18,pics:[PN(11)],draw(g,t){back(11,t);panel(30,420,540,355);
  const n=Math.floor(G.clamp((t-1)/6.5)*FS.length);T(FS.slice(0,n).join(' '),300,462,{size:20});
  const curves=[['real sentences',SAFF,1],['grammar, no meaning ("Jabberwocky")',TEAL,.55],['word lists',TILE,.45],['made-up non-words',ROSE,.08]];
- const x0=80,w=440,base=740,hm=230,shown=t<8?1:G.clamp(1+Math.floor((t-8)/1.4),1,4);G.line(x0,base,x0+w,base,INK,2,.4);G.line(x0,base,x0,base-hm,INK,2,.4);T('word 1 → word 8',300,760,{size:16,w:600,col:'#6b5636'});
+ const x0=80,w=440,base=728,hm=220,shown=t<8?1:G.clamp(1+Math.floor((t-8)/1.4),1,4);G.line(x0,base,x0+w,base,INK,2,.4);G.line(x0,base,x0,base-hm,INK,2,.4);T('word 1 → word 8',300,750,{size:16,w:600,col:'#6b5636'});
  curves.slice(0,shown).forEach(([l,c,sl],i)=>{const u=i===0?G.clamp((t-1)/6.5):G.clamp((t-8-(i-1)*1.4)/1.2);G.path(Array.from({length:30},(_,j)=>{const x=j/29;return[x0+x*w*u,base-20-(hm-40)*x*u*sl]}),c,5);T(l,x0+12,base-hm+10+i*30,{size:17,align:'left',col:c,w:800})});
  T('brain signal (γ-power)',300,500,{size:17,col:'#6b5636',w:600})}};
 // 12 Tang & Chang: melody of speech
@@ -151,7 +152,7 @@ D[17]={dur:17,pics:[PN(17)],draw(g,t){back(17,t);panel(30,430,540,345);
 // 18 Regev: 1, 4 and 6 word windows
 const RW='the chef who the critic praised opened a new café'.split(' ');
 D[18]={dur:17,pics:[PN(18)],draw(g,t){back(18,t);panel(30,430,540,345);
- const n=Math.min(RW.length,1+Math.floor(G.clamp(t-1,0,10)*1));const vis=RW.slice(0,n);const x0=300-((vis.length-1)*52)/2;vis.forEach((w,i)=>T(w,x0+i*52,480,{size:15,w:700,col:INK,maxW:49}));
+ const n=Math.min(RW.length,1+Math.floor(G.clamp(t-1,0,10)*1));const vis=RW.slice(0,n);const x0=300-((vis.length-1)*52)/2;vis.forEach((w,i)=>T(w,x0+i*52,470+(i%2)*26,{size:15,w:700,col:INK,maxW:100,nowrap:1}));
  [[1,SAFF,'about 1 word'],[4,TILE,'about 4 words'],[6,TEAL,'about 6 words']].forEach(([k,c,l],j)=>{const y=545+j*72,a=ramp(t,1.5+j*1.5,2.5+j*1.5),m=Math.min(k,n),xe=x0+(n-1)*52+24,xs=x0+(n-m)*52-24;G.rr(xs,y-18,xe-xs,36,18,G.rgba(c,.25*a),c,a,2.5);T(l,300,y+32,{size:17,col:c,al:a,w:800})});
  if(t>12)chip('22 people · 3 kinds, mixed together',300,765,INK,ramp(t,12,12.6),17)}};
 // 19 Wairagkar: instant voice
@@ -166,7 +167,7 @@ D[20]={dur:17,pics:[PN(20)],draw(g,t){back(20,t);panel(30,440,540,335);
  T('Movement area of the brain',300,476,{size:20});
  const a=ramp(t,1,2),b=ramp(t,4.5,5.5);hbar(70,540,460,20,.95*a,SAFF,'trying to say it out loud','strong',a);hbar(70,605,460,20,.5*b,TEAL,'saying it only in your head','weaker copy',b);
  if(t>8){const k=ramp(t,8,9);T('Imagined sentences could be decoded',300,665,{size:19,al:k,col:TILE})}
- if(t>11){const k=ramp(t,11,12);G.at(300,725,1);G.rr(-22,-6,44,36,7,GOLD);G.c.strokeStyle=G.rgba(INK,k);G.c.lineWidth=5;G.c.beginPath();G.c.arc(0,-6,14,Math.PI,0);G.c.stroke();G.end();T('so they built privacy locks',300,770,{size:18,al:k,col:INK})}}};
+ if(t>11){const k=ramp(t,11,12);G.at(300,708,1);G.rr(-22,-6,44,36,7,GOLD);G.c.strokeStyle=G.rgba(INK,k);G.c.lineWidth=5;G.c.beginPath();G.c.arc(0,-6,14,Math.PI,0);G.c.stroke();G.end();T('so they built privacy locks',300,754,{size:18,al:k,col:INK})}}};
 const STORY={
 1:[[0,'Q',"Where in your head do words come from? In 1861 most doctors thought the whole brain did everything together. A French doctor called Paul Broca met a patient who made him doubt that."],
  [1.2,'S',"The patient, Monsieur Leborgne, could understand what people said to him. He could answer yes-or-no questions with nods and gestures. But when he tried to speak, only one word came out: \"tan\"."],

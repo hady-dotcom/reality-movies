@@ -3,20 +3,21 @@ const G=window.Demo.G,lerp=G.lerp,ramp=(t,a,b)=>G.ramp(t,a,b),win=(t,a,b,f)=>G.w
 const INK='#2a1d10',TILE='#1d4f9e',SAFF='#e08a12',TEAL='#11806f',ROSE='#c0392f',CREAM='#fff8ea',SAGE='#4f8a2e',GOLD='#f2b84b';
 const WALK=window.FIELD.meta.title,PN=n=>'../../art/cin/'+WALK+'/d'+String(n).padStart(2,'0');
 const D={};
-function back(n,t,o={}){const c=G.c,z=1.03+.06*G.clamp(t/22);c.save();c.translate(o.fx??300,o.fy??300);c.scale(z,z);c.translate(-(o.fx??300),-(o.fy??300));if(!G.pic(PN(n),0,0,600,800)){c.fillStyle=G.lg(0,0,0,800,[[0,'#fbefd6'],[1,'#e9d2a6']]);c.fillRect(0,0,600,800)}c.restore();
+let PX=null;
+function back(n,t,o={}){PX=null;const c=G.c,z=1.03+.06*G.clamp(t/22);c.save();c.translate(o.fx??300,o.fy??300);c.scale(z,z);c.translate(-(o.fx??300),-(o.fy??300));if(!G.pic(PN(n),0,0,600,800)){c.fillStyle=G.lg(0,0,0,800,[[0,'#fbefd6'],[1,'#e9d2a6']]);c.fillRect(0,0,600,800)}c.restore();
  if(o.wash){c.fillStyle=G.rgba(CREAM,o.wash);c.fillRect(0,0,600,800)}
  const g=G.lg(0,430,0,800,[[0,'rgba(255,248,234,0)'],[1,'rgba(255,244,222,.55)']]);c.fillStyle=g;c.fillRect(0,430,600,370)}
-function panel(x,y,w,h,al=1){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(70,40,10,.38)';c.shadowBlur=26;c.shadowOffsetY=8;G.rr(x,y,w,h,22,'#fff8ea');c.restore();c.globalAlpha=1;
+function panel(x,y,w,h,al=1){if(al<=0)return;PX=[x,w];const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(70,40,10,.38)';c.shadowBlur=26;c.shadowOffsetY=8;G.rr(x,y,w,h,22,'#fff8ea');c.restore();c.globalAlpha=1;
  G.rr(x,y,w,h,22,null,TILE,.7*al,3);G.rr(x+7,y+7,w-14,h-14,16,null,SAFF,.45*al,1.4);
  const q=8;for(let i=0;i<q;i++){const px=x+30+i*(w-60)/(q-1);G.dot(px,y+1.5,3.2,i%2?SAFF:TILE,.8*al)}}
-function T(s,x,y,o={}){G.text(s,x,y,Object.assign({col:INK,size:24,w:700},o))}
+function T(s,x,y,o={}){o=Object.assign({col:INK,size:24,w:700},o);if(PX&&o.maxW==null&&x>PX[0]&&x<PX[0]+PX[1]){const a=o.align||'center',L=x-PX[0]-18,R=PX[0]+PX[1]-x-18;o.maxW=Math.max(40,a==='left'?R:a==='right'?L:2*Math.min(L,R));if(!o.nowrap&&o.wrap==null)o.wrap=1}G.text(s,x,y,o)}
 function S(s,x,y,size,col,al=1,it){G.text(s,x,y,{serif:1,size,col:col||INK,al,it})}
 function chip(s,x,y,col=TILE,al=1,size=21){if(al<=0)return;const c=G.c;const z=Math.max(size,12/G.k);c.font=`700 ${z}px -apple-system,system-ui,sans-serif`;const w=Math.min(c.measureText(s).width+30,G.fitW(x,"center")+8);G.rr(x-w/2,y-z*.9,w,z*1.8,z*.9,G.rgba(col,.95*al));T(s,x,y+1,{col:"#ffffff",size,al,maxW:w-24})}
-function hbar(x,y,w,h,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,y,w,h,h/2,G.rgba(INK,.09*al));if(v>0.005)G.rr(x,y,Math.max(h,v*w),h,h/2,G.rgba(col,al));T(lab,x,y-17,{align:'left',size:20,al,w:600});if(val)T(val,x+w,y-17,{align:'right',size:21,al,col,w:800})}
-function vbar(x,base,w,hmax,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,base-hmax,w,hmax,10,G.rgba(INK,.07*al));const h=Math.max(0,v)*hmax;if(h>2)G.rr(x,base-h,w,h,10,G.rgba(col,al));T(lab,x+w/2,base+22,{size:19,al,w:600});if(val)T(val,x+w/2,base-h-18,{size:22,al,col,w:800})}
+function hbar(x,y,w,h,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,y,w,h,h/2,G.rgba(INK,.09*al));if(v>0.005)G.rr(x,y,Math.max(h,v*w),h,h/2,G.rgba(col,al));let vw=0;if(val){const c=G.c;c.font=`800 ${Math.max(21,12/G.k)}px -apple-system,system-ui,sans-serif`;vw=c.measureText(val).width+14}T(lab,x,y-17,{align:'left',size:20,al,w:600,maxW:Math.max(60,w-vw),nowrap:1});if(val)T(val,x+w,y-17,{align:'right',size:21,al,col,w:800,nowrap:1})}
+function vbar(x,base,w,hmax,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,base-hmax,w,hmax,10,G.rgba(INK,.07*al));const h=Math.max(0,v)*hmax;if(h>2)G.rr(x,base-h,w,h,10,G.rgba(col,al));T(lab,x+w/2,base+22,{size:19,al,w:600,nowrap:1});if(val)T(val,x+w/2,base-h-18,{size:22,al,col,w:800})}
 function badge(s,t0,t){G.stamp(s,300,90,t0,t,ROSE,30)}
 function spark(x,y,col,k){if(k<=0)return;G.bloom(x,y,60,col,.7*k);G.ring(x,y,14+26*(1-k),col,3,k)}
-function bubble(x,y,w,h,txt,al=1,col=INK,size=24,tail){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(60,30,10,.3)';c.shadowBlur=14;G.rr(x,y,w,h,h/2>26?26:h/2,'#ffffff');c.restore();if(tail){c.globalAlpha=al;c.fillStyle='#ffffff';c.beginPath();c.moveTo(x+w*.3,y+h-2);c.lineTo(tail[0],tail[1]);c.lineTo(x+w*.45,y+h-2);c.fill();c.globalAlpha=1}T(txt,x+w/2,y+h/2+1,{size,col,al})}
+function bubble(x,y,w,h,txt,al=1,col=INK,size=24,tail){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=al;c.shadowColor='rgba(60,30,10,.3)';c.shadowBlur=14;G.rr(x,y,w,h,h/2>26?26:h/2,'#ffffff');c.restore();if(tail){c.globalAlpha=al;c.fillStyle='#ffffff';c.beginPath();c.moveTo(x+w*.3,y+h-2);c.lineTo(tail[0],tail[1]);c.lineTo(x+w*.45,y+h-2);c.fill();c.globalAlpha=1}T(txt,x+w/2,y+h/2+1,{size,col,al,maxW:w-22})}
 function trace(x,y,w,fn,col,lw=3.5,al=1){G.wave(x,y,w,fn,col,lw,al)}
 function brainAt(x,y,s,spots,al=1){G.brain(x,y,s,{spots,al,tint:'#eab3a5'})}
 function standin(t){if(t<.2)return;const k=G.clamp(t/0.8);chip('Stand-in scene · not an experiment',300,38,'#7a5a2a',.92*k,19)}
@@ -41,7 +42,7 @@ D[3]={dur:18,pics:[PN(3)],draw(g,t){back(3,t);panel(30,440,540,335);
  T('LEFT half: talks',170,690,{size:17,col:TILE,w:800});T('RIGHT half: no words',430,690,{size:17,col:SAFF,w:800});
  if(t>3.5&&t<5.5)chip('"spoon" flashed to the LEFT side of view',300,480,SAFF,1,18);
  const r=ramp(t,4.5,5.5);G.dot(360,600,30*r,SAFF,.6*r);
- if(t>6.5){bubble(80,730,200,46,'"I saw nothing"',ramp(t,6.5,7.2),TILE,19)}if(t>9){bubble(320,730,220,46,'left hand picks spoon',ramp(t,9,9.7),SAFF,18);G.mark(520,690,true,ramp(t,9.5,10),.5)}
+ if(t>6.5){bubble(80,730,200,46,'"I saw nothing"',ramp(t,6.5,7.2),TILE,19)}if(t>9){bubble(320,730,220,46,'left hand picks spoon',ramp(t,9,9.7),SAFF,18);G.mark(522,622,true,ramp(t,9.5,10),.5)}
  if(t>12.5){const k=ramp(t,12.5,13.3);G.rr(40,450,520,90,14,G.rgba('#fff8ea',k));T('Two halves can know different things',300,495,{size:21,al:k,col:INK})}}};
 // 4 Searle: Chinese room (stand-in)
 D[4]={dur:16,pics:[PN(4)],draw(g,t){back(4,t);standin(t);panel(30,450,540,325);
@@ -115,7 +116,7 @@ D[14]={dur:17,pics:[PN(14)],draw(g,t){back(14,t);panel(30,440,540,335);
  const rich=k=>{for(let i=0;i<10;i++)for(let j=i+1;j<10;j++)if((i*7+j*3)%4==0){const a=i/10*6.283,b=j/10*6.283;G.line(Math.cos(a)*55,Math.sin(a)*40,Math.cos(b)*55,Math.sin(b)*40,(i+j)%2?SAFF:TILE,3,k*(.5+.5*Math.sin(t*2+i)))}};
  const items=[[95,'healthy',1],[230,'minimally conscious',.85],[370,'unresponsive',.15],[505,'anaesthesia',.2]];
  items.forEach(([x,l,k],i)=>{const a=ramp(t,1+i*1.6,2+i*1.6);G.at(x,610,.8);G.c.globalAlpha=a;G.dot(0,0,62,'#fdeee0');rich(k*a);G.c.globalAlpha=1;G.end();l.split(' ').forEach((p,j,A)=>T(p,x,700+(j-(A.length-1)/2)*20,{size:14,w:800,al:a,col:k>.5?SAGE:'#8a7350',maxW:128}))});
- if(t>9)chip('rich, changing pattern goes with consciousness',300,750,TEAL,ramp(t,9,9.6),16)}};
+ if(t>9)chip('rich, changing pattern goes with consciousness',300,744,TEAL,ramp(t,9,9.6),16)}};
 // 15 FND: a rule-in sign
 D[15]={dur:17,pics:[PN(15)],draw(g,t){back(15,t);panel(30,440,540,335);
  T('Example sign: Hoover\'s sign',300,476,{size:20,col:TILE});
@@ -126,14 +127,14 @@ D[15]={dur:17,pics:[PN(15)],draw(g,t){back(15,t);panel(30,440,540,335);
 D[16]={dur:18,pics:[PN(16)],draw(g,t){back(16,t);panel(30,440,540,335);
  const steps=[[567,'cardiac arrests in hospital'],[53,'survived'],[28,'interviewed'],[11,'had memories suggesting awareness']];
  steps.forEach(([n,l],i)=>{const y=490+i*55,k=ramp(t,1+i*1.8,2+i*1.8);hbar(170,y,360,14,Math.sqrt(n/567)*k,[TILE,TEAL,SAFF,ROSE][i],'',null,k);T(String(n),120,y+6,{size:24,al:k,col:[TILE,TEAL,SAFF,ROSE][i],w:800});T(l,350,y-14,{size:16,al:k,w:600})});
- if(t>9.5){const k=ramp(t,9.5,10.5);T('Hidden picture on a tablet: nobody named it',300,715,{size:17,al:k});T('Brain waves near normal up to 35–60 min into CPR (some)',300,750,{size:15,al:ramp(t,11.5,12.5),col:TILE,w:800})}}};
+ if(t>9.5){const k=ramp(t,9.5,10.5);T('Hidden picture on a tablet: nobody named it',300,702,{size:17,al:k});T('Brain waves near normal up to 35–60 min into CPR (some)',300,740,{size:15,al:ramp(t,11.5,12.5),col:TILE,w:800})}}};
 // 17 Physio4FMD
 D[17]={dur:17,pics:[PN(17)],draw(g,t){back(17,t);panel(30,440,540,335);
  T('355 people · 11 hospitals · split at random',300,476,{size:19});
  const k=ramp(t,2,3);chip('specialist physio',190,530,SAFF,k,18);chip('usual care',420,530,TILE,k,18);
- const m=ramp(t,5,7);vbar(140,720,100,150,.55*m,SAFF,'specialist','',m);vbar(370,720,100,150,.5*m,TILE,'usual','',m);T('physical function at 12 months',300,560,{size:16,al:m,w:600,col:'#6b5636'});
+ const m=ramp(t,5,7);vbar(140,702,100,132,.55*m,SAFF,'specialist','',m);vbar(370,702,100,132,.5*m,TILE,'usual','',m);T('physical function at 12 months',300,560,{size:16,al:m,w:600,col:'#6b5636'});
  if(t>8){const c=ramp(t,8,9);chip('no clear difference',300,610,ROSE,c,20)}
- if(t>11)T('but more felt their symptoms improved',300,766,{size:17,col:SAGE,al:ramp(t,11,12)})}};
+ if(t>11)T('but more felt their symptoms improved',300,752,{size:17,col:SAGE,al:ramp(t,11,12)})}};
 // 18 Bodien 2024: cognitive motor dissociation
 D[18]={dur:17,pics:[PN(18)],draw(g,t){back(18,t);beyond(t);panel(30,440,540,335);
  T('241 patients who could not respond to commands',300,476,{size:18});T('"Imagine opening and closing your hand…"',300,508,{size:17,col:TILE,w:600});
@@ -150,8 +151,8 @@ D[20]={dur:18,pics:[PN(20)],draw(g,t){back(20,t);beyond(t);panel(30,440,540,335)
  T('5-minute chats with a person AND an AI at once',300,476,{size:17});T('Which one is the human?',300,504,{size:19,col:TILE});
  const r=[['GPT-4.5 (told to act human)',.73,SAFF],['LLaMa-3.1 (same prompt)',.56,TEAL],['ELIZA (1960s program)',.23,'#8a7350'],['GPT-4o (no persona)',.21,'#8a7350']];
  r.forEach(([l,v,c],i)=>{const k=ramp(t,2+i*1.4,3+i*1.4);hbar(80,560+i*52,440,14,v*k,c,l,Math.round(v*100)+'%',k)});
- G.line(80+440*.5,545,80+440*.5,750,ROSE,2,.5*ramp(t,8,9),[5,5]);T('chance',308,770,{size:14,col:ROSE,al:ramp(t,8,9),align:'left'});
- G.text('chosen as "the human"',80,770,{size:13,col:'#8a7350',align:'left',w:500,maxW:212})}};
+ G.line(80+440*.5,545,80+440*.5,736,ROSE,2,.5*ramp(t,8,9),[5,5]);T('chance',308,754,{size:14,col:ROSE,al:ramp(t,8,9),align:'left'});
+ G.text('chosen as "the human"',80,754,{size:13,col:'#8a7350',align:'left',w:500,maxW:212})}};
 const STORY={
 1:[[0,'Q',"When you stub your toe, do you feel it instantly? In 1850 most scientists thought nerve signals were far too fast to measure. Hermann von Helmholtz decided to time one anyway."],
  [0.5,'S',"He used a frog's leg muscle with its long nerve still attached, wired to a very precise timer. When the nerve is zapped with a little electricity, the muscle twitches."],

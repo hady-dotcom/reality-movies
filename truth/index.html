@@ -37,12 +37,20 @@ canvas{display:block;position:fixed;inset:0}
 @media(min-width:900px){#card{left:auto;right:30px;bottom:86px;width:430px;max-height:70vh}#card .c{font-size:17px}}
 #card .hd{font-family:'Instrument Serif',Georgia,serif;font-size:27px;line-height:1.1;margin:8px 0 6px;color:#2a2118}#card .c{font:15.5px/1.55 -apple-system,system-ui,'Segoe UI',sans-serif}#card .src{margin-top:10px;font:11.5px/1.4 -apple-system,system-ui,sans-serif;color:#6b5b49;letter-spacing:.02em}#card .src a{color:#1f5f8b}
 #card .y,#title h2,#room{font-family:'Instrument Serif',Georgia,serif}#title p{font-family:-apple-system,system-ui,sans-serif;font-style:normal;font-size:15px;line-height:1.55}#title .intro{font-size:17px;max-width:520px}#title .lede{opacity:.8;max-width:460px}#roomnote{font-family:-apple-system,system-ui,sans-serif}
+</style><style>/* bright demo window to match the walk */
+#demo{background:#2a1d0e99!important}
+#demo .dm-box{background:linear-gradient(170deg,#fffaf0,#f3e8d2)!important;border-color:#1f5f8b55!important;box-shadow:0 24px 70px #3a2a1466!important}
+#demo .dm-k{color:#1f5f8b!important}#demo .dm-t{color:#1d2a3a!important}
+#demo .dm-cap,#demo .dm-cap .dm-tx{color:#2a2118!important}#demo .dm-ck{color:#1f5f8b!important}#demo .dm-n{color:#2a211899!important}#demo .dm-cap[data-k="N"] .dm-lab{color:#11806f!important}
+#demo button{color:#1f5f8b!important;background:#fffaf0!important;border-color:#1f5f8b66!important}
+#demo .dm-bar{background:#1f5f8b1f!important}#demo .dm-bar i{background:#e3a72f!important}
+#demo .dm-stage{background:#f6efe0!important}
 </style></head><body>
 <div id="title"><div class="k">Reality Sourcing</div><h2>Truth showing up</h2><p class="intro">How do you know something is really true? This walk goes from measuring space with a ruler, to a brain that is always guessing, to AI that finds things no person could, and the checks that keep everyone honest.</p><p class="lede">Start in 1868 with geometry and real objects. End in 2025, with AI finding things and people checking them.</p><div class="yr">22 STOPS · 6 ROOMS · 1868 – 2025</div><button id="enter">Start walking</button><a class="hub" href="../">‹ Home</a></div>
 <div id="top"><h1><a href="../" class="homelink" style="color:inherit;text-decoration:none;pointer-events:auto;display:inline-block;padding:4px 10px;margin-left:-10px;border:1px solid currentColor;border-radius:20px;opacity:.9">‹ Home</a> · Truth showing up</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
-<script src="data.js?v=td2"></script><script>window.DEMO_PAL={a:'#f3b65a',b:'#1f5f8b',hi:'#fff3dc',bg0:'#123a5c',bg1:'#1f5f8b'}</script><script src="../demos/demo.js?v=fix1"></script><script src="demos.js?v=fix1"></script><script src="theme.js"></script>
+<script src="data.js?v=td2"></script><script>window.DEMO_PAL={a:'#f3b65a',b:'#1f5f8b',hi:'#fff3dc',bg0:'#123a5c',bg1:'#1f5f8b'}</script><script src="../demos/demo.js?v=qa1"></script><script src="demos.js?v=fix1"></script><script src="theme.js"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD, M=F.meta, stops=[];

@@ -18,7 +18,7 @@ window.WALK={
    "head": "Halal and tayyib, side by side",
    "place": "Medina, Arabia",
    "who": "The Qur'an, Surah al-Baqarah 2:168",
-   "cap": "The Qur'an tells all people: \"Eat of what is on the earth, halal and tayyib.\" Halal means allowed. Tayyib means good, wholesome and clean. The two words come as a pair.",
+   "cap": "The Qur'an tells all people: \"O humanity! Eat from what is lawful and good on the earth.\" In the Arabic, the pair is halal (allowed) and tayyib (good, wholesome and clean).",
    "spread": "Recited aloud, memorised and later written down. Muslims have read the verse ever since.",
    "oh": "From the start, 'allowed' was never meant to stand alone. It came with 'good'.",
    "terms": [
@@ -41,9 +41,9 @@ window.WALK={
    "head": "A short list of what is not allowed",
    "place": "Medina, Arabia",
    "who": "The Qur'an, Surah al-Ma'idah 5:3 and 5:5",
-   "cap": "The Qur'an names what is haram (forbidden): animals found already dead, blood, pork, and animals killed in the name of anything other than God. It also says the food of Jews and Christians is allowed to Muslims.",
+   "cap": "The Qur'an names what is haram (forbidden): animals found already dead, blood, pork, and animals killed in the name of anything other than God. It also forbids animals killed by strangling, a blow, a fall or being gored, meat a predator has partly eaten unless you slaughter it, what is sacrificed on altars, and drawing lots to make decisions. It also says the food of Jews and Christians is allowed to Muslims.",
    "spread": "Part of the Qur'an, so it reached every Muslim community.",
-   "oh": "The forbidden list is short. Most food is allowed by default.",
+   "oh": "The verse names what is forbidden. Most other food is allowed by default.",
    "terms": [
     [
      "Haram",
@@ -87,7 +87,7 @@ window.WALK={
    "head": "When in doubt, leave it",
    "place": "Tus and Baghdad",
    "who": "Abu Hamid al-Ghazali",
-   "cap": "In his great book Revival of the Religious Sciences, al-Ghazali wrote a whole section on the lawful and the unlawful. He built on a saying of the Prophet: halal is clear, haram is clear, and between them are doubtful things.",
+   "cap": "A saying of the Prophet, in Sahih al-Bukhari: halal is clear, haram is clear, and between them are doubtful things. al-Ghazali's Revival of the Religious Sciences is often said to devote a section to this.",
    "spread": "Copied, taught and translated for centuries; still read today.",
    "oh": "Long before labels, the advice for unclear food was simple: if you're not sure, skip it.",
    "terms": [
@@ -100,8 +100,8 @@ window.WALK={
      "Islamic law as worked out by scholars"
     ]
    ],
-   "thin": "The book is dated to roughly 1095–1105.",
-   "src": "al-Ghazali, Ihya' 'Ulum al-Din; Sahih al-Bukhari 52",
+   "thin": "The book is dated to roughly 1095–1105. No working link to the Ihya was found, so the claim about that book is thin. The linked source is only Sahih al-Bukhari 52.",
+   "src": "Sahih al-Bukhari 52",
    "url": "https://sunnah.com/bukhari:52"
   },
   {
@@ -168,7 +168,7 @@ window.WALK={
    "place": "Selangor, Malaysia",
    "who": "Selangor Islamic Religious Department (JAIS)",
    "cap": "According to Malaysia's own halal authority, state religious officials in Selangor began certifying products as halal in 1965.",
-   "spread": "Other Malaysian states followed, each with its own logo.",
+   "spread": "State religious officials in Selangor issued the certificates.",
    "oh": "Halal turned from something you knew into something someone signs for you.",
    "terms": [
     [
@@ -176,7 +176,7 @@ window.WALK={
      "an official check that ends with a certificate or logo"
     ]
    ],
-   "thin": "Details of the earliest certificates are thin; this date comes from JAKIM's own history page.",
+   "thin": "Details of the earliest certificates are thin; this date comes from JAKIM's own history page. That page does not say other states then followed, so that line is left out.",
    "src": "JAKIM, Halal Management Division profile",
    "url": "https://www.islam.gov.my/en/bahagian-pengurusan-halal/profil"
   },
@@ -197,7 +197,7 @@ window.WALK={
    ],
    "thin": "",
    "src": "Halal Malaysia Portal, Halal History",
-   "url": "https://www.halal.gov.my/index.php/en/main-page/index.php?data=bW9kdWxlcy9jb3Jwb3JhdGU7Ozs7&utama=corporate%27"
+   "url": "https://www.halal.gov.my/index.php/en/main-page/index.php?data=bW9kdWxlcy9jb3Jwb3JhdGU7Ozs7&utama=corporate"
   },
   {
    "y": "1982",
@@ -227,10 +227,10 @@ window.WALK={
    "k": "clash",
    "head": "The lard scare",
    "place": "Malang and Jakarta, Indonesia",
-   "who": "Tri Susanto; Indonesian Ulema Council (MUI)",
-   "cap": "A food researcher listed 34 products that might contain pork fat or gelatin. The study had no lab tests, and copies were changed as they spread, but sales of some products fell sharply. In January 1989 the Ulema Council set up LPPOM MUI to certify food.",
-   "spread": "A student bulletin, photocopies, radio sermons and newspapers.",
-   "oh": "A rumour, not proof, built Indonesia's halal system.",
+   "who": "Indonesian Ulema Council (MUI)",
+   "cap": "In 1988 a scare about pork fat spread in Indonesia. The government asked the Ulema Council to act. On 6 January 1989 the council set up LPPOM MUI to inspect products and certify them as halal.",
+   "spread": "The scare was widely discussed, and a new inspection body followed.",
+   "oh": "The 1988 scare is why Indonesia set up a body to check halal food.",
    "terms": [
     [
      "Lard",
@@ -242,8 +242,8 @@ window.WALK={
     ]
    ],
    "thin": "",
-   "src": "Tempo, 29 Oct 1988; LPPOM MUI history",
-   "url": "https://halalmui.org/en/about-us-2/"
+   "src": "LPPOM, Kaleidoskop Sertifikasi Halal Indonesia",
+   "url": "https://halalmui.org/kaleidoskop-sertifikasi-halal-indonesia/"
   },
   {
    "y": "1997",
@@ -291,7 +291,7 @@ window.WALK={
    "who": "Dan Jørgensen, agriculture minister",
    "cap": "Denmark required all animals to be stunned before slaughter, ending the religious exception. The minister said animal rights come before religion. Muslim and Jewish groups said it limited their freedom.",
    "spread": "Covered worldwide; other European countries debated the same step.",
-   "oh": "Meat from religious slaughter could still be imported, so the ban changed where animals were killed, not what people could buy.",
+   "oh": "Muslim and Jewish groups said the ban limited their freedom to practise their religion.",
    "terms": [
     [
      "Exception",
@@ -309,8 +309,8 @@ window.WALK={
    "place": "Malaysia",
    "who": "Ministry of Health; JAKIM; Cadbury",
    "cap": "A health ministry test found pig DNA in two Cadbury chocolate bars. Cadbury recalled them and there were calls for a boycott. Then JAKIM tested 11 samples straight from the factory and found none.",
-   "spread": "News reports and calls for a boycott. The all-clear came on 2 June, nine days after the first result.",
-   "oh": "The scare came first. The all-clear came nine days later.",
+   "spread": "News reports and calls for a boycott. The all-clear was reported on 2 June 2014.",
+   "oh": "The scare came first. The all-clear came after new tests at the factory.",
    "terms": [
     [
      "Recall",
@@ -327,18 +327,18 @@ window.WALK={
    "head": "Halal as a brand",
    "place": "Malaysia and worldwide",
    "who": "Cosmetics and drinks makers",
-   "cap": "Halal logos spread to lipstick, shampoo and even bottled water. A 2016 study of halal cosmetics brands argued the logo was being used as a marketing sign of piety.",
-   "spread": "Packaging, adverts and trade fairs.",
-   "oh": "Water was always halal. The logo on it says something about the market, not the water.",
+   "cap": "A 2016 study of halal cosmetics brands argued the logo was being used as a marketing sign of piety, on products such as lipstick and shampoo. Bottled water is certified in some countries too: Malaysia's halal office told Khaleej Times the check is for the process, because some filters use animal products.",
+   "spread": "Packaging, adverts and trade fairs, and later news about certified drinks.",
+   "oh": "A logo on water checks the process, including the filter, not the water alone.",
    "terms": [
     [
      "Branding",
      "using names and symbols to make you choose a product"
     ]
    ],
-   "thin": "One academic study; water can need checking if filters use animal products.",
-   "src": "Kemanusiaan 23 (2016); Khaleej Times",
-   "url": "https://doi.org/10.21315/kajh2016.23.s2.4"
+   "thin": "The cosmetics point is one academic study. The bottled-water point is a 2019 news report, later than this stop's year.",
+   "src": "Kemanusiaan 23 (2016), doi.org/10.21315/kajh2016.23.s2.4; Khaleej Times, 16 May 2019",
+   "url": "https://www.khaleejtimes.com/lifestyle/health/why-water-is-halal-certified-in-some-countries"
   },
   {
    "y": "2019",
@@ -356,8 +356,8 @@ window.WALK={
     ]
    ],
    "thin": "",
-   "src": "Indonesia Law 33/2014; BPJPH",
-   "url": "https://bpjph.halal.go.id/en/detail/head-of-bpjph-halal-certification-obligation-for-consumer-protection-and-business-convenience/"
+   "src": "Indonesia Law 33/2014; Ministry of Marine Affairs and Fisheries, 16 Oct 2019",
+   "url": "https://www.kkp.go.id/news/news-detail/pemerintah-siap-selenggarakan-jaminan-produk-halal65fa43d1ed457.html"
   },
   {
    "y": "2020",
@@ -383,9 +383,9 @@ window.WALK={
    "k": "shift",
    "head": "Checking the animal is alive",
    "place": "UK",
-   "who": "Defra, NFU, Bristol University and halal certifiers",
-   "cap": "The UK government launched a halal assurance scheme, the 'Demonstration of Life' protocol, to show that a stunned animal is still alive at slaughter, which many Muslims require.",
-   "spread": "Announced by government and farmers' groups for UK and export markets.",
+   "who": "UK farming groups, Bristol University and halal certifiers",
+   "cap": "UK farming groups, Bristol University and halal certifiers developed a halal assurance scheme, the 'Demonstration of Life' protocol, to show that a stunned animal is still alive at slaughter, which many Muslims require.",
+   "spread": "Set out with farmers' groups for UK processors and export markets.",
    "oh": "Science was used to build a bridge between welfare and faith instead of a wall.",
    "terms": [
     [

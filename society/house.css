@@ -1,0 +1,24 @@
+/* Reality Society house tokens — Apple HIG (iOS 26 Liquid Glass) inspired.
+   Swap this one file for Jenkins' tokens later; pages only use the variables below. */
+:root{
+ --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,"Helvetica Neue",Arial,system-ui,sans-serif;
+ --font-serif:'Instrument Serif',Georgia,serif;
+ /* type scale (size/line) */
+ --t-large:700 34px/41px var(--font);--t-title1:700 28px/34px var(--font);--t-title2:700 22px/28px var(--font);
+ --t-title3:600 20px/25px var(--font);--t-headline:600 17px/22px var(--font);--t-body:400 17px/22px var(--font);
+ --t-callout:400 16px/21px var(--font);--t-subhead:400 15px/20px var(--font);--t-foot:400 13px/18px var(--font);--t-cap:400 12px/16px var(--font);
+ /* 8pt grid */
+ --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:40px;--s6:48px;--s8:64px;
+ /* colour */
+ --bg:#ffffff;--bg2:#f2f2f7;--card:#ffffff;--label:#000000;--label2:rgba(60,60,67,.6);--label3:rgba(60,60,67,.3);--sep:rgba(60,60,67,.12);
+ --tint:#0a7aff;              /* the one accent */
+ --k-principle:#248a3d;--k-shift:#0a7aff;--k-clash:#d70015;
+ /* glass */
+ --glass:rgba(255,255,255,.62);--glass-brd:rgba(255,255,255,.7);--glass-blur:saturate(180%) blur(24px);
+ --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.08);
+ /* shape + motion */
+ --r-card:22px;--r-btn:999px;--r-img:18px;
+ --spring:cubic-bezier(.2,.9,.25,1.15);--ease:cubic-bezier(.25,.1,.25,1);--dur:.55s;
+ --bar-h:52px;--tab-h:64px;
+}
+@font-face{font-family:'Instrument Serif';src:url(../fonts/InstrumentSerif-Regular.ttf) format('truetype');font-display:swap}

@@ -81,8 +81,8 @@ D[8]={dur:17,pics:[PN(8)],draw(g,t){back(8,t);panel(30,440,540,335);
 D[9]={dur:17,pics:[PN(9)],draw(g,t){back(9,t);panel(30,440,540,335);
  T('Brain scan at rest: no task needed',300,476,{size:20});
  const pts=[[-100,-40],[-40,-90],[40,-80],[100,-30],[-60,30],[60,30]],strong=t<8;
- [[195,'minimally conscious',1],[410,'unresponsive',.25]].forEach(([x,l,s])=>{G.at(x,610,.62);G.brain(0,0,1,{tint:'#eab3a5'});pts.forEach((p,i)=>pts.slice(i+1).forEach(q=>G.line(p[0],p[1],q[0],q[1],TEAL,4,s*ramp(t,1.5,3)*(.6+.4*Math.sin(t*3+i)))));G.end();T(l,x,712,{size:17,w:800,col:s>.5?TEAL:'#8a7350'})});
- if(t>8){const k=ramp(t,8,9);chip('each network told the groups apart >80% of the time',300,748,TILE,k,15);T('best: the HEARING network',300,520,{size:19,col:SAFF,al:ramp(t,10,11)})}}};
+ [[195,'minimally conscious',1],[410,'unresponsive',.25]].forEach(([x,l,s])=>{G.at(x,610,.62);G.brain(0,0,1,{tint:'#eab3a5'});pts.forEach((p,i)=>pts.slice(i+1).forEach(q=>G.line(p[0],p[1],q[0],q[1],TEAL,4,s*ramp(t,1.5,3)*(.6+.4*Math.sin(t*3+i)))));G.end();T(l,x,702,{size:17,w:800,col:s>.5?TEAL:'#8a7350'})});
+ if(t>8){const k=ramp(t,8,9);chip('each network told the groups apart >80% of the time',300,736,TILE,k,15);T('best: the HEARING network',300,520,{size:19,col:SAFF,al:ramp(t,10,11)})}}};
 // 10 Casarotto: zap and zip
 D[10]={dur:18,pics:[PN(10)],draw(g,t){back(10,t);panel(30,440,540,335);
  if(t<9){T('A magnetic pulse "knocks" the brain; EEG listens to the echo',300,474,{size:16,w:700});
@@ -114,8 +114,8 @@ D[13]={dur:18,pics:[PN(13)],draw(g,t){back(13,t);panel(30,440,540,335);
 D[14]={dur:17,pics:[PN(14)],draw(g,t){back(14,t);panel(30,440,540,335);
  T('Brain-wide patterns that come and go',300,476,{size:20});
  const rich=k=>{for(let i=0;i<10;i++)for(let j=i+1;j<10;j++)if((i*7+j*3)%4==0){const a=i/10*6.283,b=j/10*6.283;G.line(Math.cos(a)*55,Math.sin(a)*40,Math.cos(b)*55,Math.sin(b)*40,(i+j)%2?SAFF:TILE,3,k*(.5+.5*Math.sin(t*2+i)))}};
- const items=[[95,'healthy',1],[230,'minimally conscious',.85],[370,'unresponsive',.15],[505,'anaesthesia',.2]];
- items.forEach(([x,l,k],i)=>{const a=ramp(t,1+i*1.6,2+i*1.6);G.at(x,610,.8);G.c.globalAlpha=a;G.dot(0,0,62,'#fdeee0');rich(k*a);G.c.globalAlpha=1;G.end();l.split(' ').forEach((p,j,A)=>T(p,x,700+(j-(A.length-1)/2)*20,{size:14,w:800,al:a,col:k>.5?SAGE:'#8a7350',maxW:128}))});
+ const items=[[100,'healthy',1],[233,'minimally conscious',.85],[367,'unresponsive',.15],[494,'anaesthesia',.2]];
+ items.forEach(([x,l,k],i)=>{const a=ramp(t,1+i*1.6,2+i*1.6);G.at(x,610,.8);G.c.globalAlpha=a;G.dot(0,0,62,'#fdeee0');rich(k*a);G.c.globalAlpha=1;G.end();l.split(' ').forEach((p,j,A)=>T(p,x,700+(j-(A.length-1)/2)*20,{size:14,w:800,al:a,col:k>.5?SAGE:'#8a7350',maxW:Math.min(124,2*(548-x))}))});
  if(t>9)chip('rich, changing pattern goes with consciousness',300,744,TEAL,ramp(t,9,9.6),16)}};
 // 15 FND: a rule-in sign
 D[15]={dur:17,pics:[PN(15)],draw(g,t){back(15,t);panel(30,440,540,335);
@@ -151,7 +151,7 @@ D[20]={dur:18,pics:[PN(20)],draw(g,t){back(20,t);beyond(t);panel(30,440,540,335)
  T('5-minute chats with a person AND an AI at once',300,476,{size:17});T('Which one is the human?',300,504,{size:19,col:TILE});
  const r=[['GPT-4.5 (told to act human)',.73,SAFF],['LLaMa-3.1 (same prompt)',.56,TEAL],['ELIZA (1960s program)',.23,'#8a7350'],['GPT-4o (no persona)',.21,'#8a7350']];
  r.forEach(([l,v,c],i)=>{const k=ramp(t,2+i*1.4,3+i*1.4);hbar(80,560+i*52,440,14,v*k,c,l,Math.round(v*100)+'%',k)});
- G.line(80+440*.5,545,80+440*.5,736,ROSE,2,.5*ramp(t,8,9),[5,5]);T('chance',308,754,{size:14,col:ROSE,al:ramp(t,8,9),align:'left'});
+ r.forEach((_,i)=>G.line(80+440*.5,560+i*52-5,80+440*.5,560+i*52+19,ROSE,2.5,.6*ramp(t,8,9)));T('chance',308,754,{size:14,col:ROSE,al:ramp(t,8,9),align:'left'});
  G.text('chosen as "the human"',80,754,{size:13,col:'#8a7350',align:'left',w:500,maxW:212})}};
 const STORY={
 1:[[0,'Q',"When you stub your toe, do you feel it instantly? In 1850 most scientists thought nerve signals were far too fast to measure. Hermann von Helmholtz decided to time one anyway."],

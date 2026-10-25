@@ -110,8 +110,8 @@ D[11]={dur:18,pics:[PN(11)],draw(g,t){back(11,t);panel(30,420,540,355);
  const n=Math.floor(G.clamp((t-1)/6.5)*FS.length);T(FS.slice(0,n).join(' '),300,462,{size:20});
  const curves=[['real sentences',SAFF,1],['grammar, no meaning ("Jabberwocky")',TEAL,.55],['word lists',TILE,.45],['made-up non-words',ROSE,.08]];
  const x0=80,w=440,base=728,hm=220,shown=t<8?1:G.clamp(1+Math.floor((t-8)/1.4),1,4);G.line(x0,base,x0+w,base,INK,2,.4);G.line(x0,base,x0,base-hm,INK,2,.4);T('word 1 → word 8',300,750,{size:16,w:600,col:'#6b5636'});
- curves.slice(0,shown).forEach(([l,c,sl],i)=>{const u=i===0?G.clamp((t-1)/6.5):G.clamp((t-8-(i-1)*1.4)/1.2);G.path(Array.from({length:30},(_,j)=>{const x=j/29;return[x0+x*w*u,base-20-(hm-40)*x*u*sl]}),c,5);T(l,x0+12,base-hm+10+i*30,{size:17,align:'left',col:c,w:800})});
- T('brain signal (γ-power)',300,500,{size:17,col:'#6b5636',w:600})}};
+ curves.slice(0,shown).forEach(([l,c,sl],i)=>{const u=i===0?G.clamp((t-1)/6.5):G.clamp((t-8-(i-1)*1.4)/1.2);G.path(Array.from({length:30},(_,j)=>{const x=j/29;return[x0+x*w*u,base-20-(hm-90)*x*u*sl]}),c,5);T(l,x0+12,base-hm+34+i*28,{size:17,align:'left',col:c,w:800})});
+ T('brain signal (γ-power)',300,496,{size:17,col:'#6b5636',w:600})}};
 // 12 Tang & Chang: melody of speech
 D[12]={dur:17,pics:[PN(12)],draw(g,t){back(12,t);panel(30,440,540,335);
  const p=Math.floor(G.clamp(t-1,0,11)/3.4)%3,cont=[[0,0,0,0],[1,0,0,0],[0,0,0,1]][p],lab=['"Movies demand…" (flat)','"MOVIES demand…" (stress)','"Movies demand…?" (question)'][p];

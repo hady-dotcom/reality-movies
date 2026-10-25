@@ -36,12 +36,42 @@ canvas{display:block;position:fixed;inset:0}
 #card .hd{font-family:'Instrument Serif',Georgia,serif;font-size:26px;line-height:1.1;margin:8px 0 6px;color:#fff}#card .c{font:15.5px/1.55 -apple-system,system-ui,'Segoe UI',sans-serif;opacity:.92}#card .src{margin-top:10px;font:11.5px/1.4 -apple-system,system-ui,sans-serif;opacity:.6;letter-spacing:.02em}#card .src a{color:inherit}
 #card .y,#title h2,#room{font-family:'Instrument Serif',Georgia,serif}#title p{font-family:-apple-system,system-ui,sans-serif;font-style:normal;font-size:15px;line-height:1.55}#title .intro{font-size:17px;max-width:520px}#title .lede{opacity:.75;max-width:460px}#roomnote{font-family:-apple-system,system-ui,sans-serif}
 #card .play{display:inline-flex;align-items:center;gap:8px;margin-top:12px;height:40px;padding:0 18px;border-radius:20px;border:1px solid currentColor;background:#ffffff10;color:inherit;font:600 14px -apple-system,system-ui,sans-serif;cursor:pointer}#card .play span{font-size:11px}
+
+/* bright courtyard palette */
+html,body{background:#f6efe0;color:#2a2118}
+#top{background:linear-gradient(#f6efe0f2,#f6efe000)}
+#top h1{color:#1f5f8b}#room{color:#2a2118;text-shadow:none}#roomnote{color:#6b5a44}
+#bar i{background:#e3d6bd}#bar i.on{background:#e3a72f;box-shadow:none}
+#card{background:linear-gradient(160deg,#fffaf0f2,#f7eedcf2);border:1.5px solid #1f5f8b55;box-shadow:0 10px 30px #6b4f2a33;color:#2a2118}
+#card.thin{border-style:dashed;border-color:#b9a27a;background:linear-gradient(160deg,#fffaf0ee,#f3ead8ee)}
+#card .y,#card.thin .y{color:#c0761a;text-shadow:none}#card .hd{color:#1d2a3a}#card .c{color:#2a2118}#card .s{color:#5d4d38}
+.tag,.tag.thin{border-color:#1f5f8b66;color:#1f5f8b}.tag.bey{background:#e3a72f;border-color:#e3a72f;color:#2a2118}
+#card .play{background:#1f5f8b;color:#fffaf0;border-color:#1f5f8b}
+#nav button{background:#fffaf0e6;color:#1f5f8b;border-color:#1f5f8b88;box-shadow:0 4px 14px #6b4f2a22}
+#title{background:radial-gradient(ellipse at 50% 45%,#fffaf0ee,#f1e4c8f8 75%)}
+#title .k,#title .hub{color:#1f5f8b}#title h2{color:#1f5f8b;text-shadow:0 2px 0 #e3a72f55;animation:none}
+#title p,#title .intro{color:#2a2118}#title .yr{color:#8a6a3a}
+#enter{background:#1f5f8b;color:#fffaf0;border-color:#1f5f8b;box-shadow:0 6px 20px #1f5f8b44}
+.go{background:#1f5f8b;color:#fffaf0;border-color:#1f5f8b;box-shadow:none}.go.ghost{color:#1f5f8b;background:none}
+/* stop number + year: large and legible (cin.js otherwise hides the year and paints the number dark-on-dark) */
+#card .cin-hero~.y{font-size:40px!important;line-height:1;margin-top:4px;color:#c0761a!important}
+#card .cin-num{color:#ffd98a!important;text-shadow:0 2px 12px #000,0 0 22px #000a!important}#card .cin-yr{color:#ffe9b8!important;opacity:1}#card .cin-hero~.y .tag{margin-left:10px!important}#card .src .tag.bey{display:block;width:fit-content;margin:0 0 6px!important}
+</style>
+<style>/* bright demo window to match the walk */
+#demo{background:#2a1d0e99!important}
+#demo .dm-box{background:linear-gradient(170deg,#fffaf0,#f3e8d2)!important;border-color:#1f5f8b55!important;box-shadow:0 24px 70px #3a2a1466!important}
+#demo .dm-k{color:#1f5f8b!important}#demo .dm-t{color:#1d2a3a!important}
+#demo .dm-cap,#demo .dm-cap .dm-tx{color:#2a2118!important}#demo .dm-ck{color:#1f5f8b!important}#demo .dm-n{color:#2a211899!important}#demo .dm-cap[data-k="N"] .dm-lab{color:#11806f!important}
+#demo button{color:#1f5f8b!important;background:#fffaf0!important;border-color:#1f5f8b66!important}
+#demo .dm-bar{background:#1f5f8b1f!important}#demo .dm-bar i{background:#e3a72f!important}
+#demo .dm-stage{background:#f6efe0!important}
+#demo .dm-s[hidden]{display:none!important}#sm .tl .t b{color:#1f5f8b!important}#demo .dm-s[aria-pressed="true"]{background:#1f5f8b!important;color:#fffaf0!important}
 </style></head><body>
 <div id="title"><div class="k">Reality Sourcing</div><h2>Hearing</h2><p class="intro">Your ears don't just record sound like a microphone. Your brain splits a noisy room into voices, guesses the next note, and can even hear a tone that was never played. Here is how we found out.</p><p class="lede">Start in 1863 with the science of musical notes. End in 2025 with mice whose brains notice a sound that doesn't match their steps.</p><div class="yr">20 STOPS · 5 ROOMS · 1863 – 2025</div><button id="enter">Start walking</button><a class="hub" href="../">‹ Home</a></div>
 <div id="top"><h1><a href="../" class="homelink" style="color:inherit;text-decoration:none;pointer-events:auto;display:inline-block;padding:4px 10px;margin-left:-10px;border:1px solid currentColor;border-radius:20px;opacity:.9">‹ Home</a> · Hearing</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
-<script src="data.js?v=fact1"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#f6a640',b:'#b8461c',hi:'#ffe6b8',bg0:'#0a0604',bg1:'#2b1607'}</script><script src="../demos/demo.js?v=qa1"></script><script src="demos.js?v=fix1"></script><script src="story.js"></script><script src="../storymap/storymap.js"></script><script src="../cinematic/cin.js"></script>
+<script src="data.js?v=fact1"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#f6a640',b:'#b8461c',hi:'#ffe6b8',bg0:'#0a0604',bg1:'#2b1607'}</script><script src="../demos/demo.js?v=qa1"></script><script src="demos.js?v=br1"></script><script src="story.js"></script><script>/* demos keep their night palette; the map and card art layer use the bright courtyard palette */window.DEMO_PAL={a:'#1f5f8b',b:'#e3a72f',hi:'#2a2118',bg0:'#f6efe0',bg1:'#fffaf0'}</script><script src="../storymap/storymap.js"></script><script src="../cinematic/cin.js"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD, M=F.meta, stops=[];
@@ -52,9 +82,9 @@ const NAMES=M.names;
 const LIGHT={dim:.35,half:.62,bright:1};
 const RDS=F.rooms.map(r=>Math.max(14,r.cards.length*2.3+3)),ZS=RDS.map((d,i)=>RDS.slice(0,i).reduce((a,b)=>a+b,0)),RD=14, renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});
 renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.prepend(renderer.domElement);
-const scene=new THREE.Scene();scene.background=new THREE.Color(0x070504);scene.fog=new THREE.FogExp2(0x0a0604,.055);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0xf6efe0);scene.fog=new THREE.FogExp2(0xf6efe0,.035);
 const cam=new THREE.PerspectiveCamera(62,1,.1,200);
-scene.add(new THREE.AmbientLight(0xffe2b0,.35));
+scene.add(new THREE.AmbientLight(0xfff4e0,1.1));scene.add(new THREE.HemisphereLight(0xfffaf0,0xd9c7a2,.8));
 const TL=new THREE.TextureLoader();const tex=u=>{const t=TL.load(u);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=4;return t};
 // soft radial sprite for glow/bloom and dust
 const gcv=document.createElement('canvas');gcv.width=gcv.height=64;{const g=gcv.getContext('2d'),gr=g.createRadialGradient(32,32,0,32,32,32);gr.addColorStop(0,'rgba(255,230,170,1)');gr.addColorStop(.25,'rgba(255,190,90,.55)');gr.addColorStop(1,'rgba(255,160,60,0)');g.fillStyle=gr;g.fillRect(0,0,64,64)}
@@ -62,24 +92,25 @@ const GLOW=new THREE.CanvasTexture(gcv);
 const halo=(color,size,op)=>{const s=new THREE.Sprite(new THREE.SpriteMaterial({map:GLOW,color,transparent:true,opacity:op,depthWrite:false,blending:THREE.AdditiveBlending}));s.scale.set(size,size,1);return s};
 const pulses=[], backdrops=[];
 const plinthPos=[];let k=0;
-const floorMat=new THREE.MeshStandardMaterial({color:0x2a1d12,roughness:.35,metalness:.3});
+const floorMat=new THREE.MeshStandardMaterial({color:0xe8dcc4,roughness:.8,metalness:0});
 const plGeo=new THREE.BoxGeometry(.8,1,.8), cardGeo=new THREE.PlaneGeometry(2.2,1.65), frameGeo=new THREE.PlaneGeometry(2.34,1.79);
 F.rooms.forEach((r,ri)=>{const RD=RDS[ri],z0=ZS[ri], L=LIGHT[r.light]*(F.thinField?.8:1);
  const rt=tex(Cin.banner(ri));
  const floor=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),floorMat);floor.rotation.x=-Math.PI/2;floor.position.set(0,0,z0+RD/2);scene.add(floor);
  // walls: room mood image, darkened by evidence level
- for(const s of[-1,1]){const wt=rt.clone();wt.wrapS=THREE.MirroredRepeatWrapping;wt.repeat.set(2,1);wt.needsUpdate=true;const m=new THREE.MeshBasicMaterial({map:wt,color:new THREE.Color().setScalar(.2+.22*L)});const w=new THREE.Mesh(new THREE.PlaneGeometry(RD,5,8,1),m);w.rotation.y=-s*Math.PI/2;w.position.set(s*5,2.5,z0+RD/2);if(s>0)w.scale.x=-1;scene.add(w)}
+ for(const s of[-1,1]){const wt=rt.clone();wt.wrapS=THREE.MirroredRepeatWrapping;wt.repeat.set(2,1);wt.needsUpdate=true;const m=new THREE.MeshLambertMaterial({color:0xf1e6d0});const w=new THREE.Mesh(new THREE.PlaneGeometry(RD,5,8,1),m);w.rotation.y=-s*Math.PI/2;w.position.set(s*5,2.5,z0+RD/2);if(s>0)w.scale.x=-1;scene.add(w)}
+ for(const s of[-1,1]){const b=new THREE.Mesh(new THREE.PlaneGeometry(RD,.22),new THREE.MeshBasicMaterial({color:0x1f5f8b}));b.rotation.y=-s*Math.PI/2;b.position.set(s*4.98,.55,z0+RD/2);scene.add(b);const b2=b.clone();b2.material=new THREE.MeshBasicMaterial({color:0xe3a72f});b2.scale.y=.35;b2.position.y=.72;scene.add(b2)}
  // ceiling
- const ce=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),new THREE.MeshBasicMaterial({color:0x060403}));ce.rotation.x=Math.PI/2;ce.position.set(0,5,z0+RD/2);scene.add(ce);
+ const ce=new THREE.Mesh(new THREE.PlaneGeometry(10,RD),new THREE.MeshBasicMaterial({color:0xfbf5e8}));ce.rotation.x=Math.PI/2;ce.position.set(0,5,z0+RD/2);scene.add(ce);
  // backdrop at the far end of each room (fades as you approach)
- const bd=new THREE.Mesh(new THREE.PlaneGeometry(10,5.4),new THREE.MeshBasicMaterial({map:rt,transparent:true,opacity:.9,depthWrite:false,color:new THREE.Color().setScalar(.45+.55*L)}));bd.position.set(0,2.6,z0+RD-.2);bd.rotation.y=Math.PI;bd.scale.x=-1;if(ri<F.rooms.length-1){scene.add(bd);backdrops.push(bd)}
+ const bd=new THREE.Mesh(new THREE.PlaneGeometry(10,5.4),new THREE.MeshBasicMaterial({map:rt,transparent:true,opacity:.9,depthWrite:false,color:new THREE.Color().setScalar(1)}));bd.position.set(0,2.4,z0+RD-.2);bd.rotation.y=Math.PI;bd.scale.set(-.46,.46,1);if(ri<F.rooms.length-1){scene.add(bd);backdrops.push(bd)}
  const pl=new THREE.PointLight(0xffc27a,22*L,14,1.5);pl.position.set(0,4,z0+RD/2);scene.add(pl);
  const lamp=halo(0xffc070,1.6,.5*L);lamp.position.copy(pl.position);scene.add(lamp);pulses.push({o:lamp,b:.5*L,a:.12,f:.5+ri*.13,ph:ri});
- const arch=new THREE.Mesh(new THREE.TorusGeometry(1.7,.05,8,48,Math.PI),new THREE.MeshBasicMaterial({color:L<.5?0x8a7a60:0xffcf7a}));arch.position.set(0,2,z0+.05);scene.add(arch);
+ const arch=new THREE.Mesh(new THREE.TorusGeometry(1.7,.05,8,48,Math.PI),new THREE.MeshBasicMaterial({color:0x1f5f8b}));arch.position.set(0,2,z0+.05);scene.add(arch);
  const n=r.cards.length;r.cards.forEach((c,i)=>{const side=(k%2)?1:-1;const z=z0+1.5+(i+.5)*(RD-3)/n;const thin=!!c.thin;
-  const p=new THREE.Mesh(plGeo,new THREE.MeshStandardMaterial({color:thin?0x3a332a:0x6b4a26,roughness:.4,metalness:.6,emissive:thin?0x000000:0x2a1404}));p.position.set(side*3.6,.5,z);scene.add(p);
-  const fr=new THREE.Mesh(frameGeo,new THREE.MeshBasicMaterial({color:thin?0x6a5d48:0xd9a54e,transparent:true,opacity:thin?.5:.9}));fr.position.set(side*4.93,2.1,z);fr.rotation.y=-side*Math.PI/2;scene.add(fr);
-  const card=new THREE.Mesh(cardGeo,new THREE.MeshBasicMaterial({map:tex(Cin.hero(c.n)),color:new THREE.Color().setScalar(thin?.62:1)}));
+  const p=new THREE.Mesh(plGeo,new THREE.MeshStandardMaterial({color:thin?0xd8c9a8:0xf3e7cf,roughness:.7,metalness:0}));p.position.set(side*3.6,.5,z);scene.add(p);
+  const fr=new THREE.Mesh(frameGeo,new THREE.MeshBasicMaterial({color:thin?0xb9a27a:0x1f5f8b,transparent:true,opacity:.95}));fr.position.set(side*4.93,2.1,z);fr.rotation.y=-side*Math.PI/2;scene.add(fr);
+  const card=new THREE.Mesh(cardGeo,new THREE.MeshBasicMaterial({map:tex(Cin.hero(c.n)),color:new THREE.Color().setScalar(1)}));
   card.position.set(side*4.9,2.1,z);card.rotation.y=-side*Math.PI/2;scene.add(card);
   const ch=halo(0xffb860,3.4,thin?.08:.18);ch.position.set(side*4.75,2.1,z);scene.add(ch);pulses.push({o:ch,b:thin?.08:.18,a:.05,f:.7,ph:k});
   const orb=new THREE.Mesh(new THREE.SphereGeometry(.09,16,12),new THREE.MeshBasicMaterial({color:thin?0x9a8a70:0xffe0a0}));orb.position.set(side*3.6,1.25,z);scene.add(orb);
@@ -87,12 +118,12 @@ F.rooms.forEach((r,ri)=>{const RD=RDS[ri],z0=ZS[ri], L=LIGHT[r.light]*(F.thinFie
   plinthPos.push(new THREE.Vector3(side*3.6,1.25,z));k++;});
 });
 // threads between listed markers
-const tmat=new (F.thinField?THREE.LineDashedMaterial:THREE.LineBasicMaterial)({dashSize:.25,gapSize:.2,color:0xe0a857,transparent:true,opacity:.28,blending:THREE.AdditiveBlending,depthWrite:false});
+const tmat=new (F.thinField?THREE.LineDashedMaterial:THREE.LineBasicMaterial)({dashSize:.25,gapSize:.2,color:0xe0a857,transparent:true,opacity:.28,depthWrite:false});
 stops.forEach((a,i)=>a.links.forEach(t=>{const j=stops.findIndex(b=>b.title.startsWith(t.slice(0,30)));if(j>i||(j>=0&&j<i&&!stops[j].links.some(x=>a.title.startsWith(x.slice(0,30))))){const p=plinthPos[i],q=plinthPos[j],m=p.clone().add(q).multiplyScalar(.5);m.y=4;
  {const ln=new THREE.Line(new THREE.BufferGeometry().setFromPoints(new THREE.QuadraticBezierCurve3(p,m,q).getPoints(24)),tmat);if(F.thinField)ln.computeLineDistances();scene.add(ln)}}}));
 // end: doorway to the next walk
 const endZ=ZS[ZS.length-1]+RDS[RDS.length-1];
-const wall=new THREE.Mesh(new THREE.PlaneGeometry(10,5),new THREE.MeshBasicMaterial({color:0x0c0907}));wall.position.set(0,2.5,endZ+.6);wall.rotation.y=Math.PI;scene.add(wall);
+const wall=new THREE.Mesh(new THREE.PlaneGeometry(10,5),new THREE.MeshBasicMaterial({color:0xf1e4c8}));wall.position.set(0,2.5,endZ+.6);wall.rotation.y=Math.PI;scene.add(wall);
 const hf=new THREE.Mesh(new THREE.PlaneGeometry(2.6,2.6),new THREE.MeshBasicMaterial({map:tex(`img/${M.end.img}.webp?v=door2`)}));hf.position.set(0,2,endZ+.5);hf.rotation.y=Math.PI;scene.add(hf);
 const hh=halo(0xffc070,4.4,.16);hh.position.set(0,2,endZ+.3);scene.add(hh);pulses.push({o:hh,b:.16,a:.06,f:.4,ph:0});
 // dust motes
@@ -100,7 +131,7 @@ const DN=innerWidth<700?500:900, dpos=new Float32Array(DN*3), dseed=new Float32A
 for(let i=0;i<DN;i++){dpos[i*3]=(Math.random()-.5)*9.6;dpos[i*3+1]=Math.random()*4.8;dpos[i*3+2]=-4+Math.random()*(endZ+4);dseed[i]=Math.random()*6.28}
 const glyphs=[];if(((window.THEME||{}).motion)==='glyph'){const L='AaBbEeGgKkMmRrSsWwβλΩ';for(let i=0;i<(innerWidth<700?70:140);i++){const c=document.createElement('canvas');c.width=c.height=64;const g=c.getContext('2d');g.fillStyle='#fff';g.font='44px Georgia';g.textAlign='center';g.textBaseline='middle';g.fillText(L[i%L.length],32,34);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),color:0xffe2a0,transparent:true,opacity:.35,depthWrite:false}));sp.scale.setScalar(.22+Math.random()*.18);sp.position.set((Math.random()-.5)*9,Math.random()*4.8,-3+Math.random()*(endZ+3));sp.userData.r=Math.random()-.5;scene.add(sp);glyphs.push(sp)}}
 const dgeo=new THREE.BufferGeometry();dgeo.setAttribute('position',new THREE.BufferAttribute(dpos,3));
-const dust=new THREE.Points(dgeo,new THREE.PointsMaterial({map:GLOW,size:.07,color:0xffd590,transparent:true,opacity:.7,depthWrite:false,blending:THREE.AdditiveBlending,sizeAttenuation:true}));scene.add(dust);
+const dust=new THREE.Points(dgeo,new THREE.PointsMaterial({map:GLOW,size:.07,color:0xe3a72f,transparent:true,opacity:.35,depthWrite:false,sizeAttenuation:true}));scene.add(dust);
 // camera poses
 function pose(i){if(i<=0)return{p:new THREE.Vector3(0,1.7,-4.5),l:new THREE.Vector3(0,1.9,4)};
  if(i>=N-1)return{p:new THREE.Vector3(0,1.7,endZ-3.6),l:new THREE.Vector3(0,1.95,endZ+1)};
@@ -125,7 +156,7 @@ function fill(){const card=$('#card');
  $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;window.StoryMap&&StoryMap.refill(idx);if(started)Cin.room(idx>0&&idx<N-1?stops[idx-1].ri:-1);}
 let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
  history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};
- if(first){fill()}else{const c=$('#card');c.classList.add('fade');clearTimeout(fadeT);fadeT=setTimeout(()=>{fill();c.classList.remove('fade')},260);$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}
+ if(first){fill()}else{const c=$('#card');clearTimeout(fadeT);c.style.transition='none';c.classList.add('fade');fill();void c.offsetWidth;c.style.transition='';fadeT=setTimeout(()=>c.classList.remove('fade'),20);$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}
  window.__state.room=idx===0?'Entrance':idx===N-1?M.end.room:F.rooms[stops[idx-1].ri].name}
 function go(d){if(!started){start();return}const n=Math.max(0,Math.min(N-1,idx+d));if(n!==idx){idx=n;ui()}}
 window.__go=n=>{started=true;titleEl.classList.add('gone');idx=n;ui(true)};

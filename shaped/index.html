@@ -78,11 +78,11 @@ const pg=new THREE.BufferGeometry(),PN=160,pp=new Float32Array(PN*3);for(let i=0
 let idx=0,cz=4,tz=4,look=0,tlook=0;
 const bar=$('#bar');stops.forEach((s,k)=>{const i=document.createElement('i');if(k&&s.ri!==stops[k-1].ri)i.className='rb';bar.appendChild(i)});
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function show(){const card=$('#card');card.classList.add('fade');[...bar.children].forEach((b,k)=>b.classList.toggle('on',k<idx));
+function show(){const card=$('#card');card.style.transition='none';card.classList.add('fade');void card.offsetWidth;card.style.transition='';[...bar.children].forEach((b,k)=>b.classList.toggle('on',k<idx));
  clearTimeout(window.__showT);window.__showT=setTimeout(()=>{let h='';if(idx===0){const r=F.rooms[0];$('#room').textContent=M.entrance_title;$('#roomnote').textContent=M.entrance_note;h=`<div class="hd">${esc(M.entrance_title)}</div><div class="c">${esc(M.entrance_note)}</div><div class="src">${F.gaps.map(esc).join('<br>')}</div>`}
  else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;h=`<div class="hd">${esc(M.end.room)}</div><div class="c">${esc(M.end.note)}</div><a class="go" href="${M.end.href}">${esc(M.end.label)} ›</a>`}
  else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;h=`<div class="row"><span class="y">${s.year}</span>${s.thin?'<span class="tag">thin evidence</span>':''}<span class="tag" style="border-style:solid">stop ${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div><button class="play">Watch the experiment</button><div class="src">${esc(s.src)} · <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></div>`}
- card.innerHTML=h;card.classList.remove('fade')},220);
+ card.innerHTML=h;card.classList.remove('fade')},0);
  tz=idx===0?4:idx===N-1?zOf(N-1)+3:zOf(idx)+.6;tlook=idx>0&&idx<N-1?((idx-1)%2?1:-1):0;$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}
 const go=d=>{const n=Math.max(0,Math.min(N-1,idx+d));if(n!==idx){idx=n;show()}};
 $('#prev').onclick=()=>go(-1);$('#next').onclick=()=>go(1);addEventListener('keydown',e=>{if(window.__demoOpen)return;if(e.key==='ArrowRight'||e.key==='ArrowDown')go(1);if(e.key==='ArrowLeft'||e.key==='ArrowUp')go(-1)});

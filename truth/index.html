@@ -133,7 +133,7 @@ function fill(){const card=$('#card');
  $('#prev').disabled=idx===0;$('#next').disabled=idx===N-1;}
 let fadeT;function ui(first){const bars=[...document.querySelectorAll('#bar i')];bars.forEach((b,j)=>b.classList.toggle('on',j<idx));
  history.replaceState(null,'','?stop='+idx);window.__state={idx,N,room:''};
- if(first){fill()}else{const c=$('#card');c.classList.add('fade');clearTimeout(fadeT);fadeT=setTimeout(()=>{fill();c.classList.remove('fade')},260);$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}
+ if(first){fill()}else{const c=$('#card');clearTimeout(fadeT);c.style.transition='none';c.classList.add('fade');fill();void c.offsetWidth;c.style.transition='';fadeT=setTimeout(()=>c.classList.remove('fade'),20);$('#prev').disabled=idx===0;$('#next').disabled=idx===N-1}
  window.__state.room=idx===0?'Entrance':idx===N-1?M.end.room:F.rooms[stops[idx-1].ri].name}
 $('#card').addEventListener('click',e=>{if(e.target.closest('.play')&&idx>0&&idx<N-1){const s=stops[idx-1];Demo.open(s.n,s.head)}});window.__openDemo=()=>{const s=stops[idx-1];Demo.open(s.n,s.head)};
 function go(d){if(!started){start();return}const n=Math.max(0,Math.min(N-1,idx+d));if(n!==idx){idx=n;ui()}}

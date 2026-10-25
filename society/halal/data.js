@@ -41,7 +41,7 @@ window.WALK={
    "head": "A short list of what is not allowed",
    "place": "Medina, Arabia",
    "who": "The Qur'an, Surah al-Ma'idah 5:3 and 5:5",
-   "cap": "The Qur'an names what is haram (forbidden): animals found already dead, blood, pork, and animals killed in the name of anything other than God. It also forbids animals killed by strangling, a blow, a fall or being gored, meat a predator has partly eaten unless you slaughter it, what is sacrificed on altars, and drawing lots to make decisions. It also says the food of Jews and Christians is allowed to Muslims.",
+   "cap": "The Qur'an names what is haram (forbidden): animals found already dead, blood, pork, and animals killed in the name of anything other than God. It also forbids animals killed by strangling, a blow, a fall or being gored, meat a predator has partly eaten unless you slaughter it, what is sacrificed on altars, and drawing lots to make decisions. It also says the food of those given the Scripture (usually understood as Jews and Christians) is allowed to Muslims.",
    "spread": "Part of the Qur'an, so it reached every Muslim community.",
    "oh": "The verse names what is forbidden. Most other food is allowed by default.",
    "terms": [
@@ -56,7 +56,8 @@ window.WALK={
    ],
    "thin": "The year is approximate. Surah al-Ma'idah is usually counted among the last revealed.",
    "src": "Qur'an 5:3 and 5:5",
-   "url": "https://quran.com/5/3"
+   "url": "https://quran.com/5/3",
+   "url2": "https://quran.com/5/5"
   },
   {
    "y": "c. 870",

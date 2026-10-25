@@ -24,7 +24,7 @@ main{max-width:1180px;margin:0 auto;padding:44px 16px calc(env(safe-area-inset-b
 .sec{text-align:center;margin:6px 0 30px}.sec h2{font-size:clamp(34px,5vw,54px);margin:.2em 0 0;color:#1f1a14}
 .sec:after{content:"";display:block;width:120px;height:10px;margin:14px auto 0;background:radial-gradient(circle,#c2410c 2.5px,transparent 3px) 0 0/20px 10px,linear-gradient(#1d8a8a,#1d8a8a) center/100% 1px no-repeat}
 .doors{display:grid;grid-template-columns:1fr;gap:18px}
-@media(min-width:800px){.doors{grid-template-columns:1fr 1fr;gap:24px}.door:last-child{grid-column:1/-1;display:grid;grid-template-columns:1.4fr 1fr}.door:last-child .ph{aspect-ratio:auto;min-height:300px}.door:last-child .dt{align-self:center}}
+@media(min-width:800px){.doors{grid-template-columns:1fr 1fr;gap:24px}}
 .door{position:relative;display:block;border-radius:22px;overflow:hidden;text-decoration:none;color:inherit;background:#fffdf8;border:1px solid #e8dcc6;box-shadow:0 14px 40px #6b4a2224;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
 .ph{position:relative;aspect-ratio:16/9;overflow:hidden}
 .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
@@ -40,8 +40,8 @@ main{max-width:1180px;margin:0 auto;padding:44px 16px calc(env(safe-area-inset-b
 .foot{margin:36px auto 0;font-size:13.5px;color:#6b5a40;max-width:620px;text-align:center}
 @media(prefers-reduced-motion:reduce){.hero img,.hin{animation:none}.hero img{transform:none}}
 </style></head><body>
-<header class="hero"><picture><source media="(max-aspect-ratio:3/4)" srcset="art/home/hero_tall.webp?v=bright1"><img src="art/home/hero.webp?v=bright1" alt="" fetchpriority="high"></picture><div class="hin"><div class="k">Seven walks · 140 real studies</div><h1 class="serif">Reality <i>Sourcing</i></h1><p>How do you see, hear, remember, speak and know what's real? Walk through the experiments that found out, one room at a time.</p><a class="scroll" href="#walks">Choose a walk</a></div></header>
-<main id="walks"><div class="sec"><div class="k">The halls</div><h2 class="serif">Seven walks through the science of you</h2></div>
+<header class="hero"><picture><source media="(max-aspect-ratio:3/4)" srcset="art/home/hero_tall.webp?v=bright1"><img src="art/home/hero.webp?v=bright1" alt="" fetchpriority="high"></picture><div class="hin"><div class="k">Eight walks · 162 real studies</div><h1 class="serif">Reality <i>Sourcing</i></h1><p>How do you see, hear, remember, speak and know what's real? Walk through the experiments that found out, one room at a time.</p><a class="scroll" href="#walks">Choose a walk</a></div></header>
+<main id="walks"><div class="sec"><div class="k">The halls</div><h2 class="serif">Eight walks through the science of you</h2></div>
 <div class="doors" id="doors"></div>
 <p class="foot">Each stop is a real study, recorded in Pixel Hound. Walks marked "less evidence so far" have fewer studies that point to each other. Every walk ends at a door to the next one.</p>
 </main>
@@ -52,6 +52,7 @@ var W=[["seeing","Seeing","#a14a08","Your brain builds what you see, guesses wha
 ["shaped","Things being shaped","#b5411b","Snails changed by boat paint, and tiny plastic now found in human blood and lungs.","1851–2025"],
 ["hold","Learning & holding","#0f7470","Cells that fire together, sleep that edits the day, and lost memories switched back on.","1852–2020"],
 ["speech","Speech & meaning","#3b3f9e","From a man who could only say \u201cTan\u201d to brain cells that track six words at a time.","1861–2024",1],
-["edges","Life edges","#6b3fa0","Can a machine think? And how doctors find awareness in patients who cannot move.","1850–2022",1]];
-document.getElementById('doors').innerHTML=W.map(function(w,i){return '<a class="door" href="'+w[0]+'/" style="--a:'+w[2]+'"><div class="ph"><img src="art/home/'+w[0]+'.webp?v=bright1" alt="" loading="'+(i<2?'eager':'lazy')+'"><span class="num">WALK '+(i+1)+' / 7</span></div><div class="dt"><h3 class="serif">'+w[1]+'</h3><p>'+w[3]+'</p><div class="meta"><span class="yr">20 stops · '+w[4]+'</span>'+(w[5]?'<span class="thin">less evidence so far</span>':'')+'<span class="enter">Enter ›</span></div></div></a>'}).join('');
+["edges","Life edges","#6b3fa0","Can a machine think? And how doctors find awareness in patients who cannot move.","1850–2022",1],
+["evolution","Evolution meets society","#1f5f8b","How the idea of evolution grew, and where it ran into the rest of the world.","1676–2022",0,22,"art/cin/evolution/r1.webp"]];
+document.getElementById('doors').innerHTML=W.map(function(w,i){var img=w[7]||('art/home/'+w[0]+'.webp?v=bright1'),stops=w[6]||20;return '<a class="door" href="'+w[0]+'/" style="--a:'+w[2]+'"><div class="ph"><img src="'+img+'" alt="" loading="'+(i<2?'eager':'lazy')+'"><span class="num">WALK '+(i+1)+' / '+W.length+'</span></div><div class="dt"><h3 class="serif">'+w[1]+'</h3><p>'+w[3]+'</p><div class="meta"><span class="yr">'+stops+' stops · '+w[4]+'</span>'+(w[5]?'<span class="thin">less evidence so far</span>':'')+'<span class="enter">Enter ›</span></div></div></a>'}).join('');
 </script></body></html>

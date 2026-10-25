@@ -217,7 +217,7 @@ D[19]={dur:15,pics:['four-cases'],rv:11,rvx:300,rvy:330,
  draw(g,t){const c=g.c;G.pic('four-cases',0,0,600,800);const xs=[93,232,375,516],scan=t>4&&t<11?((t-4)/1.75)%4:-1;
   xs.forEach((x,i)=>{const a=ramp(t,.5+i*.5,1.3+i*.5),hit=scan>=0&&Math.floor(scan)===i?Math.sin((scan%1)*Math.PI):0;
    G.bloom(x,300,90,P.a,(.2+.6*hit)*a);G.text('idea '+(i+1),x,200,{size:15,al:a*.9});G.text('?',x,320,{serif:1,size:80,col:'#ffffff',al:(.55+.45*hit)*a,glow:P.a})});
-  if(scan>=0){const x=lerp(xs[0],xs[3],(scan%4)/3);c.fillStyle=G.rgba(P.hi,.18);c.beginPath();c.moveTo(x-8,640);c.lineTo(x-55,440);c.lineTo(x+55,440);c.lineTo(x+8,640);c.fill();G.bloom(x,640,50,P.hi,.6);G.text('test?',x,670,{size:17})}
+  if(scan>=0){const x=lerp(xs[0],xs[3],(scan%4)/3);c.fillStyle=G.rgba(P.hi,.18);c.beginPath();c.moveTo(x-8,640);c.lineTo(x-55,440);c.lineTo(x+55,440);c.lineTo(x+8,640);c.fill();G.bloom(x,640,50,P.hi,.6);G.text('test?',G.clamp(x,60,540),670,{size:17})}
   if(t>11)G.stamp('NOT DECIDED',300,720,11,t,P.a,40)}};
 /* On-screen story for each demo: [time in the animation, kind, line]. Q question, S setup, D what they did, R what happened, W why it matters, N good to know. Facts only from each stop's Pixel Hound record. */
 const STORY={

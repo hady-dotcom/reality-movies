@@ -11,7 +11,7 @@ function panel(x,y,w,h,al=1){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=
  const q=8;for(let i=0;i<q;i++){const px=x+30+i*(w-60)/(q-1);G.dot(px,y+1.5,3.2,i%2?SAFF:TILE,.8*al)}}
 function T(s,x,y,o={}){G.text(s,x,y,Object.assign({col:INK,size:24,w:700},o))}
 function S(s,x,y,size,col,al=1,it){G.text(s,x,y,{serif:1,size,col:col||INK,al,it})}
-function chip(s,x,y,col=TILE,al=1,size=21){if(al<=0)return;const c=G.c;const z=Math.max(size,13.5/G.k);c.font=`700 ${z}px -apple-system,system-ui,sans-serif`;const w=c.measureText(s).width+30;G.rr(x-w/2,y-z*.9,w,z*1.8,z*.9,G.rgba(col,.95*al));T(s,x,y+1,{col:'#ffffff',size,al})}
+function chip(s,x,y,col=TILE,al=1,size=21){if(al<=0)return;const c=G.c;const z=Math.max(size,12/G.k);c.font=`700 ${z}px -apple-system,system-ui,sans-serif`;const w=Math.min(c.measureText(s).width+30,G.fitW(x,"center")+8);G.rr(x-w/2,y-z*.9,w,z*1.8,z*.9,G.rgba(col,.95*al));T(s,x,y+1,{col:"#ffffff",size,al,maxW:w-24})}
 function hbar(x,y,w,h,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,y,w,h,h/2,G.rgba(INK,.09*al));if(v>0.005)G.rr(x,y,Math.max(h,v*w),h,h/2,G.rgba(col,al));T(lab,x,y-17,{align:'left',size:20,al,w:600});if(val)T(val,x+w,y-17,{align:'right',size:21,al,col,w:800})}
 function vbar(x,base,w,hmax,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,base-hmax,w,hmax,10,G.rgba(INK,.07*al));const h=Math.max(0,v)*hmax;if(h>2)G.rr(x,base-h,w,h,10,G.rgba(col,al));T(lab,x+w/2,base+22,{size:19,al,w:600});if(val)T(val,x+w/2,base-h-18,{size:22,al,col,w:800})}
 function badge(s,t0,t){G.stamp(s,300,90,t0,t,ROSE,30)}
@@ -41,9 +41,9 @@ D[2]={dur:17,pics:[PN(2)],draw(g,t){back(2,t);panel(30,440,540,330);
 const CQ=[['A canary can sing',2],['A canary can fly',1],['A canary has skin',0]];
 D[3]={dur:17,pics:[PN(3)],draw(g,t){back(3,t);panel(30,420,540,355);
  const N=[[300,470,'ANIMAL','has skin'],[300,560,'BIRD','can fly'],[300,650,'CANARY','can sing']];
- G.line(300,490,300,540,TILE,4,.6);G.line(300,580,300,630,TILE,4,.6);
+ if(t<11.8){G.line(300,490,300,540,TILE,4,.6);G.line(300,580,300,630,TILE,4,.6)}
  const ph=Math.floor(G.clamp((t-1)/3.6,0,2.99)),lt=((t-1)%3.6),act=t>1&&t<11.8;
- N.forEach(([x,y,a,b],i)=>{const hot=act&&CQ[ph][1]===i&&lt>1+(2-i)*.55;G.rr(x-95,y-24,190,48,24,hot?SAFF:'#fff',TILE,.8,2);T(a,x,y,{size:21,col:hot?'#fff':INK});T(b,x+170,y,{size:19,col:'#6b5636',w:600})});
+ if(t<11.8)N.forEach(([x,y,a,b],i)=>{const hot=act&&CQ[ph][1]===i&&lt>1+(2-i)*.55;G.rr(x-95,y-24,190,48,24,hot?SAFF:'#fff',TILE,.8,2);T(a,x,y,{size:21,col:hot?'#fff':INK});T(b,x+170,y,{size:19,col:'#6b5636',w:600})});
  if(act){const [s,lev]=CQ[ph];chip(s,300,730,TILE,win(lt,0,3.5,.3),21);const steps=2-lev,u=G.clamp((lt-.6)/(.55*(steps+1)));const y=lerp(650,650-steps*90,u);G.ball(205,y,10,SAFF);
   hbar(70,770-0,460,10,G.clamp((lt-.4)/2.2)*((steps+1)/3),SAFF,'',null,.0001)}
  if(t>11.8){const k=ramp(t,11.8,12.6);CQ.forEach(([s,l],i)=>hbar(80,600+i*55,440,14,(3-l)/3,[SAGE,SAFF,ROSE][i],s,['fastest','slower','slowest'][i],k));G.rr(40,430,520,120,18,G.rgba('#fff8ea',k));T('Further up the tree',300,470,{size:24,al:k,col:TILE});T('= longer to answer',300,505,{size:24,al:k,col:TILE})}}};
@@ -98,9 +98,9 @@ D[9]={dur:17,pics:[PN(9)],draw(g,t){back(9,t);panel(30,430,540,345);
 // 10 Ding: words, phrases, sentences
 const DW=['new','plans','gave','hope','dry','fur','rubs','skin'];
 D[10]={dur:18,pics:[PN(10)],draw(g,t){back(10,t);panel(30,420,540,355);
- const tt=Math.max(0,t-1),wi=Math.floor(tt*2)%8;DW.forEach((w,i)=>{const on=i===wi&&t>1&&t<11;T(w,85+i*62,465,{size:21,col:on?SAFF:INK,al:on?1:.45})});
+ const tt=Math.max(0,t-1),wi=Math.floor(tt*2)%8;if(t<11)DW.forEach((w,i)=>{const on=i===wi&&t>1&&t<11;T(w,85+i*62,465,{size:21,col:on?SAFF:INK,al:on?1:.45})});
  const rows=[['words',4,SAFF],['phrases',2,TEAL],['sentences',1,TILE]];const sh=t>11?0:1;
- rows.forEach(([n,f,c],i)=>{const y=530+i*62,k=ramp(t,2+i*2,3+i*2);T(n,95,y,{size:19,al:k,w:600});trace(160,y,380,(u,px)=>-Math.max(0,Math.cos((u*4-tt*.5)*f*Math.PI*2*.5))*20*k,c,3.5,k)});
+ if(t<11)rows.forEach(([n,f,c],i)=>{const y=530+i*62,k=ramp(t,2+i*2,3+i*2);T(n,95,y,{size:19,al:k,w:600});trace(160,y,380,(u,px)=>-Math.max(0,Math.cos((u*4-tt*.5)*f*Math.PI*2*.5))*20*k,c,3.5,k)});
  const k2=ramp(t,11,12);if(k2>0){G.rr(40,430,520,340,18,G.rgba('#fff8ea',k2));T('Brain rhythms found at',300,470,{size:22,al:k2});[[1,'1 a second','sentences',TILE],[2,'2 a second','phrases',TEAL],[4,'4 a second','words',SAFF]].forEach(([f,a,b,c],i)=>vbar(90+i*150,700,100,170,[.55,.7,.9][i]*k2,c,b,a,k2));
   T("People who didn't know the language: only the word beat",300,752,{size:16,al:ramp(t,14,15),col:ROSE,w:700})}}};
 // 11 Fedorenko: meaning builds word by word
@@ -151,7 +151,7 @@ D[17]={dur:17,pics:[PN(17)],draw(g,t){back(17,t);panel(30,430,540,345);
 // 18 Regev: 1, 4 and 6 word windows
 const RW='the chef who the critic praised opened a new café'.split(' ');
 D[18]={dur:17,pics:[PN(18)],draw(g,t){back(18,t);panel(30,430,540,345);
- const n=Math.min(RW.length,1+Math.floor(G.clamp(t-1,0,10)*1));const vis=RW.slice(0,n);const x0=300-((vis.length-1)*52)/2;vis.forEach((w,i)=>T(w,x0+i*52,480,{size:15,w:700,col:INK}));
+ const n=Math.min(RW.length,1+Math.floor(G.clamp(t-1,0,10)*1));const vis=RW.slice(0,n);const x0=300-((vis.length-1)*52)/2;vis.forEach((w,i)=>T(w,x0+i*52,480,{size:15,w:700,col:INK,maxW:49}));
  [[1,SAFF,'about 1 word'],[4,TILE,'about 4 words'],[6,TEAL,'about 6 words']].forEach(([k,c,l],j)=>{const y=545+j*72,a=ramp(t,1.5+j*1.5,2.5+j*1.5),m=Math.min(k,n),xe=x0+(n-1)*52+24,xs=x0+(n-m)*52-24;G.rr(xs,y-18,xe-xs,36,18,G.rgba(c,.25*a),c,a,2.5);T(l,300,y+32,{size:17,col:c,al:a,w:800})});
  if(t>12)chip('22 people · 3 kinds, mixed together',300,765,INK,ramp(t,12,12.6),17)}};
 // 19 Wairagkar: instant voice

@@ -11,7 +11,7 @@ function panel(x,y,w,h,al=1){if(al<=0)return;const c=G.c;c.save();c.globalAlpha=
  const q=8;for(let i=0;i<q;i++){const px=x+30+i*(w-60)/(q-1);G.dot(px,y+1.5,3.2,i%2?SAFF:TILE,.8*al)}}
 function T(s,x,y,o={}){G.text(s,x,y,Object.assign({col:INK,size:24,w:700},o))}
 function S(s,x,y,size,col,al=1,it){G.text(s,x,y,{serif:1,size,col:col||INK,al,it})}
-function chip(s,x,y,col=TILE,al=1,size=21){if(al<=0)return;const c=G.c;const z=Math.max(size,13.5/G.k);c.font=`700 ${z}px -apple-system,system-ui,sans-serif`;const w=c.measureText(s).width+30;G.rr(x-w/2,y-z*.9,w,z*1.8,z*.9,G.rgba(col,.95*al));T(s,x,y+1,{col:'#ffffff',size,al})}
+function chip(s,x,y,col=TILE,al=1,size=21){if(al<=0)return;const c=G.c;const z=Math.max(size,12/G.k);c.font=`700 ${z}px -apple-system,system-ui,sans-serif`;const w=Math.min(c.measureText(s).width+30,G.fitW(x,"center")+8);G.rr(x-w/2,y-z*.9,w,z*1.8,z*.9,G.rgba(col,.95*al));T(s,x,y+1,{col:"#ffffff",size,al,maxW:w-24})}
 function hbar(x,y,w,h,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,y,w,h,h/2,G.rgba(INK,.09*al));if(v>0.005)G.rr(x,y,Math.max(h,v*w),h,h/2,G.rgba(col,al));T(lab,x,y-17,{align:'left',size:20,al,w:600});if(val)T(val,x+w,y-17,{align:'right',size:21,al,col,w:800})}
 function vbar(x,base,w,hmax,v,col,lab,val,al=1){if(al<=0)return;G.rr(x,base-hmax,w,hmax,10,G.rgba(INK,.07*al));const h=Math.max(0,v)*hmax;if(h>2)G.rr(x,base-h,w,h,10,G.rgba(col,al));T(lab,x+w/2,base+22,{size:19,al,w:600});if(val)T(val,x+w/2,base-h-18,{size:22,al,col,w:800})}
 function badge(s,t0,t){G.stamp(s,300,90,t0,t,ROSE,30)}
@@ -23,10 +23,10 @@ function standin(t){if(t<.2)return;const k=G.clamp(t/0.8);chip('Stand-in scene �
 function beyond(t){chip('Beyond our Pixel Hound records',300,38,TEAL,.92*G.clamp(t/0.8),19)}
 // 1 Helmholtz: timing a nerve
 D[1]={dur:17,pics:[PN(1)],draw(g,t){back(1,t);panel(30,440,540,335);
- T('Zap the nerve far from the muscle, then near it',300,476,{size:19,w:700});
+ if(t<12){T('Zap the nerve far from the muscle, then near it',300,476,{size:19,w:700});
  G.path([[70,560],[470,560]],'#e8d6b8',10);G.rr(470,535,70,50,22,'#d98c7c');T('muscle',505,610,{size:17,w:600});
  const ph=t<6?0:1,lt=(t-1.5)%4.5,x0=ph?400:90,u=G.clamp(lt/(ph?.6:2.4));if(t>1.5&&t<12){spark(x0,560,SAFF,1-G.clamp(lt/.4));G.ball(lerp(x0,470,u),560,9,SAFF);if(u>=1)spark(505,560,ROSE,1-G.clamp((lt-(ph?.6:2.4))/.6))}
- T(ph?'zap near → twitch comes sooner':'zap far → twitch comes later',300,640,{size:20,col:ph?SAGE:ROSE});
+ T(ph?'zap near → twitch comes sooner':'zap far → twitch comes later',300,640,{size:20,col:ph?SAGE:ROSE})}
  if(t>12){const k=ramp(t,12,13);G.rr(40,450,520,315,18,G.rgba('#fff8ea',k));T('The difference in delay = travel time',300,490,{size:20,al:k});S('≈ 27 metres a second',300,560,46,SAFF,k);T('about 100 km/h: fast, but not instant',300,620,{size:20,al:k,col:TILE});
   const r=G.clamp((t-13.5)/3);G.dot(80+420*r,700,10,SAFF,k);T('nerve signal',80+420*r,730,{size:15,al:k,w:600})}}};
 // 2 Turing: imitation game (stand-in)
@@ -38,7 +38,7 @@ D[2]={dur:16,pics:[PN(2)],draw(g,t){back(2,t);standin(t);panel(30,450,540,325);
 // 3 Sperry: split brain
 D[3]={dur:18,pics:[PN(3)],draw(g,t){back(3,t);panel(30,440,540,335);
  G.at(300,600,1);G.c.globalAlpha=1;G.dot(-60,0,70,'#f3cdb8');G.dot(60,0,70,'#f3cdb8');G.ring(-60,0,70,INK,2,.4);G.ring(60,0,70,INK,2,.4);const cut=ramp(t,1,2.5);G.line(0,-80,0,80,ROSE,5,cut,[8,8]);G.end();
- T('LEFT half: talks',240,690,{size:17,col:TILE,w:800});T('RIGHT half: no words',380,690,{size:17,col:SAFF,w:800});
+ T('LEFT half: talks',170,690,{size:17,col:TILE,w:800});T('RIGHT half: no words',430,690,{size:17,col:SAFF,w:800});
  if(t>3.5&&t<5.5)chip('"spoon" flashed to the LEFT side of view',300,480,SAFF,1,18);
  const r=ramp(t,4.5,5.5);G.dot(360,600,30*r,SAFF,.6*r);
  if(t>6.5){bubble(80,730,200,46,'"I saw nothing"',ramp(t,6.5,7.2),TILE,19)}if(t>9){bubble(320,730,220,46,'left hand picks spoon',ramp(t,9,9.7),SAFF,18);G.mark(520,690,true,ramp(t,9.5,10),.5)}
@@ -54,7 +54,7 @@ D[4]={dur:16,pics:[PN(4)],draw(g,t){back(4,t);standin(t);panel(30,450,540,325);
 D[5]={dur:17,pics:[PN(5)],draw(g,t){back(5,t);panel(30,440,540,335);
  T('Real timing: key press, then a beep 250 ms later',300,476,{size:18});
  const x0=130,x1=470,y=560;G.line(80,y,520,y,INK,3,.4);const k=ramp(t,1,2);chip('press',x0,y-34,TILE,k,18);chip('beep',x1,y-34,SAFF,k,18);G.dot(x0,y,9,TILE,k);G.dot(x1,y,9,SAFF,k);
- const b=ramp(t,5,7);T('What people felt, when THEY chose to press:',300,620,{size:18,al:ramp(t,4.5,5)});const p1=lerp(x0,x0+70,b),p2=lerp(x1,x1-90,b);G.line(80,670,520,670,INK,3,.25*b);G.dot(p1,670,10,TILE,b);G.dot(p2,670,10,SAFF,b);if(b>.9)G.arrow(p1+14,690,p2-14,690,SAGE,3,ramp(t,7,7.5));T('pulled together',300,710,{size:17,col:SAGE,al:ramp(t,7,7.5),w:800});
+ const b=ramp(t,5,7);if(t<10){T('What people felt, when THEY chose to press:',300,620,{size:18,al:ramp(t,4.5,5)});const p1=lerp(x0,x0+70,b),p2=lerp(x1,x1-90,b);G.line(80,670,520,670,INK,3,.25*b);G.dot(p1,670,10,TILE,b);G.dot(p2,670,10,SAFF,b);if(b>.9)G.arrow(p1+14,690,p2-14,690,SAGE,3,ramp(t,7,7.5));T('pulled together',300,710,{size:17,col:SAGE,al:ramp(t,7,7.5),w:800})}
  if(t>10){const c=ramp(t,10,11);G.rr(40,600,520,165,14,G.rgba('#fff8ea',c));T('When a magnet made the finger twitch',300,630,{size:18,al:c});const q1=lerp(x0,x0-40,c),q2=lerp(x1,x1+40,c);G.line(60,690,540,690,INK,3,.25*c);G.dot(q1,690,10,TILE,c);G.dot(q2,690,10,SAFF,c);T('pushed apart',300,735,{size:18,col:ROSE,al:c,w:800})}}};
 // 6 Tononi IIT (stand-in)
 D[6]={dur:16,pics:[PN(6)],draw(g,t){back(6,t);standin(t);panel(30,450,540,325);
@@ -84,11 +84,11 @@ D[9]={dur:17,pics:[PN(9)],draw(g,t){back(9,t);panel(30,440,540,335);
  if(t>8){const k=ramp(t,8,9);chip('each network told the groups apart >80% of the time',300,748,TILE,k,15);T('best: the HEARING network',300,520,{size:19,col:SAFF,al:ramp(t,10,11)})}}};
 // 10 Casarotto: zap and zip
 D[10]={dur:18,pics:[PN(10)],draw(g,t){back(10,t);panel(30,440,540,335);
- T('A magnetic pulse "knocks" the brain; EEG listens to the echo',300,474,{size:16,w:700});
+ if(t<9){T('A magnetic pulse "knocks" the brain; EEG listens to the echo',300,474,{size:16,w:700});
  const lt=(t-1)%3.2;[[180,'unconscious: short, simple echo',0],[420,'conscious: rich, spreading echo',1]].forEach(([x,l,c])=>{G.at(x,600,.55);G.brain(0,0,1,{tint:'#eab3a5'});G.end();
-  if(t>1){if(c){for(let i=0;i<6;i++){const a=i*1.05,r=lt*60;G.dot(x+Math.cos(a)*r*(.6+.1*i),600+Math.sin(a)*r*.6,9,[SAFF,TEAL,TILE][i%3],G.clamp(1-lt/2.5))}}else G.ring(x,600,lt*40,SAFF,4,G.clamp(1-lt/1))}T(l,x,690,{size:15,w:800,col:c?TEAL:'#8a7350'})});
+  if(t>1){if(c){for(let i=0;i<6;i++){const a=i*1.05,r=lt*60;G.dot(x+Math.cos(a)*r*(.6+.1*i),600+Math.sin(a)*r*.6,9,[SAFF,TEAL,TILE][i%3],G.clamp(1-lt/2.5))}}else G.ring(x,600,lt*40,SAFF,4,G.clamp(1-lt/1))}const ls=l.split(': ');T(ls[0]+':',x,682,{size:15,w:800,col:c?TEAL:'#8a7350'});T(ls[1],x,706,{size:15,w:800,col:c?TEAL:'#8a7350'})})}
  if(t>9){const k=ramp(t,9,10);G.rr(40,450,520,315,18,G.rgba('#fff8ea',k));T('Cut-off tested on 150 people who could report',300,488,{size:17,al:k});
-  hbar(80,560,440,16,.947*k,TEAL,'minimally conscious patients detected','94.7%',k);hbar(80,640,440,16,(9/43)*ramp(t,11,12),SAFF,'"vegetative" patients with high scores','9 of 43',ramp(t,11,12));T('maybe aware inside?',300,710,{size:20,col:SAFF,al:ramp(t,12.5,13.5)})}}};
+  hbar(80,560,440,16,.947*k,TEAL,'minimally conscious: detected','94.7%',k);hbar(80,640,440,16,(9/43)*ramp(t,11,12),SAFF,'"vegetative": high score','9 of 43',ramp(t,11,12));T('maybe aware inside?',300,710,{size:20,col:SAFF,al:ramp(t,12.5,13.5)})}}};
 // 11 Andrillon: learning in sleep
 D[11]={dur:17,pics:[PN(11)],draw(g,t){back(11,t);panel(30,440,540,335);
  T('The same noise snippet, repeated, while asleep',300,476,{size:19});
@@ -113,13 +113,13 @@ D[13]={dur:18,pics:[PN(13)],draw(g,t){back(13,t);panel(30,440,540,335);
 D[14]={dur:17,pics:[PN(14)],draw(g,t){back(14,t);panel(30,440,540,335);
  T('Brain-wide patterns that come and go',300,476,{size:20});
  const rich=k=>{for(let i=0;i<10;i++)for(let j=i+1;j<10;j++)if((i*7+j*3)%4==0){const a=i/10*6.283,b=j/10*6.283;G.line(Math.cos(a)*55,Math.sin(a)*40,Math.cos(b)*55,Math.sin(b)*40,(i+j)%2?SAFF:TILE,3,k*(.5+.5*Math.sin(t*2+i)))}};
- const items=[[105,'healthy',1],[245,'minimally conscious',.85],[385,'unresponsive',.15],[505,'anaesthesia',.2]];
- items.forEach(([x,l,k],i)=>{const a=ramp(t,1+i*1.6,2+i*1.6);G.at(x,610,.8);G.c.globalAlpha=a;G.dot(0,0,62,'#fdeee0');rich(k*a);G.c.globalAlpha=1;G.end();T(l,x,700,{size:14,w:800,al:a,col:k>.5?SAGE:'#8a7350'})});
+ const items=[[95,'healthy',1],[230,'minimally conscious',.85],[370,'unresponsive',.15],[505,'anaesthesia',.2]];
+ items.forEach(([x,l,k],i)=>{const a=ramp(t,1+i*1.6,2+i*1.6);G.at(x,610,.8);G.c.globalAlpha=a;G.dot(0,0,62,'#fdeee0');rich(k*a);G.c.globalAlpha=1;G.end();l.split(' ').forEach((p,j,A)=>T(p,x,700+(j-(A.length-1)/2)*20,{size:14,w:800,al:a,col:k>.5?SAGE:'#8a7350',maxW:128}))});
  if(t>9)chip('rich, changing pattern goes with consciousness',300,750,TEAL,ramp(t,9,9.6),16)}};
 // 15 FND: a rule-in sign
 D[15]={dur:17,pics:[PN(15)],draw(g,t){back(15,t);panel(30,440,540,335);
  T('Example sign: Hoover\'s sign',300,476,{size:20,col:TILE});
- const k1=ramp(t,1.5,2.5),k2=ramp(t,5,6);hbar(80,550,440,18,.2*k1,ROSE,'"Push the weak leg down"','weak',k1);hbar(80,620,440,18,.9*k2,SAGE,'Lift the OTHER leg: weak leg pushes down','strong',k2);
+ const k1=ramp(t,1.5,2.5),k2=ramp(t,5,6);hbar(80,550,440,18,.2*k1,ROSE,'"Push the weak leg down"','weak',k1);hbar(80,620,440,18,.9*k2,SAGE,'Lift the OTHER leg instead','strong',k2);
  if(t>8){T('Strength is there, but hard to use on purpose',300,680,{size:18,al:ramp(t,8,9),col:INK})}
  if(t>11)chip('signs like this: 64–100% specific in studies',300,740,TEAL,ramp(t,11,11.6),17)}};
 // 16 AWARE-II
@@ -150,8 +150,8 @@ D[20]={dur:18,pics:[PN(20)],draw(g,t){back(20,t);beyond(t);panel(30,440,540,335)
  T('5-minute chats with a person AND an AI at once',300,476,{size:17});T('Which one is the human?',300,504,{size:19,col:TILE});
  const r=[['GPT-4.5 (told to act human)',.73,SAFF],['LLaMa-3.1 (same prompt)',.56,TEAL],['ELIZA (1960s program)',.23,'#8a7350'],['GPT-4o (no persona)',.21,'#8a7350']];
  r.forEach(([l,v,c],i)=>{const k=ramp(t,2+i*1.4,3+i*1.4);hbar(80,560+i*52,440,14,v*k,c,l,Math.round(v*100)+'%',k)});
- G.line(80+440*.5,545,80+440*.5,750,ROSE,2,.5*ramp(t,8,9),[5,5]);T('chance',300,770,{size:14,col:ROSE,al:ramp(t,8,9)});
- G.text('chosen as "the human"',540,766,{size:13,col:'#8a7350',align:'right',w:500})}};
+ G.line(80+440*.5,545,80+440*.5,750,ROSE,2,.5*ramp(t,8,9),[5,5]);T('chance',308,770,{size:14,col:ROSE,al:ramp(t,8,9),align:'left'});
+ G.text('chosen as "the human"',80,770,{size:13,col:'#8a7350',align:'left',w:500,maxW:212})}};
 const STORY={
 1:[[0,'Q',"When you stub your toe, do you feel it instantly? In 1850 most scientists thought nerve signals were far too fast to measure. Hermann von Helmholtz decided to time one anyway."],
  [0.5,'S',"He used a frog's leg muscle with its long nerve still attached, wired to a very precise timer. When the nerve is zapped with a little electricity, the muscle twitches."],

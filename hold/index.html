@@ -45,7 +45,7 @@ canvas#w{display:block;position:fixed;inset:0}
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
 <script src="data.js"></script>
 <script>window.DEMO_PAL={a:'#c2410c',b:'#16507a',hi:'#1f1a14',bg0:'#efe2c8',bg1:'#fbf4e6'};window.DEMO_IMG_BASE='scene/';window.DEMO_HERO=n=>'scene/'+window.FIELD.meta.imgs[n-1]+'.webp';</script>
-<script src="../demos/demo-bright.js"></script><script src="../demos/kit-bright.js"></script><script src="demos.js"></script>
+<script src="../demos/demo-bright.js?v=fix1"></script><script src="../demos/kit-bright.js?v=fix1"></script><script src="demos.js?v=fix1"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD,M=F.meta,$=s=>document.querySelector(s);const stops=[];F.rooms.forEach((r,ri)=>r.cards.forEach(c=>stops.push({...c,ri})));
@@ -72,14 +72,14 @@ stops.forEach((s,k)=>frameAt('scene/'+s.scene+'.webp',k+1,k%2?1:-1));
 F.rooms.forEach((r,ri)=>{const first=stops.findIndex(s=>s.ri===ri)+1;const img=new Image();img.src='scene/'+r.cards[0].scene+'.webp';const t=tex(1024,320,()=>{});const draw=()=>{const c=t.image,g=c.getContext('2d');g.fillStyle='#16507a';g.fillRect(0,0,1024,320);if(img.complete&&img.naturalWidth){g.save();g.beginPath();g.arc(160,160,128,0,7);g.clip();g.drawImage(img,0,120,600,600,32,32,256,256);g.restore()}g.strokeStyle='#e8a33a';g.lineWidth=8;g.beginPath();g.arc(160,160,128,0,7);g.stroke();g.strokeRect(12,12,1000,296);const[a,b]=r.name.split(' · ');g.fillStyle='#e8a33a';g.font='700 30px system-ui,sans-serif';g.fillText(a.toUpperCase(),320,110);g.fillStyle='#fffaf0';g.font='54px "Instrument Serif",Georgia,serif';let ln=b||'',y=180;const words=ln.split(' ');let cur='';for(const w of words){if(g.measureText(cur+w).width>650){g.fillText(cur,320,y);y+=60;cur=''}cur+=w+' '}g.fillText(cur,320,y);t.needsUpdate=true};img.onload=draw;document.fonts&&document.fonts.ready.then(draw);draw();
  const m=new THREE.Mesh(new THREE.PlaneGeometry(5.6,1.75),new THREE.MeshBasicMaterial({map:t,toneMapped:false,side:THREE.DoubleSide}));m.position.set(0,4.9,zOf(first)+SP/2-.05);S.add(m)});
 // end door
-const door=frameAt('img/'+M.end.img+'.webp',N-1,0);door.rotation.y=0;door.position.set(0,2.3,zOf(N-1)-3.2);
+const door=frameAt('img/'+M.end.img+'.webp?v=door2',N-1,0);door.rotation.y=0;door.position.set(0,2.3,zOf(N-1)-3.2);
 // petals for gentle motion
 const pg=new THREE.BufferGeometry(),PN=160,pp=new Float32Array(PN*3);for(let i=0;i<PN;i++){pp[i*3]=(Math.random()-.5)*8;pp[i*3+1]=Math.random()*5;pp[i*3+2]=-Math.random()*L}pg.setAttribute('position',new THREE.BufferAttribute(pp,3));S.add(new THREE.Points(pg,new THREE.PointsMaterial({color:'#e8a33a',size:.06,transparent:true,opacity:.7})));
 let idx=0,cz=4,tz=4,look=0,tlook=0;
 const bar=$('#bar');stops.forEach((s,k)=>{const i=document.createElement('i');if(k&&s.ri!==stops[k-1].ri)i.className='rb';bar.appendChild(i)});
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function show(){const card=$('#card');card.classList.add('fade');[...bar.children].forEach((b,k)=>b.classList.toggle('on',k<idx));
- setTimeout(()=>{let h='';if(idx===0){const r=F.rooms[0];$('#room').textContent=M.entrance_title;$('#roomnote').textContent=M.entrance_note;h=`<div class="hd">${esc(M.entrance_title)}</div><div class="c">${esc(M.entrance_note)}</div><div class="src">${F.gaps.map(esc).join('<br>')}</div>`}
+ clearTimeout(window.__showT);window.__showT=setTimeout(()=>{let h='';if(idx===0){const r=F.rooms[0];$('#room').textContent=M.entrance_title;$('#roomnote').textContent=M.entrance_note;h=`<div class="hd">${esc(M.entrance_title)}</div><div class="c">${esc(M.entrance_note)}</div><div class="src">${F.gaps.map(esc).join('<br>')}</div>`}
  else if(idx===N-1){$('#room').textContent=M.end.room;$('#roomnote').textContent=M.end.note;h=`<div class="hd">${esc(M.end.room)}</div><div class="c">${esc(M.end.note)}</div><a class="go" href="${M.end.href}">${esc(M.end.label)} ›</a>`}
  else{const s=stops[idx-1],r=F.rooms[s.ri];$('#room').textContent=r.name;$('#roomnote').textContent=r.note;h=`<div class="row"><span class="y">${s.year}</span>${s.thin?'<span class="tag">thin evidence</span>':''}<span class="tag" style="border-style:solid">stop ${s.n} of ${stops.length}</span></div><div class="hd">${esc(s.head)}</div><div class="c">${esc(s.cap)}</div><button class="play">Watch the experiment</button><div class="src">${esc(s.src)} · <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></div>`}
  card.innerHTML=h;card.classList.remove('fade')},220);

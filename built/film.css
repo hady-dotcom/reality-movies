@@ -15,7 +15,7 @@ main{position:relative;z-index:2}
 .step:first-child{min-height:100vh}
 .card{max-width:440px;width:100%;background:rgba(255,250,239,.94);border:1px solid #ecdcbc;border-radius:18px;padding:20px 20px 14px;box-shadow:0 10px 40px rgba(120,80,20,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
 .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);font-weight:600}
-.k b{color:var(--blue)}
+.k b{color:var(--blue);display:block;font:400 30px/1.05 IS,Georgia,serif;letter-spacing:0;text-transform:none;margin-bottom:4px}
 h1{font-family:IS;font-weight:400;font-size:52px;line-height:1;margin:6px 0 10px}
 h2{font-family:IS;font-weight:400;font-size:33px;line-height:1.08;margin:6px 0 10px}
 .card p{margin:0 0 10px}

@@ -1,7 +1,7 @@
 /* Truth showing up: 22 experiment demos. Drawn in code (no photos). Stops 1-15: facts only from each stop's Pixel Hound record and cited paper. Stops 16-22: new, beyond our records, facts only from the linked published papers. */
 (function(){const G=window.Demo.G,P=G.P,lerp=G.lerp,ramp=(t,a,b)=>G.ramp(t,a,b);const D={};
 const SAF='#f3b65a',TER='#e0795a',CRM='#f4ead8',GRN='#7fc49a',RED='#ef6b5b';
-const label=(s,x,y,col,al=1,size=19)=>{if(al<=0)return;const c=G.c;const z=Math.max(size,13.5/G.k);c.font=`600 ${z}px -apple-system,system-ui,sans-serif`;const w=c.measureText(s).width+z*1.3;G.rr(x-w/2,y-z*.95,w,z*1.9,z*.95,'#0f2f4a',null,.78*al);G.text(s,x,y,{size,col:col||CRM,al,w:600})};
+const label=(s,x,y,col,al=1,size=19)=>{if(al<=0)return;const c=G.c;const z=Math.max(size,12/G.k);c.font=`600 ${z}px -apple-system,system-ui,sans-serif`;const w=c.measureText(s).width+z*1.3;G.rr(x-w/2,y-z*.95,w,z*1.9,z*.95,'#0f2f4a',null,.78*al);G.text(s,x,y,{size,col:col||CRM,al,w:600})};
 const panel=(x,y,w,h,al=1)=>G.glass(x,y,w,h,18,al);
 const tick=(x,y,s,ok,al=1)=>{const c=G.c;c.globalAlpha=al;c.lineWidth=s*.2;c.lineCap='round';c.strokeStyle=ok?GRN:RED;c.beginPath();if(ok){c.moveTo(x-s*.5,y);c.lineTo(x-s*.12,y+s*.4);c.lineTo(x+s*.55,y-s*.45)}else{c.moveTo(x-s*.4,y-s*.4);c.lineTo(x+s*.4,y+s*.4);c.moveTo(x+s*.4,y-s*.4);c.lineTo(x-s*.4,y+s*.4)}c.stroke();c.globalAlpha=1};
 const floor=()=>{return;const c=G.c;c.fillStyle=G.lg(0,560,0,800,[[0,'#1a2a38'],[1,'#0a1118']]);c.fillRect(0,560,600,240);for(let i=-8;i<9;i++)G.line(300+i*30,560,300+i*120,800,'#ffffff',1,.06);for(let j=0;j<5;j++){const y=560+Math.pow(j/5,1.6)*240;G.line(0,y,600,y,'#ffffff',1,.06)}};

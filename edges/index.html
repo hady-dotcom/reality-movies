@@ -66,7 +66,7 @@ html,body{background:#f6efe0;color:#2a2118}
 <div id="top"><h1><a href="../" class="homelink" style="color:inherit;text-decoration:none;pointer-events:auto;display:inline-block;padding:4px 10px;margin-left:-10px;border:1px solid currentColor;border-radius:20px;opacity:.9">‹ Home</a> · Life edges</h1><div id="room"></div><div id="roomnote"></div><div id="bar"></div></div>
 <div id="card"></div>
 <div id="nav"><button id="prev" aria-label="Previous">‹ Back</button><button id="next" aria-label="Next">Next ›</button></div>
-<script src="data.js?v=sl1"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#1f5f8b',b:'#e3a72f',hi:'#2a2118',bg0:'#f6efe0',bg1:'#fffaf0'}</script><script src="../demos/demo.js?v=qa1"></script><script src="demos.js?v=r3"></script><script src="story.js?v=sl1"></script><script src="../storymap/storymap.js"></script><script src="../cinematic/cin.js"></script>
+<script src="data.js?v=ev2"></script><script src="theme.js"></script><script>window.DEMO_PAL={a:'#1f5f8b',b:'#e3a72f',hi:'#2a2118',bg0:'#f6efe0',bg1:'#fffaf0'}</script><script src="../demos/demo.js?v=qa1"></script><script src="demos.js?v=r3"></script><script src="story.js?v=sl1"></script><script src="../storymap/storymap.js"></script><script src="../cinematic/cin.js"></script>
 <script type="module">
 import * as THREE from '../vendor/three.module.min.js';
 const F=window.FIELD, M=F.meta, stops=[];document.getElementById('ti').textContent=M.intro;document.getElementById('tl').textContent=M.sub;document.getElementById('ty').textContent=M.years;
@@ -119,7 +119,7 @@ stops.forEach((a,i)=>a.links.forEach(t=>{const j=stops.findIndex(b=>b.title.star
 // end: doorway to the next walk
 const endZ=ZS[ZS.length-1]+RDS[RDS.length-1];
 const wall=new THREE.Mesh(new THREE.PlaneGeometry(10,5),new THREE.MeshBasicMaterial({color:0xf1e4c8}));wall.position.set(0,2.5,endZ+.6);wall.rotation.y=Math.PI;scene.add(wall);
-const hf=new THREE.Mesh(new THREE.PlaneGeometry(2.6,2.6),new THREE.MeshBasicMaterial({map:tex(`img/${M.end.img}.webp?v=door2`)}));hf.position.set(0,2,endZ+.5);hf.rotation.y=Math.PI;scene.add(hf);
+const hf=new THREE.Mesh(new THREE.PlaneGeometry(2.6,2.6),new THREE.MeshBasicMaterial({map:tex(`img/${M.end.img}.webp?v=ev2`)}));hf.position.set(0,2,endZ+.5);hf.rotation.y=Math.PI;scene.add(hf);
 const hh=halo(0xffc070,4.4,.16);hh.position.set(0,2,endZ+.3);scene.add(hh);pulses.push({o:hh,b:.16,a:.06,f:.4,ph:0});
 // dust motes
 const DN=innerWidth<700?500:900, dpos=new Float32Array(DN*3), dseed=new Float32Array(DN);

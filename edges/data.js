@@ -362,7 +362,7 @@ window.FIELD={
    "20": "Jones & Bergen"
   },
   "end": {
-   "room": "You walked all seven",
+   "room": "You walked all eight",
    "note": "Pick any walk to go again.",
    "href": "../",
    "label": "Back to all walks",

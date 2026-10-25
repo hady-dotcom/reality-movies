@@ -16,7 +16,7 @@ function draw(n,g,t){PX=null;const c=G.c,k=K[n-1];
  // timeline
  const N=K.length,L=60,R=540,ly=y0+150,X=i=>L+(R-L)*i/(N-1);
  G.path([[L,ly],[R,ly]],G.rgba(INK,.25),3);
- T('ideas',L-6,ly-62,{align:'left',size:16,col:TILE,nowrap:1,maxW:120});T('finds',L-6,ly+64,{align:'left',size:16,col:SAFF,nowrap:1,maxW:120});
+ T('ideas',L-6,ly-62,{align:'left',size:16,col:TILE,nowrap:1,maxW:120});T('clashes with society',R,ly-62,{align:'right',size:15,col:ROSE,nowrap:1,maxW:240});T('finds',L-6,ly+64,{align:'left',size:16,col:SAFF,nowrap:1,maxW:120});
  const rev=ramp(t,1,4.5);
  for(let i=0;i<N;i++){const q=K[i],dy=q.k==='idea'?-30:q.k==='find'?30:0,xi=X(i);
   if(i<n-1){const a=G.clamp(rev*(n-1)-i+1);if(a<=0)continue;G.path([[xi,ly],[xi,ly+dy]],G.rgba(COL[q.k],.5*a),2);G.dot(xi,ly+dy,7,COL[q.k],.85*a)}

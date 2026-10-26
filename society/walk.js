@@ -18,11 +18,11 @@ function view(){
  <div class="txt"><div class="meta"><span class="chip k k-${s.k}"><i></i>${KL[s.k]}</span><span class="chip">${i} of ${N}</span>${s.thin?'<span class="chip">Thin evidence</span>':''}</div>
  <h2>${esc(s.head)}</h2><p class="who">${esc(s.place)} · ${esc(s.who)}</p>${tl(i)}
  ${quote(s.quote)}<section class="sec"><h3>What happened</h3><p>${esc(s.cap)}</p></section>
- <section class="sec"><h3>How it spread</h3><p>${esc(s.spread)}</p></section>
+ ${s.spread?`<section class="sec"><h3>How it spread</h3><p>${esc(s.spread)}</p></section>`:''}
  ${s.nums?`<section class="sec nums">${s.nums.map(num).join('')}</section>`:''}<section class="sec oh"><h3>Oh</h3><p>${esc(s.oh)}</p></section>
  <section class="sec"><h3>Words to know</h3><dl class="terms">${s.terms.map(t=>`<div><dt>${esc(t[0])}:</dt> <dd>${esc(t[1])}</dd></div>`).join('')}</dl></section>
  ${s.thin?`<section class="sec thin">Thin evidence: ${esc(s.thin)}</section>`:''}
- <section class="sec src">Source · ${esc(s.src)} · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>${s.url2?` · <a href="${esc(s.url2)}" target="_blank" rel="noopener">see the other source</a>`:''}</section></div></article>`}
+ <section class="sec src">Source · ${esc(s.src)} · <a href="${esc(s.url)}" target="_blank" rel="noopener">see the original</a>${s.url2?` · <a href="${esc(s.url2)}" target="_blank" rel="noopener">see the other source</a>`:''}${s.url3?` · <a href="${esc(s.url3)}" target="_blank" rel="noopener">see the sentencing</a>`:''}</section></div></article>`}
 function render(dir){st.innerHTML=view();window.scrollTo(0,0);
  $('#prev').disabled=i===0;$('#next').textContent=i===0?'Start':i===N+1?'Done':'Next';$('#next').classList.toggle('go',i===0);
  $('#pos').textContent=i===0?'Introduction':i===N+1?'The end':`${S[i-1].y} · ${i}/${N}`;

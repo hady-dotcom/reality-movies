@@ -199,7 +199,7 @@ window.WALK={
    "who": "Alfred Kinsey's team",
    "cap": "Kinsey's surveys (1948, 1953) noted that some people reported sexual feelings during exercise. The question was not asked in a standard way.",
    "oh": "Science started measuring exercise and arousal, but with loose data.",
-   "src": "Kinsey et al., as cited by Herbenick et al., 2021",
+   "src": "Kinsey et al., as cited by Herbenick et al., 2012",
    "url": "https://www.eurekalert.org/news-releases/508508",
    "alt": "Painted 1950s research office with questionnaires",
    "thin": "Mostly volunteered answers, not a fixed question; no reliable figure is given here.",
@@ -273,6 +273,7 @@ window.WALK={
    "place": "Indiana, USA",
    "who": "Herbenick and Fortenberry, Indiana University",
    "cap": "An online survey of 370 women found some had felt sexual sensations during exercise. Among those, abdominal exercises were named far more often than yoga.",
+   "spread": "Magazines and blogs had talked about it for years; this was one of the first studies to measure it.",
    "oh": "Yoga was not special. Most people were not thinking about sex at the time; it was a body reaction.",
    "src": "Herbenick & Fortenberry, Sexual and Relationship Therapy, 2011",
    "url": "https://doi.org/10.1080/14681994.2011.647902",
@@ -314,6 +315,7 @@ window.WALK={
    "url": "https://www.justice.gov/usao-edny/pr/founder-sexual-wellness-company-onetaste-and-former-head-sales-convicted-forced-labor",
    "alt": "Painted federal courthouse with news cameras on tripods outside",
    "url2": "https://www.bloomberg.com/news/features/2018-06-18/the-dark-side-of-onetaste-the-orgasmic-meditation-company",
+   "url3": "https://www.justice.gov/usao-edny/pr/onetaste-founder-nicole-daedone-sentenced-nine-years-prison-forced-labor-conspiracy",
    "spread": "A practice sold as freedom ended in a forced-labour conviction.",
    "thin": "The 2018 Bloomberg claims were allegations when published; the jury later convicted on the conspiracy charge.",
    "terms": [
@@ -323,8 +325,8 @@ window.WALK={
     ]
    ],
    "quote": {
-    "t": "The defendants ... obtained the labor and services of a group of OneTaste members by subjecting them to economic, sexual, emotional and psychological abuse; surveillance; indoctrination; and intimidation.",
-    "ref": "2023 indictment (charges, later proven at trial)",
+    "t": "The defendants ... obtained the labor and services of a group of OneTaste members by subjecting them to economic, sexual, emotional and psychological abuse, surveillance, indoctrination, and intimidation.",
+    "ref": "DOJ release on the indictment, 6 June 2023 (charges; the jury later convicted on forced labour conspiracy)",
     "url": "https://www.justice.gov/usao-edny/pr/onetaste-founder-and-former-head-sales-indicted-forced-labor-conspiracy"
    }
   },

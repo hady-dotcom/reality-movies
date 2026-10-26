@@ -1,11 +1,11 @@
 .tl{display:flex;align-items:center;gap:3px;margin:var(--s2) 0;height:34px}
 .tl b{flex:1;height:6px;border-radius:3px;background:var(--bg2);position:relative;transition:transform .4s var(--spring)}
-.tl b.done{background:color-mix(in srgb,var(--k) 55%,#fff)}.tl b.now{background:var(--k);transform:scaleY(2.2)}
+.tl b.done{background:color-mix(in srgb,var(--k) 55%,var(--card))}.tl b.now{background:var(--k);transform:scaleY(2.2)}
 .tl b.principle{--k:var(--k-principle)}.tl b.shift{--k:var(--k-shift)}.tl b.clash{--k:var(--k-clash)}
 .hero{position:relative;border-radius:var(--r-img);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/3;background:var(--bg2)}
 .hero img{width:100%;height:100%;object-fit:cover;display:block;animation:ken 16s var(--ease) forwards}
 @keyframes ken{from{transform:scale(1.02)}to{transform:scale(1.09)}}
-.yr{position:absolute;left:var(--s2);bottom:var(--s2);padding:var(--s1) var(--s2);border-radius:16px;background:rgba(255,255,255,.72);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);font:400 64px/1 var(--font-serif);color:#1c1c1e;animation:pop .7s var(--spring) both}
+.yr{position:absolute;left:var(--s2);bottom:var(--s2);padding:var(--s1) var(--s2);border-radius:16px;background:var(--glass);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);font:400 64px/1 var(--font-serif);color:var(--label);animation:pop .7s var(--spring) both}
 @keyframes pop{from{opacity:0;transform:translateY(14px) scale(.9)}to{opacity:1;transform:none}}
 .meta{display:flex;flex-wrap:wrap;gap:var(--s1);margin:var(--s2) 0 0}
 .stop h2{font:var(--t-title1);margin:var(--s1) 0 4px}
@@ -15,16 +15,37 @@
 @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 .sec h3{font:600 13px/18px var(--font);letter-spacing:.06em;text-transform:uppercase;color:var(--label2);margin:0 0 6px}
 .sec p{margin:0;font:var(--t-body)}
-.oh{background:color-mix(in srgb,var(--k) 9%,#fff);border-radius:var(--r-card);padding:var(--s2) var(--s3)}
+.oh{background:color-mix(in srgb,var(--k) 9%,var(--card));border-radius:var(--r-card);padding:var(--s2) var(--s3)}
 .oh p{font:400 22px/29px var(--font-serif)}
 .terms{margin:0;display:grid;gap:6px}.terms div{font:var(--t-callout)}.terms dt{display:inline;font-weight:600}.terms dd{display:inline;margin:0;color:var(--label2)}
 .thin{border:1.5px dashed var(--label3);border-radius:16px;padding:var(--s1) var(--s2);font:var(--t-subhead);color:var(--label2)}
 .src{font:var(--t-foot);color:var(--label2)}
 .tab{position:fixed;left:0;right:0;bottom:0;z-index:20;height:calc(var(--tab-h) + env(safe-area-inset-bottom));padding:0 var(--s2) env(safe-area-inset-bottom);display:flex;align-items:center;justify-content:space-between;gap:var(--s2);background:var(--glass);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur);box-shadow:0 -.5px 0 var(--sep)}
-.tab button{min-width:96px;min-height:44px;border-radius:var(--r-btn);border:0;background:var(--bg2);color:var(--tint);font:var(--t-headline);cursor:pointer;transition:transform .45s var(--spring)}
-.tab button:active{transform:scale(.94)}.tab button:disabled{opacity:.35}.tab button.go{background:var(--tint);color:#fff}
+.tab button{min-width:96px;min-height:44px;border-radius:var(--r-btn);border:0;background:var(--card);color:var(--tint);font:var(--t-headline);cursor:pointer;transition:transform .45s var(--spring)}
+.tab button:active{transform:scale(.94)}.tab button:disabled{opacity:.35}.tab button.go{background:var(--tint);color:var(--on-tint)}
 .tab .pos{font:var(--t-foot);color:var(--label2);text-align:center}
 .legend{display:flex;flex-wrap:wrap;gap:var(--s1);margin:0 0 var(--s3)}
 #stage.out{opacity:0;transform:translateX(var(--dx,0))}#stage{transition:opacity .22s var(--ease),transform .35s var(--spring)}
 @media(min-width:900px){main{max-width:760px}.stop h2{font:var(--t-large)}.yr{font-size:88px}}
 @media(min-width:900px){body.walk main{max-width:1120px}.stop{display:grid;grid-template-columns:1.15fr 1fr;gap:var(--s5);align-items:start}.stop .hero{position:sticky;top:calc(var(--bar-h) + var(--s2))}.stop .meta{margin-top:0}}
+
+/* white cards on the grouped grey canvas (house style) */
+.stop .txt,.sec.panel,.sec.chart{background:var(--card);border-radius:var(--r-card);box-shadow:var(--shadow)}
+.stop .txt{padding:var(--s2) var(--s3) var(--s3);margin-top:var(--s2)}
+.sec.panel,.sec.chart{padding:var(--s2) var(--s3) var(--s3)}
+.quote{margin:var(--s3) 0 0;padding:var(--s2) var(--s3);border-left:4px solid var(--k);background:var(--bg2);border-radius:var(--r-ctl)}
+.quote blockquote{margin:0;font:400 22px/29px var(--font-serif);color:var(--label)}
+.quote figcaption{margin-top:var(--s1);font:var(--t-foot)}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:var(--s1)}
+.num{background:var(--bg2);border-radius:var(--r-ctl);padding:var(--s2)}
+.nv{font:var(--t-title1);color:var(--k)}.nl{font:var(--t-subhead);color:var(--label);margin:4px 0 var(--s1)}
+.meter{height:8px;border-radius:4px;background:var(--sep);overflow:hidden}.meter i{display:block;height:100%;border-radius:4px;background:var(--k,var(--tint));transform-origin:left;animation:grow .9s var(--spring) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:none}}
+.ns{font:var(--t-cap);color:var(--label2);margin-top:var(--s1)}
+.chart{--k:var(--tint)}.chart .row{padding:var(--s1) 0;border-bottom:1px solid var(--sep)}.chart .row:last-child{border:0}
+.chart .rl{font:var(--t-callout);margin-bottom:6px}.chart .rl b{font:var(--t-headline);color:var(--tint)}.chart .rs{font:var(--t-cap);display:inline-block;margin-top:4px}
+.tn{font:var(--t-cap);border:1px dashed var(--label3);border-radius:var(--r-btn);padding:0 6px;color:var(--label2)}
+.want{--k:var(--k-principle)}.want ul{margin:0;padding-left:1.2em;display:grid;gap:6px}.want li{font:var(--t-body)}
+.want .find{margin-top:var(--s2);background:var(--tint-fill);border-radius:var(--r-ctl);padding:var(--s2);font:var(--t-callout)}
+.want .wl{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s2)}
+@media(min-width:900px){.stop .txt{margin-top:0}}

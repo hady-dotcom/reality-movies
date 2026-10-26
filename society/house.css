@@ -1,24 +1,21 @@
-/* Reality Society house tokens — Apple HIG (iOS 26 Liquid Glass) inspired.
-   Swap this one file for Jenkins' tokens later; pages only use the variables below. */
+/* Reality Society house tokens, mapped onto Jenkins' house style (tokens.css, Apple HIG / iOS 26 Liquid Glass).
+   Pages only use the variables below; every colour and size comes from tokens.css except the three walk-kind colours. */
+@import url(tokens.css?v=hh1);
 :root{
- --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","SF Pro Display",Inter,"Helvetica Neue",Arial,system-ui,sans-serif;
+ --font:var(--hh-font-system);--font-display:var(--hh-font-display);
  --font-serif:'Instrument Serif',Georgia,serif;
- /* type scale (size/line) */
- --t-large:700 34px/41px var(--font);--t-title1:700 28px/34px var(--font);--t-title2:700 22px/28px var(--font);
- --t-title3:600 20px/25px var(--font);--t-headline:600 17px/22px var(--font);--t-body:400 17px/22px var(--font);
- --t-callout:400 16px/21px var(--font);--t-subhead:400 15px/20px var(--font);--t-foot:400 13px/18px var(--font);--t-cap:400 12px/16px var(--font);
- /* 8pt grid */
- --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:40px;--s6:48px;--s8:64px;
- /* colour */
- --bg:#ffffff;--bg2:#f2f2f7;--card:#ffffff;--label:#000000;--label2:rgba(60,60,67,.6);--label3:rgba(60,60,67,.3);--sep:rgba(60,60,67,.12);
- --tint:#0a7aff;              /* the one accent */
- --k-principle:#248a3d;--k-shift:#0a7aff;--k-clash:#d70015;
- /* glass */
- --glass:rgba(255,255,255,.62);--glass-brd:rgba(255,255,255,.7);--glass-blur:saturate(180%) blur(24px);
- --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.08);
- /* shape + motion */
- --r-card:22px;--r-btn:999px;--r-img:18px;
- --spring:cubic-bezier(.2,.9,.25,1.15);--ease:cubic-bezier(.25,.1,.25,1);--dur:.55s;
+ --t-large:700 var(--hh-font-size-display)/var(--hh-line-large-title) var(--font-display);
+ --t-title1:700 var(--hh-font-size-title1)/1.22 var(--font-display);--t-title2:700 var(--hh-font-size-title)/1.27 var(--font-display);
+ --t-title3:600 var(--hh-font-size-h2)/1.25 var(--font);--t-headline:600 var(--hh-font-size-headline)/1.3 var(--font);--t-body:400 var(--hh-font-size-body-lg)/1.35 var(--font);
+ --t-callout:400 var(--hh-font-size-body)/1.35 var(--font);--t-subhead:400 var(--hh-font-size-small)/1.4 var(--font);--t-foot:400 var(--hh-font-size-small)/1.35 var(--font);--t-cap:400 var(--hh-font-size-caption)/1.33 var(--font);
+ --s1:var(--hh-space-2);--s2:var(--hh-space-3);--s3:var(--hh-space-4);--s4:var(--hh-space-5);--s5:40px;--s6:var(--hh-space-6);--s8:64px;
+ --bg:var(--hh-canvas);--bg2:var(--hh-surface);--card:var(--hh-paper);--label:var(--hh-ink);--label2:var(--hh-muted);--label3:var(--hh-glass-line);--sep:var(--hh-line);
+ --tint:var(--hh-accent);--tint-fill:var(--hh-accent-fill);--on-tint:var(--hh-on-accent);
+ --k-principle:#248a3d;--k-shift:var(--hh-accent);--k-clash:#c81e1e;
+ --glass:var(--hh-glass);--glass-brd:var(--hh-glass-edge);--glass-blur:saturate(180%) blur(var(--hh-glass-blur));
+ --shadow:var(--hh-shadow-card),var(--hh-shadow-lift);
+ --r-card:var(--hh-radius-card);--r-btn:var(--hh-radius-pill);--r-img:var(--hh-radius-card);--r-ctl:var(--hh-radius-control);
+ --spring:var(--hh-spring);--ease:var(--hh-ease);--dur:.55s;--press:var(--hh-press);--tap:var(--hh-tap-min);
  --bar-h:52px;--tab-h:64px;
 }
 @font-face{font-family:'Instrument Serif';src:url(../fonts/InstrumentSerif-Regular.ttf) format('truetype');font-display:swap}

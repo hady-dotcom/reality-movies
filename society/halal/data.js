@@ -1,5 +1,6 @@
 // How halal lost its cleanliness: stops checked against the linked sources.
 window.WALK={
+ "next": {"href": "../halal-animals/", "label": "Next walk: How the animal got lost"},
  "title": "How halal lost its cleanliness",
  "intro": "In the Qur'an, halal (allowed) comes paired with tayyib (good, wholesome, clean). Over 1,400 years, factories, certificates and logos changed what most people mean by halal. Here is how, stage by stage.",
  "note": "Facts come from the source linked on each card. Thin evidence is marked. The title is this walk's reading of the history, not a religious ruling. Pictures are painted impressions.",

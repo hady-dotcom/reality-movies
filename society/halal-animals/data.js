@@ -452,7 +452,7 @@ window.WALK={
    "alt": "Painted whitewashed country abattoir yard with calm sheep in a straw pen"
   },
   {
-   "y": "2019",
+   "y": "2022",
    "k": "shift",
    "head": "99 out of 100",
    "place": "United States",

@@ -89,6 +89,31 @@ window.WALK={
    "alt": "Painted figure meditating by a still pond at a forest hermitage"
   },
   {
+   "y": "c. 1050",
+   "k": "principle",
+   "head": "Poses as self-control",
+   "place": "India",
+   "who": "Early haṭha yoga texts, from Tantric traditions",
+   "cap": "Haṭha yoga grew out of Tantric traditions between about the 11th and 15th centuries. In its early texts, postures and breath were tools to control the body's energy and build discipline and self-restraint.",
+   "spread": "These methods spread to Hindu ascetic groups and became the haṭha yoga of later handbooks.",
+   "oh": "The poses began as training in self-control. The Kama Sutra (c. 3rd century CE) is a separate text about love and social life, not a yoga text.",
+   "terms": [
+    [
+     "Tantra",
+     "a family of Hindu and Buddhist traditions with rituals and practices for working with the body and energy."
+    ],
+    [
+     "Self-restraint",
+     "holding back an urge instead of giving in to it."
+    ]
+   ],
+   "thin": "Dates for the earliest haṭha texts are scholars' estimates. The Buddhist-origins view comes from the SOAS Hatha Yoga Project and is newer research.",
+   "src": "SOAS, The Hatha Yoga Project (James Mallinson)",
+   "url": "https://www.soas.ac.uk/research/hatha-yoga-project-ancient-practices-modern-wellbeing",
+   "url2": "https://www.britannica.com/topic/Kama-Sutra",
+   "alt": "Painted temple courtyard with bundled palm-leaf manuscripts and an oil lamp by a water tank"
+  },
+  {
    "y": "c. 1450",
    "k": "shift",
    "head": "The body joins in",
@@ -490,7 +515,7 @@ window.WALK={
    "who": "K. Pattabhi Jois, Ashtanga yoga",
    "cap": "Former students, including Karen Rain, said Pattabhi Jois, who died in 2009, touched them sexually while 'adjusting' their poses. His grandson Sharath Jois said he had seen his grandfather \"giving improper adjustments\" and apologised.",
    "spread": "Many yoga schools wrote new rules about touch and consent.",
-   "oh": "Jois and Iyengar learned from the same teacher in the same Mysore palace (stop 5).",
+   "oh": "Jois and Iyengar learned from the same teacher in the same Mysore palace (stop 6).",
    "terms": [
     [
      "Adjustment",
@@ -558,5 +583,10 @@ window.WALK={
    "url2": "https://ssscorp.org/sssc-aob-report-letter/",
    "alt": "Painted bound report and pen on a desk with New Mexico desert outside"
   }
- ]
+ ],
+ "imgv": "y2",
+ "next": {
+  "href": "../yoga-inverted/",
+  "label": "Next walk: How yoga got turned inside out"
+ }
 };

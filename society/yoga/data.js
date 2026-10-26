@@ -328,7 +328,7 @@ window.WALK={
    "head": "O Guru, Guru, Guru",
    "place": "New York, USA",
    "who": "The New Yorker, on Swami Muktananda and SYDA Yoga",
-   "cap": "A long New Yorker report collected allegations that Muktananda, who died in 1982, had sexual contact with young female followers. Some accounts had appeared in the early 1980s.",
+   "cap": "A long New Yorker report collected allegations that Muktananda, who died in 1982, had sexual contact with followers. Some accounts had appeared in the early 1980s.",
    "spread": "His organisation, SYDA, has continued under a successor.",
    "oh": "These stories came out after the teacher had died, so they could never be tested in court.",
    "terms": [

@@ -1,5 +1,6 @@
 // How the animal got lost: stops checked against the linked sources.
 window.WALK={
+ "imgv": "ha3",
  "title": "How the animal got lost",
  "intro": "Islam's teachings on animals are about their whole lives, not just their last moment. Then farming changed. Here is how, with the numbers, and what the full picture of halal and tayyib looks like.",
  "note": "Every quote and number links to its source. Thin evidence is marked. This walk is a reading of the history, not a religious ruling. Pictures are painted impressions.",
@@ -452,6 +453,37 @@ window.WALK={
    "alt": "Painted whitewashed country abattoir yard with calm sheep in a straw pen"
   },
   {
+   "y": "2019",
+   "k": "shift",
+   "head": "Three in four, worldwide",
+   "place": "The world",
+   "who": "Sentience Institute, explained by Our World in Data",
+   "cap": "Worldwide, about 74% of farmed land animals are estimated to live on factory farms. That is around 23 billion animals at any one time. Including fish, it is over 90%.",
+   "spread": "Most of them are chickens, the animal most often farmed intensively.",
+   "oh": "This is not a Western problem that Muslim countries escaped. Big sheds are now the global default.",
+   "terms": [
+    [
+     "Farmed land animals",
+     "chickens, pigs, cows, sheep and others, not fish."
+    ]
+   ],
+   "nums": [
+    {
+     "v": "~74%",
+     "label": "farmed land animals on factory farms",
+     "bar": 0.74,
+     "src": "Sentience Institute / Our World in Data",
+     "url": "https://ourworldindata.org/how-many-animals-are-factory-farmed",
+     "thin": "rough estimate with 'substantial uncertainty'"
+    }
+   ],
+   "thin": "The researchers say the estimate has substantial uncertainty.",
+   "src": "Our World in Data, How many animals are factory-farmed?",
+   "url": "https://ourworldindata.org/how-many-animals-are-factory-farmed",
+   "url2": "https://www.sentienceinstitute.org/global-animal-farming-estimates",
+   "alt": "Painted globe on a tiled stand with chickens, pigs and a cow around it"
+  },
+  {
    "y": "2022",
    "k": "shift",
    "head": "99 out of 100",
@@ -494,37 +526,6 @@ window.WALK={
    "src": "Sentience Institute, US factory farming estimates",
    "url": "https://www.sentienceinstitute.org/us-factory-farming-estimates",
    "alt": "Painted aerial view of a small red barn dwarfed by rows of long grey sheds"
-  },
-  {
-   "y": "2019",
-   "k": "shift",
-   "head": "Three in four, worldwide",
-   "place": "The world",
-   "who": "Sentience Institute, explained by Our World in Data",
-   "cap": "Worldwide, about 74% of farmed land animals are estimated to live on factory farms. That is around 23 billion animals at any one time. Including fish, it is over 90%.",
-   "spread": "Most of them are chickens, the animal most often farmed intensively.",
-   "oh": "This is not a Western problem that Muslim countries escaped. Big sheds are now the global default.",
-   "terms": [
-    [
-     "Farmed land animals",
-     "chickens, pigs, cows, sheep and others, not fish."
-    ]
-   ],
-   "nums": [
-    {
-     "v": "~74%",
-     "label": "farmed land animals on factory farms",
-     "bar": 0.74,
-     "src": "Sentience Institute / Our World in Data",
-     "url": "https://ourworldindata.org/how-many-animals-are-factory-farmed",
-     "thin": "rough estimate with 'substantial uncertainty'"
-    }
-   ],
-   "thin": "The researchers say the estimate has substantial uncertainty.",
-   "src": "Our World in Data, How many animals are factory-farmed?",
-   "url": "https://ourworldindata.org/how-many-animals-are-factory-farmed",
-   "url2": "https://www.sentienceinstitute.org/global-animal-farming-estimates",
-   "alt": "Painted globe on a tiled stand with chickens, pigs and a cow around it"
   },
   {
    "y": "2022",

@@ -8,7 +8,7 @@ window.WALK={
  "summary": [
   {
    "v": "~99%",
-   "label": "US farmed animals on factory farms (2019)",
+   "label": "US farmed animals on factory farms (2022)",
    "bar": 0.99,
    "src": "Sentience Institute",
    "url": "https://www.sentienceinstitute.org/us-factory-farming-estimates",
@@ -134,9 +134,9 @@ window.WALK={
     "ref": "Sahih al-Bukhari 3482",
     "url": "https://sunnah.com/bukhari:3482"
    },
-   "cap": "One of the most trusted hadith collections tells of a woman punished for locking up a cat with no food or water. She did not hit it. She just kept it shut in and did not let it live like a cat.",
+   "cap": "One of the most trusted hadith collections tells of a woman punished for locking up a cat with no food or water. She kept it shut in and did not let it go to find food.",
    "spread": "The story is taught to Muslim children everywhere. Al-Bukhari finished his collection around 846.",
-   "oh": "The sin was confinement: shutting an animal in without letting it do what it needs to do.",
+   "oh": "The sin was shutting an animal in and leaving it without food, water or a way to feed itself.",
    "terms": [
     [
      "Hadith",
@@ -194,7 +194,7 @@ window.WALK={
    },
    "cap": "Another report adds a detail: don't let the animal see the knife being sharpened. Its fear counts too.",
    "spread": "Many halal guides repeat this rule: sharpen out of sight, and don't slaughter one animal in front of another.",
-   "oh": "The concern is not only pain. It is fear, which is a feeling only a creature with a mind can have.",
+   "oh": "The concern is not only pain, but fear too.",
    "terms": [
     [
      "Sunan",
@@ -354,8 +354,8 @@ window.WALK={
    "head": "140 birds a minute",
    "place": "Washington DC, USA",
    "who": "US Department of Agriculture",
-   "cap": "US rules let chicken plants under the 'New Poultry Inspection System' run lines at up to 140 birds a minute. Plants with a waiver can go to 175.",
-   "spread": "In 2026 the USDA proposed letting all such plants run at 175. That is a proposal, not yet a rule.",
+   "cap": "US rules let chicken plants under the 'New Poultry Inspection System' run lines at up to 140 birds a minute. Some plants have been allowed to go faster under special waivers.",
+   "spread": "In February 2026 the USDA proposed in the Federal Register letting all such plants run at 175 birds a minute. That is a proposal, not yet a rule.",
    "oh": "At 140 a minute, each bird gets less than half a second. The hadith asked for a sharp knife and a calm animal. The line asks for speed.",
    "terms": [
     [
@@ -370,7 +370,7 @@ window.WALK={
    "nums": [
     {
      "v": "140/min",
-     "label": "US limit for chicken lines (175 with a waiver)",
+     "label": "US limit for chicken lines under this system",
      "bar": null,
      "src": "9 CFR 381.69",
      "url": "https://www.law.cornell.edu/cfr/text/9/381.69"
@@ -424,7 +424,7 @@ window.WALK={
    "nums": [
     {
      "v": "75%",
-     "label": "sheep and goats stunned before slaughter",
+     "label": "sheep stunned before slaughter",
      "bar": 0.75,
      "src": "FSA 2018 survey",
      "url": "https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/778588/slaughter-method-survey-2018.pdf"
@@ -456,7 +456,7 @@ window.WALK={
    "k": "shift",
    "head": "99 out of 100",
    "place": "United States",
-   "who": "Sentience Institute, using the 2017 USDA farm census",
+   "who": "Sentience Institute, using USDA farm census data",
    "cap": "Counting farms by US government size rules, researchers estimated that about 99% of US farm animals live on factory farms. For meat chickens it is over 99.9%.",
    "spread": "Cows do best, partly because many spend time on pasture before feedlots.",
    "oh": "In the US, a farm animal that is not factory-farmed is a rare exception.",
@@ -532,7 +532,7 @@ window.WALK={
    "head": "83 billion a year",
    "place": "The world",
    "who": "UN FAO data, via Our World in Data",
-   "cap": "In 2022, about 83 billion land animals were slaughtered for meat. Most were chickens: around 74 billion a year, or about 200 million a day.",
+   "cap": "In 2022, about 83 billion land animals were slaughtered for meat. Most were chickens: around 74 billion a year in 2021, or about 200 million a day.",
    "spread": "That number does not include the male chicks killed in the egg industry because they cannot lay eggs.",
    "oh": "200 million chickens a day. No one can sharpen a knife out of sight of each one.",
    "terms": [
@@ -551,7 +551,7 @@ window.WALK={
     },
     {
      "v": "~74 bn",
-     "label": "of them chickens (about 202 million a day, 2021 data)",
+     "label": "chickens a year (about 202 million a day), 2021 data",
      "bar": null,
      "src": "Our World in Data",
      "url": "https://ourworldindata.org/how-many-animals-get-slaughtered-every-day"
@@ -568,9 +568,9 @@ window.WALK={
    "head": "Taken in the first hours",
    "place": "Parma, Italy",
    "who": "European Food Safety Authority",
-   "cap": "The EU's food safety scientists found most dairy farms take calves from their mothers immediately or within hours of birth, so the milk can be sold. They recommended at least 24 hours together, and longer is better.",
+   "cap": "The EU's food safety scientists found that separating calves from their mothers soon after birth is common on dairy farms. They recommended at least one day together, and longer contact where possible.",
    "spread": "Some farms now try 'cow with calf' dairying, where calves stay with mothers for weeks or months.",
-   "oh": "A glass of milk usually means a mother and calf parted on day one.",
+   "oh": "On many dairy farms, mother and calf are parted on day one.",
    "terms": [
     [
      "Dam",
@@ -593,7 +593,7 @@ window.WALK={
    "place": "United Kingdom",
    "who": "RSPCA",
    "cap": "The UK raises over a billion meat chickens a year. Only 2.34% are reared to RSPCA Assured standards, with slower-growing breeds and more space. Free-range is a few percent. Organic is under 1%.",
-   "spread": "The rest, the large majority, are fast-growing breeds kept indoors. The RSPCA says most do not get a good life.",
+   "spread": "The rest, the large majority, are fast-growing breeds kept indoors. The RSPCA says not all of them are raised in suitable conditions.",
    "oh": "Even in a country with strong welfare laws, the better chicken is the rare one.",
    "terms": [
     [
@@ -661,6 +661,7 @@ window.WALK={
      "url": "https://esmis.nal.usda.gov/sites/default/release-files/795783/cofd0226.pdf"
     }
    ],
+   "thin": "The line that most beef cattle start on grass is general background, not a figure from the USDA report linked here.",
    "src": "USDA NASS, Cattle on Feed (20 Feb 2026)",
    "url": "https://esmis.nal.usda.gov/sites/default/release-files/795783/cofd0226.pdf",
    "alt": "Painted wide cattle feedlot with silos at sunset"

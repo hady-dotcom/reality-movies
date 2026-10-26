@@ -86,8 +86,7 @@ window.WALK={
    "src": "James Mallinson, SOAS research",
    "url": "https://eprints.soas.ac.uk/35256/",
    "alt": "Painted monastery library with manuscripts on shelves",
-   "url2": "https://publications.efeo.fr/en/livres/966_the-am-tasiddhi-and-am-tasiddhim-la",
-   "thin": "Dates are estimates; the Buddhist-roots view is one scholarly reading.",
+   "thin": "Dates are estimates; the Buddhist-roots view is one scholarly reading. The Amṛtasiddhi detail comes from Mallinson's work; its edition page could not be checked.",
    "terms": [
     [
      "Haṭha yoga",
@@ -127,7 +126,7 @@ window.WALK={
    "url": "https://burtoniana.org/books/1883-Kama%20Sutra/index.htm",
    "alt": "Painted Victorian desk with a red privately printed book",
    "url2": "https://www.christies.com/en/lot/lot-4256223",
-   "thin": "The obscenity-law motive is widely reported but comes from secondary accounts.",
+   "thin": "Christie's catalogue notes that printing 'for private circulation' got round the Obscene Publications Act 1857.",
    "terms": [
     [
      "Private circulation",
@@ -160,13 +159,13 @@ window.WALK={
    "head": "The 'Tantrik Order'",
    "place": "New York",
    "who": "Pierre Bernard, born Perry Baker in Iowa",
-   "cap": "Bernard ran a 'Tantrik Order' teaching hatha yoga. In 1910 he was arrested after two young women said he controlled them. Charges were dropped when they would not testify.",
+   "cap": "Bernard ran a 'Tantrik Order' teaching hatha yoga. In 1910 he was arrested and accused of misconduct with a young female student. The charges were later dropped.",
    "oh": "Tantra's first American headline was a scandal about control. He later ran a rich country club and was never convicted.",
    "src": "New York Times review of 'The Great Oom', 2010",
    "url": "https://www.nytimes.com/2010/04/15/books/15book.html",
    "alt": "Painted 1910 newspaper page on a table",
    "url2": "https://www.npr.org/2010/05/09/126610671/the-great-oom-yogas-wild-ride-to-respectability",
-   "thin": "The accusations were never tested in court.",
+   "thin": "The accusations were never tested in court. The 1910 date comes from the linked reviews of a later biography.",
    "terms": [
     [
      "Tantrik Order",
@@ -198,22 +197,12 @@ window.WALK={
    "head": "Counting it",
    "place": "Indiana, USA",
    "who": "Alfred Kinsey's team",
-   "cap": "Kinsey's surveys (1948, 1953) noted that a small share of people reported sexual feelings during exercise. The question was not asked in a standard way.",
+   "cap": "Kinsey's surveys (1948, 1953) noted that some people reported sexual feelings during exercise. The question was not asked in a standard way.",
    "oh": "Science started measuring exercise and arousal, but with loose data.",
    "src": "Kinsey et al., as cited by Herbenick et al., 2021",
    "url": "https://www.eurekalert.org/news-releases/508508",
    "alt": "Painted 1950s research office with questionnaires",
-   "nums": [
-    {
-     "v": "~5%",
-     "label": "reported this during exercise or muscle strain",
-     "bar": 5,
-     "src": "Kinsey 1953, as cited later",
-     "url": "https://www.eurekalert.org/news-releases/508508",
-     "thin": true
-    }
-   ],
-   "thin": "Mostly volunteered answers, not a fixed question.",
+   "thin": "Mostly volunteered answers, not a fixed question; no reliable figure is given here.",
    "terms": [
     [
      "Survey",
@@ -238,7 +227,8 @@ window.WALK={
      "Sannyas",
      "renunciation: taking vows as a spiritual seeker."
     ]
-   ]
+   ],
+   "thin": "The 1968 talks and the \"sex guru\" nickname come from Urban (2003), not the linked interview."
   },
   {
    "y": "1989",
@@ -277,33 +267,12 @@ window.WALK={
    ]
   },
   {
-   "y": "2004–2026",
-   "k": "clash",
-   "head": "Sold as freedom",
-   "place": "San Francisco and Brooklyn",
-   "who": "OneTaste, founded by Nicole Daedone",
-   "cap": "OneTaste sold courses in a paid partnered practice it called 'orgasmic meditation'. A 2018 Bloomberg investigation described pressure, debt and control of members.",
-   "oh": "In 2023 Daedone and sales head Rachel Cherwitz were charged with forced labour conspiracy. On 9 June 2025 a Brooklyn jury found both guilty. In March 2026 Daedone got nine years, Cherwitz 78 months.",
-   "src": "US Attorney's Office, EDNY, 9 June 2025",
-   "url": "https://www.justice.gov/usao-edny/pr/founder-sexual-wellness-company-onetaste-and-former-head-sales-convicted-forced-labor",
-   "alt": "Painted federal courthouse with news cameras on tripods outside",
-   "url2": "https://www.justice.gov/usao-edny/pr/onetaste-founder-nicole-daedone-sentenced-nine-years-prison-forced-labor-conspiracy",
-   "spread": "A practice sold as freedom ended in a forced-labour conviction.",
-   "thin": "The 2018 Bloomberg claims were allegations when published (article not linked here); the court later convicted on the conspiracy charge.",
-   "terms": [
-    [
-     "Forced labour conspiracy",
-     "agreeing to get people's work or services through serious harm, threats or abuse."
-    ]
-   ]
-  },
-  {
-   "y": "2012",
+   "y": "2011",
    "k": "shift",
    "head": "What the data showed",
    "place": "Indiana, USA",
    "who": "Herbenick and Fortenberry, Indiana University",
-   "cap": "An online survey of 530 women found some had felt sexual sensations during exercise. Among those, abdominal exercises were named far more often than yoga.",
+   "cap": "An online survey of 370 women found some had felt sexual sensations during exercise. Among those, abdominal exercises were named far more often than yoga.",
    "oh": "Yoga was not special. Most people were not thinking about sex at the time; it was a body reaction.",
    "src": "Herbenick & Fortenberry, Sexual and Relationship Therapy, 2011",
    "url": "https://doi.org/10.1080/14681994.2011.647902",
@@ -313,15 +282,15 @@ window.WALK={
     {
      "v": "51%",
      "label": "named abdominal exercise",
-     "bar": 51,
-     "src": "Herbenick 2011",
+     "bar": 0.51,
+     "src": "Herbenick & Fortenberry 2011",
      "url": "https://www.eurekalert.org/news-releases/508508"
     },
     {
      "v": "20%",
      "label": "named yoga",
-     "bar": 20,
-     "src": "Herbenick 2011",
+     "bar": 0.2,
+     "src": "Herbenick & Fortenberry 2011",
      "url": "https://www.eurekalert.org/news-releases/508508"
     }
    ],
@@ -332,6 +301,32 @@ window.WALK={
      "people who chose to answer, so not a fair picture of everyone."
     ]
    ]
+  },
+  {
+   "y": "2004–2026",
+   "k": "clash",
+   "head": "Sold as freedom",
+   "place": "San Francisco and Brooklyn",
+   "who": "OneTaste, founded by Nicole Daedone",
+   "cap": "OneTaste sold courses in a paid partnered practice it called 'orgasmic meditation'. A 2018 Bloomberg investigation described pressure, debt and control of members.",
+   "oh": "In 2023 Daedone and sales head Rachel Cherwitz were charged with forced labour conspiracy. On 9 June 2025 a Brooklyn jury found both guilty. In March 2026 Daedone got nine years, Cherwitz 78 months.",
+   "src": "US Attorney's Office, EDNY, 9 June 2025",
+   "url": "https://www.justice.gov/usao-edny/pr/founder-sexual-wellness-company-onetaste-and-former-head-sales-convicted-forced-labor",
+   "alt": "Painted federal courthouse with news cameras on tripods outside",
+   "url2": "https://www.bloomberg.com/news/features/2018-06-18/the-dark-side-of-onetaste-the-orgasmic-meditation-company",
+   "spread": "A practice sold as freedom ended in a forced-labour conviction.",
+   "thin": "The 2018 Bloomberg claims were allegations when published; the jury later convicted on the conspiracy charge.",
+   "terms": [
+    [
+     "Forced labour conspiracy",
+     "agreeing to get people's work or services through serious harm, threats or abuse."
+    ]
+   ],
+   "quote": {
+    "t": "The defendants ... obtained the labor and services of a group of OneTaste members by subjecting them to economic, sexual, emotional and psychological abuse; surveillance; indoctrination; and intimidation.",
+    "ref": "2023 indictment (charges, later proven at trial)",
+    "url": "https://www.justice.gov/usao-edny/pr/onetaste-founder-and-former-head-sales-indicted-forced-labor-conspiracy"
+   }
   },
   {
    "y": "2020",
@@ -353,7 +348,7 @@ window.WALK={
    ]
   }
  ],
- "imgv": "i1",
+ "imgv": "i2",
  "next": {
   "href": "../yoga/",
   "label": "Back to: How yoga went West"

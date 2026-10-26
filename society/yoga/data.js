@@ -94,17 +94,13 @@ window.WALK={
    "head": "Poses as self-control",
    "place": "India",
    "who": "Early haṭha yoga texts, from Tantric traditions",
-   "cap": "Haṭha yoga grew out of Tantric traditions between about the 11th and 15th centuries. In its early texts, postures and breath were tools to control the body's energy and build discipline and self-restraint.",
+   "cap": "Haṭha yoga began among ascetic groups around 1000 CE and, the SOAS Hatha Yoga Project found, was first written down by Buddhists.",
    "spread": "These methods spread to Hindu ascetic groups and became the haṭha yoga of later handbooks.",
    "oh": "The poses began as training in self-control. The Kama Sutra (c. 3rd century CE) is a separate text about love and social life, not a yoga text.",
    "terms": [
     [
      "Tantra",
      "a family of Hindu and Buddhist traditions with rituals and practices for working with the body and energy."
-    ],
-    [
-     "Self-restraint",
-     "holding back an urge instead of giving in to it."
     ]
    ],
    "thin": "Dates for the earliest haṭha texts are scholars' estimates. The Buddhist-origins view comes from the SOAS Hatha Yoga Project and is newer research.",

@@ -107,7 +107,7 @@ window.WALK={
      "someone who gives up comforts for spiritual practice."
     ]
    ],
-   "thin": "The 15th-century date is the usual estimate; the oldest dated manuscript is from about 1496.",
+   "thin": "The 15th-century date is the usual estimate. The 1496 manuscript date is not covered by the sources linked here.",
    "src": "Haṭha Yoga Pradīpikā, chapter 1 (Wisdom Library)",
    "url": "https://www.wisdomlib.org/hinduism/book/hatha-yoga-pradipika-english/d/doc7974.html",
    "url2": "https://yso.soas.ac.uk/courses/hathapradipika-symposium-launch-of-the-new-digital-edition/",
@@ -136,7 +136,8 @@ window.WALK={
    "src": "Vivekananda, Raja Yoga (1896)",
    "url": "https://www.yogebooks.com/english/vivekananda/1896rajayoga.pdf",
    "url2": "https://asia-archive.si.edu/september-11-1893/",
-   "alt": "Painted 1893 Chicago fair hall with crowd and an orange-draped lectern"
+   "alt": "Painted 1893 Chicago fair hall with crowd and an orange-draped lectern",
+   "thin": "That Raja Yoga became a bestseller comes from a museum page, not sales figures."
   },
   {
    "y": "1933",
@@ -164,14 +165,14 @@ window.WALK={
    "alt": "Painted palace hall with gym ropes, bars and rolled mats"
   },
   {
-   "y": "1948",
+   "y": "1947",
    "k": "shift",
    "head": "Hollywood stretches",
    "place": "Los Angeles, USA",
    "who": "Indra Devi",
-   "cap": "Indra Devi, born in Latvia and a student of Krishnamacharya, opened a yoga studio in Hollywood. Film stars like Gloria Swanson and Greta Garbo came.",
+   "cap": "Indra Devi, a European woman who had trained in India, settled in California in 1947 and taught yoga from a studio there. Film stars came to her classes.",
    "spread": "Yoga became a beauty and health routine for Western women, far from its monk origins.",
-   "oh": "One of the first Western yoga studios was run by a European woman, teaching stars.",
+   "oh": "One of the first Western yoga studios was run by a European woman.",
    "terms": [
     [
      "Studio",
@@ -198,7 +199,7 @@ window.WALK={
      "blocks, straps and blankets used to help with poses."
     ]
    ],
-   "thin": "The pose count varies by edition and how you count variations.",
+   "thin": "The pose count varies by edition, and the Menuhin link is not covered by the source linked here.",
    "src": "Mark Singleton, Yoga Body (2010)",
    "url": "https://doi.org/10.1093/acprof:oso/9780195395358.001.0001",
    "alt": "Painted open book of pose drawings with a block, strap and blanket"
@@ -241,7 +242,7 @@ window.WALK={
      "secretly copied and shared writing in the USSR."
     ]
    ],
-   "thin": "Based on a scholar's history of Soviet yoga, citing the 1973 decree.",
+   "thin": "Based on one researcher's blog; not independently checked.",
    "src": "A Short History of Yoga in the USSR (NewAgeRu research blog)",
    "url": "https://newageru.hypotheses.org/3407",
    "alt": "Painted Moscow flat in winter with a mat and tied stack of typed pages"
@@ -276,7 +277,9 @@ window.WALK={
    ],
    "src": "Török et al., JAMA 1997",
    "url": "https://doi.org/10.1001/jama.1997.03550050051033",
-   "alt": "Painted 1980s Oregon diner with an empty salad bar"
+   "alt": "Painted 1980s Oregon diner with an empty salad bar",
+   "url2": "https://en.wikipedia.org/wiki/1984_Rajneeshee_bioterror_attack",
+   "thin": "The 'largest bioterror attack' label and the commune's 1985 collapse come from the second source (Wikipedia), not the JAMA study."
   },
   {
    "y": "1991",
@@ -284,8 +287,8 @@ window.WALK={
    "head": "Protest at the hotel",
    "place": "Virginia, USA",
    "who": "Swami Satchidananda, Integral Yoga",
-   "cap": "Former followers of Satchidananda, the guru who opened Woodstock in 1969, protested outside a hotel where he spoke. They alleged he used his position to seek sex with female students.",
-   "spread": "He denied the claims. No court case resulted.",
+   "cap": "Former followers of Satchidananda, the guru who opened Woodstock in 1969, protested outside a hotel where he spoke. They alleged he had sexually abused students.",
+   "spread": "He denied all claims of misconduct. No court case resulted.",
    "oh": "By 1991, the rock-star guru era was meeting its first public reckonings.",
    "terms": [
     [
@@ -304,9 +307,9 @@ window.WALK={
    "head": "The guru admits it",
    "place": "Massachusetts, USA",
    "who": "Amrit Desai, Kripalu",
-   "cap": "Amrit Desai led Kripalu, one of America's biggest yoga centres, where residents were expected to stay celibate. In 1994 he admitted sexual relationships with followers and resigned.",
+   "cap": "Amrit Desai led Kripalu, one of America's biggest yoga centres. Desai had taken a vow of celibacy. In 1994 he admitted sexual relationships with three followers and resigned.",
    "spread": "Kripalu later dropped the guru-led model.",
-   "oh": "The rules for followers didn't apply to the leader.",
+   "oh": "The leader broke the vow he was admired for.",
    "terms": [
     [
      "Celibate",
@@ -316,7 +319,8 @@ window.WALK={
    "src": "The New York Times, 27 January 1995",
    "url": "https://www.nytimes.com/1995/01/27/arts/bending-the-body-to-straighten-the-soul.html",
    "url2": "https://www.indiatoday.in/magazine/international/story/19941215-indian-spiritual-leaders-come-under-fire-for-sexual-escapades-in-us-809985-1994-12-14",
-   "alt": "Painted brick former monastery above a lake in autumn"
+   "alt": "Painted brick former monastery above a lake in autumn",
+   "thin": "That Kripalu later dropped the guru-led model is not covered by the sources linked here."
   },
   {
    "y": "1994",
@@ -484,7 +488,7 @@ window.WALK={
    "head": "The adjustments",
    "place": "Mysore, India and worldwide",
    "who": "K. Pattabhi Jois, Ashtanga yoga",
-   "cap": "Former students, including Karen Rain, said Pattabhi Jois, who died in 2009, touched them sexually while 'adjusting' their poses. His grandson Sharath Jois publicly admitted 'improper adjustments' and apologised.",
+   "cap": "Former students, including Karen Rain, said Pattabhi Jois, who died in 2009, touched them sexually while 'adjusting' their poses. His grandson Sharath Jois said he had seen his grandfather \"giving improper adjustments\" and apologised.",
    "spread": "Many yoga schools wrote new rules about touch and consent.",
    "oh": "Jois and Iyengar learned from the same teacher in the same Mysore palace (stop 5).",
    "terms": [
@@ -509,8 +513,8 @@ window.WALK={
    "head": "Sivananda's reckoning",
    "place": "Quebec, Canada and worldwide",
    "who": "Swami Vishnudevananda, Sivananda Yoga Vedanta Centres",
-   "cap": "Julie Salter, his former assistant, alleged that Vishnudevananda, who died in 1993, sexually abused her for over three years. The organisation admitted it had known of earlier complaints and announced an independent investigation in 2020.",
-   "spread": "Other former members came forward. An independent group, Project SATYA, published reports on wider abuse claims.",
+   "cap": "Julie Salter, his former assistant, alleged that Vishnudevananda, who died in 1993, sexually abused her for over three years. The organisation apologised for \"historic mistakes\" in handling allegations and said it had commissioned an independent investigation.",
+   "spread": "A lawyer crowdfunded by a former members' group, Project Satya, said she had spoken to 25 to 30 women alleging assault by Sivananda staff.",
    "oh": "One of the world's largest yoga teacher-training networks had to face its founder's past.",
    "terms": [
     [
@@ -518,7 +522,7 @@ window.WALK={
      "a course that certifies people to teach yoga."
     ]
    ],
-   "thin": "Allegations, not proven in court. The 2020 investigation was later suspended, citing COVID-19.",
+   "thin": "Allegations, not proven in court.",
    "src": "BBC News, 'Coercion and rape': Investigating my yoga school (2021)",
    "url": "https://www.bbc.com/news/world-asia-india-57400014",
    "url2": "https://soas-repository.worktribe.com/output/380802",

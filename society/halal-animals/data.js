@@ -1,5 +1,6 @@
 // How the animal got lost: stops checked against the linked sources.
 window.WALK={
+ "next": {"href": "../yoga/", "label": "Next walk: How yoga went West"},
  "imgv": "ha3",
  "title": "How the animal got lost",
  "intro": "Islam's teachings on animals are about their whole lives, not just their last moment. Then farming changed. Here is how, with the numbers, and what the full picture of halal and tayyib looks like.",

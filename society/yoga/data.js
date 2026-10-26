@@ -288,7 +288,7 @@ window.WALK={
    "place": "Virginia, USA",
    "who": "Swami Satchidananda, Integral Yoga",
    "cap": "Former followers of Satchidananda, the guru who opened Woodstock in 1969, protested outside a hotel where he spoke. They alleged he had sexually abused students.",
-   "spread": "He denied all claims of misconduct. No court case resulted.",
+   "spread": "He denied all claims of misconduct.",
    "oh": "By 1991, the rock-star guru era was meeting its first public reckonings.",
    "terms": [
     [

@@ -19,3 +19,14 @@
  --bar-h:52px;--tab-h:64px;
 }
 @font-face{font-family:'Instrument Serif';src:url(../fonts/InstrumentSerif-Regular.ttf) format('truetype');font-display:swap}
+/* Apple nav bar: back | centred title | matching spacer. The title takes the leftover width and ellipsizes; the back label ellipsizes only when the sides no longer fit. */
+header.bar{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr) minmax(0,max-content);align-items:center;column-gap:8px;justify-content:stretch}
+header.bar .btn,header.bar .trail{display:block;min-width:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:var(--t-body);line-height:var(--tap)}
+header.bar .btn .short,header.bar .trail .short{display:none}
+header.bar .small{position:static;left:auto;width:100%;max-width:100%;min-width:0;transform:none;text-align:center;justify-self:stretch}
+header.bar.glass .small{transform:none}
+header.bar .trail{visibility:hidden}
+@media(max-width:430px){
+ header.bar .btn .long,header.bar .trail .long{display:none}
+ header.bar .btn .short,header.bar .trail .short{display:inline}
+}

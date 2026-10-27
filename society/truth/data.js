@@ -104,7 +104,7 @@ window.WALK={
    "head": "Truth as a sales promise",
    "place": "United States",
    "who": "Advertising trade groups",
-   "cap": "In 1911 the American advertising clubs adopted 'Ten Commandments of Advertising'. The first read: 'Thou shalt have no other gods in advertising but Truth'. The same year the trade magazine Printers' Ink published a model law making false ads a crime.",
+   "cap": "In 1911 the American advertising clubs adopted 'Ten Commandments of Advertising'. The first read: 'Thou shalt have no other gods in advertising but Truth'. The same year the trade magazine Printers' Ink published a model law for states to adopt against false advertising.",
    "oh": "Truth became a rule that protected buyers. It also became a selling point: a trade that sells persuasion promised to be honest, partly so its ads would be believed.",
    "terms": [
     [
@@ -177,7 +177,7 @@ window.WALK={
    "url2": "https://en.wikipedia.org/wiki/Ministry_of_Truth"
   },
   {
-   "y": "c. 1969",
+   "y": "1969",
    "k": "clash",
    "head": "Doubt as a product",
    "place": "United States",
@@ -194,7 +194,7 @@ window.WALK={
    "url": "https://reportsthatmatter.org/reports/us-v-philip-morris",
    "alt": "Painted 1960s boardroom with ashtrays, folders and smoke in sunbeams",
    "url2": "https://www.industrydocuments.ucsf.edu/docs/psdw0147/",
-   "thin": "Author unknown. The UCSF archive lists no date and the judge calls it undated; 1969 is the date usually given. A proposal is not proof of how it was used."
+   "thin": "Author unknown. The UCSF archive dates it 1969; Judge Kessler calls it undated. A proposal is not proof of how it was used."
   },
   {
    "y": "1979",
@@ -202,7 +202,7 @@ window.WALK={
    "head": "Doubting the grand stories",
    "place": "France",
    "who": "Jean-François Lyotard, 'The Postmodern Condition'",
-   "cap": "Lyotard defined 'the postmodern' as 'incredulity toward metanarratives': people no longer trusting big stories, like 'progress', that claim to explain everything.",
+   "cap": "Lyotard defined 'the postmodern' as 'incredulity towards metanarratives': people no longer trusting big stories, like 'progress', that claim to explain everything.",
    "oh": "The line is about trust in grand explanations, not a claim that facts do not exist. Reading it as 'there is no truth' goes further than what he wrote there.",
    "terms": [
     [
@@ -222,7 +222,7 @@ window.WALK={
    "head": "Truth from the gut",
    "place": "United States",
    "who": "Stephen Colbert, 'The Colbert Report'",
-   "cap": "On the first episode of The Colbert Report, on 17 October 2005, Stephen Colbert introduced 'truthiness': truth that comes from the gut, not books. Merriam-Webster made it its 2006 Word of the Year.",
+   "cap": "On the first episode of The Colbert Report, in October 2005, Stephen Colbert introduced 'truthiness': truth that comes from the gut, not books. The American Dialect Society voted it its 2005 Word of the Year, and Merriam-Webster made it its 2006 Word of the Year.",
    "oh": "It began as satire of feeling right instead of checking. The joke needed a word, and the word stuck.",
    "terms": [
     [
@@ -273,7 +273,7 @@ window.WALK={
    "url": "https://www.nbcnews.com/meet-the-press/meet-press-1-22-17-n710491",
    "alt": "Painted briefing room with an empty lectern and two framed field photographs",
    "url2": "https://www.cnn.com/2017/01/22/politics/kellyanne-conway-alternative-facts",
-   "thin": "In the same interview Conway said crowd numbers could not be quantified; the transcript is the best source for both sides."
+   "thin": "In the same interview Conway said there was \"no way to really quantify crowds\"; the transcript is the best source for both sides."
   },
   {
    "y": "2018",
@@ -348,7 +348,7 @@ window.WALK={
    "head": "Seeing is not believing",
    "place": "Hong Kong",
    "who": "The Arup deepfake case",
-   "cap": "In early 2024 a finance worker at the engineering firm Arup in Hong Kong joined a video call with what looked like senior colleagues. They were AI fakes. He made 15 transfers worth about HK$200 million (about US$25 million) before the fraud was found.",
+   "cap": "In early 2024 a finance worker at the engineering firm Arup in Hong Kong joined a video call with what looked like senior colleagues. They were AI fakes. The worker made 15 transfers worth about HK$200 million (about US$25 million) before the fraud was found.",
    "oh": "A familiar face and voice used to be good evidence of who you were talking to. That can now be faked well enough to cost a company millions.",
    "terms": [
     [

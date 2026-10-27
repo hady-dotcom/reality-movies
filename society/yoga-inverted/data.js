@@ -352,7 +352,7 @@ window.WALK={
  ],
  "imgv": "i2",
  "next": {
-  "href": "../yoga/",
-  "label": "Back to: How yoga went West"
+  "href": "../truth/",
+  "label": "Next walk: How “truth” lost its meaning"
  }
 };

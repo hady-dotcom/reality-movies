@@ -72,7 +72,7 @@ window.WALK={
      "v": "96 of 100",
      "label": "most-used English words that come from Old English or Old Norse",
      "bar": 0.96,
-     "src": "Oxford English Corpus list (Wikipedia)",
+     "src": "Study cited in McCrum, The Story of English (via Wikipedia)",
      "url": "https://en.wikipedia.org/wiki/Most_common_words_in_English",
      "thin": "The four exceptions are 'just', 'people', 'use' and 'because'."
     },
@@ -82,7 +82,7 @@ window.WALK={
      "bar": 0.25,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 80,000 in the Shorter Oxford), not how often words are used."
+     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
     }
    ],
    "spread": "'Wife' now means a married woman, but 'woman' itself comes from Old English wifman, and the old sense lives on in 'midwife'. 'Starve' narrowed to dying of hunger in the mid-1400s; German sterben still means 'to die'.",
@@ -156,7 +156,7 @@ window.WALK={
      "bar": 0.283,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 80,000 in the Shorter Oxford), not how often words are used."
+     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
     },
     {
      "v": "28.2%",
@@ -164,7 +164,7 @@ window.WALK={
      "bar": 0.2824,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 80,000 in the Shorter Oxford), not how often words are used."
+     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
     }
    ],
    "spread": "'Villain' (c. 1300, a peasant) became a scoundrel by the mid-1500s and the bad guy in a story by 1822. 'Very' meant 'true, real' in the late 1200s and came to mean 'extremely' by the mid-1400s.",
@@ -276,7 +276,7 @@ window.WALK={
      "bar": 0.0532,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 80,000 in the Shorter Oxford), not how often words are used."
+     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
     }
    ],
    "spread": "'Egregious' meant 'shockingly bad' by the late 1500s. 'Explode' meant 'burst with a loud noise' in the 1790s. 'Sophisticated' meant 'worldly-wise' by 1895.",
@@ -483,7 +483,7 @@ window.WALK={
   {
    "y": "1945–1972",
    "k": "shift",
-   "head": "Machines borrow body words",
+   "head": "Machines borrow old words",
    "place": "United States and Britain",
    "who": "engineers",
    "cap": "A 'computer' meant an electronic machine by 1945. In 1965 a hand-held pointer was named a 'mouse'. By 1972 there were computer 'viruses' (a word that once meant poison or pus) and 'smart' machines ('smart' first meant stinging).",
@@ -500,12 +500,12 @@ window.WALK={
    "url2": "https://www.etymonline.com/word/virus"
   },
   {
-   "y": "late 1940s–1961",
+   "y": "1947–1961",
    "k": "shift",
    "head": "Gay, cool and awesome",
    "place": "United States",
    "who": "jazz clubs, writers and teenagers",
-   "cap": "'Gay' had meant merry since the late 1300s. Its meaning 'homosexual' appears in print from the late 1940s and was widely known by the 1950s. 'Cool' became general praise in late-1940s jazz talk. 'Awesome', once 'full of reverence', meant 'very good' by 1961.",
+   "cap": "'Gay' had meant merry since the late 1300s. Its meaning 'homosexual' appears in print from the late 1940s; it was not widely understood outside gay circles until the 1950s at the earliest. 'Cool' became general praise in late-1940s jazz talk. 'Awesome', once 'full of reverence', meant 'very good' by 1961.",
    "oh": "When a group uses a word in a new way, it can spread until the old meaning is the surprising one.",
    "terms": [
     [
@@ -530,7 +530,7 @@ window.WALK={
    "head": "The early internet",
    "place": "online newsgroups",
    "who": "early internet users",
-   "cap": "In online groups, a 'troll' (from fishing with a moving line, and the Norse giant) became someone stirring up trouble. 'Spam', a tinned meat (1937), meant junk messages by 1993, after a Monty Python sketch. People 'surfed' the internet by 1993. 'Geek', once a carnival performer, became a proud word for an enthusiast from about 1989.",
+   "cap": "In online groups, a 'troll' (from fishing with a moving line, and the Norse giant) became someone stirring up trouble. 'Spam', a tinned meat (1937), meant junk messages by 1993, after a Monty Python sketch. People 'surfed' the internet by 1993. 'Geek', once a carnival performer, became a neutral word for an enthusiast from about 1989.",
    "oh": "Internet slang works like old slang, just faster: a joke inside a small group becomes everyone's word.",
    "terms": [
     [

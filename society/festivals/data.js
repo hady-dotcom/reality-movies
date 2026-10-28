@@ -43,7 +43,7 @@ window.WALK={
  ],
  "stops": [
   {
-   "y": "c. 600 BC on",
+   "y": "c. 600 BC",
    "k": "clash",
    "head": "Secret rites at Eleusis",
    "place": "Eleusis, near Athens",
@@ -66,7 +66,7 @@ window.WALK={
    "thin": "The secret was kept well: we know the promises and the outline, not what was shown inside."
   },
   {
-   "y": "c. AD 100–400",
+   "y": "AD 100–400",
    "k": "clash",
    "head": "Mithras: what we know, and what was added",
    "place": "Roman Empire",
@@ -117,7 +117,7 @@ window.WALK={
    "place": "Rome to England",
    "who": "Pope Gregory the Great",
    "cap": "Gregory wrote to the missionary Mellitus: don't destroy England's temples, destroy the idols in them and turn the buildings into churches. People who used to kill oxen for feasts should keep feasting, but on saints' days and to thank God.",
-   "oh": "This is the clearest evidence for Leon's idea: old places and feasts were deliberately pulled towards God. But it is a plan for gradual change, not proof that any particular festival was copied.",
+   "oh": "This is the clearest evidence that old feasts were deliberately pulled towards God. But it is a plan for gradual change, not proof that any particular festival was copied.",
    "terms": [
     [
      "Missionary",
@@ -167,7 +167,7 @@ window.WALK={
    "place": "Frankish empire",
    "who": "Pope Gregory IV and Emperor Louis the Pious",
    "cap": "In 835 the feast of All Saints was fixed on 1 November across the Frankish lands. It was already kept on that date in places. An older feast for all martyrs had been on 13 May.",
-   "oh": "A popular story says the Church moved All Saints to blot out the Celtic festival Samhain. No medieval source says so; the idea comes from James Frazer in 1907.",
+   "oh": "A popular story says the Church moved All Saints to blot out the Celtic festival Samhain. No medieval source says so; the idea comes from John Rhys and James Frazer (1888–1907).",
    "terms": [
     [
      "All Saints / All Hallows",
@@ -281,8 +281,8 @@ window.WALK={
    "head": "Where the 'all pagan' story comes from",
    "place": "Britain",
    "who": "James Frazer and other writers",
-   "cap": "Around 1900, writers like John Rhys and James Frazer (The Golden Bough) argued that many church feasts were disguised pagan festivals. Frazer said All Saints was set to replace a Celtic feast of the dead. These claims spread into popular books and even dictionaries: the OED's 1989 entry still said Halloween was the old Celtic new year.",
-   "oh": "Most 'pagan origin' stories are about 120 years old, not 1,500. They became popular at the same time as the shopping holidays.",
+   "cap": "Around 1900, writers like John Rhys and James Frazer (The Golden Bough) argued that many church feasts were disguised pagan festivals. Frazer said All Saints was set to replace a Celtic feast of the dead. These claims spread into popular books.",
+   "oh": "Many popular 'pagan origin' stories took their modern form around 1900, not 1,500 years ago. They became popular at the same time as the shopping holidays.",
    "terms": [
     [
      "Folklore",
@@ -320,8 +320,8 @@ window.WALK={
    "head": "Coca-Cola's Santa",
    "place": "United States",
    "who": "Haddon Sundblom for Coca-Cola",
-   "cap": "From 1931 Coca-Cola ran Christmas adverts with a warm, red-suited Santa painted by Haddon Sundblom. They ran for decades and fixed one image of Santa worldwide.",
-   "oh": "Myth check: Coca-Cola did not invent the red Santa; red Santas appear earlier, including Nast's. It did make one version standard, and sell with it.",
+   "cap": "From 1931 Coca-Cola ran Christmas adverts with a warm, red-suited Santa painted by Haddon Sundblom. They ran for decades and helped make one image of Santa standard.",
+   "oh": "Myth check: Coca-Cola did not invent the red Santa; red Santas appear earlier, including Nast's. It helped make one image of Santa standard, and sold with it.",
    "terms": [
     [
      "Advert",
@@ -334,12 +334,12 @@ window.WALK={
    "url2": "https://americanhistory.si.edu/explore/stories/how-santa-brought-coca-cola-cold"
   },
   {
-   "y": "1961",
+   "y": "1951–1961",
    "k": "shift",
-   "head": "'Black Friday' gets its name",
+   "head": "'Black Friday': from police complaint to sale",
    "place": "Philadelphia",
    "who": "police and shopkeepers",
-   "cap": "Philadelphia police called the day after Thanksgiving 'Black Friday' because of the crowds and traffic. By 1961 shops tried to rename it 'Big Friday', without success.",
+   "cap": "From 1951 Philadelphia police called the day after Thanksgiving 'Black Friday' because of the crowds and traffic. In 1961 the city's shops pushed to rename it 'Big Friday', without success.",
    "oh": "Myth check: it did not start with shops going 'into the black' (that story came later) or with slave sales. The name started as a complaint and became a sales event.",
    "terms": [
     [
@@ -393,8 +393,8 @@ window.WALK={
    "head": "Did paganism come back, or shopping?",
    "place": "anywhere",
    "who": "you",
-   "cap": "Old names and dates were pulled towards God, as Gregory planned and Bede recorded. In the last 150 years, money and media pulled many of these days away again. What filled the gap looks less like old paganism than like shopping, plus 'pagan origin' stories that were mostly written around 1900.",
-   "oh": "Leon's idea holds for the first half: feasts went towards God. For the second half the evidence points to the shop more than the old gods. Either way, the meaning moved, just like words.",
+   "cap": "Old names and dates were pulled towards God, as Gregory planned and Bede recorded. In the last 150 years, money and media pulled many of these days away again. What filled the gap looks less like old paganism than like shopping, plus 'pagan origin' stories, many of which took shape around 1900.",
+   "oh": "The first half is well supported: feasts went towards God. For the second half the evidence points to the shop more than the old gods. Either way, the meaning moved, just like words.",
    "terms": [
     [
      "Secular",

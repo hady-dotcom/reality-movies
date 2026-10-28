@@ -643,5 +643,9 @@ window.WALK={
    "thin": "The readings are built from dated senses on Etymonline; nobody wrote this sentence. In 1300 'sad' could already mean unhappy; 'serious' is an older sense still in use then."
   }
  ],
- "imgv": "w1"
+ "imgv": "w1",
+ "next": {
+  "href": "../festivals/",
+  "label": "Next walk: How festivals changed meaning"
+ }
 };

@@ -1,7 +1,7 @@
 // Reality Society walk engine. Data comes from window.WALK (data.js). Every stop is rebuilt from scratch, so no text is left over.
 (function(){
 const W=window.WALK,S=W.stops,N=S.length,$=s=>document.querySelector(s),st=$('#stage');
-const KL={principle:'Principle',shift:'Shift',clash:'Clash'},KD={principle:'what the teaching says',shift:'how practice changed',clash:'where it collided with society'};
+const KL=W.kl||{principle:'Principle',shift:'Shift',clash:'Clash'},KD=W.kd||{principle:'what the teaching says',shift:'how practice changed',clash:'where it collided with society'};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let i=Math.max(0,Math.min(N+1,parseInt(new URLSearchParams(location.search).get('stop')||'0')||0));
 const num=n=>`<div class="num"><div class="nv">${esc(n.v)}</div><div class="nl">${esc(n.label)}</div>${n.bar!=null?`<div class="meter" aria-hidden="true"><i style="width:${Math.max(1.5,n.bar*100)}%"></i></div>`:''}<div class="ns"><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.src)}</a>${n.thin?` · <em>Thin: ${esc(n.thin)}</em>`:''}</div></div>`;
@@ -12,13 +12,14 @@ const tl=cur=>`<div class="tl" aria-hidden="true">${S.map((s,j)=>`<b class="${s.
 const legend=()=>`<div class="legend">${Object.keys(KL).map(k=>`<span class="chip k k-${k}"><i></i>${KL[k]}: ${KD[k]}</span>`).join('')}</div>`;
 function view(){
  if(i===0)return `<div class="eyebrow">Reality Society · a walk</div><h1 class="large">${esc(W.title)}</h1><p class="lede">${esc(W.intro)}</p>${legend()}${tl(0)}<p class="sec"><button class="pill" id="start">Start the walk</button></p><p class="foot">${esc(W.note)}</p>`;
- if(i===N+1)return `<div class="eyebrow">End of the walk</div><h1 class="large">${esc(W.endTitle)}</h1>${tl(N+1)}<div class="sec oh k-principle"><p>${esc(W.endOh)}</p></div>${W.summary?chart(W.summary):''}${want(W.want)}<div class="sec panel"><h3>Still missing from this walk</h3>${W.gaps.map(g=>`<p style="margin-bottom:8px">• ${esc(g)}</p>`).join('')}</div><div class="sec list">${W.next?`<a href="${esc(W.next.href)}">${esc(W.next.label)} <span>›</span></a>`:''}<a href="../">More walks on Reality Society <span>›</span></a><a href="../../">Reality Sourcing <span>›</span></a></div>`;
+ if(i===N+1)return `<div class="eyebrow">End of the walk</div><h1 class="large">${esc(W.endTitle)}</h1>${tl(N+1)}<div class="sec oh k-principle"><p>${esc(W.endOh)}</p></div>${W.summary?chart(W.summary):''}${W.btn?`<p class="sec"><a class="pill" href="${esc(W.btn.href)}">${esc(W.btn.label)}</a></p>`:''}${want(W.want)}<div class="sec panel"><h3>Still missing from this walk</h3>${W.gaps.map(g=>`<p style="margin-bottom:8px">• ${esc(g)}</p>`).join('')}</div><div class="sec list">${W.next?`<a href="${esc(W.next.href)}">${esc(W.next.label)} <span>›</span></a>`:''}<a href="../">More walks on Reality Society <span>›</span></a><a href="../../">Reality Sourcing <span>›</span></a></div>`;
  const s=S[i-1];
  return `<article class="stop k-${s.k}"><div class="hero"><img src="img/${String(i).padStart(2,'0')}.webp?v=${W.imgv||'s1'}" alt="${esc(s.alt||s.head)}"><div class="yr">${esc(s.y)}</div></div>
  <div class="txt"><div class="meta"><span class="chip k k-${s.k}"><i></i>${KL[s.k]}</span><span class="chip">${i} of ${N}</span>${s.thin?'<span class="chip">Thin evidence</span>':''}</div>
  <h2>${esc(s.head)}</h2><p class="who">${esc(s.place)} · ${esc(s.who)}</p>${tl(i)}
  ${quote(s.quote)}<section class="sec"><h3>What happened</h3><p>${esc(s.cap)}</p></section>
  ${s.spread?`<section class="sec"><h3>How it spread</h3><p>${esc(s.spread)}</p></section>`:''}
+ ${s.btn?`<p class="sec"><a class="pill" href="${esc(s.btn.href)}">${esc(s.btn.label)}</a></p>`:''}
  ${s.nums?`<section class="sec nums">${s.nums.map(num).join('')}</section>`:''}<section class="sec oh"><h3>Oh</h3><p>${esc(s.oh)}</p></section>
  <section class="sec"><h3>Words to know</h3><dl class="terms">${s.terms.map(t=>`<div><dt>${esc(t[0])}:</dt> <dd>${esc(t[1])}</dd></div>`).join('')}</dl></section>
  ${s.thin?`<section class="sec thin">Thin evidence: ${esc(s.thin)}</section>`:''}

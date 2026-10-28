@@ -383,5 +383,9 @@ window.WALK={
    "thin": "This stop records the change only. How well Community Notes works is still being studied."
   }
  ],
- "imgv": "t1"
+ "imgv": "t1",
+ "next": {
+  "href": "../words/",
+  "label": "Next walk: How words change meaning"
+ }
 };

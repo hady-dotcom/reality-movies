@@ -82,7 +82,7 @@ window.WALK={
      "bar": 0.25,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
+     "thin": "one 1973 count of the 75,150 entries in the Shorter Oxford. It counts dictionary words, not how often they're used."
     }
    ],
    "spread": "'Wife' now means a married woman, but 'woman' itself comes from Old English wifman, and the old sense lives on in 'midwife'. 'Starve' narrowed to dying of hunger in the mid-1400s; German sterben still means 'to die'.",
@@ -156,7 +156,7 @@ window.WALK={
      "bar": 0.283,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
+     "thin": "one 1973 count of the 75,150 entries in the Shorter Oxford. It counts dictionary words, not how often they're used."
     },
     {
      "v": "28.2%",
@@ -164,7 +164,7 @@ window.WALK={
      "bar": 0.2824,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
+     "thin": "same 1973 count as the card before."
     }
    ],
    "spread": "'Villain' (c. 1300, a peasant) became a scoundrel by the mid-1500s and the bad guy in a story by 1822. 'Very' meant 'true, real' in the late 1200s and came to mean 'extremely' by the mid-1400s.",
@@ -276,7 +276,7 @@ window.WALK={
      "bar": 0.0532,
      "src": "Finkenstaedt & Wolff, Ordered Profusion (1973), via Wikipedia",
      "url": "https://en.wikipedia.org/wiki/Foreign-language_influences_in_English",
-     "thin": "Counts dictionary entries (about 75,000 entries (75,150) in the Shorter Oxford), not how often words are used."
+     "thin": "one 1973 count of the 75,150 entries in the Shorter Oxford. It counts dictionary words, not how often they're used."
     }
    ],
    "spread": "'Egregious' meant 'shockingly bad' by the late 1500s. 'Explode' meant 'burst with a loud noise' in the 1790s. 'Sophisticated' meant 'worldly-wise' by 1895.",

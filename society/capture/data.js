@@ -142,7 +142,7 @@ window.WALK={
    "head": "Baghdad: paper and the book boom",
    "place": "Baghdad",
    "who": "the Abbasid court and its officials",
-   "cap": "Under the caliph Harun al-Rashid, paper began to be made in Baghdad, usually dated 794–795; later writers credit the Barmakid family of ministers. From there it spread to Damascus, Cairo, and Muslim Spain, where a paper mill at Xàtiva is recorded by the 1050s, and later to Italy.",
+   "cap": "Under the caliph Harun al-Rashid, paper began to be made in Baghdad, usually dated 794–795; later writers credit the Barmakid family of ministers. From there it spread to Damascus, Cairo, and Muslim Spain, where Xàtiva was famous for its paper by about 1150, and later to Italy.",
    "oh": "Paper helped run a huge empire on records and helped a book culture grow, including the Baghdad translation movement that turned Greek science into Arabic. Bloom calls paper an enabler, not the cause.",
    "so": "So keeping records became normal everywhere: debts, laws, books and, soon, prices. Once things are written down cheaply, it is easier to count them.",
    "terms": [
@@ -159,7 +159,9 @@ window.WALK={
    "url": "https://doi.org/10.37862/aaeportal.00217.003",
    "alt": "Painted lantern-lit book market with wooden shelves of bound volumes and stacks of paper",
    "url2": "https://scholarworks.iu.edu/journals/index.php/tmr/article/view/15725",
-   "thin": "The route is solid; exact dates for each city are less certain."
+   "url3": "https://historyofinformation.com/detail.php?id=2546",
+   "l3": "see al-Idrisi on Xàtiva (c. 1150)",
+   "thin": "The route is solid; exact dates for each city are less certain. Al-Idrisi wrote about Xàtiva from reports, not a visit."
   },
   {
    "y": "Ancient",
@@ -358,7 +360,7 @@ window.WALK={
    "head": "A machine that hears words in silence",
    "place": "USA",
    "who": "Allison Koenecke and colleagues",
-   "cap": "Researchers tested Whisper, a popular speech-to-text system, on 13,140 short recordings. About 1% of the transcripts (1.4% on average) contained whole sentences that nobody had said. 38% of those invented passages were harmful, such as violence or made-up names. It happened more for people with aphasia, who pause more when they speak: 1.7% against 1.2%.",
+   "cap": "Researchers tested Whisper, a popular speech-to-text system, on 13,140 short recordings. About 1.4% of the transcripts contained whole sentences that nobody had said. 38% of those invented passages were harmful, such as violence or made-up names. It happened more for people with aphasia, who pause more when they speak: 1.7% against 1.2%.",
    "oh": "Comparison, not the same mechanism: systems like Whisper predict the next likely word, a bit like the brain predicts the next sound. One 2022 study found brain activity that tracks word-prediction in a similar way. Where nothing is heard, both can fill the gap with a guess.",
    "so": "So a machine built to capture what was said can also invent what was never said. A transcript is no longer proof on its own.",
    "terms": [
@@ -407,7 +409,7 @@ window.WALK={
    "head": "Copies of what never happened",
    "place": "Hong Kong",
    "who": "a finance worker at Arup",
-   "cap": "In early 2024 a finance worker at the engineering firm Arup joined a video call with what looked like senior colleagues. They were deepfakes. He sent about US$25 million (HK$200 million) to fraudsters.",
+   "cap": "In early 2024 a finance worker at the engineering firm Arup joined a video call with what looked like senior colleagues. They were deepfakes. The worker sent about US$25 million (HK$200 million) to fraudsters.",
    "oh": "This is where the chain loops back. We built writing, print, photos and recordings so we didn't have to trust our guessing brains. Now machines that guess can make convincing copies of things that never happened.",
    "so": "So proof stops being proof on its own. We are back where we started, checking a guess, and the old skills matter again: ask who made it, and check another source.",
    "terms": [

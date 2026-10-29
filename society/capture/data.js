@@ -13,7 +13,7 @@ window.WALK={
   "shift": "a new way to hold something still",
   "clash": "a popular story, checked"
  },
- "imgv": "c1",
+ "imgv": "c2",
  "stops": [
   {
    "y": "Always",
@@ -65,6 +65,31 @@ window.WALK={
    "thin": "The main experiment comes from one lab, partly repeated by others. The 2019 paper is a review that argues a view."
   },
   {
+   "y": "c. 8000 BC",
+   "k": "shift",
+   "head": "Counting with clay tokens",
+   "place": "The Near East",
+   "who": "early farming villages",
+   "cap": "Long before writing, farmers in the Near East shaped small clay tokens: cones, spheres, disks and cylinders. Archaeologist Denise Schmandt-Besserat argues that each shape stood for an amount of a particular good, such as a measure of grain or an animal. Tokens were used from about 8000 BC until writing took over, around 3100 BC.",
+   "oh": "On her account, by about 3400–3200 BC groups of tokens were sealed inside clay balls, with the tokens pressed into the outside so you could see what was inside. Then people realised the marks alone were enough. Keeping track of goods came before writing.",
+   "so": "So people could keep track of goods, and possibly of what was owed, with clay long before anyone wrote a word. Next, the marks for those tokens moved onto flat clay tablets.",
+   "terms": [
+    [
+     "Token",
+     "a small clay shape used as a counter for goods."
+    ],
+    [
+     "Envelope",
+     "here, a hollow clay ball sealed around tokens."
+    ]
+   ],
+   "src": "Denise Schmandt-Besserat, 'From Accounting to Writing' (University of Texas at Austin)",
+   "url": "https://sites.utexas.edu/dsb/tokens/from-accounting-to-writing/",
+   "alt": "Painted clay tablets with small wedge marks laid on reed matting beside a basket of barley",
+   "url2": "https://sites.utexas.edu/dsb/wp-content/uploads/sites/3043/2021/10/New-Tokens-FactsandInterpretationVisibleLanguage.pdf",
+   "thin": "The tokens are real finds, but what each shape meant, whether they recorded debts, and how directly they led to writing are Schmandt-Besserat's interpretation; other scholars disagree on parts of it. The picture shows the tablets of the next stop."
+  },
+  {
    "y": "c. 3200 BC",
    "k": "shift",
    "head": "Writing begins as bookkeeping",
@@ -72,7 +97,7 @@ window.WALK={
    "who": "temple and city officials",
    "cap": "The oldest writing we have from Mesopotamia is on clay tablets from the city of Uruk. Most of them are not stories or prayers. They are records: how much grain, how many sheep, who owes what. About 85% are accounts and the rest are word lists for training scribes.",
    "oh": "Writing was also invented separately in China, Egypt and Central America, and not always for accounts. An older theory says clay tokens led to the first signs; it is still debated.",
-   "so": "So a memory no longer had to live in one person's head. A mark on clay could be checked tomorrow by someone who wasn't there. But clay is heavy.",
+   "so": "So a memory no longer had to live in one person's head: who owes what could be checked later by someone who wasn't there. And once you write down debts, you need a way to say how much things are worth.",
    "terms": [
     [
      "Scribe",
@@ -94,6 +119,61 @@ window.WALK={
     ]
    ],
    "thin": "'Writing began as accounting' is true for Mesopotamia. The token theory (Schmandt-Besserat) is still argued about."
+  },
+  {
+   "y": "Ancient",
+   "k": "clash",
+   "head": "Money: a number for everything",
+   "place": "Everywhere",
+   "who": "traders, rulers and temples",
+   "cap": "Money lets people write the value of very different things as one kind of number, so you can compare a goat, a day's work and a debt. Records of debts in grain and silver are among the oldest uses of writing.",
+   "oh": "Myth check: the textbook story says people bartered first, then invented money to make swapping easier. The anthropologist Caroline Humphrey wrote that no pure barter economy has ever been described. Barter happens, but usually alongside money or credit.",
+   "so": "So value itself could be written down. If a goat has a number, what about harder things, even a person's life?",
+   "terms": [
+    [
+     "Barter",
+     "swapping goods directly, without money."
+    ],
+    [
+     "Credit",
+     "getting something now and paying later."
+    ]
+   ],
+   "src": "Caroline Humphrey, 'Barter and Economic Disintegration', Man 20(1) (1985)",
+   "url": "https://doi.org/10.2307/2802221",
+   "alt": "Painted wooden counting table with scattered silver coins, a balance scale and a clay jar",
+   "thin": "'Money puts a number on things' is an interpretation; the barter point is a strong finding from anthropology."
+  },
+  {
+   "y": "c. AD 600",
+   "k": "shift",
+   "head": "A price on a life",
+   "place": "Kent, England, and Arabia",
+   "who": "Æthelberht of Kent; early Islamic law",
+   "cap": "The first English law code, from King Æthelberht of Kent around 600, sets a 'person-price' of 100 shillings for killing a free man, to be paid to his family. In Islamic law, diya (blood-money) is paid to the family after an accidental killing.",
+   "oh": "The Qur'an (4:92) sets the principle of diya and says the family may forgive it. The amount of 100 camels is not in the Qur'an's text: it comes from hadith, such as the letter to Amr ibn Hazm, and from later legal scholarship (fiqh). In both systems the payment was meant to replace revenge, not to say a life is cheap.",
+   "so": "So almost anything, even a life, could be written down as a number. What was still missing was something cheap and light to write it all on.",
+   "terms": [
+    [
+     "Wergild",
+     "Old English 'man-payment': the price set on a person's life."
+    ],
+    [
+     "Diya",
+     "blood-money in Islamic law, paid to a victim's family."
+    ],
+    [
+     "Fiqh",
+     "Islamic legal scholarship."
+    ]
+   ],
+   "src": "Early English Laws, 'Æthelberht's code' (Law §24, person-price)",
+   "url": "https://earlyenglishlaws.ac.uk/law/abt",
+   "alt": "Painted oak table with a sealed scroll, a set of old scales and a small pouch of coins by candlelight",
+   "url2": "https://quran.com/4/92",
+   "url3": "https://www.iium.edu.my/deed/hadith/malik/043_mmt.html",
+   "l3": "see the hadith (Muwatta Malik 43)",
+   "thin": "The diya rules vary between schools of Islamic law and have not been checked by an Islamic scholar for this walk. The hadith letter's chain is graded differently by different scholars."
   },
   {
    "y": "c. 150 BC",
@@ -144,7 +224,7 @@ window.WALK={
    "who": "the Abbasid court and its officials",
    "cap": "Under the caliph Harun al-Rashid, paper began to be made in Baghdad, usually dated 794–795; later writers credit the Barmakid family of ministers. From there it spread to Damascus, Cairo, and Muslim Spain, where Xàtiva was famous for its paper by about 1150, and later to Italy.",
    "oh": "Paper helped run a huge empire on records and helped a book culture grow, including the Baghdad translation movement that turned Greek science into Arabic. Bloom calls paper an enabler, not the cause.",
-   "so": "So keeping records became normal everywhere: debts, laws, books and, soon, prices. Once things are written down cheaply, it is easier to count them.",
+   "so": "So books and records spread cheaply across a huge empire, including Greek science in Arabic translation. In that world of books, one scientist asked a new question: how does seeing itself work?",
    "terms": [
     [
      "Caliph",
@@ -162,61 +242,6 @@ window.WALK={
    "url3": "https://historyofinformation.com/detail.php?id=2546",
    "l3": "see al-Idrisi on Xàtiva (c. 1150)",
    "thin": "The route is solid; exact dates for each city are less certain. Al-Idrisi wrote about Xàtiva from reports, not a visit."
-  },
-  {
-   "y": "Ancient",
-   "k": "clash",
-   "head": "Money: a number for everything",
-   "place": "Everywhere",
-   "who": "traders, rulers and temples",
-   "cap": "Money lets people write the value of very different things as one kind of number, so you can compare a goat, a day's work and a debt. Records of debts in grain and silver are among the oldest uses of writing.",
-   "oh": "Myth check: the textbook story says people bartered first, then invented money to make swapping easier. The anthropologist Caroline Humphrey wrote that no pure barter economy has ever been described. Barter happens, but usually alongside money or credit.",
-   "so": "So value itself could be written down. If a goat has a number, what about harder things, even a person's life?",
-   "terms": [
-    [
-     "Barter",
-     "swapping goods directly, without money."
-    ],
-    [
-     "Credit",
-     "getting something now and paying later."
-    ]
-   ],
-   "src": "Caroline Humphrey, 'Barter and Economic Disintegration', Man 20(1) (1985)",
-   "url": "https://doi.org/10.2307/2802221",
-   "alt": "Painted wooden counting table with scattered silver coins, a balance scale and a clay jar",
-   "thin": "'Money puts a number on things' is an interpretation; the barter point is a strong finding from anthropology."
-  },
-  {
-   "y": "c. 600",
-   "k": "shift",
-   "head": "A price on a life",
-   "place": "Kent, England, and Arabia",
-   "who": "Æthelberht of Kent; early Islamic law",
-   "cap": "The first English law code, from King Æthelberht of Kent around 600, sets a 'person-price' of 100 shillings for killing a free man, to be paid to his family. In Islamic law, diya (blood-money) is paid to the family after an accidental killing.",
-   "oh": "The Qur'an (4:92) sets the principle of diya and says the family may forgive it. The amount of 100 camels is not in the Qur'an's text: it comes from hadith, such as the letter to Amr ibn Hazm, and from later legal scholarship (fiqh). In both systems the payment was meant to replace revenge, not to say a life is cheap.",
-   "so": "So by now value could be written as a number for almost anything. Next came a different question: how does seeing itself work?",
-   "terms": [
-    [
-     "Wergild",
-     "Old English 'man-payment': the price set on a person's life."
-    ],
-    [
-     "Diya",
-     "blood-money in Islamic law, paid to a victim's family."
-    ],
-    [
-     "Fiqh",
-     "Islamic legal scholarship."
-    ]
-   ],
-   "src": "Early English Laws, 'Æthelberht's code' (Law §24, person-price)",
-   "url": "https://earlyenglishlaws.ac.uk/law/abt",
-   "alt": "Painted oak table with a sealed scroll, a set of old scales and a small pouch of coins by candlelight",
-   "url2": "https://quran.com/4/92",
-   "url3": "https://www.iium.edu.my/deed/hadith/malik/043_mmt.html",
-   "l3": "see the hadith (Muwatta Malik 43)",
-   "thin": "The diya rules vary between schools of Islamic law and have not been checked by an Islamic scholar for this walk. The hadith letter's chain is graded differently by different scholars."
   },
   {
    "y": "c. 1020",

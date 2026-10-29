@@ -49,3 +49,7 @@
 .want .find{margin-top:var(--s2);background:var(--tint-fill);border-radius:var(--r-ctl);padding:var(--s2);font:var(--t-callout)}
 .want .wl{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s2)}
 @media(min-width:900px){.stop .txt{margin-top:0}}
+
+.so{border-left:3px solid var(--k);padding:2px 0 2px var(--s2)}.so h3{color:var(--k)}.so p{font:600 17px/24px var(--font);letter-spacing:-.01em}
+.see{display:flex;flex-wrap:wrap;gap:8px}.see a{font:var(--t-subhead);text-decoration:none;color:var(--tint);background:var(--tint-fill);border-radius:999px;padding:7px 12px}
+.tab .pos{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}

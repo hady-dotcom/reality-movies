@@ -15,6 +15,10 @@ window.WALK={
  },
  "endTitle": "Old names, new meanings",
  "endOh": "Festivals kept their names while their meanings moved: from local gods and seasons towards the saints, then towards shops and screens. The best guide is the same as for words: ask what it meant then, and who says so.",
+ "next": {
+  "href": "../capture/",
+  "label": "Next walk: From guessing brains to guessing machines"
+ },
  "want": {
   "title": "Keeping a festival's meaning",
   "items": [
@@ -339,7 +343,7 @@ window.WALK={
    "head": "'Black Friday': from police complaint to sale",
    "place": "Philadelphia",
    "who": "police and shopkeepers",
-   "cap": "From 1951 Philadelphia police called the day after Thanksgiving 'Black Friday' because of the crowds and traffic. In 1961 the city's shops pushed to rename it 'Big Friday', without success.",
+   "cap": "From the 1950s Philadelphia police called the day after Thanksgiving 'Black Friday' because of the crowds and traffic. In 1961 the city's shops pushed to rename it 'Big Friday', without success.",
    "oh": "Myth check: it did not start with shops going 'into the black' (that story came later) or with slave sales. The name started as a complaint and became a sales event.",
    "terms": [
     [
